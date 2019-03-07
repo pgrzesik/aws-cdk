@@ -1,0 +1,1063 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"2zwVzZyuouxh1DRf6Xl4iiTAsox1uAgiE7UstRpSZ3c="}
+
+@aws-cdk/alexa-ask
+==================
+
+.. mdinclude:: ./__aws-cdk_alexa-ask.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.Alexa.Ask/0.25.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.Alexa.Ask" Version="0.25.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.Alexa.Ask --version 0.25.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.Alexa.Ask" version="0.25.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/alexa-ask/0.25.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:alexa-ask:jar:0.25.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="alexa-ask" rev="0.25.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>alexa-ask</artifactId>
+           <version>0.25.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:alexa-ask:0.25.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='alexa-ask', version='0.25.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/alexa-ask/v/0.25.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/alexa-ask@0.25.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/alexa-ask": "^0.25.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/alexa-ask@0.25.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/alexa-ask/v/0.25.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/alexa-ask@0.25.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/alexa-ask": "^0.25.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/alexa-ask@0.25.0
+
+
+
+.. py:module:: @aws-cdk/alexa-ask
+
+AlexaSkillDeployAction
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: AlexaSkillDeployAction(props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.Alexa.Ask;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.alexa.ask.AlexaSkillDeployAction;
+
+      .. code-tab:: javascript
+
+         const { AlexaSkillDeployAction } = require('@aws-cdk/alexa-ask');
+
+      .. code-tab:: typescript
+
+         import { AlexaSkillDeployAction } from '@aws-cdk/alexa-ask';
+
+
+
+   Deploys the skill to Alexa
+
+
+
+   :extends: :py:class:`@aws-cdk/aws-codepipeline-api.DeployAction`\ 
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/alexa-ask.AlexaSkillDeployActionProps`\ 
+
+   .. py:method:: bind(_stage, _scope)
+
+      *Implements* :py:meth:`@aws-cdk/aws-codepipeline-api.Action.bind`
+
+      The method called when an Action is attached to a Pipeline.
+
+      This method is guaranteed to be called only once for each Action instance.
+
+
+
+      *Protected method*
+
+      :param _stage: 
+      :type _stage: :py:class:`@aws-cdk/aws-codepipeline-api.IStage`\ 
+      :param _scope: 
+      :type _scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+
+
+   .. py:method:: addInputArtifact(artifact) -> @aws-cdk/aws-codepipeline-api.Action
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.addInputArtifact>`
+
+      *Protected method*
+
+      :param artifact: 
+      :type artifact: :py:class:`@aws-cdk/aws-codepipeline-api.Artifact`\ 
+      :rtype: :py:class:`@aws-cdk/aws-codepipeline-api.Action`\ 
+
+
+   .. py:method:: addOutputArtifact(name) -> @aws-cdk/aws-codepipeline-api.Artifact
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.addOutputArtifact>`
+
+      *Protected method*
+
+      :param name: 
+      :type name: string
+      :rtype: :py:class:`@aws-cdk/aws-codepipeline-api.Artifact`\ 
+
+
+   .. py:method:: onStateChange(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.onStateChange>`
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.validate>`
+
+      *Protected method*
+
+      :rtype: string[]
+
+
+   .. py:attribute:: actionName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.actionName>`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: category
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.category>`
+
+      The category of the action.
+
+      The category defines which action type the owner
+
+      (the entity that performs the action) performs.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-codepipeline-api.ActionCategory`\  *(readonly)*
+
+
+   .. py:attribute:: owner
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.owner>`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: provider
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.provider>`
+
+      The service provider that the action calls.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.runOrder>`
+
+      The order in which AWS CodePipeline runs this action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: scope
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.scope>`
+
+      Retrieves the Construct scope of this Action.
+
+      Only available after the Action has been added to a Stage,
+
+      and that Stage to a Pipeline.
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Construct`\  *(readonly)*
+
+
+   .. py:attribute:: version
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.version>`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: configuration
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.configuration>`
+
+      The action's configuration. These are key-value pairs that specify input values for an action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: any *(optional)* *(readonly)*
+
+
+   .. py:attribute:: region
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.region>`
+
+      The AWS region the given Action resides in.
+
+      Note that a cross-region Pipeline requires replication buckets to function correctly.
+
+      You can provide their names with the {@link PipelineProps#crossRegionReplicationBuckets} property.
+
+      If you don't, the CodePipeline Construct will create new Stacks in your CDK app containing those buckets,
+
+      that you will need to `cdk deploy` before deploying the main, Pipeline-containing Stack.
+
+
+
+      :type: string *(optional)* *(readonly)*
+      :default: the Action resides in the same region as the Pipeline
+
+
+   .. py:attribute:: role
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.role>`
+
+      The service role that is assumed during execution of action.
+
+      This role is not mandatory, however more advanced configuration
+
+      may require specifying it.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-iam.IRole`\  *(optional)* *(readonly)*
+
+
+AlexaSkillDeployActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: AlexaSkillDeployActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.Alexa.Ask;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.alexa.ask.AlexaSkillDeployActionProps;
+
+      .. code-tab:: javascript
+
+         // AlexaSkillDeployActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { AlexaSkillDeployActionProps } from '@aws-cdk/alexa-ask';
+
+
+
+   Construction properties of the {@link AlexaSkillDeployAction Alexa deploy Action}.
+
+
+
+   :extends: :py:class:`@aws-cdk/aws-codepipeline-api.CommonActionProps`\ 
+
+
+   .. py:attribute:: clientId
+
+      The client id of the developer console token
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Secret`\ 
+
+
+   .. py:attribute:: clientSecret
+
+      The client secret of the developer console token
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Secret`\ 
+
+
+   .. py:attribute:: inputArtifact
+
+      The source artifact containing the voice model and skill manifest
+
+
+
+      :type: :py:class:`@aws-cdk/aws-codepipeline-api.Artifact`\ 
+
+
+   .. py:attribute:: refreshToken
+
+      The refresh token of the developer console token
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Secret`\ 
+
+
+   .. py:attribute:: skillId
+
+      The Alexa skill id
+
+
+
+      :type: string
+
+
+   .. py:attribute:: parameterOverridesArtifact
+
+      An optional artifact containing overrides for the skill manifest
+
+
+
+      :type: :py:class:`@aws-cdk/aws-codepipeline-api.Artifact`\  *(optional)*
+
+
+   .. py:attribute:: actionName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionProps <@aws-cdk/aws-codepipeline-api.CommonActionProps.actionName>`
+
+      The physical, human-readable name of the Action.
+
+      Not that Action names must be unique within a single Stage.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionProps <@aws-cdk/aws-codepipeline-api.CommonActionProps.runOrder>`
+
+      The runOrder property for this Action.
+
+      RunOrder determines the relative order in which multiple Actions in the same Stage execute.
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+
+CfnSkill
+^^^^^^^^
+
+.. py:class:: CfnSkill(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.Alexa.Ask;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.alexa.ask.CfnSkill;
+
+      .. code-tab:: javascript
+
+         const { CfnSkill } = require('@aws-cdk/alexa-ask');
+
+      .. code-tab:: typescript
+
+         import { CfnSkill } from '@aws-cdk/alexa-ask';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/alexa-ask.CfnSkillProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/alexa-ask.CfnSkillProps`\  *(readonly)*
+
+
+   .. py:attribute:: skillId
+
+      :type: string *(readonly)*
+
+   .. py:class:: AuthenticationConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.Alexa.Ask;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.alexa.ask.CfnSkill.AuthenticationConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnSkill.AuthenticationConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnSkill.AuthenticationConfigurationProperty } from '@aws-cdk/alexa-ask';
+
+
+
+
+
+      .. py:attribute:: clientId
+
+         ``CfnSkill.AuthenticationConfigurationProperty.ClientId``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-clientid
+
+
+         :type: string
+
+
+      .. py:attribute:: clientSecret
+
+         ``CfnSkill.AuthenticationConfigurationProperty.ClientSecret``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-clientsecret
+
+
+         :type: string
+
+
+      .. py:attribute:: refreshToken
+
+         ``CfnSkill.AuthenticationConfigurationProperty.RefreshToken``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-authenticationconfiguration.html#cfn-ask-skill-authenticationconfiguration-refreshtoken
+
+
+         :type: string
+
+
+   .. py:class:: OverridesProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.Alexa.Ask;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.alexa.ask.CfnSkill.OverridesProperty;
+
+         .. code-tab:: javascript
+
+            // CfnSkill.OverridesProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnSkill.OverridesProperty } from '@aws-cdk/alexa-ask';
+
+
+
+
+
+      .. py:attribute:: manifest
+
+         ``CfnSkill.OverridesProperty.Manifest``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-overrides.html#cfn-ask-skill-overrides-manifest
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: SkillPackageProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.Alexa.Ask;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.alexa.ask.CfnSkill.SkillPackageProperty;
+
+         .. code-tab:: javascript
+
+            // CfnSkill.SkillPackageProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnSkill.SkillPackageProperty } from '@aws-cdk/alexa-ask';
+
+
+
+
+
+      .. py:attribute:: s3Bucket
+
+         ``CfnSkill.SkillPackageProperty.S3Bucket``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-skillpackage.html#cfn-ask-skill-skillpackage-s3bucket
+
+
+         :type: string
+
+
+      .. py:attribute:: s3Key
+
+         ``CfnSkill.SkillPackageProperty.S3Key``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-skillpackage.html#cfn-ask-skill-skillpackage-s3key
+
+
+         :type: string
+
+
+      .. py:attribute:: overrides
+
+         ``CfnSkill.SkillPackageProperty.Overrides``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-skillpackage.html#cfn-ask-skill-skillpackage-overrides
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/alexa-ask.CfnSkill.OverridesProperty`\  *(optional)*
+
+
+      .. py:attribute:: s3BucketRole
+
+         ``CfnSkill.SkillPackageProperty.S3BucketRole``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-skillpackage.html#cfn-ask-skill-skillpackage-s3bucketrole
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: s3ObjectVersion
+
+         ``CfnSkill.SkillPackageProperty.S3ObjectVersion``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ask-skill-skillpackage.html#cfn-ask-skill-skillpackage-s3objectversion
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+CfnSkillProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnSkillProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.Alexa.Ask;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.alexa.ask.CfnSkillProps;
+
+      .. code-tab:: javascript
+
+         // CfnSkillProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnSkillProps } from '@aws-cdk/alexa-ask';
+
+
+
+
+
+   .. py:attribute:: authenticationConfiguration
+
+      ``Alexa::ASK::Skill.AuthenticationConfiguration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-authenticationconfiguration
+
+
+      :type: :py:class:`~@aws-cdk/alexa-ask.CfnSkill.AuthenticationConfigurationProperty`\  or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:attribute:: skillPackage
+
+      ``Alexa::ASK::Skill.SkillPackage``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-skillpackage
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/alexa-ask.CfnSkill.SkillPackageProperty`\ 
+
+
+   .. py:attribute:: vendorId
+
+      ``Alexa::ASK::Skill.VendorId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ask-skill.html#cfn-ask-skill-vendorid
+
+
+      :type: string
+
+

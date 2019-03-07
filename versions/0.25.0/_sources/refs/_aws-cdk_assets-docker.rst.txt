@@ -1,0 +1,315 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"KdHlzLXhUPkjS2z9rO82tqbLrfnbwx6zrIrgdMrNfsw="}
+
+AWS CDK Docker Image Assets
+===========================
+
+.. mdinclude:: ./__aws-cdk_assets-docker.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.Assets.Docker/0.25.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.Assets.Docker" Version="0.25.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.Assets.Docker --version 0.25.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.Assets.Docker" version="0.25.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/cdk-assets-docker/0.25.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:cdk-assets-docker:jar:0.25.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="cdk-assets-docker" rev="0.25.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>cdk-assets-docker</artifactId>
+           <version>0.25.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:cdk-assets-docker:0.25.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='cdk-assets-docker', version='0.25.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/assets-docker/v/0.25.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/assets-docker@0.25.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/assets-docker": "^0.25.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/assets-docker@0.25.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/assets-docker/v/0.25.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/assets-docker@0.25.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/assets-docker": "^0.25.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/assets-docker@0.25.0
+
+
+
+.. py:module:: @aws-cdk/assets-docker
+
+DockerImageAsset
+^^^^^^^^^^^^^^^^
+
+.. py:class:: DockerImageAsset(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.Assets.Docker;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.assets.docker.DockerImageAsset;
+
+      .. code-tab:: javascript
+
+         const { DockerImageAsset } = require('@aws-cdk/assets-docker');
+
+      .. code-tab:: typescript
+
+         import { DockerImageAsset } from '@aws-cdk/assets-docker';
+
+
+
+   An asset that represents a Docker image.
+
+   
+
+   The image will be created in build time and uploaded to an ECR repository.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/assets-docker.DockerImageAssetProps`\ 
+
+   .. py:attribute:: imageUri
+
+      The full URI of the image (including a tag). Use this reference to pull
+
+      the asset.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: repository
+
+      Repository where the image is stored
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ecr.IRepository`\ 
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+DockerImageAssetProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: DockerImageAssetProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.Assets.Docker;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.assets.docker.DockerImageAssetProps;
+
+      .. code-tab:: javascript
+
+         // DockerImageAssetProps is an interface
+
+      .. code-tab:: typescript
+
+         import { DockerImageAssetProps } from '@aws-cdk/assets-docker';
+
+
+
+
+
+   .. py:attribute:: directory
+
+      The directory where the Dockerfile is stored
+
+
+
+      :type: string
+
+

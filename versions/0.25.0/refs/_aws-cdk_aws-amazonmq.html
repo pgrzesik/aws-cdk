@@ -1,0 +1,3032 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>@aws-cdk/aws-amazonmq &mdash; AWS Cloud Development Kit</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.2.10/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.2.10/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.2.10/tab.min.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="@aws-cdk/aws-apigateway" href="_aws-cdk_aws-apigateway.html" />
+    <link rel="prev" title="AWS CDK Docker Image Assets" href="_aws-cdk_assets-docker.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AWS Cloud Development Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.25.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../reference.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_alexa-ask.html">&#64;aws-cdk/alexa-ask</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_app-delivery.html">&#64;aws-cdk/app-delivery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_assets.html">&#64;aws-cdk/assets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_assets-docker.html">AWS CDK Docker Image Assets</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;aws-cdk/aws-amazonmq</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#aws-amazonmq-construct-library">AWS AmazonMQ Construct Library</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reference">Reference</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cfnbroker">CfnBroker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cfnbrokerprops-interface">CfnBrokerProps (interface)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cfnconfiguration">CfnConfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cfnconfigurationassociation">CfnConfigurationAssociation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cfnconfigurationassociationprops-interface">CfnConfigurationAssociationProps (interface)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cfnconfigurationprops-interface">CfnConfigurationProps (interface)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-apigateway.html">&#64;aws-cdk/aws-apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-applicationautoscaling.html">&#64;aws-cdk/aws-applicationautoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-appstream.html">&#64;aws-cdk/aws-appstream</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-appsync.html">&#64;aws-cdk/aws-appsync</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-athena.html">&#64;aws-cdk/aws-athena</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-autoscaling.html">&#64;aws-cdk/aws-autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-autoscaling-api.html">&#64;aws-cdk/aws-autoscaling-api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-autoscaling-common.html">&#64;aws-cdk/aws-autoscaling-common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-autoscalingplans.html">&#64;aws-cdk/aws-autoscalingplans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-batch.html">&#64;aws-cdk/aws-batch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-budgets.html">&#64;aws-cdk/aws-budgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-certificatemanager.html">&#64;aws-cdk/aws-certificatemanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-cloud9.html">&#64;aws-cdk/aws-cloud9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-cloudformation.html">&#64;aws-cdk/aws-cloudformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-cloudfront.html">&#64;aws-cdk/aws-cloudfront</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-cloudtrail.html">&#64;aws-cdk/aws-cloudtrail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-cloudwatch.html">&#64;aws-cdk/aws-cloudwatch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-codebuild.html">AWS CodeBuild</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-codecommit.html">AWS CodeCommit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-codedeploy.html">&#64;aws-cdk/aws-codedeploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-codedeploy-api.html">&#64;aws-cdk/aws-codedeploy-api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-codepipeline.html">&#64;aws-cdk/aws-codepipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-codepipeline-api.html">&#64;aws-cdk/aws-codepipeline-api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-cognito.html">&#64;aws-cdk/aws-cognito</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-config.html">&#64;aws-cdk/aws-config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-datapipeline.html">&#64;aws-cdk/aws-datapipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-dax.html">&#64;aws-cdk/aws-dax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-directoryservice.html">&#64;aws-cdk/aws-directoryservice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-dlm.html">&#64;aws-cdk/aws-dlm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-dms.html">&#64;aws-cdk/aws-dms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-docdb.html">&#64;aws-cdk/aws-docdb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-dynamodb.html">&#64;aws-cdk/aws-dynamodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-ec2.html">&#64;aws-cdk/aws-ec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-ecr.html">&#64;aws-cdk/aws-ecr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-ecs.html">Amazon ECS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-efs.html">&#64;aws-cdk/aws-efs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-eks.html">&#64;aws-cdk/aws-eks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-elasticache.html">&#64;aws-cdk/aws-elasticache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-elasticbeanstalk.html">&#64;aws-cdk/aws-elasticbeanstalk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-elasticloadbalancing.html">&#64;aws-cdk/aws-elasticloadbalancing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-elasticloadbalancingv2.html">&#64;aws-cdk/aws-elasticloadbalancingv2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-elasticsearch.html">&#64;aws-cdk/aws-elasticsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-emr.html">&#64;aws-cdk/aws-emr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-events.html">&#64;aws-cdk/aws-events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-fsx.html">&#64;aws-cdk/aws-fsx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-gamelift.html">&#64;aws-cdk/aws-gamelift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-glue.html">&#64;aws-cdk/aws-glue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-guardduty.html">&#64;aws-cdk/aws-guardduty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-iam.html">&#64;aws-cdk/aws-iam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-inspector.html">&#64;aws-cdk/aws-inspector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-iot.html">&#64;aws-cdk/aws-iot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-iot1click.html">&#64;aws-cdk/aws-iot1click</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-iotanalytics.html">&#64;aws-cdk/aws-iotanalytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-kinesis.html">&#64;aws-cdk/aws-kinesis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-kinesisanalytics.html">&#64;aws-cdk/aws-kinesisanalytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-kinesisfirehose.html">&#64;aws-cdk/aws-kinesisfirehose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-kms.html">&#64;aws-cdk/aws-kms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-lambda.html">&#64;aws-cdk/aws-lambda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-lambda-event-sources.html">&#64;aws-cdk/aws-lambda-event-sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-logs.html">&#64;aws-cdk/aws-logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-neptune.html">&#64;aws-cdk/aws-neptune</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-opsworks.html">&#64;aws-cdk/aws-opsworks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-opsworkscm.html">&#64;aws-cdk/aws-opsworkscm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-quickstarts.html">&#64;aws-cdk/aws-quickstarts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-ram.html">&#64;aws-cdk/aws-ram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-rds.html">&#64;aws-cdk/aws-rds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-redshift.html">&#64;aws-cdk/aws-redshift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-robomaker.html">&#64;aws-cdk/aws-robomaker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-route53.html">&#64;aws-cdk/aws-route53</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-route53resolver.html">&#64;aws-cdk/aws-route53resolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-s3.html">&#64;aws-cdk/aws-s3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-s3-deployment.html">&#64;aws-cdk/aws-s3-deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-s3-notifications.html">&#64;aws-cdk/aws-s3-notifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-sagemaker.html">&#64;aws-cdk/aws-sagemaker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-sdb.html">&#64;aws-cdk/aws-sdb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-secretsmanager.html">&#64;aws-cdk/aws-secretsmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-serverless.html">&#64;aws-cdk/aws-serverless</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-servicecatalog.html">&#64;aws-cdk/aws-servicecatalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-servicediscovery.html">&#64;aws-cdk/aws-servicediscovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-ses.html">&#64;aws-cdk/aws-ses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-sns.html">&#64;aws-cdk/aws-sns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-sqs.html">&#64;aws-cdk/aws-sqs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-ssm.html">&#64;aws-cdk/aws-ssm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-stepfunctions.html">&#64;aws-cdk/aws-stepfunctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-waf.html">&#64;aws-cdk/aws-waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-wafregional.html">&#64;aws-cdk/aws-wafregional</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-workspaces.html">&#64;aws-cdk/aws-workspaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_cdk.html">&#64;aws-cdk/cdk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_cx-api.html">&#64;aws-cdk/cx-api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_runtime-values.html">&#64;aws-cdk/runtime-values</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AWS Cloud Development Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../reference.html">Reference</a> &raquo;</li>
+        
+      <li>&#64;aws-cdk/aws-amazonmq</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/refs/_aws-cdk_aws-amazonmq.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           ﻿<p style="background-color:#e47911; border-top:1px solid #ccc; margin-top:6px; padding-top:10px; padding-bottom:10px; padding-left:5px; font-weight:bold; font-style:italic; font-size:16px; color:white; vertical-align:middle">
+This documentation is for the developer preview release of the AWS CDK.
+Do not use this version of the AWS CDK in production.
+Subsequent releases of the AWS CDK will likely include breaking changes.
+</p>
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aws-cdk-aws-amazonmq">
+<h1>&#64;aws-cdk/aws-amazonmq<a class="headerlink" href="#aws-cdk-aws-amazonmq" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="aws-amazonmq-construct-library">
+<h2>AWS AmazonMQ Construct Library<a class="headerlink" href="#aws-amazonmq-construct-library" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">amazonmq</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-QyM= active docutils container">
+<p>View in <a class="reference external" href="https://www.nuget.org/packages/Amazon.CDK.AWS.AmazonMQ/0.25.0">Nuget</a></p>
+<p><strong>csproj</strong>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;PackageReference</span> <span class="na">Include=</span><span class="s">&quot;Amazon.CDK.AWS.AmazonMQ&quot;</span> <span class="na">Version=</span><span class="s">&quot;0.25.0&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p><strong>dotnet</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">dotnet add package Amazon.CDK.AWS.AmazonMQ --version 0.25.0</span>
+</pre></div>
+</div>
+<p><strong>packages.config</strong>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;package</span> <span class="na">id=</span><span class="s">&quot;Amazon.CDK.AWS.AmazonMQ&quot;</span> <span class="na">version=</span><span class="s">&quot;0.25.0&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-SmF2YQ== docutils container">
+<p>View in <a class="reference external" href="https://repo1.maven.org/maven2/software/amazon/awscdk/amazonmq/0.25.0/">Maven Central</a></p>
+<p><strong>Apache Buildr</strong>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;software.amazon.awscdk:amazonmq:jar:0.25.0&#39;
+</pre></div>
+</div>
+<p><strong>Apache Ivy</strong>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dependency</span> <span class="na">groupId=</span><span class="s">&quot;software.amazon.awscdk&quot;</span> <span class="na">name=</span><span class="s">&quot;amazonmq&quot;</span> <span class="na">rev=</span><span class="s">&quot;0.25.0&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p><strong>Apache Maven</strong>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>software.amazon.awscdk<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>amazonmq<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>0.25.0<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</pre></div>
+</div>
+<p><strong>Gradle / Grails</strong>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>compile &#39;software.amazon.awscdk:amazonmq:0.25.0&#39;
+</pre></div>
+</div>
+<p><strong>Groovy Grape</strong>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>@Grapes(
+@Grab(group=&#39;software.amazon.awscdk&#39;, module=&#39;amazonmq&#39;, version=&#39;0.25.0&#39;)
+)
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<p>View in <a class="reference external" href="https://www.npmjs.com/package/&#64;aws-cdk/aws-amazonmq/v/0.25.0">NPM</a></p>
+<p><strong>npm</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> npm i @aws-cdk/aws-amazonmq@0.25.0
+</pre></div>
+</div>
+<p><strong>package.json</strong>:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;@aws-cdk/aws-amazonmq&quot;</span><span class="o">:</span> <span class="s2">&quot;^0.25.0&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>yarn</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> yarn add @aws-cdk/aws-amazonmq@0.25.0
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<p>View in <a class="reference external" href="https://www.npmjs.com/package/&#64;aws-cdk/aws-amazonmq/v/0.25.0">NPM</a></p>
+<p><strong>npm</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> npm i @aws-cdk/aws-amazonmq@0.25.0
+</pre></div>
+</div>
+<p><strong>package.json</strong>:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;@aws-cdk/aws-amazonmq&quot;</span><span class="o">:</span> <span class="s2">&quot;^0.25.0&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>yarn</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> yarn add @aws-cdk/aws-amazonmq@0.25.0
+</pre></div>
+</div>
+</div>
+</div>
+<span class="target" id="module-&#64;aws-cdk/aws-amazonmq"></span><div class="section" id="cfnbroker">
+<h3>CfnBroker<a class="headerlink" href="#cfnbroker" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker">
+<em class="property">class </em><code class="descclassname">&#64;aws-cdk/aws-amazonmq.</code><code class="descname">CfnBroker</code><span class="sig-paren">(</span><em>scope</em>, <em>id</em>, <em>props</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.AmazonMQ</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.amazonmq.CfnBroker</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">CfnBroker</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnBroker</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Extends:</th><td class="field-body"><p class="first"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource" title="&#64;aws-cdk/cdk.Resource"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>scope</strong> (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct" title="&#64;aws-cdk/cdk.Construct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a>) – scope in which this resource is defined</li>
+<li><strong>id</strong> (<em>string</em>) – scoped id of the resource</li>
+<li><strong>props</strong> (<a class="reference internal" href="#&#64;aws-cdk/aws-amazonmq.CfnBrokerProps" title="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps"><code class="xref py py-class docutils literal notranslate"><span class="pre">CfnBrokerProps</span></code></a>) – resource properties</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.renderProperties">
+<code class="descname">renderProperties</code><span class="sig-paren">(</span><em>properties</em><span class="sig-paren">)</span> &#x2192; string =&gt; any<a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.renderProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Overrides</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.renderProperties" title="&#64;aws-cdk/cdk.Resource.renderProperties"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource.renderProperties()</span></code></a></p>
+<p><em>Protected method</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>properties</strong> (<em>any</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">string =&gt; any</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.resourceTypeName">
+<code class="descname">resourceTypeName</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.resourceTypeName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The CloudFormation resource type name for this resource class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em> <em>(static)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.brokerAmqpEndpoints">
+<code class="descname">brokerAmqpEndpoints</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.brokerAmqpEndpoints" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.brokerArn">
+<code class="descname">brokerArn</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.brokerArn" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.brokerConfigurationId">
+<code class="descname">brokerConfigurationId</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.brokerConfigurationId" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.brokerConfigurationRevision">
+<code class="descname">brokerConfigurationRevision</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.brokerConfigurationRevision" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.brokerId">
+<code class="descname">brokerId</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.brokerId" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.brokerIpAddresses">
+<code class="descname">brokerIpAddresses</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.brokerIpAddresses" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.brokerMqttEndpoints">
+<code class="descname">brokerMqttEndpoints</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.brokerMqttEndpoints" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.brokerOpenWireEndpoints">
+<code class="descname">brokerOpenWireEndpoints</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.brokerOpenWireEndpoints" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.brokerStompEndpoints">
+<code class="descname">brokerStompEndpoints</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.brokerStompEndpoints" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.brokerWssEndpoints">
+<code class="descname">brokerWssEndpoints</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.brokerWssEndpoints" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.propertyOverrides">
+<code class="descname">propertyOverrides</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.propertyOverrides" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#&#64;aws-cdk/aws-amazonmq.CfnBrokerProps" title="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps"><code class="xref py py-class docutils literal notranslate"><span class="pre">CfnBrokerProps</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.ConfigurationIdProperty">
+<em class="property">class </em><code class="descname">ConfigurationIdProperty</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.ConfigurationIdProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.AmazonMQ</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.amazonmq.CfnBroker.ConfigurationIdProperty</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// CfnBroker.ConfigurationIdProperty is an interface</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnBroker</span><span class="p">.</span><span class="nx">ConfigurationIdProperty</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.ConfigurationIdProperty.id">
+<code class="descname">id</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.ConfigurationIdProperty.id" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnBroker.ConfigurationIdProperty.Id</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-id">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-id</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.ConfigurationIdProperty.revision">
+<code class="descname">revision</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.ConfigurationIdProperty.revision" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnBroker.ConfigurationIdProperty.Revision</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-revision">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-configurationid.html#cfn-amazonmq-broker-configurationid-revision</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">number or <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.LogListProperty">
+<em class="property">class </em><code class="descname">LogListProperty</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.LogListProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.AmazonMQ</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.amazonmq.CfnBroker.LogListProperty</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// CfnBroker.LogListProperty is an interface</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnBroker</span><span class="p">.</span><span class="nx">LogListProperty</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.LogListProperty.audit">
+<code class="descname">audit</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.LogListProperty.audit" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnBroker.LogListProperty.Audit</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-audit">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-audit</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean or <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.LogListProperty.general">
+<code class="descname">general</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.LogListProperty.general" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnBroker.LogListProperty.General</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-general">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-loglist.html#cfn-amazonmq-broker-loglist-general</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean or <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.MaintenanceWindowProperty">
+<em class="property">class </em><code class="descname">MaintenanceWindowProperty</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.MaintenanceWindowProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.AmazonMQ</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.amazonmq.CfnBroker.MaintenanceWindowProperty</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// CfnBroker.MaintenanceWindowProperty is an interface</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnBroker</span><span class="p">.</span><span class="nx">MaintenanceWindowProperty</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.MaintenanceWindowProperty.dayOfWeek">
+<code class="descname">dayOfWeek</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.MaintenanceWindowProperty.dayOfWeek" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnBroker.MaintenanceWindowProperty.DayOfWeek</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-dayofweek">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-dayofweek</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.MaintenanceWindowProperty.timeOfDay">
+<code class="descname">timeOfDay</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.MaintenanceWindowProperty.timeOfDay" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnBroker.MaintenanceWindowProperty.TimeOfDay</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timeofday">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timeofday</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.MaintenanceWindowProperty.timeZone">
+<code class="descname">timeZone</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.MaintenanceWindowProperty.timeZone" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnBroker.MaintenanceWindowProperty.TimeZone</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timezone">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timezone</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.TagsEntryProperty">
+<em class="property">class </em><code class="descname">TagsEntryProperty</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.TagsEntryProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.AmazonMQ</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.amazonmq.CfnBroker.TagsEntryProperty</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// CfnBroker.TagsEntryProperty is an interface</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnBroker</span><span class="p">.</span><span class="nx">TagsEntryProperty</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.TagsEntryProperty.key">
+<code class="descname">key</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.TagsEntryProperty.key" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnBroker.TagsEntryProperty.Key</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-tagsentry.html#cfn-amazonmq-broker-tagsentry-key">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-tagsentry.html#cfn-amazonmq-broker-tagsentry-key</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.TagsEntryProperty.value">
+<code class="descname">value</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.TagsEntryProperty.value" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnBroker.TagsEntryProperty.Value</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-tagsentry.html#cfn-amazonmq-broker-tagsentry-value">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-tagsentry.html#cfn-amazonmq-broker-tagsentry-value</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.UserProperty">
+<em class="property">class </em><code class="descname">UserProperty</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.UserProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.AmazonMQ</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.amazonmq.CfnBroker.UserProperty</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// CfnBroker.UserProperty is an interface</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnBroker</span><span class="p">.</span><span class="nx">UserProperty</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.UserProperty.password">
+<code class="descname">password</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.UserProperty.password" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnBroker.UserProperty.Password</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-password">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-password</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.UserProperty.username">
+<code class="descname">username</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.UserProperty.username" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnBroker.UserProperty.Username</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-username">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-username</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.UserProperty.consoleAccess">
+<code class="descname">consoleAccess</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.UserProperty.consoleAccess" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnBroker.UserProperty.ConsoleAccess</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-consoleaccess">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-consoleaccess</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean or <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.UserProperty.groups">
+<code class="descname">groups</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.UserProperty.groups" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnBroker.UserProperty.Groups</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-groups">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-user.html#cfn-amazonmq-broker-user-groups</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> or (string or <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a>)[] <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.toString">
+<code class="descname">toString</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; string<a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.toString" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.toString" title="&#64;aws-cdk/cdk.Construct.toString"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Returns a string representation of this construct.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; string[]<a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.validate" title="&#64;aws-cdk/cdk.Construct.validate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Validate the current construct.</p>
+<p>This method can be implemented by derived constructs in order to perform</p>
+<p>validation logic. It is called on all constructs before synthesis.</p>
+<p><em>Protected method</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">An array of validation error messages, or an empty array if there the construct is valid.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">string[]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.dependencyRoots">
+<code class="descname">dependencyRoots</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.dependencyRoots" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.dependencyRoots" title="&#64;aws-cdk/cdk.Construct.dependencyRoots"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>The set of constructs that form the root of this dependable</p>
+<p>All resources under all returned constructs are included in the ordering</p>
+<p>dependency.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.IConstruct" title="&#64;aws-cdk/cdk.IConstruct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.IConstruct</span></code></a>[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.node">
+<code class="descname">node</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.node" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.node" title="&#64;aws-cdk/cdk.Construct.node"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Construct node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.ConstructNode" title="&#64;aws-cdk/cdk.ConstructNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.ConstructNode</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.ref">
+<code class="descname">ref</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.ref" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Referenceable.ref" title="&#64;aws-cdk/cdk.Referenceable.ref"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Referenceable</span></code></a></p>
+<p>Returns a token to a CloudFormation { Ref } that references this entity based on it’s logical ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.addDeletionOverride">
+<code class="descname">addDeletionOverride</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.addDeletionOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addDeletionOverride" title="&#64;aws-cdk/cdk.Resource.addDeletionOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Syntactic sugar for <cite>addOverride(path, undefined)</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<em>string</em>) – The path of the value to delete</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.addDependsOn">
+<code class="descname">addDependsOn</code><span class="sig-paren">(</span><em>resource</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.addDependsOn" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addDependsOn" title="&#64;aws-cdk/cdk.Resource.addDependsOn"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Indicates that this resource depends on another resource and cannot be provisioned</p>
+<p>unless the other resource has been successfully provisioned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>resource</strong> (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource" title="&#64;aws-cdk/cdk.Resource"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.addOverride">
+<code class="descname">addOverride</code><span class="sig-paren">(</span><em>path</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.addOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addOverride" title="&#64;aws-cdk/cdk.Resource.addOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Adds an override to the synthesized CloudFormation resource. To add a</p>
+<p>property override, either use <cite>addPropertyOverride</cite> or prefix <cite>path</cite> with</p>
+<p>“Properties.” (i.e. <cite>Properties.TopicName</cite>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> (<em>string</em>) – The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.</li>
+<li><strong>value</strong> (<em>any</em>) – The value. Could be primitive or complex.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.addPropertyDeletionOverride">
+<code class="descname">addPropertyDeletionOverride</code><span class="sig-paren">(</span><em>propertyPath</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.addPropertyDeletionOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addPropertyDeletionOverride" title="&#64;aws-cdk/cdk.Resource.addPropertyDeletionOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Adds an override that deletes the value of a property from the resource definition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>propertyPath</strong> (<em>string</em>) – The path to the property.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.addPropertyOverride">
+<code class="descname">addPropertyOverride</code><span class="sig-paren">(</span><em>propertyPath</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.addPropertyOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addPropertyOverride" title="&#64;aws-cdk/cdk.Resource.addPropertyOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Adds an override to a resource property.</p>
+<p>Syntactic sugar for <cite>addOverride(“Properties.&lt;…&gt;”, value)</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>propertyPath</strong> (<em>string</em>) – The path of the property</li>
+<li><strong>value</strong> (<em>any</em>) – The value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.getAtt">
+<code class="descname">getAtt</code><span class="sig-paren">(</span><em>attributeName</em><span class="sig-paren">)</span> &#x2192; &#64;aws-cdk/cdk.CfnReference<a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.getAtt" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.getAtt" title="&#64;aws-cdk/cdk.Resource.getAtt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Returns a token for an runtime attribute of this resource.</p>
+<p>Ideally, use generated attribute accessors (e.g. <cite>resource.arn</cite>), but this can be used for future compatibility</p>
+<p>in case there is no generated attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>attributeName</strong> (<em>string</em>) – The name of the attribute.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.CfnReference" title="&#64;aws-cdk/cdk.CfnReference"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.CfnReference</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.toCloudFormation">
+<code class="descname">toCloudFormation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; json<a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.toCloudFormation" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.toCloudFormation" title="&#64;aws-cdk/cdk.Resource.toCloudFormation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Emits CloudFormation for this resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">json</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.options">
+<code class="descname">options</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.options" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.options" title="&#64;aws-cdk/cdk.Resource.options"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Options for this resource, such as condition, update policy etc.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.ResourceOptions" title="&#64;aws-cdk/cdk.ResourceOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.ResourceOptions</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.properties">
+<code class="descname">properties</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.properties" title="&#64;aws-cdk/cdk.Resource.properties"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>AWS resource properties.</p>
+<p>This object is rendered via a call to “renderProperties(this.properties)”.</p>
+<p><em>Protected property</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">any <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.resourceType">
+<code class="descname">resourceType</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.resourceType" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.resourceType" title="&#64;aws-cdk/cdk.Resource.resourceType"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>AWS resource type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.untypedPropertyOverrides">
+<code class="descname">untypedPropertyOverrides</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.untypedPropertyOverrides" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.untypedPropertyOverrides" title="&#64;aws-cdk/cdk.Resource.untypedPropertyOverrides"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>AWS resource property overrides.</p>
+<p>During synthesis, the method “renderProperties(this.overrides)” is called</p>
+<p>with this object, and merged on top of the output of</p>
+<p>“renderProperties(this.properties)”.</p>
+<p>Derived classes should expose a strongly-typed version of this object as</p>
+<p>a public property called <cite>propertyOverrides</cite>.</p>
+<p><em>Protected property</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">any <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.overrideLogicalId">
+<code class="descname">overrideLogicalId</code><span class="sig-paren">(</span><em>newLogicalId</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.overrideLogicalId" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.overrideLogicalId" title="&#64;aws-cdk/cdk.StackElement.overrideLogicalId"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>Overrides the auto-generated logical ID with a specific ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>newLogicalId</strong> (<em>string</em>) – The new logical ID to use for this stack element.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.prepare">
+<code class="descname">prepare</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.prepare" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.prepare" title="&#64;aws-cdk/cdk.StackElement.prepare"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>Automatically detect references in this StackElement</p>
+<p><em>Protected method</em></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.creationStackTrace">
+<code class="descname">creationStackTrace</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.creationStackTrace" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.creationStackTrace" title="&#64;aws-cdk/cdk.StackElement.creationStackTrace"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.logicalId">
+<code class="descname">logicalId</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.logicalId" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.logicalId" title="&#64;aws-cdk/cdk.StackElement.logicalId"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>The logical ID for this CloudFormation stack element. The logical ID of the element</p>
+<p>is calculated from the path of the resource node in the construct tree.</p>
+<p>To override this value, use <cite>overrideLogicalId(newLogicalId)</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBroker.stackPath">
+<code class="descname">stackPath</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBroker.stackPath" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.stackPath" title="&#64;aws-cdk/cdk.StackElement.stackPath"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>Return the path with respect to the stack</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="cfnbrokerprops-interface">
+<h3>CfnBrokerProps (interface)<a class="headerlink" href="#cfnbrokerprops-interface" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps">
+<em class="property">class </em><code class="descclassname">&#64;aws-cdk/aws-amazonmq.</code><code class="descname">CfnBrokerProps</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBrokerProps" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.AmazonMQ</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.amazonmq.CfnBrokerProps</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// CfnBrokerProps is an interface</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnBrokerProps</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps.autoMinorVersionUpgrade">
+<code class="descname">autoMinorVersionUpgrade</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBrokerProps.autoMinorVersionUpgrade" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Broker.AutoMinorVersionUpgrade</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-autominorversionupgrade">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-autominorversionupgrade</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean or <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps.brokerName">
+<code class="descname">brokerName</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBrokerProps.brokerName" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Broker.BrokerName</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-brokername">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-brokername</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps.deploymentMode">
+<code class="descname">deploymentMode</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBrokerProps.deploymentMode" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Broker.DeploymentMode</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-deploymentmode">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-deploymentmode</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps.engineType">
+<code class="descname">engineType</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBrokerProps.engineType" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Broker.EngineType</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-enginetype">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-enginetype</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps.engineVersion">
+<code class="descname">engineVersion</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBrokerProps.engineVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Broker.EngineVersion</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-engineversion">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-engineversion</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps.hostInstanceType">
+<code class="descname">hostInstanceType</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBrokerProps.hostInstanceType" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Broker.HostInstanceType</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-hostinstancetype">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-hostinstancetype</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps.publiclyAccessible">
+<code class="descname">publiclyAccessible</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBrokerProps.publiclyAccessible" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Broker.PubliclyAccessible</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-publiclyaccessible">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-publiclyaccessible</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">boolean or <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps.users">
+<code class="descname">users</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBrokerProps.users" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Broker.Users</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-users">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-users</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> or (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> or <a class="reference internal" href="#&#64;aws-cdk/aws-amazonmq.CfnBroker.UserProperty" title="&#64;aws-cdk/aws-amazonmq.CfnBroker.UserProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserProperty</span></code></a>)[]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps.configuration">
+<code class="descname">configuration</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBrokerProps.configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Broker.Configuration</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-configuration">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-configuration</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> or <a class="reference internal" href="#&#64;aws-cdk/aws-amazonmq.CfnBroker.ConfigurationIdProperty" title="&#64;aws-cdk/aws-amazonmq.CfnBroker.ConfigurationIdProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationIdProperty</span></code></a> <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps.logs">
+<code class="descname">logs</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBrokerProps.logs" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Broker.Logs</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-logs">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-logs</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> or <a class="reference internal" href="#&#64;aws-cdk/aws-amazonmq.CfnBroker.LogListProperty" title="&#64;aws-cdk/aws-amazonmq.CfnBroker.LogListProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">LogListProperty</span></code></a> <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps.maintenanceWindowStartTime">
+<code class="descname">maintenanceWindowStartTime</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBrokerProps.maintenanceWindowStartTime" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Broker.MaintenanceWindowStartTime</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-maintenancewindowstarttime">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-maintenancewindowstarttime</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> or <a class="reference internal" href="#&#64;aws-cdk/aws-amazonmq.CfnBroker.MaintenanceWindowProperty" title="&#64;aws-cdk/aws-amazonmq.CfnBroker.MaintenanceWindowProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">MaintenanceWindowProperty</span></code></a> <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps.securityGroups">
+<code class="descname">securityGroups</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBrokerProps.securityGroups" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Broker.SecurityGroups</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-securitygroups">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-securitygroups</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> or (string or <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a>)[] <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps.subnetIds">
+<code class="descname">subnetIds</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBrokerProps.subnetIds" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Broker.SubnetIds</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-subnetids">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-subnetids</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> or (string or <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a>)[] <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnBrokerProps.tags">
+<code class="descname">tags</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnBrokerProps.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Broker.Tags</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-tags">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-broker.html#cfn-amazonmq-broker-tags</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> or (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> or <a class="reference internal" href="#&#64;aws-cdk/aws-amazonmq.CfnBroker.TagsEntryProperty" title="&#64;aws-cdk/aws-amazonmq.CfnBroker.TagsEntryProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">TagsEntryProperty</span></code></a>)[] <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="cfnconfiguration">
+<h3>CfnConfiguration<a class="headerlink" href="#cfnconfiguration" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration">
+<em class="property">class </em><code class="descclassname">&#64;aws-cdk/aws-amazonmq.</code><code class="descname">CfnConfiguration</code><span class="sig-paren">(</span><em>scope</em>, <em>id</em>, <em>props</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.AmazonMQ</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.amazonmq.CfnConfiguration</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">CfnConfiguration</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnConfiguration</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Extends:</th><td class="field-body"><p class="first"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource" title="&#64;aws-cdk/cdk.Resource"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>scope</strong> (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct" title="&#64;aws-cdk/cdk.Construct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a>) – scope in which this resource is defined</li>
+<li><strong>id</strong> (<em>string</em>) – scoped id of the resource</li>
+<li><strong>props</strong> (<a class="reference internal" href="#&#64;aws-cdk/aws-amazonmq.CfnConfigurationProps" title="&#64;aws-cdk/aws-amazonmq.CfnConfigurationProps"><code class="xref py py-class docutils literal notranslate"><span class="pre">CfnConfigurationProps</span></code></a>) – resource properties</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.renderProperties">
+<code class="descname">renderProperties</code><span class="sig-paren">(</span><em>properties</em><span class="sig-paren">)</span> &#x2192; string =&gt; any<a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.renderProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Overrides</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.renderProperties" title="&#64;aws-cdk/cdk.Resource.renderProperties"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource.renderProperties()</span></code></a></p>
+<p><em>Protected method</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>properties</strong> (<em>any</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">string =&gt; any</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.resourceTypeName">
+<code class="descname">resourceTypeName</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.resourceTypeName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The CloudFormation resource type name for this resource class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em> <em>(static)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.configurationArn">
+<code class="descname">configurationArn</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.configurationArn" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.configurationId">
+<code class="descname">configurationId</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.configurationId" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.configurationRevision">
+<code class="descname">configurationRevision</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.configurationRevision" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.propertyOverrides">
+<code class="descname">propertyOverrides</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.propertyOverrides" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#&#64;aws-cdk/aws-amazonmq.CfnConfigurationProps" title="&#64;aws-cdk/aws-amazonmq.CfnConfigurationProps"><code class="xref py py-class docutils literal notranslate"><span class="pre">CfnConfigurationProps</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.TagsEntryProperty">
+<em class="property">class </em><code class="descname">TagsEntryProperty</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.TagsEntryProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.AmazonMQ</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.amazonmq.CfnConfiguration.TagsEntryProperty</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// CfnConfiguration.TagsEntryProperty is an interface</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnConfiguration</span><span class="p">.</span><span class="nx">TagsEntryProperty</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.TagsEntryProperty.key">
+<code class="descname">key</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.TagsEntryProperty.key" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnConfiguration.TagsEntryProperty.Key</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-configuration-tagsentry.html#cfn-amazonmq-configuration-tagsentry-key">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-configuration-tagsentry.html#cfn-amazonmq-configuration-tagsentry-key</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.TagsEntryProperty.value">
+<code class="descname">value</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.TagsEntryProperty.value" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnConfiguration.TagsEntryProperty.Value</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-configuration-tagsentry.html#cfn-amazonmq-configuration-tagsentry-value">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-configuration-tagsentry.html#cfn-amazonmq-configuration-tagsentry-value</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.toString">
+<code class="descname">toString</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; string<a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.toString" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.toString" title="&#64;aws-cdk/cdk.Construct.toString"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Returns a string representation of this construct.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; string[]<a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.validate" title="&#64;aws-cdk/cdk.Construct.validate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Validate the current construct.</p>
+<p>This method can be implemented by derived constructs in order to perform</p>
+<p>validation logic. It is called on all constructs before synthesis.</p>
+<p><em>Protected method</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">An array of validation error messages, or an empty array if there the construct is valid.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">string[]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.dependencyRoots">
+<code class="descname">dependencyRoots</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.dependencyRoots" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.dependencyRoots" title="&#64;aws-cdk/cdk.Construct.dependencyRoots"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>The set of constructs that form the root of this dependable</p>
+<p>All resources under all returned constructs are included in the ordering</p>
+<p>dependency.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.IConstruct" title="&#64;aws-cdk/cdk.IConstruct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.IConstruct</span></code></a>[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.node">
+<code class="descname">node</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.node" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.node" title="&#64;aws-cdk/cdk.Construct.node"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Construct node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.ConstructNode" title="&#64;aws-cdk/cdk.ConstructNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.ConstructNode</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.ref">
+<code class="descname">ref</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.ref" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Referenceable.ref" title="&#64;aws-cdk/cdk.Referenceable.ref"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Referenceable</span></code></a></p>
+<p>Returns a token to a CloudFormation { Ref } that references this entity based on it’s logical ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.addDeletionOverride">
+<code class="descname">addDeletionOverride</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.addDeletionOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addDeletionOverride" title="&#64;aws-cdk/cdk.Resource.addDeletionOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Syntactic sugar for <cite>addOverride(path, undefined)</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<em>string</em>) – The path of the value to delete</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.addDependsOn">
+<code class="descname">addDependsOn</code><span class="sig-paren">(</span><em>resource</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.addDependsOn" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addDependsOn" title="&#64;aws-cdk/cdk.Resource.addDependsOn"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Indicates that this resource depends on another resource and cannot be provisioned</p>
+<p>unless the other resource has been successfully provisioned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>resource</strong> (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource" title="&#64;aws-cdk/cdk.Resource"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.addOverride">
+<code class="descname">addOverride</code><span class="sig-paren">(</span><em>path</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.addOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addOverride" title="&#64;aws-cdk/cdk.Resource.addOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Adds an override to the synthesized CloudFormation resource. To add a</p>
+<p>property override, either use <cite>addPropertyOverride</cite> or prefix <cite>path</cite> with</p>
+<p>“Properties.” (i.e. <cite>Properties.TopicName</cite>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> (<em>string</em>) – The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.</li>
+<li><strong>value</strong> (<em>any</em>) – The value. Could be primitive or complex.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.addPropertyDeletionOverride">
+<code class="descname">addPropertyDeletionOverride</code><span class="sig-paren">(</span><em>propertyPath</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.addPropertyDeletionOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addPropertyDeletionOverride" title="&#64;aws-cdk/cdk.Resource.addPropertyDeletionOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Adds an override that deletes the value of a property from the resource definition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>propertyPath</strong> (<em>string</em>) – The path to the property.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.addPropertyOverride">
+<code class="descname">addPropertyOverride</code><span class="sig-paren">(</span><em>propertyPath</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.addPropertyOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addPropertyOverride" title="&#64;aws-cdk/cdk.Resource.addPropertyOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Adds an override to a resource property.</p>
+<p>Syntactic sugar for <cite>addOverride(“Properties.&lt;…&gt;”, value)</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>propertyPath</strong> (<em>string</em>) – The path of the property</li>
+<li><strong>value</strong> (<em>any</em>) – The value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.getAtt">
+<code class="descname">getAtt</code><span class="sig-paren">(</span><em>attributeName</em><span class="sig-paren">)</span> &#x2192; &#64;aws-cdk/cdk.CfnReference<a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.getAtt" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.getAtt" title="&#64;aws-cdk/cdk.Resource.getAtt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Returns a token for an runtime attribute of this resource.</p>
+<p>Ideally, use generated attribute accessors (e.g. <cite>resource.arn</cite>), but this can be used for future compatibility</p>
+<p>in case there is no generated attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>attributeName</strong> (<em>string</em>) – The name of the attribute.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.CfnReference" title="&#64;aws-cdk/cdk.CfnReference"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.CfnReference</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.toCloudFormation">
+<code class="descname">toCloudFormation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; json<a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.toCloudFormation" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.toCloudFormation" title="&#64;aws-cdk/cdk.Resource.toCloudFormation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Emits CloudFormation for this resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">json</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.options">
+<code class="descname">options</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.options" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.options" title="&#64;aws-cdk/cdk.Resource.options"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Options for this resource, such as condition, update policy etc.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.ResourceOptions" title="&#64;aws-cdk/cdk.ResourceOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.ResourceOptions</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.properties">
+<code class="descname">properties</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.properties" title="&#64;aws-cdk/cdk.Resource.properties"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>AWS resource properties.</p>
+<p>This object is rendered via a call to “renderProperties(this.properties)”.</p>
+<p><em>Protected property</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">any <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.resourceType">
+<code class="descname">resourceType</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.resourceType" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.resourceType" title="&#64;aws-cdk/cdk.Resource.resourceType"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>AWS resource type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.untypedPropertyOverrides">
+<code class="descname">untypedPropertyOverrides</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.untypedPropertyOverrides" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.untypedPropertyOverrides" title="&#64;aws-cdk/cdk.Resource.untypedPropertyOverrides"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>AWS resource property overrides.</p>
+<p>During synthesis, the method “renderProperties(this.overrides)” is called</p>
+<p>with this object, and merged on top of the output of</p>
+<p>“renderProperties(this.properties)”.</p>
+<p>Derived classes should expose a strongly-typed version of this object as</p>
+<p>a public property called <cite>propertyOverrides</cite>.</p>
+<p><em>Protected property</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">any <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.overrideLogicalId">
+<code class="descname">overrideLogicalId</code><span class="sig-paren">(</span><em>newLogicalId</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.overrideLogicalId" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.overrideLogicalId" title="&#64;aws-cdk/cdk.StackElement.overrideLogicalId"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>Overrides the auto-generated logical ID with a specific ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>newLogicalId</strong> (<em>string</em>) – The new logical ID to use for this stack element.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.prepare">
+<code class="descname">prepare</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.prepare" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.prepare" title="&#64;aws-cdk/cdk.StackElement.prepare"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>Automatically detect references in this StackElement</p>
+<p><em>Protected method</em></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.creationStackTrace">
+<code class="descname">creationStackTrace</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.creationStackTrace" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.creationStackTrace" title="&#64;aws-cdk/cdk.StackElement.creationStackTrace"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.logicalId">
+<code class="descname">logicalId</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.logicalId" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.logicalId" title="&#64;aws-cdk/cdk.StackElement.logicalId"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>The logical ID for this CloudFormation stack element. The logical ID of the element</p>
+<p>is calculated from the path of the resource node in the construct tree.</p>
+<p>To override this value, use <cite>overrideLogicalId(newLogicalId)</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.stackPath">
+<code class="descname">stackPath</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfiguration.stackPath" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.stackPath" title="&#64;aws-cdk/cdk.StackElement.stackPath"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>Return the path with respect to the stack</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="cfnconfigurationassociation">
+<h3>CfnConfigurationAssociation<a class="headerlink" href="#cfnconfigurationassociation" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation">
+<em class="property">class </em><code class="descclassname">&#64;aws-cdk/aws-amazonmq.</code><code class="descname">CfnConfigurationAssociation</code><span class="sig-paren">(</span><em>scope</em>, <em>id</em>, <em>props</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.AmazonMQ</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">CfnConfigurationAssociation</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnConfigurationAssociation</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Extends:</th><td class="field-body"><p class="first"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource" title="&#64;aws-cdk/cdk.Resource"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>scope</strong> (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct" title="&#64;aws-cdk/cdk.Construct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a>) – scope in which this resource is defined</li>
+<li><strong>id</strong> (<em>string</em>) – scoped id of the resource</li>
+<li><strong>props</strong> (<a class="reference internal" href="#&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociationProps" title="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociationProps"><code class="xref py py-class docutils literal notranslate"><span class="pre">CfnConfigurationAssociationProps</span></code></a>) – resource properties</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.renderProperties">
+<code class="descname">renderProperties</code><span class="sig-paren">(</span><em>properties</em><span class="sig-paren">)</span> &#x2192; string =&gt; any<a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.renderProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Overrides</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.renderProperties" title="&#64;aws-cdk/cdk.Resource.renderProperties"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource.renderProperties()</span></code></a></p>
+<p><em>Protected method</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>properties</strong> (<em>any</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">string =&gt; any</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.resourceTypeName">
+<code class="descname">resourceTypeName</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.resourceTypeName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The CloudFormation resource type name for this resource class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em> <em>(static)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.configurationAssociationId">
+<code class="descname">configurationAssociationId</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.configurationAssociationId" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.propertyOverrides">
+<code class="descname">propertyOverrides</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.propertyOverrides" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociationProps" title="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociationProps"><code class="xref py py-class docutils literal notranslate"><span class="pre">CfnConfigurationAssociationProps</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.ConfigurationIdProperty">
+<em class="property">class </em><code class="descname">ConfigurationIdProperty</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.ConfigurationIdProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.AmazonMQ</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociation.ConfigurationIdProperty</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// CfnConfigurationAssociation.ConfigurationIdProperty is an interface</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnConfigurationAssociation</span><span class="p">.</span><span class="nx">ConfigurationIdProperty</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.ConfigurationIdProperty.id">
+<code class="descname">id</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.ConfigurationIdProperty.id" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnConfigurationAssociation.ConfigurationIdProperty.Id</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-configurationassociation-configurationid.html#cfn-amazonmq-configurationassociation-configurationid-id">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-configurationassociation-configurationid.html#cfn-amazonmq-configurationassociation-configurationid-id</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.ConfigurationIdProperty.revision">
+<code class="descname">revision</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.ConfigurationIdProperty.revision" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnConfigurationAssociation.ConfigurationIdProperty.Revision</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-configurationassociation-configurationid.html#cfn-amazonmq-configurationassociation-configurationid-revision">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-configurationassociation-configurationid.html#cfn-amazonmq-configurationassociation-configurationid-revision</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">number or <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.toString">
+<code class="descname">toString</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; string<a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.toString" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.toString" title="&#64;aws-cdk/cdk.Construct.toString"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Returns a string representation of this construct.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; string[]<a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.validate" title="&#64;aws-cdk/cdk.Construct.validate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Validate the current construct.</p>
+<p>This method can be implemented by derived constructs in order to perform</p>
+<p>validation logic. It is called on all constructs before synthesis.</p>
+<p><em>Protected method</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">An array of validation error messages, or an empty array if there the construct is valid.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">string[]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.dependencyRoots">
+<code class="descname">dependencyRoots</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.dependencyRoots" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.dependencyRoots" title="&#64;aws-cdk/cdk.Construct.dependencyRoots"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>The set of constructs that form the root of this dependable</p>
+<p>All resources under all returned constructs are included in the ordering</p>
+<p>dependency.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.IConstruct" title="&#64;aws-cdk/cdk.IConstruct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.IConstruct</span></code></a>[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.node">
+<code class="descname">node</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.node" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.node" title="&#64;aws-cdk/cdk.Construct.node"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Construct node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.ConstructNode" title="&#64;aws-cdk/cdk.ConstructNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.ConstructNode</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.ref">
+<code class="descname">ref</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.ref" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Referenceable.ref" title="&#64;aws-cdk/cdk.Referenceable.ref"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Referenceable</span></code></a></p>
+<p>Returns a token to a CloudFormation { Ref } that references this entity based on it’s logical ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.addDeletionOverride">
+<code class="descname">addDeletionOverride</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.addDeletionOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addDeletionOverride" title="&#64;aws-cdk/cdk.Resource.addDeletionOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Syntactic sugar for <cite>addOverride(path, undefined)</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<em>string</em>) – The path of the value to delete</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.addDependsOn">
+<code class="descname">addDependsOn</code><span class="sig-paren">(</span><em>resource</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.addDependsOn" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addDependsOn" title="&#64;aws-cdk/cdk.Resource.addDependsOn"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Indicates that this resource depends on another resource and cannot be provisioned</p>
+<p>unless the other resource has been successfully provisioned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>resource</strong> (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource" title="&#64;aws-cdk/cdk.Resource"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.addOverride">
+<code class="descname">addOverride</code><span class="sig-paren">(</span><em>path</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.addOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addOverride" title="&#64;aws-cdk/cdk.Resource.addOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Adds an override to the synthesized CloudFormation resource. To add a</p>
+<p>property override, either use <cite>addPropertyOverride</cite> or prefix <cite>path</cite> with</p>
+<p>“Properties.” (i.e. <cite>Properties.TopicName</cite>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> (<em>string</em>) – The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.</li>
+<li><strong>value</strong> (<em>any</em>) – The value. Could be primitive or complex.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.addPropertyDeletionOverride">
+<code class="descname">addPropertyDeletionOverride</code><span class="sig-paren">(</span><em>propertyPath</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.addPropertyDeletionOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addPropertyDeletionOverride" title="&#64;aws-cdk/cdk.Resource.addPropertyDeletionOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Adds an override that deletes the value of a property from the resource definition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>propertyPath</strong> (<em>string</em>) – The path to the property.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.addPropertyOverride">
+<code class="descname">addPropertyOverride</code><span class="sig-paren">(</span><em>propertyPath</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.addPropertyOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addPropertyOverride" title="&#64;aws-cdk/cdk.Resource.addPropertyOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Adds an override to a resource property.</p>
+<p>Syntactic sugar for <cite>addOverride(“Properties.&lt;…&gt;”, value)</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>propertyPath</strong> (<em>string</em>) – The path of the property</li>
+<li><strong>value</strong> (<em>any</em>) – The value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.getAtt">
+<code class="descname">getAtt</code><span class="sig-paren">(</span><em>attributeName</em><span class="sig-paren">)</span> &#x2192; &#64;aws-cdk/cdk.CfnReference<a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.getAtt" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.getAtt" title="&#64;aws-cdk/cdk.Resource.getAtt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Returns a token for an runtime attribute of this resource.</p>
+<p>Ideally, use generated attribute accessors (e.g. <cite>resource.arn</cite>), but this can be used for future compatibility</p>
+<p>in case there is no generated attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>attributeName</strong> (<em>string</em>) – The name of the attribute.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.CfnReference" title="&#64;aws-cdk/cdk.CfnReference"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.CfnReference</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.toCloudFormation">
+<code class="descname">toCloudFormation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; json<a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.toCloudFormation" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.toCloudFormation" title="&#64;aws-cdk/cdk.Resource.toCloudFormation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Emits CloudFormation for this resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">json</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.options">
+<code class="descname">options</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.options" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.options" title="&#64;aws-cdk/cdk.Resource.options"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Options for this resource, such as condition, update policy etc.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.ResourceOptions" title="&#64;aws-cdk/cdk.ResourceOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.ResourceOptions</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.properties">
+<code class="descname">properties</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.properties" title="&#64;aws-cdk/cdk.Resource.properties"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>AWS resource properties.</p>
+<p>This object is rendered via a call to “renderProperties(this.properties)”.</p>
+<p><em>Protected property</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">any <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.resourceType">
+<code class="descname">resourceType</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.resourceType" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.resourceType" title="&#64;aws-cdk/cdk.Resource.resourceType"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>AWS resource type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.untypedPropertyOverrides">
+<code class="descname">untypedPropertyOverrides</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.untypedPropertyOverrides" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.untypedPropertyOverrides" title="&#64;aws-cdk/cdk.Resource.untypedPropertyOverrides"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>AWS resource property overrides.</p>
+<p>During synthesis, the method “renderProperties(this.overrides)” is called</p>
+<p>with this object, and merged on top of the output of</p>
+<p>“renderProperties(this.properties)”.</p>
+<p>Derived classes should expose a strongly-typed version of this object as</p>
+<p>a public property called <cite>propertyOverrides</cite>.</p>
+<p><em>Protected property</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">any <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.overrideLogicalId">
+<code class="descname">overrideLogicalId</code><span class="sig-paren">(</span><em>newLogicalId</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.overrideLogicalId" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.overrideLogicalId" title="&#64;aws-cdk/cdk.StackElement.overrideLogicalId"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>Overrides the auto-generated logical ID with a specific ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>newLogicalId</strong> (<em>string</em>) – The new logical ID to use for this stack element.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.prepare">
+<code class="descname">prepare</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.prepare" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.prepare" title="&#64;aws-cdk/cdk.StackElement.prepare"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>Automatically detect references in this StackElement</p>
+<p><em>Protected method</em></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.creationStackTrace">
+<code class="descname">creationStackTrace</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.creationStackTrace" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.creationStackTrace" title="&#64;aws-cdk/cdk.StackElement.creationStackTrace"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.logicalId">
+<code class="descname">logicalId</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.logicalId" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.logicalId" title="&#64;aws-cdk/cdk.StackElement.logicalId"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>The logical ID for this CloudFormation stack element. The logical ID of the element</p>
+<p>is calculated from the path of the resource node in the construct tree.</p>
+<p>To override this value, use <cite>overrideLogicalId(newLogicalId)</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.stackPath">
+<code class="descname">stackPath</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociation.stackPath" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.stackPath" title="&#64;aws-cdk/cdk.StackElement.stackPath"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>Return the path with respect to the stack</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="cfnconfigurationassociationprops-interface">
+<h3>CfnConfigurationAssociationProps (interface)<a class="headerlink" href="#cfnconfigurationassociationprops-interface" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociationProps">
+<em class="property">class </em><code class="descclassname">&#64;aws-cdk/aws-amazonmq.</code><code class="descname">CfnConfigurationAssociationProps</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociationProps" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.AmazonMQ</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.amazonmq.CfnConfigurationAssociationProps</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// CfnConfigurationAssociationProps is an interface</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnConfigurationAssociationProps</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociationProps.broker">
+<code class="descname">broker</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociationProps.broker" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::ConfigurationAssociation.Broker</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configurationassociation.html#cfn-amazonmq-configurationassociation-broker">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configurationassociation.html#cfn-amazonmq-configurationassociation-broker</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociationProps.configuration">
+<code class="descname">configuration</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationAssociationProps.configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::ConfigurationAssociation.Configuration</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configurationassociation.html#cfn-amazonmq-configurationassociation-configuration">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configurationassociation.html#cfn-amazonmq-configurationassociation-configuration</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> or <a class="reference internal" href="#&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.ConfigurationIdProperty" title="&#64;aws-cdk/aws-amazonmq.CfnConfigurationAssociation.ConfigurationIdProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">ConfigurationIdProperty</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="cfnconfigurationprops-interface">
+<h3>CfnConfigurationProps (interface)<a class="headerlink" href="#cfnconfigurationprops-interface" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationProps">
+<em class="property">class </em><code class="descclassname">&#64;aws-cdk/aws-amazonmq.</code><code class="descname">CfnConfigurationProps</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationProps" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.AmazonMQ</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.amazonmq.CfnConfigurationProps</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// CfnConfigurationProps is an interface</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnConfigurationProps</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-amazonmq&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationProps.data">
+<code class="descname">data</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationProps.data" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Configuration.Data</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-data">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-data</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationProps.engineType">
+<code class="descname">engineType</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationProps.engineType" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Configuration.EngineType</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-enginetype">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-enginetype</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationProps.engineVersion">
+<code class="descname">engineVersion</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationProps.engineVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Configuration.EngineVersion</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-engineversion">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-engineversion</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationProps.name">
+<code class="descname">name</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationProps.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Configuration.Name</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-name">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-name</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationProps.description">
+<code class="descname">description</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationProps.description" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Configuration.Description</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-description">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-description</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-amazonmq.CfnConfigurationProps.tags">
+<code class="descname">tags</code><a class="headerlink" href="#@aws-cdk/aws-amazonmq.CfnConfigurationProps.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::AmazonMQ::Configuration.Tags</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-tags">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-tags</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> or (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> or <a class="reference internal" href="#&#64;aws-cdk/aws-amazonmq.CfnConfiguration.TagsEntryProperty" title="&#64;aws-cdk/aws-amazonmq.CfnConfiguration.TagsEntryProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">TagsEntryProperty</span></code></a>)[] <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="_aws-cdk_aws-apigateway.html" class="btn btn-neutral float-right" title="@aws-cdk/aws-apigateway" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="_aws-cdk_assets-docker.html" class="btn btn-neutral" title="AWS CDK Docker Image Assets" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Amazon Web Services.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.25.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/sphinx_tabs/tabs.js"></script>
+      <script type="text/javascript" src="../_static/sphinx_tabs/semantic-ui-2.2.10/tab.min.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

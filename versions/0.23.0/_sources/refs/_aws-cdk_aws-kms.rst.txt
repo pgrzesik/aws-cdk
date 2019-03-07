@@ -1,0 +1,1822 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"+soU6nHSb7tO3OI7h5mlXHYDo+W1MB0tfJxj0SaP+PY="}
+
+@aws-cdk/aws-kms
+================
+
+.. mdinclude:: ./__aws-cdk_aws-kms.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.KMS/0.23.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.KMS" Version="0.23.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.KMS --version 0.23.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.KMS" version="0.23.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/kms/0.23.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:kms:jar:0.23.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="kms" rev="0.23.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>kms</artifactId>
+           <version>0.23.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:kms:0.23.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='kms', version='0.23.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-kms/v/0.23.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-kms@0.23.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-kms": "^0.23.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-kms@0.23.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-kms/v/0.23.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-kms@0.23.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-kms": "^0.23.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-kms@0.23.0
+
+
+
+.. py:module:: @aws-cdk/aws-kms
+
+CfnAlias
+^^^^^^^^
+
+.. py:class:: CfnAlias(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KMS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kms.CfnAlias;
+
+      .. code-tab:: javascript
+
+         const { CfnAlias } = require('@aws-cdk/aws-kms');
+
+      .. code-tab:: typescript
+
+         import { CfnAlias } from '@aws-cdk/aws-kms';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-kms.CfnAliasProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: aliasName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-kms.CfnAliasProps`\  *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnAliasProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnAliasProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KMS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kms.CfnAliasProps;
+
+      .. code-tab:: javascript
+
+         // CfnAliasProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnAliasProps } from '@aws-cdk/aws-kms';
+
+
+
+
+
+   .. py:attribute:: aliasName
+
+      ``AWS::KMS::Alias.AliasName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-alias.html#cfn-kms-alias-aliasname
+
+
+      :type: string
+
+
+   .. py:attribute:: targetKeyId
+
+      ``AWS::KMS::Alias.TargetKeyId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-alias.html#cfn-kms-alias-targetkeyid
+
+
+      :type: string
+
+
+CfnKey
+^^^^^^
+
+.. py:class:: CfnKey(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KMS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kms.CfnKey;
+
+      .. code-tab:: javascript
+
+         const { CfnKey } = require('@aws-cdk/aws-kms');
+
+      .. code-tab:: typescript
+
+         import { CfnKey } from '@aws-cdk/aws-kms';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-kms.CfnKeyProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: keyArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: keyId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-kms.CfnKeyProps`\  *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnKeyProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnKeyProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KMS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kms.CfnKeyProps;
+
+      .. code-tab:: javascript
+
+         // CfnKeyProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnKeyProps } from '@aws-cdk/aws-kms';
+
+
+
+
+
+   .. py:attribute:: keyPolicy
+
+      ``AWS::KMS::Key.KeyPolicy``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-keypolicy
+
+
+      :type: json or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:attribute:: description
+
+      ``AWS::KMS::Key.Description``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-description
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: enabled
+
+      ``AWS::KMS::Key.Enabled``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-enabled
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: enableKeyRotation
+
+      ``AWS::KMS::Key.EnableKeyRotation``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-enablekeyrotation
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: keyUsage
+
+      ``AWS::KMS::Key.KeyUsage``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-keyusage
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: pendingWindowInDays
+
+      ``AWS::KMS::Key.PendingWindowInDays``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-pendingwindowindays
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: tags
+
+      ``AWS::KMS::Key.Tags``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kms-key.html#cfn-kms-key-tags
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`@aws-cdk/cdk.Tag`\ )[] *(optional)*
+
+
+EncryptionKey
+^^^^^^^^^^^^^
+
+.. py:class:: EncryptionKey(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KMS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kms.EncryptionKey;
+
+      .. code-tab:: javascript
+
+         const { EncryptionKey } = require('@aws-cdk/aws-kms');
+
+      .. code-tab:: typescript
+
+         import { EncryptionKey } from '@aws-cdk/aws-kms';
+
+
+
+   Defines a KMS key.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-kms.EncryptionKeyBase`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-kms.EncryptionKeyProps`\  *(optional)*
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-kms.IEncryptionKey
+
+      Defines an imported encryption key.
+
+      
+
+      `ref` can be obtained either via a call to `key.export()` or using
+
+      literals.
+
+      
+
+      For example:
+
+      
+
+         const keyAttr = key.export();
+
+         const keyRef1 = EncryptionKey.import(this, 'MyImportedKey1', keyAttr);
+
+         const keyRef2 = EncryptionKey.import(this, 'MyImportedKey2', {
+
+           keyArn: new KeyArn('arn:aws:kms:...')
+
+         });
+
+
+
+      :param scope: The parent construct.
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: The name of the construct.
+      :type id: string
+      :param props: The key reference.
+      :type props: :py:class:`~@aws-cdk/aws-kms.EncryptionKeyImportProps`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-kms.IEncryptionKey`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-kms.EncryptionKeyImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-kms.EncryptionKeyBase.export`
+
+      Exports this key from the current stack.
+
+
+
+      :return: a key ref which can be used in a call to `EncryptionKey.import(ref)`.
+      :rtype: :py:class:`~@aws-cdk/aws-kms.EncryptionKeyImportProps`\ 
+
+
+   .. py:attribute:: keyArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-kms.EncryptionKeyBase.keyArn`
+
+      The ARN of the key.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      Manage tags for this construct and children
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+
+   .. py:attribute:: policy
+
+      *Implements* :py:meth:`@aws-cdk/aws-kms.EncryptionKeyBase.policy`
+
+      Optional policy document that represents the resource policy of this key.
+
+      
+
+      If specified, addToResourcePolicy can be used to edit this policy.
+
+      Otherwise this method will no-op.
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/aws-iam.PolicyDocument`\  *(optional)* *(readonly)*
+
+
+   .. py:method:: addAlias(alias) -> @aws-cdk/aws-kms.EncryptionKeyAlias
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-kms.EncryptionKeyBase <@aws-cdk/aws-kms.EncryptionKeyBase.addAlias>`
+
+      Defines a new alias for the key.
+
+
+
+      :param alias: 
+      :type alias: string
+      :rtype: :py:class:`~@aws-cdk/aws-kms.EncryptionKeyAlias`\ 
+
+
+   .. py:method:: addToResourcePolicy(statement, [allowNoOp])
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-kms.EncryptionKeyBase <@aws-cdk/aws-kms.EncryptionKeyBase.addToResourcePolicy>`
+
+      Adds a statement to the KMS key resource policy.
+
+
+
+      :param statement: The policy statement to add
+      :type statement: :py:class:`@aws-cdk/aws-iam.PolicyStatement`\ 
+      :param allowNoOp: If this is set to `false` and there is no policy defined (i.e. external key), the operation will fail. Otherwise, it will no-op.
+      :type allowNoOp: boolean *(optional)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+EncryptionKeyAlias
+^^^^^^^^^^^^^^^^^^
+
+.. py:class:: EncryptionKeyAlias(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KMS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kms.EncryptionKeyAlias;
+
+      .. code-tab:: javascript
+
+         const { EncryptionKeyAlias } = require('@aws-cdk/aws-kms');
+
+      .. code-tab:: typescript
+
+         import { EncryptionKeyAlias } from '@aws-cdk/aws-kms';
+
+
+
+   Defines a display name for a customer master key (CMK) in AWS Key Management
+
+   Service (AWS KMS). Using an alias to refer to a key can help you simplify key
+
+   management. For example, when rotating keys, you can just update the alias
+
+   mapping instead of tracking and changing key IDs. For more information, see
+
+   Working with Aliases in the AWS Key Management Service Developer Guide.
+
+   
+
+   You can also add an alias for a key by calling `key.addAlias(alias)`.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-kms.EncryptionKeyAliasProps`\ 
+
+   .. py:attribute:: aliasName
+
+      The name of the alias.
+
+
+
+      :type: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+EncryptionKeyAliasProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: EncryptionKeyAliasProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KMS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kms.EncryptionKeyAliasProps;
+
+      .. code-tab:: javascript
+
+         // EncryptionKeyAliasProps is an interface
+
+      .. code-tab:: typescript
+
+         import { EncryptionKeyAliasProps } from '@aws-cdk/aws-kms';
+
+
+
+
+
+   .. py:attribute:: alias
+
+      The name of the alias. The name must start with alias followed by a
+
+      forward slash, such as alias/. You can't specify aliases that begin with
+
+      alias/AWS. These aliases are reserved.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: key
+
+      The ID of the key for which you are creating the alias. Specify the key's
+
+      globally unique identifier or Amazon Resource Name (ARN). You can't
+
+      specify another alias.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-kms.IEncryptionKey`\ 
+
+
+EncryptionKeyBase
+^^^^^^^^^^^^^^^^^
+
+.. py:class:: EncryptionKeyBase(scope, id)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KMS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kms.EncryptionKeyBase;
+
+      .. code-tab:: javascript
+
+         const { EncryptionKeyBase } = require('@aws-cdk/aws-kms');
+
+      .. code-tab:: typescript
+
+         import { EncryptionKeyBase } from '@aws-cdk/aws-kms';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :abstract: Yes
+   :param scope: The scope in which to define this construct
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: The scoped construct ID. Must be unique amongst siblings. If the ID includes a path separator (`/`), then it will be replaced by double dash `--`.
+   :type id: string
+
+   .. py:method:: addAlias(alias) -> @aws-cdk/aws-kms.EncryptionKeyAlias
+
+      Defines a new alias for the key.
+
+
+
+      :param alias: 
+      :type alias: string
+      :rtype: :py:class:`~@aws-cdk/aws-kms.EncryptionKeyAlias`\ 
+
+
+   .. py:method:: addToResourcePolicy(statement, [allowNoOp])
+
+      Adds a statement to the KMS key resource policy.
+
+
+
+      :param statement: The policy statement to add
+      :type statement: :py:class:`@aws-cdk/aws-iam.PolicyStatement`\ 
+      :param allowNoOp: If this is set to `false` and there is no policy defined (i.e. external key), the operation will fail. Otherwise, it will no-op.
+      :type allowNoOp: boolean *(optional)*
+
+
+   .. py:method:: export() -> @aws-cdk/aws-kms.EncryptionKeyImportProps
+
+      :rtype: :py:class:`~@aws-cdk/aws-kms.EncryptionKeyImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: keyArn
+
+      The ARN of the key.
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: policy
+
+      Optional policy document that represents the resource policy of this key.
+
+      
+
+      If specified, addToResourcePolicy can be used to edit this policy.
+
+      Otherwise this method will no-op.
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/aws-iam.PolicyDocument`\  *(optional)* *(readonly)* *(abstract)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+EncryptionKeyImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: EncryptionKeyImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KMS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kms.EncryptionKeyImportProps;
+
+      .. code-tab:: javascript
+
+         // EncryptionKeyImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { EncryptionKeyImportProps } from '@aws-cdk/aws-kms';
+
+
+
+
+
+   .. py:attribute:: keyArn
+
+      The ARN of the external KMS key.
+
+
+
+      :type: string
+
+
+EncryptionKeyProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: EncryptionKeyProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KMS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kms.EncryptionKeyProps;
+
+      .. code-tab:: javascript
+
+         // EncryptionKeyProps is an interface
+
+      .. code-tab:: typescript
+
+         import { EncryptionKeyProps } from '@aws-cdk/aws-kms';
+
+
+
+   Construction properties for a KMS Key object
+
+
+
+
+
+   .. py:attribute:: description
+
+      A description of the key. Use a description that helps your users decide
+
+      whether the key is appropriate for a particular task.
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: enabled
+
+      Indicates whether the key is available for use.
+
+
+
+      :type: boolean *(optional)*
+      :default: Key is enabled
+
+
+   .. py:attribute:: enableKeyRotation
+
+      Indicates whether AWS KMS rotates the key.
+
+
+
+      :type: boolean *(optional)*
+      :default: false
+
+
+   .. py:attribute:: policy
+
+      Custom policy document to attach to the KMS key.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-iam.PolicyDocument`\  *(optional)*
+      :default: A policy document with permissions for the account root to
+administer the key will be created.
+
+
+   .. py:attribute:: tags
+
+      The AWS resource tags to associate with the KMS key.
+
+
+
+      :type: string => string *(optional)*
+
+
+IEncryptionKey (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IEncryptionKey
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KMS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kms.IEncryptionKey;
+
+      .. code-tab:: javascript
+
+         // IEncryptionKey is an interface
+
+      .. code-tab:: typescript
+
+         import { IEncryptionKey } from '@aws-cdk/aws-kms';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: keyArn
+
+      The ARN of the key.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addAlias(alias) -> @aws-cdk/aws-kms.EncryptionKeyAlias
+
+      Defines a new alias for the key.
+
+
+
+      :param alias: 
+      :type alias: string
+      :rtype: :py:class:`~@aws-cdk/aws-kms.EncryptionKeyAlias`\ 
+      :abstract: Yes
+
+
+   .. py:method:: addToResourcePolicy(statement, [allowNoOp])
+
+      Adds a statement to the KMS key resource policy.
+
+
+
+      :param statement: The policy statement to add
+      :type statement: :py:class:`@aws-cdk/aws-iam.PolicyStatement`\ 
+      :param allowNoOp: If this is set to `false` and there is no policy defined (i.e. external key), the operation will fail. Otherwise, it will no-op.
+      :type allowNoOp: boolean *(optional)*
+      :abstract: Yes
+
+
+   .. py:method:: export() -> @aws-cdk/aws-kms.EncryptionKeyImportProps
+
+      Exports this key from the current stack.
+
+
+
+      :return: a key ref which can be used in a call to `EncryptionKey.import(ref)`.
+      :rtype: :py:class:`~@aws-cdk/aws-kms.EncryptionKeyImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+

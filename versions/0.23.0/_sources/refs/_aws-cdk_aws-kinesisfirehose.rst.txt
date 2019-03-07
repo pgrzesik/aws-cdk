@@ -1,0 +1,1716 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"N/OSZBH8G1yGgnUqGfPLqvyFPMYPKP3N32xGg0yBsng="}
+
+@aws-cdk/aws-kinesisfirehose
+============================
+
+.. mdinclude:: ./__aws-cdk_aws-kinesisfirehose.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.KinesisFirehose/0.23.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.KinesisFirehose" Version="0.23.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.KinesisFirehose --version 0.23.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.KinesisFirehose" version="0.23.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/kinesisfirehose/0.23.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:kinesisfirehose:jar:0.23.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="kinesisfirehose" rev="0.23.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>kinesisfirehose</artifactId>
+           <version>0.23.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:kinesisfirehose:0.23.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='kinesisfirehose', version='0.23.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-kinesisfirehose/v/0.23.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-kinesisfirehose@0.23.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-kinesisfirehose": "^0.23.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-kinesisfirehose@0.23.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-kinesisfirehose/v/0.23.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-kinesisfirehose@0.23.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-kinesisfirehose": "^0.23.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-kinesisfirehose@0.23.0
+
+
+
+.. py:module:: @aws-cdk/aws-kinesisfirehose
+
+CfnDeliveryStream
+^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDeliveryStream(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KinesisFirehose;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream;
+
+      .. code-tab:: javascript
+
+         const { CfnDeliveryStream } = require('@aws-cdk/aws-kinesisfirehose');
+
+      .. code-tab:: typescript
+
+         import { CfnDeliveryStream } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStreamProps`\  *(optional)*
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: deliveryStreamArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: deliveryStreamName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStreamProps`\  *(readonly)*
+
+   .. py:class:: BufferingHintsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.BufferingHintsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.BufferingHintsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.BufferingHintsProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: intervalInSeconds
+
+         ``CfnDeliveryStream.BufferingHintsProperty.IntervalInSeconds``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-bufferinghints.html#cfn-kinesisfirehose-deliverystream-bufferinghints-intervalinseconds
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: sizeInMBs
+
+         ``CfnDeliveryStream.BufferingHintsProperty.SizeInMBs``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-bufferinghints.html#cfn-kinesisfirehose-deliverystream-bufferinghints-sizeinmbs
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:class:: CloudWatchLoggingOptionsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.CloudWatchLoggingOptionsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.CloudWatchLoggingOptionsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.CloudWatchLoggingOptionsProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: enabled
+
+         ``CfnDeliveryStream.CloudWatchLoggingOptionsProperty.Enabled``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.html#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-enabled
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: logGroupName
+
+         ``CfnDeliveryStream.CloudWatchLoggingOptionsProperty.LogGroupName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.html#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-loggroupname
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: logStreamName
+
+         ``CfnDeliveryStream.CloudWatchLoggingOptionsProperty.LogStreamName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-cloudwatchloggingoptions.html#cfn-kinesisfirehose-deliverystream-cloudwatchloggingoptions-logstreamname
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: CopyCommandProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.CopyCommandProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.CopyCommandProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.CopyCommandProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: dataTableName
+
+         ``CfnDeliveryStream.CopyCommandProperty.DataTableName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-copycommand.html#cfn-kinesisfirehose-deliverystream-copycommand-datatablename
+
+
+         :type: string
+
+
+      .. py:attribute:: copyOptions
+
+         ``CfnDeliveryStream.CopyCommandProperty.CopyOptions``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-copycommand.html#cfn-kinesisfirehose-deliverystream-copycommand-copyoptions
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: dataTableColumns
+
+         ``CfnDeliveryStream.CopyCommandProperty.DataTableColumns``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-copycommand.html#cfn-kinesisfirehose-deliverystream-copycommand-datatablecolumns
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: ElasticsearchBufferingHintsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchBufferingHintsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.ElasticsearchBufferingHintsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.ElasticsearchBufferingHintsProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: intervalInSeconds
+
+         ``CfnDeliveryStream.ElasticsearchBufferingHintsProperty.IntervalInSeconds``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchbufferinghints.html#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-intervalinseconds
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: sizeInMBs
+
+         ``CfnDeliveryStream.ElasticsearchBufferingHintsProperty.SizeInMBs``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchbufferinghints.html#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-sizeinmbs
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:class:: ElasticsearchDestinationConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: bufferingHints
+
+         ``CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty.BufferingHints``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-bufferinghints
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.ElasticsearchBufferingHintsProperty`\ 
+
+
+      .. py:attribute:: domainArn
+
+         ``CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty.DomainARN``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-domainarn
+
+
+         :type: string
+
+
+      .. py:attribute:: indexName
+
+         ``CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty.IndexName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-indexname
+
+
+         :type: string
+
+
+      .. py:attribute:: indexRotationPeriod
+
+         ``CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty.IndexRotationPeriod``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-indexrotationperiod
+
+
+         :type: string
+
+
+      .. py:attribute:: retryOptions
+
+         ``CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty.RetryOptions``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-retryoptions
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.ElasticsearchRetryOptionsProperty`\ 
+
+
+      .. py:attribute:: roleArn
+
+         ``CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty.RoleARN``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-rolearn
+
+
+         :type: string
+
+
+      .. py:attribute:: s3BackupMode
+
+         ``CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty.S3BackupMode``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3backupmode
+
+
+         :type: string
+
+
+      .. py:attribute:: s3Configuration
+
+         ``CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty.S3Configuration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-s3configuration
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.S3DestinationConfigurationProperty`\ 
+
+
+      .. py:attribute:: typeName
+
+         ``CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty.TypeName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-typename
+
+
+         :type: string
+
+
+      .. py:attribute:: cloudWatchLoggingOptions
+
+         ``CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty.CloudWatchLoggingOptions``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-cloudwatchloggingoptions
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.CloudWatchLoggingOptionsProperty`\  *(optional)*
+
+
+      .. py:attribute:: processingConfiguration
+
+         ``CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty.ProcessingConfiguration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration-processingconfiguration
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.ProcessingConfigurationProperty`\  *(optional)*
+
+
+   .. py:class:: ElasticsearchRetryOptionsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ElasticsearchRetryOptionsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.ElasticsearchRetryOptionsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.ElasticsearchRetryOptionsProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: durationInSeconds
+
+         ``CfnDeliveryStream.ElasticsearchRetryOptionsProperty.DurationInSeconds``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchretryoptions.html#cfn-kinesisfirehose-deliverystream-elasticsearchretryoptions-durationinseconds
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:class:: EncryptionConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.EncryptionConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.EncryptionConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.EncryptionConfigurationProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: kmsEncryptionConfig
+
+         ``CfnDeliveryStream.EncryptionConfigurationProperty.KMSEncryptionConfig``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.html#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-kmsencryptionconfig
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.KMSEncryptionConfigProperty`\  *(optional)*
+
+
+      .. py:attribute:: noEncryptionConfig
+
+         ``CfnDeliveryStream.EncryptionConfigurationProperty.NoEncryptionConfig``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-encryptionconfiguration.html#cfn-kinesisfirehose-deliverystream-encryptionconfiguration-noencryptionconfig
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: ExtendedS3DestinationConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: bucketArn
+
+         ``CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty.BucketARN``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-bucketarn
+
+
+         :type: string
+
+
+      .. py:attribute:: bufferingHints
+
+         ``CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty.BufferingHints``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-bufferinghints
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.BufferingHintsProperty`\ 
+
+
+      .. py:attribute:: compressionFormat
+
+         ``CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty.CompressionFormat``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-compressionformat
+
+
+         :type: string
+
+
+      .. py:attribute:: prefix
+
+         ``CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty.Prefix``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-prefix
+
+
+         :type: string
+
+
+      .. py:attribute:: roleArn
+
+         ``CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty.RoleARN``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-rolearn
+
+
+         :type: string
+
+
+      .. py:attribute:: cloudWatchLoggingOptions
+
+         ``CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty.CloudWatchLoggingOptions``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-cloudwatchloggingoptions
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.CloudWatchLoggingOptionsProperty`\  *(optional)*
+
+
+      .. py:attribute:: encryptionConfiguration
+
+         ``CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty.EncryptionConfiguration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-encryptionconfiguration
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.EncryptionConfigurationProperty`\  *(optional)*
+
+
+      .. py:attribute:: processingConfiguration
+
+         ``CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty.ProcessingConfiguration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-processingconfiguration
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.ProcessingConfigurationProperty`\  *(optional)*
+
+
+      .. py:attribute:: s3BackupConfiguration
+
+         ``CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty.S3BackupConfiguration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-s3backupconfiguration
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.S3DestinationConfigurationProperty`\  *(optional)*
+
+
+      .. py:attribute:: s3BackupMode
+
+         ``CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty.S3BackupMode``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-s3backupmode
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: KMSEncryptionConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.KMSEncryptionConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.KMSEncryptionConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.KMSEncryptionConfigProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: awskmsKeyArn
+
+         ``CfnDeliveryStream.KMSEncryptionConfigProperty.AWSKMSKeyARN``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kmsencryptionconfig.html#cfn-kinesisfirehose-deliverystream-kmsencryptionconfig-awskmskeyarn
+
+
+         :type: string
+
+
+   .. py:class:: KinesisStreamSourceConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.KinesisStreamSourceConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.KinesisStreamSourceConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.KinesisStreamSourceConfigurationProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: kinesisStreamArn
+
+         ``CfnDeliveryStream.KinesisStreamSourceConfigurationProperty.KinesisStreamARN``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.html#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-kinesisstreamarn
+
+
+         :type: string
+
+
+      .. py:attribute:: roleArn
+
+         ``CfnDeliveryStream.KinesisStreamSourceConfigurationProperty.RoleARN``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration.html#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration-rolearn
+
+
+         :type: string
+
+
+   .. py:class:: ProcessingConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessingConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.ProcessingConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.ProcessingConfigurationProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: enabled
+
+         ``CfnDeliveryStream.ProcessingConfigurationProperty.Enabled``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-processingconfiguration.html#cfn-kinesisfirehose-deliverystream-processingconfiguration-enabled
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: processors
+
+         ``CfnDeliveryStream.ProcessingConfigurationProperty.Processors``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-processingconfiguration.html#cfn-kinesisfirehose-deliverystream-processingconfiguration-processors
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.ProcessorProperty`\ )[] *(optional)*
+
+
+   .. py:class:: ProcessorParameterProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessorParameterProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.ProcessorParameterProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.ProcessorParameterProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: parameterName
+
+         ``CfnDeliveryStream.ProcessorParameterProperty.ParameterName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-processorparameter.html#cfn-kinesisfirehose-deliverystream-processorparameter-parametername
+
+
+         :type: string
+
+
+      .. py:attribute:: parameterValue
+
+         ``CfnDeliveryStream.ProcessorParameterProperty.ParameterValue``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-processorparameter.html#cfn-kinesisfirehose-deliverystream-processorparameter-parametervalue
+
+
+         :type: string
+
+
+   .. py:class:: ProcessorProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.ProcessorProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.ProcessorProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.ProcessorProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: parameters
+
+         ``CfnDeliveryStream.ProcessorProperty.Parameters``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-processor.html#cfn-kinesisfirehose-deliverystream-processor-parameters
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.ProcessorParameterProperty`\ )[]
+
+
+      .. py:attribute:: type
+
+         ``CfnDeliveryStream.ProcessorProperty.Type``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-processor.html#cfn-kinesisfirehose-deliverystream-processor-type
+
+
+         :type: string
+
+
+   .. py:class:: RedshiftDestinationConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RedshiftDestinationConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.RedshiftDestinationConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.RedshiftDestinationConfigurationProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: clusterJdbcurl
+
+         ``CfnDeliveryStream.RedshiftDestinationConfigurationProperty.ClusterJDBCURL``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-clusterjdbcurl
+
+
+         :type: string
+
+
+      .. py:attribute:: copyCommand
+
+         ``CfnDeliveryStream.RedshiftDestinationConfigurationProperty.CopyCommand``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-copycommand
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.CopyCommandProperty`\ 
+
+
+      .. py:attribute:: password
+
+         ``CfnDeliveryStream.RedshiftDestinationConfigurationProperty.Password``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-password
+
+
+         :type: string
+
+
+      .. py:attribute:: roleArn
+
+         ``CfnDeliveryStream.RedshiftDestinationConfigurationProperty.RoleARN``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-rolearn
+
+
+         :type: string
+
+
+      .. py:attribute:: s3Configuration
+
+         ``CfnDeliveryStream.RedshiftDestinationConfigurationProperty.S3Configuration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3configuration
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.S3DestinationConfigurationProperty`\ 
+
+
+      .. py:attribute:: username
+
+         ``CfnDeliveryStream.RedshiftDestinationConfigurationProperty.Username``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-username
+
+
+         :type: string
+
+
+      .. py:attribute:: cloudWatchLoggingOptions
+
+         ``CfnDeliveryStream.RedshiftDestinationConfigurationProperty.CloudWatchLoggingOptions``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-cloudwatchloggingoptions
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.CloudWatchLoggingOptionsProperty`\  *(optional)*
+
+
+      .. py:attribute:: processingConfiguration
+
+         ``CfnDeliveryStream.RedshiftDestinationConfigurationProperty.ProcessingConfiguration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-processingconfiguration
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.ProcessingConfigurationProperty`\  *(optional)*
+
+
+   .. py:class:: S3DestinationConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.S3DestinationConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.S3DestinationConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.S3DestinationConfigurationProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: bucketArn
+
+         ``CfnDeliveryStream.S3DestinationConfigurationProperty.BucketARN``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bucketarn
+
+
+         :type: string
+
+
+      .. py:attribute:: bufferingHints
+
+         ``CfnDeliveryStream.S3DestinationConfigurationProperty.BufferingHints``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-bufferinghints
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.BufferingHintsProperty`\ 
+
+
+      .. py:attribute:: compressionFormat
+
+         ``CfnDeliveryStream.S3DestinationConfigurationProperty.CompressionFormat``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-compressionformat
+
+
+         :type: string
+
+
+      .. py:attribute:: roleArn
+
+         ``CfnDeliveryStream.S3DestinationConfigurationProperty.RoleARN``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-rolearn
+
+
+         :type: string
+
+
+      .. py:attribute:: cloudWatchLoggingOptions
+
+         ``CfnDeliveryStream.S3DestinationConfigurationProperty.CloudWatchLoggingOptions``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-cloudwatchloggingoptions
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.CloudWatchLoggingOptionsProperty`\  *(optional)*
+
+
+      .. py:attribute:: encryptionConfiguration
+
+         ``CfnDeliveryStream.S3DestinationConfigurationProperty.EncryptionConfiguration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-encryptionconfiguration
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.EncryptionConfigurationProperty`\  *(optional)*
+
+
+      .. py:attribute:: prefix
+
+         ``CfnDeliveryStream.S3DestinationConfigurationProperty.Prefix``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-prefix
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: SplunkDestinationConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkDestinationConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.SplunkDestinationConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.SplunkDestinationConfigurationProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: hecEndpoint
+
+         ``CfnDeliveryStream.SplunkDestinationConfigurationProperty.HECEndpoint``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecendpoint
+
+
+         :type: string
+
+
+      .. py:attribute:: hecEndpointType
+
+         ``CfnDeliveryStream.SplunkDestinationConfigurationProperty.HECEndpointType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecendpointtype
+
+
+         :type: string
+
+
+      .. py:attribute:: hecToken
+
+         ``CfnDeliveryStream.SplunkDestinationConfigurationProperty.HECToken``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hectoken
+
+
+         :type: string
+
+
+      .. py:attribute:: s3Configuration
+
+         ``CfnDeliveryStream.SplunkDestinationConfigurationProperty.S3Configuration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-s3configuration
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.S3DestinationConfigurationProperty`\ 
+
+
+      .. py:attribute:: cloudWatchLoggingOptions
+
+         ``CfnDeliveryStream.SplunkDestinationConfigurationProperty.CloudWatchLoggingOptions``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-cloudwatchloggingoptions
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.CloudWatchLoggingOptionsProperty`\  *(optional)*
+
+
+      .. py:attribute:: hecAcknowledgmentTimeoutInSeconds
+
+         ``CfnDeliveryStream.SplunkDestinationConfigurationProperty.HECAcknowledgmentTimeoutInSeconds``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-hecacknowledgmenttimeoutinseconds
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: processingConfiguration
+
+         ``CfnDeliveryStream.SplunkDestinationConfigurationProperty.ProcessingConfiguration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-processingconfiguration
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.ProcessingConfigurationProperty`\  *(optional)*
+
+
+      .. py:attribute:: retryOptions
+
+         ``CfnDeliveryStream.SplunkDestinationConfigurationProperty.RetryOptions``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-retryoptions
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.SplunkRetryOptionsProperty`\  *(optional)*
+
+
+      .. py:attribute:: s3BackupMode
+
+         ``CfnDeliveryStream.SplunkDestinationConfigurationProperty.S3BackupMode``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-s3backupmode
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: SplunkRetryOptionsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.KinesisFirehose;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SplunkRetryOptionsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeliveryStream.SplunkRetryOptionsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeliveryStream.SplunkRetryOptionsProperty } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+      .. py:attribute:: durationInSeconds
+
+         ``CfnDeliveryStream.SplunkRetryOptionsProperty.DurationInSeconds``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkretryoptions.html#cfn-kinesisfirehose-deliverystream-splunkretryoptions-durationinseconds
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnDeliveryStreamProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDeliveryStreamProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.KinesisFirehose;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStreamProps;
+
+      .. code-tab:: javascript
+
+         // CfnDeliveryStreamProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnDeliveryStreamProps } from '@aws-cdk/aws-kinesisfirehose';
+
+
+
+
+
+   .. py:attribute:: deliveryStreamName
+
+      ``AWS::KinesisFirehose::DeliveryStream.DeliveryStreamName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-deliverystreamname
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: deliveryStreamType
+
+      ``AWS::KinesisFirehose::DeliveryStream.DeliveryStreamType``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-deliverystreamtype
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: elasticsearchDestinationConfiguration
+
+      ``AWS::KinesisFirehose::DeliveryStream.ElasticsearchDestinationConfiguration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-elasticsearchdestinationconfiguration
+
+
+      :type: :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.ElasticsearchDestinationConfigurationProperty`\  or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: extendedS3DestinationConfiguration
+
+      ``AWS::KinesisFirehose::DeliveryStream.ExtendedS3DestinationConfiguration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.ExtendedS3DestinationConfigurationProperty`\  *(optional)*
+
+
+   .. py:attribute:: kinesisStreamSourceConfiguration
+
+      ``AWS::KinesisFirehose::DeliveryStream.KinesisStreamSourceConfiguration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-kinesisstreamsourceconfiguration
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.KinesisStreamSourceConfigurationProperty`\  *(optional)*
+
+
+   .. py:attribute:: redshiftDestinationConfiguration
+
+      ``AWS::KinesisFirehose::DeliveryStream.RedshiftDestinationConfiguration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.RedshiftDestinationConfigurationProperty`\  *(optional)*
+
+
+   .. py:attribute:: s3DestinationConfiguration
+
+      ``AWS::KinesisFirehose::DeliveryStream.S3DestinationConfiguration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.S3DestinationConfigurationProperty`\  *(optional)*
+
+
+   .. py:attribute:: splunkDestinationConfiguration
+
+      ``AWS::KinesisFirehose::DeliveryStream.SplunkDestinationConfiguration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-kinesisfirehose.CfnDeliveryStream.SplunkDestinationConfigurationProperty`\  *(optional)*
+
+

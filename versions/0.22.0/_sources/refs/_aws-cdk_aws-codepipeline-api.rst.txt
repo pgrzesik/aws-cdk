@@ -1,0 +1,2524 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"2EKnGp77QtP3QSUZAY+V02y35VeDXU1nNMH42UOa+rM="}
+
+@aws-cdk/aws-codepipeline-api
+=============================
+
+.. mdinclude:: ./__aws-cdk_aws-codepipeline-api.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.Codepipeline.Api/0.22.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.Codepipeline.Api" Version="0.22.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.Codepipeline.Api --version 0.22.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.Codepipeline.Api" version="0.22.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/codepipeline-api/0.22.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:codepipeline-api:jar:0.22.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="codepipeline-api" rev="0.22.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>codepipeline-api</artifactId>
+           <version>0.22.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:codepipeline-api:0.22.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='codepipeline-api', version='0.22.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-codepipeline-api/v/0.22.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-codepipeline-api@0.22.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-codepipeline-api": "^0.22.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-codepipeline-api@0.22.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-codepipeline-api/v/0.22.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-codepipeline-api@0.22.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-codepipeline-api": "^0.22.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-codepipeline-api@0.22.0
+
+
+
+.. py:module:: @aws-cdk/aws-codepipeline-api
+
+Action
+^^^^^^
+
+.. py:class:: Action(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.Action;
+
+      .. code-tab:: javascript
+
+         const { Action } = require('@aws-cdk/aws-codepipeline-api');
+
+      .. code-tab:: typescript
+
+         import { Action } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   Low-level class for generic CodePipeline Actions.
+
+   It is recommended that concrete types are used instead, such as {@link codecommit.PipelineSourceAction} or
+
+   {@link codebuild.PipelineBuildAction}.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :abstract: Yes
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-codepipeline-api.ActionProps`\ 
+
+   .. py:method:: addInputArtifact([artifact]) -> @aws-cdk/aws-codepipeline-api.Action
+
+      *Protected method*
+
+      :param artifact: 
+      :type artifact: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\  *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-codepipeline-api.Action`\ 
+
+
+   .. py:method:: addOutputArtifact([name]) -> @aws-cdk/aws-codepipeline-api.Artifact
+
+      *Protected method*
+
+      :param name: 
+      :type name: string *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\ 
+
+
+   .. py:method:: onStateChange(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: validate() -> string[]
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Construct.validate`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :rtype: string[]
+
+
+   .. py:attribute:: category
+
+      The category of the action.
+
+      The category defines which action type the owner
+
+      (the entity that performs the action) performs.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.ActionCategory`\  *(readonly)*
+
+
+   .. py:attribute:: owner
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: provider
+
+      The service provider that the action calls.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: runOrder
+
+      The order in which AWS CodePipeline runs this action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: version
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: configuration
+
+      The action's configuration. These are key-value pairs that specify input values for an action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: any *(optional)* *(readonly)*
+
+
+   .. py:attribute:: region
+
+      The AWS region the given Action resides in.
+
+      Note that a cross-region Pipeline requires replication buckets to function correctly.
+
+      You can provide their names with the {@link PipelineProps#crossRegionReplicationBuckets} property.
+
+      If you don't, the CodePipeline Construct will create new Stacks in your CDK app containing those buckets,
+
+      that you will need to `cdk deploy` before deploying the main, Pipeline-containing Stack.
+
+
+
+      :type: string *(optional)* *(readonly)*
+      :default: the Action resides in the same region as the Pipeline
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ActionArtifactBounds (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ActionArtifactBounds
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.ActionArtifactBounds;
+
+      .. code-tab:: javascript
+
+         // ActionArtifactBounds is an interface
+
+      .. code-tab:: typescript
+
+         import { ActionArtifactBounds } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   Specifies the constraints on the number of input and output
+
+   artifacts an action can have.
+
+   
+
+   The constraints for each action type are documented on the
+
+   {@link https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html Pipeline Structure Reference} page.
+
+
+
+
+
+   .. py:attribute:: maxInputs
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: maxOutputs
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: minInputs
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: minOutputs
+
+      :type: number *(readonly)*
+
+
+ActionCategory (enum)
+^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ActionCategory
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.ActionCategory;
+
+      .. code-tab:: javascript
+
+         const { ActionCategory } = require('@aws-cdk/aws-codepipeline-api');
+
+      .. code-tab:: typescript
+
+         import { ActionCategory } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   .. py:data:: Source
+
+   .. py:data:: Build
+
+   .. py:data:: Test
+
+   .. py:data:: Approval
+
+   .. py:data:: Deploy
+
+   .. py:data:: Invoke
+
+
+ActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.ActionProps;
+
+      .. code-tab:: javascript
+
+         // ActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ActionProps } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   Construction properties of the low-level {@link Action Action class}.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-codepipeline-api.CommonActionProps`\ 
+   :extends: :py:class:`~@aws-cdk/aws-codepipeline-api.CommonActionConstructProps`\ 
+
+
+   .. py:attribute:: artifactBounds
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.ActionArtifactBounds`\ 
+
+
+   .. py:attribute:: category
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.ActionCategory`\ 
+
+
+   .. py:attribute:: provider
+
+      :type: string
+
+
+   .. py:attribute:: configuration
+
+      :type: any *(optional)*
+
+
+   .. py:attribute:: owner
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: region
+
+      The region this Action resides in.
+
+
+
+      :type: string *(optional)*
+      :default: the Action resides in the same region as the Pipeline
+
+
+   .. py:attribute:: version
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: stage
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionConstructProps <@aws-cdk/aws-codepipeline-api.CommonActionConstructProps.stage>`
+
+      The Pipeline Stage to add this Action to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.IStage`\ 
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionProps <@aws-cdk/aws-codepipeline-api.CommonActionProps.runOrder>`
+
+      The runOrder property for this Action.
+
+      RunOrder determines the relative order in which multiple Actions in the same Stage execute.
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+
+Artifact
+^^^^^^^^
+
+.. py:class:: Artifact(scope, name)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.Artifact;
+
+      .. code-tab:: javascript
+
+         const { Artifact } = require('@aws-cdk/aws-codepipeline-api');
+
+      .. code-tab:: typescript
+
+         import { Artifact } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   An output artifact of an action. Artifacts can be used as input by some actions.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`~@aws-cdk/aws-codepipeline-api.Action`\ 
+   :param name: 
+   :type name: string
+
+   .. py:method:: atPath(fileName) -> @aws-cdk/aws-codepipeline-api.ArtifactPath
+
+      Returns an ArtifactPath for a file within this artifact.
+
+      Output is in the form "<artifact-name>::<file-name>"
+
+
+
+      :param fileName: The name of the file
+      :type fileName: string
+      :rtype: :py:class:`~@aws-cdk/aws-codepipeline-api.ArtifactPath`\ 
+
+
+   .. py:method:: getParam(jsonFile, keyName) -> string
+
+      Returns a token for a value inside a JSON file within this artifact.
+
+
+
+      :param jsonFile: The JSON file name.
+      :type jsonFile: string
+      :param keyName: The hash key.
+      :type keyName: string
+      :rtype: string
+
+
+   .. py:method:: toString() -> string
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Construct.toString`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:attribute:: bucketName
+
+      The artifact attribute for the name of the S3 bucket where the artifact is stored.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: name
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: objectKey
+
+      The artifact attribute for The name of the .zip file that contains the artifact that is
+
+      generated by AWS CodePipeline, such as 1ABCyZZ.zip.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: url
+
+      The artifact attribute of the Amazon Simple Storage Service (Amazon S3) URL of the artifact,
+
+      such as https://s3-us-west-2.amazonaws.com/artifactstorebucket-yivczw8jma0c/test/TemplateSo/1ABCyZZ.zip.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ArtifactPath
+^^^^^^^^^^^^
+
+.. py:class:: ArtifactPath(artifact, fileName)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.ArtifactPath;
+
+      .. code-tab:: javascript
+
+         const { ArtifactPath } = require('@aws-cdk/aws-codepipeline-api');
+
+      .. code-tab:: typescript
+
+         import { ArtifactPath } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   A specific file within an output artifact.
+
+   
+
+   The most common use case for this is specifying the template file
+
+   for a CloudFormation action.
+
+
+
+   :param artifact: 
+   :type artifact: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\ 
+   :param fileName: 
+   :type fileName: string
+
+   .. py:attribute:: artifact
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\  *(readonly)*
+
+
+   .. py:attribute:: fileName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: location
+
+      :type: string *(readonly)*
+
+
+BuildAction
+^^^^^^^^^^^
+
+.. py:class:: BuildAction(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.BuildAction;
+
+      .. code-tab:: javascript
+
+         const { BuildAction } = require('@aws-cdk/aws-codepipeline-api');
+
+      .. code-tab:: typescript
+
+         import { BuildAction } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   Low level class for build actions.
+
+   It is recommended that concrete types are used instead,
+
+   such as {@link codebuild.PipelineBuildAction}.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-codepipeline-api.Action`\ 
+   :abstract: Yes
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-codepipeline-api.BuildActionProps`\ 
+
+   .. py:attribute:: outputArtifact
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\  *(readonly)*
+
+
+   .. py:method:: addInputArtifact([artifact]) -> @aws-cdk/aws-codepipeline-api.Action
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.addInputArtifact>`
+
+      *Protected method*
+
+      :param artifact: 
+      :type artifact: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\  *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-codepipeline-api.Action`\ 
+
+
+   .. py:method:: addOutputArtifact([name]) -> @aws-cdk/aws-codepipeline-api.Artifact
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.addOutputArtifact>`
+
+      *Protected method*
+
+      :param name: 
+      :type name: string *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\ 
+
+
+   .. py:method:: onStateChange(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.onStateChange>`
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :rtype: string[]
+
+
+   .. py:attribute:: category
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.category>`
+
+      The category of the action.
+
+      The category defines which action type the owner
+
+      (the entity that performs the action) performs.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.ActionCategory`\  *(readonly)*
+
+
+   .. py:attribute:: owner
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.owner>`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: provider
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.provider>`
+
+      The service provider that the action calls.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.runOrder>`
+
+      The order in which AWS CodePipeline runs this action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: version
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.version>`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: configuration
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.configuration>`
+
+      The action's configuration. These are key-value pairs that specify input values for an action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: any *(optional)* *(readonly)*
+
+
+   .. py:attribute:: region
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.region>`
+
+      The AWS region the given Action resides in.
+
+      Note that a cross-region Pipeline requires replication buckets to function correctly.
+
+      You can provide their names with the {@link PipelineProps#crossRegionReplicationBuckets} property.
+
+      If you don't, the CodePipeline Construct will create new Stacks in your CDK app containing those buckets,
+
+      that you will need to `cdk deploy` before deploying the main, Pipeline-containing Stack.
+
+
+
+      :type: string *(optional)* *(readonly)*
+      :default: the Action resides in the same region as the Pipeline
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+BuildActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: BuildActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.BuildActionProps;
+
+      .. code-tab:: javascript
+
+         // BuildActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { BuildActionProps } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   Construction properties of the low level {@link BuildAction build action}.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-codepipeline-api.CommonActionProps`\ 
+   :extends: :py:class:`~@aws-cdk/aws-codepipeline-api.CommonActionConstructProps`\ 
+
+
+   .. py:attribute:: artifactBounds
+
+      The upper and lower bounds on the number of input and output artifacts for this Action.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.ActionArtifactBounds`\ 
+
+
+   .. py:attribute:: provider
+
+      The service provider that the action calls. For example, a valid provider for Source actions is CodeBuild.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: configuration
+
+      The action's configuration. These are key-value pairs that specify input values for an action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: any *(optional)*
+
+
+   .. py:attribute:: inputArtifact
+
+      The source to use as input for this build.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\  *(optional)*
+
+
+   .. py:attribute:: outputArtifactName
+
+      The name of the build's output artifact.
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: owner
+
+      The build Action owner (could be 'AWS', 'ThirdParty' or 'Custom').
+
+
+
+      :type: string *(optional)*
+      :default: 'AWS'
+
+
+   .. py:attribute:: version
+
+      The build Action version.
+
+
+
+      :type: string *(optional)*
+      :default: '1'
+
+
+   .. py:attribute:: stage
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionConstructProps <@aws-cdk/aws-codepipeline-api.CommonActionConstructProps.stage>`
+
+      The Pipeline Stage to add this Action to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.IStage`\ 
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionProps <@aws-cdk/aws-codepipeline-api.CommonActionProps.runOrder>`
+
+      The runOrder property for this Action.
+
+      RunOrder determines the relative order in which multiple Actions in the same Stage execute.
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+
+CommonActionConstructProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CommonActionConstructProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.CommonActionConstructProps;
+
+      .. code-tab:: javascript
+
+         // CommonActionConstructProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CommonActionConstructProps } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   Common properties shared by all Action Constructs.
+
+
+
+
+
+   .. py:attribute:: stage
+
+      The Pipeline Stage to add this Action to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.IStage`\ 
+
+
+CommonActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CommonActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.CommonActionProps;
+
+      .. code-tab:: javascript
+
+         // CommonActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CommonActionProps } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   Common properties shared by all Actions.
+
+
+
+
+
+   .. py:attribute:: runOrder
+
+      The runOrder property for this Action.
+
+      RunOrder determines the relative order in which multiple Actions in the same Stage execute.
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+
+DeployAction
+^^^^^^^^^^^^
+
+.. py:class:: DeployAction(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.DeployAction;
+
+      .. code-tab:: javascript
+
+         const { DeployAction } = require('@aws-cdk/aws-codepipeline-api');
+
+      .. code-tab:: typescript
+
+         import { DeployAction } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-codepipeline-api.Action`\ 
+   :abstract: Yes
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-codepipeline-api.DeployActionProps`\ 
+
+   .. py:method:: addInputArtifact([artifact]) -> @aws-cdk/aws-codepipeline-api.Action
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.addInputArtifact>`
+
+      *Protected method*
+
+      :param artifact: 
+      :type artifact: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\  *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-codepipeline-api.Action`\ 
+
+
+   .. py:method:: addOutputArtifact([name]) -> @aws-cdk/aws-codepipeline-api.Artifact
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.addOutputArtifact>`
+
+      *Protected method*
+
+      :param name: 
+      :type name: string *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\ 
+
+
+   .. py:method:: onStateChange(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.onStateChange>`
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :rtype: string[]
+
+
+   .. py:attribute:: category
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.category>`
+
+      The category of the action.
+
+      The category defines which action type the owner
+
+      (the entity that performs the action) performs.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.ActionCategory`\  *(readonly)*
+
+
+   .. py:attribute:: owner
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.owner>`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: provider
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.provider>`
+
+      The service provider that the action calls.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.runOrder>`
+
+      The order in which AWS CodePipeline runs this action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: version
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.version>`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: configuration
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.configuration>`
+
+      The action's configuration. These are key-value pairs that specify input values for an action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: any *(optional)* *(readonly)*
+
+
+   .. py:attribute:: region
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.region>`
+
+      The AWS region the given Action resides in.
+
+      Note that a cross-region Pipeline requires replication buckets to function correctly.
+
+      You can provide their names with the {@link PipelineProps#crossRegionReplicationBuckets} property.
+
+      If you don't, the CodePipeline Construct will create new Stacks in your CDK app containing those buckets,
+
+      that you will need to `cdk deploy` before deploying the main, Pipeline-containing Stack.
+
+
+
+      :type: string *(optional)* *(readonly)*
+      :default: the Action resides in the same region as the Pipeline
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+DeployActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: DeployActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.DeployActionProps;
+
+      .. code-tab:: javascript
+
+         // DeployActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { DeployActionProps } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-codepipeline-api.CommonActionProps`\ 
+   :extends: :py:class:`~@aws-cdk/aws-codepipeline-api.CommonActionConstructProps`\ 
+
+
+   .. py:attribute:: artifactBounds
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.ActionArtifactBounds`\ 
+
+
+   .. py:attribute:: provider
+
+      :type: string
+
+
+   .. py:attribute:: configuration
+
+      :type: any *(optional)*
+
+
+   .. py:attribute:: inputArtifact
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\  *(optional)*
+
+
+   .. py:attribute:: owner
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: stage
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionConstructProps <@aws-cdk/aws-codepipeline-api.CommonActionConstructProps.stage>`
+
+      The Pipeline Stage to add this Action to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.IStage`\ 
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionProps <@aws-cdk/aws-codepipeline-api.CommonActionProps.runOrder>`
+
+      The runOrder property for this Action.
+
+      RunOrder determines the relative order in which multiple Actions in the same Stage execute.
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+
+IInternalStage (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IInternalStage
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.IInternalStage;
+
+      .. code-tab:: javascript
+
+         // IInternalStage is an interface
+
+      .. code-tab:: typescript
+
+         import { IInternalStage } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   The API of Stage used internally by the CodePipeline Construct.
+
+   You should never need to call any of the methods inside of it yourself.
+
+
+
+
+
+IPipeline (interface)
+^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IPipeline
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.IPipeline;
+
+      .. code-tab:: javascript
+
+         // IPipeline is an interface
+
+      .. code-tab:: typescript
+
+         import { IPipeline } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   The abstract view of an AWS CodePipeline as required and used by Actions.
+
+   It extends {@link events.IEventRuleTarget},
+
+   so this interface can be used as a Target for CloudWatch Events.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+   :extends: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\ 
+
+
+   .. py:attribute:: pipelineArn
+
+      The ARN of the Pipeline.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: pipelineName
+
+      The name of the Pipeline.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: role
+
+      The service Role of the Pipeline.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-iam.Role`\  *(readonly)*
+
+
+   .. py:method:: grantBucketRead([identity])
+
+      Grants read permissions to the Pipeline's S3 Bucket to the given Identity.
+
+
+
+      :param identity: the IAM Identity to grant the permissions to
+      :type identity: :py:class:`@aws-cdk/aws-iam.IPrincipal`\  *(optional)*
+      :abstract: Yes
+
+
+   .. py:method:: grantBucketReadWrite([identity])
+
+      Grants read & write permissions to the Pipeline's S3 Bucket to the given Identity.
+
+
+
+      :param identity: the IAM Identity to grant the permissions to
+      :type identity: :py:class:`@aws-cdk/aws-iam.IPrincipal`\  *(optional)*
+      :abstract: Yes
+
+
+   .. py:method:: asEventRuleTarget(ruleArn, ruleUniqueId) -> @aws-cdk/aws-events.EventRuleTargetProps
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-events.IEventRuleTarget <@aws-cdk/aws-events.IEventRuleTarget.asEventRuleTarget>`
+
+      Returns the rule target specification.
+
+      NOTE: Do not use the various `inputXxx` options. They can be set in a call to `addTarget`.
+
+
+
+      :param ruleArn: The ARN of the CloudWatch Event Rule that would trigger this target.
+      :type ruleArn: string
+      :param ruleUniqueId: A unique ID for this rule. Can be used to implement idempotency.
+      :type ruleUniqueId: string
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRuleTargetProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+IStage (interface)
+^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IStage
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.IStage;
+
+      .. code-tab:: javascript
+
+         // IStage is an interface
+
+      .. code-tab:: typescript
+
+         import { IStage } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   The abstract interface of a Pipeline Stage that is used by Actions.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: name
+
+      The physical, human-readable name of this Pipeline Stage.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: pipeline
+
+      The Pipeline this Stage belongs to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.IPipeline`\  *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+SourceAction
+^^^^^^^^^^^^
+
+.. py:class:: SourceAction(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.SourceAction;
+
+      .. code-tab:: javascript
+
+         const { SourceAction } = require('@aws-cdk/aws-codepipeline-api');
+
+      .. code-tab:: typescript
+
+         import { SourceAction } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   Low-level class for source actions.
+
+   It is recommended that concrete types are used instead,
+
+   such as {@link s3.PipelineSourceAction} or
+
+   {@link codecommit.PipelineSourceAction}.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-codepipeline-api.Action`\ 
+   :abstract: Yes
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-codepipeline-api.SourceActionProps`\ 
+
+   .. py:attribute:: outputArtifact
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\  *(readonly)*
+
+
+   .. py:method:: addInputArtifact([artifact]) -> @aws-cdk/aws-codepipeline-api.Action
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.addInputArtifact>`
+
+      *Protected method*
+
+      :param artifact: 
+      :type artifact: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\  *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-codepipeline-api.Action`\ 
+
+
+   .. py:method:: addOutputArtifact([name]) -> @aws-cdk/aws-codepipeline-api.Artifact
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.addOutputArtifact>`
+
+      *Protected method*
+
+      :param name: 
+      :type name: string *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\ 
+
+
+   .. py:method:: onStateChange(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.onStateChange>`
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :rtype: string[]
+
+
+   .. py:attribute:: category
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.category>`
+
+      The category of the action.
+
+      The category defines which action type the owner
+
+      (the entity that performs the action) performs.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.ActionCategory`\  *(readonly)*
+
+
+   .. py:attribute:: owner
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.owner>`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: provider
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.provider>`
+
+      The service provider that the action calls.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.runOrder>`
+
+      The order in which AWS CodePipeline runs this action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: version
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.version>`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: configuration
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.configuration>`
+
+      The action's configuration. These are key-value pairs that specify input values for an action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: any *(optional)* *(readonly)*
+
+
+   .. py:attribute:: region
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.region>`
+
+      The AWS region the given Action resides in.
+
+      Note that a cross-region Pipeline requires replication buckets to function correctly.
+
+      You can provide their names with the {@link PipelineProps#crossRegionReplicationBuckets} property.
+
+      If you don't, the CodePipeline Construct will create new Stacks in your CDK app containing those buckets,
+
+      that you will need to `cdk deploy` before deploying the main, Pipeline-containing Stack.
+
+
+
+      :type: string *(optional)* *(readonly)*
+      :default: the Action resides in the same region as the Pipeline
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+SourceActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: SourceActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.SourceActionProps;
+
+      .. code-tab:: javascript
+
+         // SourceActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { SourceActionProps } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   Construction properties of the low-level {@link SourceAction source Action}.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-codepipeline-api.CommonActionProps`\ 
+   :extends: :py:class:`~@aws-cdk/aws-codepipeline-api.CommonActionConstructProps`\ 
+
+
+   .. py:attribute:: provider
+
+      The service provider that the action calls.
+
+      For example, a valid provider for Source actions is "S3".
+
+
+
+      :type: string
+
+
+   .. py:attribute:: configuration
+
+      The action's configuration. These are key-value pairs that specify input values for an action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: any *(optional)*
+
+
+   .. py:attribute:: outputArtifactName
+
+      The name of the source's output artifact.
+
+      Output artifacts are used by CodePipeline as inputs into other actions.
+
+
+
+      :type: string *(optional)*
+      :default: a name will be auto-generated
+
+
+   .. py:attribute:: owner
+
+      The source action owner (could be "AWS", "ThirdParty" or "Custom").
+
+
+
+      :type: string *(optional)*
+      :default: "AWS"
+
+
+   .. py:attribute:: version
+
+      The source Action version.
+
+
+
+      :type: string *(optional)*
+      :default: "1"
+
+
+   .. py:attribute:: stage
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionConstructProps <@aws-cdk/aws-codepipeline-api.CommonActionConstructProps.stage>`
+
+      The Pipeline Stage to add this Action to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.IStage`\ 
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionProps <@aws-cdk/aws-codepipeline-api.CommonActionProps.runOrder>`
+
+      The runOrder property for this Action.
+
+      RunOrder determines the relative order in which multiple Actions in the same Stage execute.
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+
+TestAction
+^^^^^^^^^^
+
+.. py:class:: TestAction(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.TestAction;
+
+      .. code-tab:: javascript
+
+         const { TestAction } = require('@aws-cdk/aws-codepipeline-api');
+
+      .. code-tab:: typescript
+
+         import { TestAction } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   The low-level test Action.
+
+   
+
+   Test Actions are very similar to build Actions -
+
+   the difference is that test Actions don't have to have an output artifact.
+
+   
+
+   You should never need to use this class directly,
+
+   instead preferring the concrete implementations,
+
+   like {@link codebuild.PipelineTestAction}.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-codepipeline-api.Action`\ 
+   :abstract: Yes
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-codepipeline-api.TestActionProps`\ 
+
+   .. py:attribute:: outputArtifact
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\  *(optional)* *(readonly)*
+
+
+   .. py:method:: addInputArtifact([artifact]) -> @aws-cdk/aws-codepipeline-api.Action
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.addInputArtifact>`
+
+      *Protected method*
+
+      :param artifact: 
+      :type artifact: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\  *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-codepipeline-api.Action`\ 
+
+
+   .. py:method:: addOutputArtifact([name]) -> @aws-cdk/aws-codepipeline-api.Artifact
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.addOutputArtifact>`
+
+      *Protected method*
+
+      :param name: 
+      :type name: string *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\ 
+
+
+   .. py:method:: onStateChange(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.onStateChange>`
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :rtype: string[]
+
+
+   .. py:attribute:: category
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.category>`
+
+      The category of the action.
+
+      The category defines which action type the owner
+
+      (the entity that performs the action) performs.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.ActionCategory`\  *(readonly)*
+
+
+   .. py:attribute:: owner
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.owner>`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: provider
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.provider>`
+
+      The service provider that the action calls.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.runOrder>`
+
+      The order in which AWS CodePipeline runs this action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: version
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.version>`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: configuration
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.configuration>`
+
+      The action's configuration. These are key-value pairs that specify input values for an action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: any *(optional)* *(readonly)*
+
+
+   .. py:attribute:: region
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.region>`
+
+      The AWS region the given Action resides in.
+
+      Note that a cross-region Pipeline requires replication buckets to function correctly.
+
+      You can provide their names with the {@link PipelineProps#crossRegionReplicationBuckets} property.
+
+      If you don't, the CodePipeline Construct will create new Stacks in your CDK app containing those buckets,
+
+      that you will need to `cdk deploy` before deploying the main, Pipeline-containing Stack.
+
+
+
+      :type: string *(optional)* *(readonly)*
+      :default: the Action resides in the same region as the Pipeline
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+TestActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: TestActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Codepipeline.Api;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codepipeline.api.TestActionProps;
+
+      .. code-tab:: javascript
+
+         // TestActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { TestActionProps } from '@aws-cdk/aws-codepipeline-api';
+
+
+
+   Construction properties of the low-level {@link TestAction test Action}.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-codepipeline-api.CommonActionProps`\ 
+   :extends: :py:class:`~@aws-cdk/aws-codepipeline-api.CommonActionConstructProps`\ 
+
+
+   .. py:attribute:: artifactBounds
+
+      The upper and lower bounds on the number of input and output artifacts for this Action.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.ActionArtifactBounds`\ 
+
+
+   .. py:attribute:: provider
+
+      The service provider that the action calls.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: configuration
+
+      The action's configuration. These are key-value pairs that specify input values for an action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: any *(optional)*
+
+
+   .. py:attribute:: inputArtifact
+
+      The source to use as input for this test.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.Artifact`\  *(optional)*
+      :default: CodePipeline will use the output of the last Action from a previous Stage as input
+
+
+   .. py:attribute:: outputArtifactName
+
+      The optional name of the output artifact.
+
+      If you provide a value here,
+
+      then the `outputArtifact` property of your Action will be non-null.
+
+      If you don't, `outputArtifact` will be `null`.
+
+
+
+      :type: string *(optional)*
+      :default: the Action will not have an output artifact
+
+
+   .. py:attribute:: owner
+
+      The test Action owner (could be 'AWS', 'ThirdParty' or 'Custom').
+
+
+
+      :type: string *(optional)*
+      :default: 'AWS'
+
+
+   .. py:attribute:: version
+
+      The test Action version.
+
+
+
+      :type: string *(optional)*
+      :default: '1'
+
+
+   .. py:attribute:: stage
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionConstructProps <@aws-cdk/aws-codepipeline-api.CommonActionConstructProps.stage>`
+
+      The Pipeline Stage to add this Action to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codepipeline-api.IStage`\ 
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionProps <@aws-cdk/aws-codepipeline-api.CommonActionProps.runOrder>`
+
+      The runOrder property for this Action.
+
+      RunOrder determines the relative order in which multiple Actions in the same Stage execute.
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+

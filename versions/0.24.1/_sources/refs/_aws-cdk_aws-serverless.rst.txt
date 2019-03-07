@@ -1,0 +1,3925 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"f2P9XKcbSjAAhLWvgD11k7RZm25h0Y/4O5v168Aqw8k="}
+
+@aws-cdk/aws-serverless
+=======================
+
+.. mdinclude:: ./__aws-cdk_aws-serverless.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.Serverless/0.24.1>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.Serverless" Version="0.24.1" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.Serverless --version 0.24.1
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.Serverless" version="0.24.1" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/serverless/0.24.1/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:serverless:jar:0.24.1'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="serverless" rev="0.24.1"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>serverless</artifactId>
+           <version>0.24.1</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:serverless:0.24.1'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='serverless', version='0.24.1')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-serverless/v/0.24.1>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-serverless@0.24.1
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-serverless": "^0.24.1"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-serverless@0.24.1
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-serverless/v/0.24.1>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-serverless@0.24.1
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-serverless": "^0.24.1"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-serverless@0.24.1
+
+
+
+.. py:module:: @aws-cdk/aws-serverless
+
+CfnApi
+^^^^^^
+
+.. py:class:: CfnApi(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Serverless;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.serverless.CfnApi;
+
+      .. code-tab:: javascript
+
+         const { CfnApi } = require('@aws-cdk/aws-serverless');
+
+      .. code-tab:: typescript
+
+         import { CfnApi } from '@aws-cdk/aws-serverless';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-serverless.CfnApiProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: requiredTransform
+
+      The ``Transform`` a template must use in order to use this resource
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: apiName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-serverless.CfnApiProps`\  *(readonly)*
+
+   .. py:class:: AuthProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnApi.AuthProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApi.AuthProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApi.AuthProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: authorizers
+
+         ``CfnApi.AuthProperty.Authorizers``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api-auth-object
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: defaultAuthorizer
+
+         ``CfnApi.AuthProperty.DefaultAuthorizer``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api-auth-object
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: S3LocationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnApi.S3LocationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApi.S3LocationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApi.S3LocationProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: bucket
+
+         ``CfnApi.S3LocationProperty.Bucket``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+         :type: string
+
+
+      .. py:attribute:: key
+
+         ``CfnApi.S3LocationProperty.Key``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+         :type: string
+
+
+      .. py:attribute:: version
+
+         ``CfnApi.S3LocationProperty.Version``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnApiProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApiProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Serverless;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.serverless.CfnApiProps;
+
+      .. code-tab:: javascript
+
+         // CfnApiProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnApiProps } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+   .. py:attribute:: stageName
+
+      ``AWS::Serverless::Api.StageName``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
+
+
+      :type: string
+
+
+   .. py:attribute:: auth
+
+      ``AWS::Serverless::Api.Auth``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
+
+
+      :type: :py:class:`~@aws-cdk/aws-serverless.CfnApi.AuthProperty`\  or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: binaryMediaTypes
+
+      ``AWS::Serverless::Api.BinaryMediaTypes``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: cacheClusterEnabled
+
+      ``AWS::Serverless::Api.CacheClusterEnabled``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: cacheClusterSize
+
+      ``AWS::Serverless::Api.CacheClusterSize``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: cors
+
+      ``AWS::Serverless::Api.Cors``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: definitionBody
+
+      ``AWS::Serverless::Api.DefinitionBody``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
+
+
+      :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: definitionUri
+
+      ``AWS::Serverless::Api.DefinitionUri``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
+
+
+      :type: string or :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-serverless.CfnApi.S3LocationProperty`\  *(optional)*
+
+
+   .. py:attribute:: endpointConfiguration
+
+      ``AWS::Serverless::Api.EndpointConfiguration``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: methodSettings
+
+      ``AWS::Serverless::Api.MethodSettings``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
+
+
+      :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: name
+
+      ``AWS::Serverless::Api.Name``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: variables
+
+      ``AWS::Serverless::Api.Variables``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or string => (string or :py:class:`@aws-cdk/cdk.Token`\ ) *(optional)*
+
+
+CfnApplication
+^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplication(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Serverless;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.serverless.CfnApplication;
+
+      .. code-tab:: javascript
+
+         const { CfnApplication } = require('@aws-cdk/aws-serverless');
+
+      .. code-tab:: typescript
+
+         import { CfnApplication } from '@aws-cdk/aws-serverless';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-serverless.CfnApplicationProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: requiredTransform
+
+      The ``Transform`` a template must use in order to use this resource
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: applicationName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-serverless.CfnApplicationProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The ``TagManager`` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. ``Tag`` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+   .. py:class:: ApplicationLocationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnApplication.ApplicationLocationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnApplication.ApplicationLocationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnApplication.ApplicationLocationProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: applicationId
+
+         ``CfnApplication.ApplicationLocationProperty.ApplicationId``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapplication
+
+
+         :type: string
+
+
+      .. py:attribute:: semanticVersion
+
+         ``CfnApplication.ApplicationLocationProperty.SemanticVersion``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapplication
+
+
+         :type: string
+
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnApplicationProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplicationProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Serverless;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.serverless.CfnApplicationProps;
+
+      .. code-tab:: javascript
+
+         // CfnApplicationProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnApplicationProps } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+   .. py:attribute:: location
+
+      ``AWS::Serverless::Application.Location``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapplication
+
+
+      :type: string or :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-serverless.CfnApplication.ApplicationLocationProperty`\ 
+
+
+   .. py:attribute:: notificationArns
+
+      ``AWS::Serverless::Application.NotificationArns``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapplication
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: parameters
+
+      ``AWS::Serverless::Application.Parameters``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapplication
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or string => (string or :py:class:`@aws-cdk/cdk.Token`\ ) *(optional)*
+
+
+   .. py:attribute:: tags
+
+      ``AWS::Serverless::Application.Tags``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapplication
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or string => (string or :py:class:`@aws-cdk/cdk.Token`\ ) *(optional)*
+
+
+   .. py:attribute:: timeoutInMinutes
+
+      ``AWS::Serverless::Application.TimeoutInMinutes``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapplication
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+CfnFunction
+^^^^^^^^^^^
+
+.. py:class:: CfnFunction(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Serverless;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.serverless.CfnFunction;
+
+      .. code-tab:: javascript
+
+         const { CfnFunction } = require('@aws-cdk/aws-serverless');
+
+      .. code-tab:: typescript
+
+         import { CfnFunction } from '@aws-cdk/aws-serverless';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-serverless.CfnFunctionProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: requiredTransform
+
+      The ``Transform`` a template must use in order to use this resource
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: functionName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-serverless.CfnFunctionProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The ``TagManager`` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. ``Tag`` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+   .. py:class:: AlexaSkillEventProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.AlexaSkillEventProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.AlexaSkillEventProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.AlexaSkillEventProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: variables
+
+         ``CfnFunction.AlexaSkillEventProperty.Variables``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#alexaskill
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or string => (string or :py:class:`@aws-cdk/cdk.Token`\ ) *(optional)*
+
+
+   .. py:class:: ApiEventProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.ApiEventProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.ApiEventProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.ApiEventProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: method
+
+         ``CfnFunction.ApiEventProperty.Method``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+
+
+         :type: string
+
+
+      .. py:attribute:: path
+
+         ``CfnFunction.ApiEventProperty.Path``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+
+
+         :type: string
+
+
+      .. py:attribute:: restApiId
+
+         ``CfnFunction.ApiEventProperty.RestApiId``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: CloudWatchEventEventProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.CloudWatchEventEventProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.CloudWatchEventEventProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.CloudWatchEventEventProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: pattern
+
+         ``CfnFunction.CloudWatchEventEventProperty.Pattern``
+
+         http://docs.aws.amazon.com/AmazonCloudWatch/latest/events/CloudWatchEventsandEventPatterns.html
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: input
+
+         ``CfnFunction.CloudWatchEventEventProperty.Input``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cloudwatchevent
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: inputPath
+
+         ``CfnFunction.CloudWatchEventEventProperty.InputPath``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#cloudwatchevent
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: DeadLetterQueueProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.DeadLetterQueueProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.DeadLetterQueueProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.DeadLetterQueueProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: targetArn
+
+         ``CfnFunction.DeadLetterQueueProperty.TargetArn``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+         :type: string
+
+
+      .. py:attribute:: type
+
+         ``CfnFunction.DeadLetterQueueProperty.Type``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+         :type: string
+
+
+   .. py:class:: DeploymentPreferenceProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.DeploymentPreferenceProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.DeploymentPreferenceProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.DeploymentPreferenceProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: enabled
+
+         ``CfnFunction.DeploymentPreferenceProperty.Enabled``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#deploymentpreference-object
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: type
+
+         ``CfnFunction.DeploymentPreferenceProperty.Type``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#deploymentpreference-object
+
+
+         :type: string
+
+
+      .. py:attribute:: alarms
+
+         ``CfnFunction.DeploymentPreferenceProperty.Alarms``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#deploymentpreference-object
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+      .. py:attribute:: hooks
+
+         ``CfnFunction.DeploymentPreferenceProperty.Hooks``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#deploymentpreference-object
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:class:: DynamoDBEventProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.DynamoDBEventProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.DynamoDBEventProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.DynamoDBEventProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: batchSize
+
+         ``CfnFunction.DynamoDBEventProperty.BatchSize``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: startingPosition
+
+         ``CfnFunction.DynamoDBEventProperty.StartingPosition``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb
+
+
+         :type: string
+
+
+      .. py:attribute:: stream
+
+         ``CfnFunction.DynamoDBEventProperty.Stream``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#dynamodb
+
+
+         :type: string
+
+
+   .. py:class:: EventSourceProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.EventSourceProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.EventSourceProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.EventSourceProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: properties
+
+         ``CfnFunction.EventSourceProperty.Properties``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-types
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.AlexaSkillEventProperty`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.ApiEventProperty`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.CloudWatchEventEventProperty`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.DynamoDBEventProperty`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.S3EventProperty`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.SNSEventProperty`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.SQSEventProperty`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.KinesisEventProperty`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.ScheduleEventProperty`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.IoTRuleEventProperty`\ 
+
+
+      .. py:attribute:: type
+
+         ``CfnFunction.EventSourceProperty.Type``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-object
+
+
+         :type: string
+
+
+   .. py:class:: FunctionEnvironmentProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.FunctionEnvironmentProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.FunctionEnvironmentProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.FunctionEnvironmentProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: variables
+
+         ``CfnFunction.FunctionEnvironmentProperty.Variables``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or string => (string or :py:class:`@aws-cdk/cdk.Token`\ )
+
+
+   .. py:class:: IAMPolicyDocumentProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.IAMPolicyDocumentProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.IAMPolicyDocumentProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.IAMPolicyDocumentProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: statement
+
+         ``CfnFunction.IAMPolicyDocumentProperty.Statement``
+
+         http://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:class:: IoTRuleEventProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.IoTRuleEventProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.IoTRuleEventProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.IoTRuleEventProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: sql
+
+         ``CfnFunction.IoTRuleEventProperty.Sql``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#iotrule
+
+
+         :type: string
+
+
+      .. py:attribute:: awsIotSqlVersion
+
+         ``CfnFunction.IoTRuleEventProperty.AwsIotSqlVersion``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#iotrule
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: KinesisEventProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.KinesisEventProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.KinesisEventProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.KinesisEventProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: startingPosition
+
+         ``CfnFunction.KinesisEventProperty.StartingPosition``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#kinesis
+
+
+         :type: string
+
+
+      .. py:attribute:: stream
+
+         ``CfnFunction.KinesisEventProperty.Stream``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#kinesis
+
+
+         :type: string
+
+
+      .. py:attribute:: batchSize
+
+         ``CfnFunction.KinesisEventProperty.BatchSize``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#kinesis
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: S3EventProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.S3EventProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.S3EventProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.S3EventProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: bucket
+
+         ``CfnFunction.S3EventProperty.Bucket``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3
+
+
+         :type: string
+
+
+      .. py:attribute:: events
+
+         ``CfnFunction.S3EventProperty.Events``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3
+
+
+         :type: string or :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[]
+
+
+      .. py:attribute:: filter
+
+         ``CfnFunction.S3EventProperty.Filter``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.S3NotificationFilterProperty`\  *(optional)*
+
+
+   .. py:class:: S3LocationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.S3LocationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.S3LocationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.S3LocationProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: bucket
+
+         ``CfnFunction.S3LocationProperty.Bucket``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+         :type: string
+
+
+      .. py:attribute:: key
+
+         ``CfnFunction.S3LocationProperty.Key``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+         :type: string
+
+
+      .. py:attribute:: version
+
+         ``CfnFunction.S3LocationProperty.Version``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: S3NotificationFilterProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.S3NotificationFilterProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.S3NotificationFilterProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.S3NotificationFilterProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: s3Key
+
+         ``CfnFunction.S3NotificationFilterProperty.S3Key``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfiguration-config-filter.html
+
+
+         :type: string
+
+
+   .. py:class:: SNSEventProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.SNSEventProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.SNSEventProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.SNSEventProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: topic
+
+         ``CfnFunction.SNSEventProperty.Topic``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sns
+
+
+         :type: string
+
+
+   .. py:class:: SQSEventProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.SQSEventProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.SQSEventProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.SQSEventProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: queue
+
+         ``CfnFunction.SQSEventProperty.Queue``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sqs
+
+
+         :type: string
+
+
+      .. py:attribute:: batchSize
+
+         ``CfnFunction.SQSEventProperty.BatchSize``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#sqs
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: ScheduleEventProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.ScheduleEventProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.ScheduleEventProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.ScheduleEventProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: schedule
+
+         ``CfnFunction.ScheduleEventProperty.Schedule``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#schedule
+
+
+         :type: string
+
+
+      .. py:attribute:: input
+
+         ``CfnFunction.ScheduleEventProperty.Input``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#schedule
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: VpcConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnFunction.VpcConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnFunction.VpcConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnFunction.VpcConfigProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: securityGroupIds
+
+         ``CfnFunction.VpcConfigProperty.SecurityGroupIds``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[]
+
+
+      .. py:attribute:: subnetIds
+
+         ``CfnFunction.VpcConfigProperty.SubnetIds``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-vpcconfig.html
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[]
+
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnFunctionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnFunctionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Serverless;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.serverless.CfnFunctionProps;
+
+      .. code-tab:: javascript
+
+         // CfnFunctionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnFunctionProps } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+   .. py:attribute:: codeUri
+
+      ``AWS::Serverless::Function.CodeUri``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: string or :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.S3LocationProperty`\ 
+
+
+   .. py:attribute:: handler
+
+      ``AWS::Serverless::Function.Handler``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: string
+
+
+   .. py:attribute:: runtime
+
+      ``AWS::Serverless::Function.Runtime``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: string
+
+
+   .. py:attribute:: autoPublishAlias
+
+      ``AWS::Serverless::Function.AutoPublishAlias``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: deadLetterQueue
+
+      ``AWS::Serverless::Function.DeadLetterQueue``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.DeadLetterQueueProperty`\  *(optional)*
+
+
+   .. py:attribute:: deploymentPreference
+
+      ``AWS::Serverless::Function.DeploymentPreference``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#deploymentpreference-object
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.DeploymentPreferenceProperty`\  *(optional)*
+
+
+   .. py:attribute:: description
+
+      ``AWS::Serverless::Function.Description``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: environment
+
+      ``AWS::Serverless::Function.Environment``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.FunctionEnvironmentProperty`\  *(optional)*
+
+
+   .. py:attribute:: events
+
+      ``AWS::Serverless::Function.Events``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or string => (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.EventSourceProperty`\ ) *(optional)*
+
+
+   .. py:attribute:: functionName
+
+      ``AWS::Serverless::Function.FunctionName``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: kmsKeyArn
+
+      ``AWS::Serverless::Function.KmsKeyArn``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: layers
+
+      ``AWS::Serverless::Function.Layers``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: memorySize
+
+      ``AWS::Serverless::Function.MemorySize``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: policies
+
+      ``AWS::Serverless::Function.Policies``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: string or :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.IAMPolicyDocumentProperty`\  or (string or :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.IAMPolicyDocumentProperty`\ )[] *(optional)*
+
+
+   .. py:attribute:: reservedConcurrentExecutions
+
+      ``AWS::Serverless::Function.ReservedConcurrentExecutions``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: role
+
+      ``AWS::Serverless::Function.Role``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: tags
+
+      ``AWS::Serverless::Function.Tags``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or string => (string or :py:class:`@aws-cdk/cdk.Token`\ ) *(optional)*
+
+
+   .. py:attribute:: timeout
+
+      ``AWS::Serverless::Function.Timeout``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: tracing
+
+      ``AWS::Serverless::Function.Tracing``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: vpcConfig
+
+      ``AWS::Serverless::Function.VpcConfig``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-serverless.CfnFunction.VpcConfigProperty`\  *(optional)*
+
+
+CfnLayerVersion
+^^^^^^^^^^^^^^^
+
+.. py:class:: CfnLayerVersion(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Serverless;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.serverless.CfnLayerVersion;
+
+      .. code-tab:: javascript
+
+         const { CfnLayerVersion } = require('@aws-cdk/aws-serverless');
+
+      .. code-tab:: typescript
+
+         import { CfnLayerVersion } from '@aws-cdk/aws-serverless';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-serverless.CfnLayerVersionProps`\  *(optional)*
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: requiredTransform
+
+      The ``Transform`` a template must use in order to use this resource
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: layerVersionArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-serverless.CfnLayerVersionProps`\  *(readonly)*
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnLayerVersionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnLayerVersionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Serverless;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.serverless.CfnLayerVersionProps;
+
+      .. code-tab:: javascript
+
+         // CfnLayerVersionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnLayerVersionProps } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+   .. py:attribute:: compatibleRuntimes
+
+      ``AWS::Serverless::LayerVersion.CompatibleRuntimes``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesslayerversion
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: contentUri
+
+      ``AWS::Serverless::LayerVersion.ContentUri``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesslayerversion
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: description
+
+      ``AWS::Serverless::LayerVersion.Description``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesslayerversion
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: layerName
+
+      ``AWS::Serverless::LayerVersion.LayerName``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesslayerversion
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: licenseInfo
+
+      ``AWS::Serverless::LayerVersion.LicenseInfo``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesslayerversion
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: retentionPolicy
+
+      ``AWS::Serverless::LayerVersion.RetentionPolicy``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesslayerversion
+
+
+      :type: string *(optional)*
+
+
+CfnSimpleTable
+^^^^^^^^^^^^^^
+
+.. py:class:: CfnSimpleTable(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Serverless;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.serverless.CfnSimpleTable;
+
+      .. code-tab:: javascript
+
+         const { CfnSimpleTable } = require('@aws-cdk/aws-serverless');
+
+      .. code-tab:: typescript
+
+         import { CfnSimpleTable } from '@aws-cdk/aws-serverless';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-serverless.CfnSimpleTableProps`\  *(optional)*
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: requiredTransform
+
+      The ``Transform`` a template must use in order to use this resource
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-serverless.CfnSimpleTableProps`\  *(readonly)*
+
+
+   .. py:attribute:: simpleTableName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The ``TagManager`` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. ``Tag`` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+   .. py:class:: PrimaryKeyProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnSimpleTable.PrimaryKeyProperty;
+
+         .. code-tab:: javascript
+
+            // CfnSimpleTable.PrimaryKeyProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnSimpleTable.PrimaryKeyProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: type
+
+         ``CfnSimpleTable.PrimaryKeyProperty.Type``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#primary-key-object
+
+
+         :type: string
+
+
+      .. py:attribute:: name
+
+         ``CfnSimpleTable.PrimaryKeyProperty.Name``
+
+         https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#primary-key-object
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: ProvisionedThroughputProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnSimpleTable.ProvisionedThroughputProperty;
+
+         .. code-tab:: javascript
+
+            // CfnSimpleTable.ProvisionedThroughputProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnSimpleTable.ProvisionedThroughputProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: writeCapacityUnits
+
+         ``CfnSimpleTable.ProvisionedThroughputProperty.WriteCapacityUnits``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: readCapacityUnits
+
+         ``CfnSimpleTable.ProvisionedThroughputProperty.ReadCapacityUnits``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: SSESpecificationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Serverless;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.serverless.CfnSimpleTable.SSESpecificationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnSimpleTable.SSESpecificationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnSimpleTable.SSESpecificationProperty } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+      .. py:attribute:: sseEnabled
+
+         ``CfnSimpleTable.SSESpecificationProperty.SSEEnabled``
+
+         https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnSimpleTableProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnSimpleTableProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Serverless;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.serverless.CfnSimpleTableProps;
+
+      .. code-tab:: javascript
+
+         // CfnSimpleTableProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnSimpleTableProps } from '@aws-cdk/aws-serverless';
+
+
+
+
+
+   .. py:attribute:: primaryKey
+
+      ``AWS::Serverless::SimpleTable.PrimaryKey``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#primary-key-object
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-serverless.CfnSimpleTable.PrimaryKeyProperty`\  *(optional)*
+
+
+   .. py:attribute:: provisionedThroughput
+
+      ``AWS::Serverless::SimpleTable.ProvisionedThroughput``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-serverless.CfnSimpleTable.ProvisionedThroughputProperty`\  *(optional)*
+
+
+   .. py:attribute:: sseSpecification
+
+      ``AWS::Serverless::SimpleTable.SSESpecification``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesssimpletable
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-serverless.CfnSimpleTable.SSESpecificationProperty`\  *(optional)*
+
+
+   .. py:attribute:: tableName
+
+      ``AWS::Serverless::SimpleTable.TableName``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesssimpletable
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: tags
+
+      ``AWS::Serverless::SimpleTable.Tags``
+
+      https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlesssimpletable
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or string => (string or :py:class:`@aws-cdk/cdk.Token`\ ) *(optional)*
+
+

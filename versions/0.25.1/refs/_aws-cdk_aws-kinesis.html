@@ -1,0 +1,2891 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>@aws-cdk/aws-kinesis &mdash; AWS Cloud Development Kit</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/tabs.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.2.10/segment.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.2.10/menu.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_tabs/semantic-ui-2.2.10/tab.min.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="@aws-cdk/aws-kinesisanalytics" href="_aws-cdk_aws-kinesisanalytics.html" />
+    <link rel="prev" title="@aws-cdk/aws-iotanalytics" href="_aws-cdk_aws-iotanalytics.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> AWS Cloud Development Kit
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.25.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../reference.html">Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_alexa-ask.html">&#64;aws-cdk/alexa-ask</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_app-delivery.html">&#64;aws-cdk/app-delivery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_assets.html">&#64;aws-cdk/assets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_assets-docker.html">AWS CDK Docker Image Assets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-amazonmq.html">&#64;aws-cdk/aws-amazonmq</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-apigateway.html">&#64;aws-cdk/aws-apigateway</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-applicationautoscaling.html">&#64;aws-cdk/aws-applicationautoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-appstream.html">&#64;aws-cdk/aws-appstream</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-appsync.html">&#64;aws-cdk/aws-appsync</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-athena.html">&#64;aws-cdk/aws-athena</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-autoscaling.html">&#64;aws-cdk/aws-autoscaling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-autoscaling-api.html">&#64;aws-cdk/aws-autoscaling-api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-autoscaling-common.html">&#64;aws-cdk/aws-autoscaling-common</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-autoscalingplans.html">&#64;aws-cdk/aws-autoscalingplans</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-batch.html">&#64;aws-cdk/aws-batch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-budgets.html">&#64;aws-cdk/aws-budgets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-certificatemanager.html">&#64;aws-cdk/aws-certificatemanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-cloud9.html">&#64;aws-cdk/aws-cloud9</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-cloudformation.html">&#64;aws-cdk/aws-cloudformation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-cloudfront.html">&#64;aws-cdk/aws-cloudfront</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-cloudtrail.html">&#64;aws-cdk/aws-cloudtrail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-cloudwatch.html">&#64;aws-cdk/aws-cloudwatch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-codebuild.html">AWS CodeBuild</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-codecommit.html">AWS CodeCommit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-codedeploy.html">&#64;aws-cdk/aws-codedeploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-codedeploy-api.html">&#64;aws-cdk/aws-codedeploy-api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-codepipeline.html">&#64;aws-cdk/aws-codepipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-codepipeline-api.html">&#64;aws-cdk/aws-codepipeline-api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-cognito.html">&#64;aws-cdk/aws-cognito</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-config.html">&#64;aws-cdk/aws-config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-datapipeline.html">&#64;aws-cdk/aws-datapipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-dax.html">&#64;aws-cdk/aws-dax</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-directoryservice.html">&#64;aws-cdk/aws-directoryservice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-dlm.html">&#64;aws-cdk/aws-dlm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-dms.html">&#64;aws-cdk/aws-dms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-docdb.html">&#64;aws-cdk/aws-docdb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-dynamodb.html">&#64;aws-cdk/aws-dynamodb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-ec2.html">&#64;aws-cdk/aws-ec2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-ecr.html">&#64;aws-cdk/aws-ecr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-ecs.html">Amazon ECS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-efs.html">&#64;aws-cdk/aws-efs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-eks.html">&#64;aws-cdk/aws-eks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-elasticache.html">&#64;aws-cdk/aws-elasticache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-elasticbeanstalk.html">&#64;aws-cdk/aws-elasticbeanstalk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-elasticloadbalancing.html">&#64;aws-cdk/aws-elasticloadbalancing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-elasticloadbalancingv2.html">&#64;aws-cdk/aws-elasticloadbalancingv2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-elasticsearch.html">&#64;aws-cdk/aws-elasticsearch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-emr.html">&#64;aws-cdk/aws-emr</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-events.html">&#64;aws-cdk/aws-events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-fsx.html">&#64;aws-cdk/aws-fsx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-gamelift.html">&#64;aws-cdk/aws-gamelift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-glue.html">&#64;aws-cdk/aws-glue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-guardduty.html">&#64;aws-cdk/aws-guardduty</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-iam.html">&#64;aws-cdk/aws-iam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-inspector.html">&#64;aws-cdk/aws-inspector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-iot.html">&#64;aws-cdk/aws-iot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-iot1click.html">&#64;aws-cdk/aws-iot1click</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-iotanalytics.html">&#64;aws-cdk/aws-iotanalytics</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">&#64;aws-cdk/aws-kinesis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#aws-kinesis-construct-library">AWS Kinesis Construct Library</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#encryption">Encryption</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#reference">Reference</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cfnstream">CfnStream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cfnstreamconsumer">CfnStreamConsumer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cfnstreamconsumerprops-interface">CfnStreamConsumerProps (interface)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cfnstreamprops-interface">CfnStreamProps (interface)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#istream-interface">IStream (interface)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stream">Stream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#streambase">StreamBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#streamencryption-enum">StreamEncryption (enum)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#streamimportprops-interface">StreamImportProps (interface)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#streamprops-interface">StreamProps (interface)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-kinesisanalytics.html">&#64;aws-cdk/aws-kinesisanalytics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-kinesisfirehose.html">&#64;aws-cdk/aws-kinesisfirehose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-kms.html">&#64;aws-cdk/aws-kms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-lambda.html">&#64;aws-cdk/aws-lambda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-lambda-event-sources.html">&#64;aws-cdk/aws-lambda-event-sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-logs.html">&#64;aws-cdk/aws-logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-neptune.html">&#64;aws-cdk/aws-neptune</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-opsworks.html">&#64;aws-cdk/aws-opsworks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-opsworkscm.html">&#64;aws-cdk/aws-opsworkscm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-quickstarts.html">&#64;aws-cdk/aws-quickstarts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-ram.html">&#64;aws-cdk/aws-ram</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-rds.html">&#64;aws-cdk/aws-rds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-redshift.html">&#64;aws-cdk/aws-redshift</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-robomaker.html">&#64;aws-cdk/aws-robomaker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-route53.html">&#64;aws-cdk/aws-route53</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-route53resolver.html">&#64;aws-cdk/aws-route53resolver</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-s3.html">&#64;aws-cdk/aws-s3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-s3-deployment.html">&#64;aws-cdk/aws-s3-deployment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-s3-notifications.html">&#64;aws-cdk/aws-s3-notifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-sagemaker.html">&#64;aws-cdk/aws-sagemaker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-sdb.html">&#64;aws-cdk/aws-sdb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-secretsmanager.html">&#64;aws-cdk/aws-secretsmanager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-serverless.html">&#64;aws-cdk/aws-serverless</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-servicecatalog.html">&#64;aws-cdk/aws-servicecatalog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-servicediscovery.html">&#64;aws-cdk/aws-servicediscovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-ses.html">&#64;aws-cdk/aws-ses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-sns.html">&#64;aws-cdk/aws-sns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-sqs.html">&#64;aws-cdk/aws-sqs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-ssm.html">&#64;aws-cdk/aws-ssm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-stepfunctions.html">&#64;aws-cdk/aws-stepfunctions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-waf.html">&#64;aws-cdk/aws-waf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-wafregional.html">&#64;aws-cdk/aws-wafregional</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_aws-workspaces.html">&#64;aws-cdk/aws-workspaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_cdk.html">&#64;aws-cdk/cdk</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_cx-api.html">&#64;aws-cdk/cx-api</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_aws-cdk_runtime-values.html">&#64;aws-cdk/runtime-values</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AWS Cloud Development Kit</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../reference.html">Reference</a> &raquo;</li>
+        
+      <li>&#64;aws-cdk/aws-kinesis</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/refs/_aws-cdk_aws-kinesis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           ﻿<p style="background-color:#e47911; border-top:1px solid #ccc; margin-top:6px; padding-top:10px; padding-bottom:10px; padding-left:5px; font-weight:bold; font-style:italic; font-size:16px; color:white; vertical-align:middle">
+This documentation is for the developer preview release of the AWS CDK.
+Do not use this version of the AWS CDK in production.
+Subsequent releases of the AWS CDK will likely include breaking changes.
+</p>
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aws-cdk-aws-kinesis">
+<h1>&#64;aws-cdk/aws-kinesis<a class="headerlink" href="#aws-cdk-aws-kinesis" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="aws-kinesis-construct-library">
+<h2>AWS Kinesis Construct Library<a class="headerlink" href="#aws-kinesis-construct-library" title="Permalink to this headline">¶</a></h2>
+<p>Define an unencrypted Kinesis stream.</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="k">new</span> <span class="nx">Stream</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s1">&#39;MyFirstStream&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+<div class="section" id="encryption">
+<h3>Encryption<a class="headerlink" href="#encryption" title="Permalink to this headline">¶</a></h3>
+<p>Define a KMS-encrypted stream:</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">stream</span> <span class="o">=</span> <span class="nx">newStream</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s1">&#39;MyEncryptedStream&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">encryption</span>: <span class="kt">StreamEncryption.Kms</span>
+<span class="p">});</span>
+
+<span class="c1">// you can access the encryption key:</span>
+<span class="nx">assert</span><span class="p">(</span><span class="nx">stream</span><span class="p">.</span><span class="nx">encryptionKey</span> <span class="k">instanceof</span> <span class="nx">kms</span><span class="p">.</span><span class="nx">EncryptionKey</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>You can also supply your own key:</p>
+<div class="highlight-ts notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">myKmsKey</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">kms</span><span class="p">.</span><span class="nx">EncryptionKey</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s1">&#39;MyKey&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">stream</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Stream</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="s1">&#39;MyEncryptedStream&#39;</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">encryption</span>: <span class="kt">StreamEncryption.Kms</span><span class="p">,</span>
+    <span class="nx">encryptionKey</span>: <span class="kt">myKmsKey</span>
+<span class="p">});</span>
+
+<span class="nx">assert</span><span class="p">(</span><span class="nx">stream</span><span class="p">.</span><span class="nx">encryptionKey</span> <span class="o">===</span> <span class="nx">myKmsKey</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-QyM= active docutils container">
+<p>View in <a class="reference external" href="https://www.nuget.org/packages/Amazon.CDK.AWS.Kinesis/0.25.1">Nuget</a></p>
+<p><strong>csproj</strong>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;PackageReference</span> <span class="na">Include=</span><span class="s">&quot;Amazon.CDK.AWS.Kinesis&quot;</span> <span class="na">Version=</span><span class="s">&quot;0.25.1&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p><strong>dotnet</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">dotnet add package Amazon.CDK.AWS.Kinesis --version 0.25.1</span>
+</pre></div>
+</div>
+<p><strong>packages.config</strong>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;package</span> <span class="na">id=</span><span class="s">&quot;Amazon.CDK.AWS.Kinesis&quot;</span> <span class="na">version=</span><span class="s">&quot;0.25.1&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-SmF2YQ== docutils container">
+<p>View in <a class="reference external" href="https://repo1.maven.org/maven2/software/amazon/awscdk/kinesis/0.25.1/">Maven Central</a></p>
+<p><strong>Apache Buildr</strong>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&#39;software.amazon.awscdk:kinesis:jar:0.25.1&#39;
+</pre></div>
+</div>
+<p><strong>Apache Ivy</strong>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dependency</span> <span class="na">groupId=</span><span class="s">&quot;software.amazon.awscdk&quot;</span> <span class="na">name=</span><span class="s">&quot;kinesis&quot;</span> <span class="na">rev=</span><span class="s">&quot;0.25.1&quot;</span><span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<p><strong>Apache Maven</strong>:</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dependency&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>software.amazon.awscdk<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>kinesis<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>0.25.1<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</pre></div>
+</div>
+<p><strong>Gradle / Grails</strong>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>compile &#39;software.amazon.awscdk:kinesis:0.25.1&#39;
+</pre></div>
+</div>
+<p><strong>Groovy Grape</strong>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>@Grapes(
+@Grab(group=&#39;software.amazon.awscdk&#39;, module=&#39;kinesis&#39;, version=&#39;0.25.1&#39;)
+)
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<p>View in <a class="reference external" href="https://www.npmjs.com/package/&#64;aws-cdk/aws-kinesis/v/0.25.1">NPM</a></p>
+<p><strong>npm</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> npm i @aws-cdk/aws-kinesis@0.25.1
+</pre></div>
+</div>
+<p><strong>package.json</strong>:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;@aws-cdk/aws-kinesis&quot;</span><span class="o">:</span> <span class="s2">&quot;^0.25.1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>yarn</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> yarn add @aws-cdk/aws-kinesis@0.25.1
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<p>View in <a class="reference external" href="https://www.npmjs.com/package/&#64;aws-cdk/aws-kinesis/v/0.25.1">NPM</a></p>
+<p><strong>npm</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> npm i @aws-cdk/aws-kinesis@0.25.1
+</pre></div>
+</div>
+<p><strong>package.json</strong>:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;@aws-cdk/aws-kinesis&quot;</span><span class="o">:</span> <span class="s2">&quot;^0.25.1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>yarn</strong>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$</span> yarn add @aws-cdk/aws-kinesis@0.25.1
+</pre></div>
+</div>
+</div>
+</div>
+<span class="target" id="module-&#64;aws-cdk/aws-kinesis"></span><div class="section" id="cfnstream">
+<h3>CfnStream<a class="headerlink" href="#cfnstream" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream">
+<em class="property">class </em><code class="descclassname">&#64;aws-cdk/aws-kinesis.</code><code class="descname">CfnStream</code><span class="sig-paren">(</span><em>scope</em>, <em>id</em>, <em>props</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.Kinesis</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.kinesis.CfnStream</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">CfnStream</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@aws-cdk/aws-kinesis&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnStream</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-kinesis&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Extends:</th><td class="field-body"><p class="first"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource" title="&#64;aws-cdk/cdk.Resource"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>scope</strong> (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct" title="&#64;aws-cdk/cdk.Construct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a>) – scope in which this resource is defined</li>
+<li><strong>id</strong> (<em>string</em>) – scoped id of the resource</li>
+<li><strong>props</strong> (<a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.CfnStreamProps" title="&#64;aws-cdk/aws-kinesis.CfnStreamProps"><code class="xref py py-class docutils literal notranslate"><span class="pre">CfnStreamProps</span></code></a>) – resource properties</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.renderProperties">
+<code class="descname">renderProperties</code><span class="sig-paren">(</span><em>properties</em><span class="sig-paren">)</span> &#x2192; string =&gt; any<a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.renderProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Overrides</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.renderProperties" title="&#64;aws-cdk/cdk.Resource.renderProperties"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource.renderProperties()</span></code></a></p>
+<p><em>Protected method</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>properties</strong> (<em>any</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">string =&gt; any</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.resourceTypeName">
+<code class="descname">resourceTypeName</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.resourceTypeName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The CloudFormation resource type name for this resource class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em> <em>(static)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.propertyOverrides">
+<code class="descname">propertyOverrides</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.propertyOverrides" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.CfnStreamProps" title="&#64;aws-cdk/aws-kinesis.CfnStreamProps"><code class="xref py py-class docutils literal notranslate"><span class="pre">CfnStreamProps</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.streamArn">
+<code class="descname">streamArn</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.streamArn" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.streamId">
+<code class="descname">streamId</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.streamId" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.tags">
+<code class="descname">tags</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <code class="docutils literal notranslate"><span class="pre">TagManager</span></code> handles setting, removing and formatting tags</p>
+<p>Tags should be managed either passing them as properties during</p>
+<p>initiation or by calling methods on this object. If both techniques are</p>
+<p>used only the tags from the TagManager will be used. <code class="docutils literal notranslate"><span class="pre">Tag</span></code> (aspect)</p>
+<p>will use the manager.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.TagManager" title="&#64;aws-cdk/cdk.TagManager"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.TagManager</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.StreamEncryptionProperty">
+<em class="property">class </em><code class="descname">StreamEncryptionProperty</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.StreamEncryptionProperty" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.Kinesis</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.kinesis.CfnStream.StreamEncryptionProperty</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// CfnStream.StreamEncryptionProperty is an interface</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnStream</span><span class="p">.</span><span class="nx">StreamEncryptionProperty</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-kinesis&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.StreamEncryptionProperty.encryptionType">
+<code class="descname">encryptionType</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.StreamEncryptionProperty.encryptionType" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnStream.StreamEncryptionProperty.EncryptionType</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streamencryption.html#cfn-kinesis-stream-streamencryption-encryptiontype">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streamencryption.html#cfn-kinesis-stream-streamencryption-encryptiontype</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.StreamEncryptionProperty.keyId">
+<code class="descname">keyId</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.StreamEncryptionProperty.keyId" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">CfnStream.StreamEncryptionProperty.KeyId</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streamencryption.html#cfn-kinesis-stream-streamencryption-keyid">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesis-stream-streamencryption.html#cfn-kinesis-stream-streamencryption-keyid</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.toString">
+<code class="descname">toString</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; string<a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.toString" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.toString" title="&#64;aws-cdk/cdk.Construct.toString"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Returns a string representation of this construct.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; string[]<a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.validate" title="&#64;aws-cdk/cdk.Construct.validate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Validate the current construct.</p>
+<p>This method can be implemented by derived constructs in order to perform</p>
+<p>validation logic. It is called on all constructs before synthesis.</p>
+<p><em>Protected method</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">An array of validation error messages, or an empty array if there the construct is valid.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">string[]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.dependencyRoots">
+<code class="descname">dependencyRoots</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.dependencyRoots" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.dependencyRoots" title="&#64;aws-cdk/cdk.Construct.dependencyRoots"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>The set of constructs that form the root of this dependable</p>
+<p>All resources under all returned constructs are included in the ordering</p>
+<p>dependency.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.IConstruct" title="&#64;aws-cdk/cdk.IConstruct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.IConstruct</span></code></a>[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.node">
+<code class="descname">node</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.node" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.node" title="&#64;aws-cdk/cdk.Construct.node"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Construct node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.ConstructNode" title="&#64;aws-cdk/cdk.ConstructNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.ConstructNode</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.ref">
+<code class="descname">ref</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.ref" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Referenceable.ref" title="&#64;aws-cdk/cdk.Referenceable.ref"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Referenceable</span></code></a></p>
+<p>Returns a token to a CloudFormation { Ref } that references this entity based on it’s logical ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.addDeletionOverride">
+<code class="descname">addDeletionOverride</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.addDeletionOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addDeletionOverride" title="&#64;aws-cdk/cdk.Resource.addDeletionOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Syntactic sugar for <cite>addOverride(path, undefined)</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<em>string</em>) – The path of the value to delete</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.addDependsOn">
+<code class="descname">addDependsOn</code><span class="sig-paren">(</span><em>resource</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.addDependsOn" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addDependsOn" title="&#64;aws-cdk/cdk.Resource.addDependsOn"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Indicates that this resource depends on another resource and cannot be provisioned</p>
+<p>unless the other resource has been successfully provisioned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>resource</strong> (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource" title="&#64;aws-cdk/cdk.Resource"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.addOverride">
+<code class="descname">addOverride</code><span class="sig-paren">(</span><em>path</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.addOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addOverride" title="&#64;aws-cdk/cdk.Resource.addOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Adds an override to the synthesized CloudFormation resource. To add a</p>
+<p>property override, either use <cite>addPropertyOverride</cite> or prefix <cite>path</cite> with</p>
+<p>“Properties.” (i.e. <cite>Properties.TopicName</cite>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> (<em>string</em>) – The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.</li>
+<li><strong>value</strong> (<em>any</em>) – The value. Could be primitive or complex.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.addPropertyDeletionOverride">
+<code class="descname">addPropertyDeletionOverride</code><span class="sig-paren">(</span><em>propertyPath</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.addPropertyDeletionOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addPropertyDeletionOverride" title="&#64;aws-cdk/cdk.Resource.addPropertyDeletionOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Adds an override that deletes the value of a property from the resource definition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>propertyPath</strong> (<em>string</em>) – The path to the property.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.addPropertyOverride">
+<code class="descname">addPropertyOverride</code><span class="sig-paren">(</span><em>propertyPath</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.addPropertyOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addPropertyOverride" title="&#64;aws-cdk/cdk.Resource.addPropertyOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Adds an override to a resource property.</p>
+<p>Syntactic sugar for <cite>addOverride(“Properties.&lt;…&gt;”, value)</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>propertyPath</strong> (<em>string</em>) – The path of the property</li>
+<li><strong>value</strong> (<em>any</em>) – The value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.getAtt">
+<code class="descname">getAtt</code><span class="sig-paren">(</span><em>attributeName</em><span class="sig-paren">)</span> &#x2192; &#64;aws-cdk/cdk.CfnReference<a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.getAtt" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.getAtt" title="&#64;aws-cdk/cdk.Resource.getAtt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Returns a token for an runtime attribute of this resource.</p>
+<p>Ideally, use generated attribute accessors (e.g. <cite>resource.arn</cite>), but this can be used for future compatibility</p>
+<p>in case there is no generated attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>attributeName</strong> (<em>string</em>) – The name of the attribute.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.CfnReference" title="&#64;aws-cdk/cdk.CfnReference"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.CfnReference</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.toCloudFormation">
+<code class="descname">toCloudFormation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; json<a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.toCloudFormation" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.toCloudFormation" title="&#64;aws-cdk/cdk.Resource.toCloudFormation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Emits CloudFormation for this resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">json</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.options">
+<code class="descname">options</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.options" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.options" title="&#64;aws-cdk/cdk.Resource.options"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Options for this resource, such as condition, update policy etc.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.ResourceOptions" title="&#64;aws-cdk/cdk.ResourceOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.ResourceOptions</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.properties">
+<code class="descname">properties</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.properties" title="&#64;aws-cdk/cdk.Resource.properties"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>AWS resource properties.</p>
+<p>This object is rendered via a call to “renderProperties(this.properties)”.</p>
+<p><em>Protected property</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">any <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.resourceType">
+<code class="descname">resourceType</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.resourceType" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.resourceType" title="&#64;aws-cdk/cdk.Resource.resourceType"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>AWS resource type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.untypedPropertyOverrides">
+<code class="descname">untypedPropertyOverrides</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.untypedPropertyOverrides" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.untypedPropertyOverrides" title="&#64;aws-cdk/cdk.Resource.untypedPropertyOverrides"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>AWS resource property overrides.</p>
+<p>During synthesis, the method “renderProperties(this.overrides)” is called</p>
+<p>with this object, and merged on top of the output of</p>
+<p>“renderProperties(this.properties)”.</p>
+<p>Derived classes should expose a strongly-typed version of this object as</p>
+<p>a public property called <cite>propertyOverrides</cite>.</p>
+<p><em>Protected property</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">any <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.overrideLogicalId">
+<code class="descname">overrideLogicalId</code><span class="sig-paren">(</span><em>newLogicalId</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.overrideLogicalId" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.overrideLogicalId" title="&#64;aws-cdk/cdk.StackElement.overrideLogicalId"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>Overrides the auto-generated logical ID with a specific ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>newLogicalId</strong> (<em>string</em>) – The new logical ID to use for this stack element.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.prepare">
+<code class="descname">prepare</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.prepare" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.prepare" title="&#64;aws-cdk/cdk.StackElement.prepare"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>Automatically detect references in this StackElement</p>
+<p><em>Protected method</em></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.creationStackTrace">
+<code class="descname">creationStackTrace</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.creationStackTrace" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.creationStackTrace" title="&#64;aws-cdk/cdk.StackElement.creationStackTrace"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.logicalId">
+<code class="descname">logicalId</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.logicalId" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.logicalId" title="&#64;aws-cdk/cdk.StackElement.logicalId"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>The logical ID for this CloudFormation stack element. The logical ID of the element</p>
+<p>is calculated from the path of the resource node in the construct tree.</p>
+<p>To override this value, use <cite>overrideLogicalId(newLogicalId)</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStream.stackPath">
+<code class="descname">stackPath</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStream.stackPath" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.stackPath" title="&#64;aws-cdk/cdk.StackElement.stackPath"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>Return the path with respect to the stack</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="cfnstreamconsumer">
+<h3>CfnStreamConsumer<a class="headerlink" href="#cfnstreamconsumer" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer">
+<em class="property">class </em><code class="descclassname">&#64;aws-cdk/aws-kinesis.</code><code class="descname">CfnStreamConsumer</code><span class="sig-paren">(</span><em>scope</em>, <em>id</em>, <em>props</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.Kinesis</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.kinesis.CfnStreamConsumer</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">CfnStreamConsumer</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@aws-cdk/aws-kinesis&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnStreamConsumer</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-kinesis&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Extends:</th><td class="field-body"><p class="first"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource" title="&#64;aws-cdk/cdk.Resource"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>scope</strong> (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct" title="&#64;aws-cdk/cdk.Construct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a>) – scope in which this resource is defined</li>
+<li><strong>id</strong> (<em>string</em>) – scoped id of the resource</li>
+<li><strong>props</strong> (<a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.CfnStreamConsumerProps" title="&#64;aws-cdk/aws-kinesis.CfnStreamConsumerProps"><code class="xref py py-class docutils literal notranslate"><span class="pre">CfnStreamConsumerProps</span></code></a>) – resource properties</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.renderProperties">
+<code class="descname">renderProperties</code><span class="sig-paren">(</span><em>properties</em><span class="sig-paren">)</span> &#x2192; string =&gt; any<a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.renderProperties" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Overrides</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.renderProperties" title="&#64;aws-cdk/cdk.Resource.renderProperties"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource.renderProperties()</span></code></a></p>
+<p><em>Protected method</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>properties</strong> (<em>any</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">string =&gt; any</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.resourceTypeName">
+<code class="descname">resourceTypeName</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.resourceTypeName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The CloudFormation resource type name for this resource class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em> <em>(static)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.propertyOverrides">
+<code class="descname">propertyOverrides</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.propertyOverrides" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.CfnStreamConsumerProps" title="&#64;aws-cdk/aws-kinesis.CfnStreamConsumerProps"><code class="xref py py-class docutils literal notranslate"><span class="pre">CfnStreamConsumerProps</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.streamConsumerArn">
+<code class="descname">streamConsumerArn</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.streamConsumerArn" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.streamConsumerConsumerArn">
+<code class="descname">streamConsumerConsumerArn</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.streamConsumerConsumerArn" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.streamConsumerConsumerCreationTimestamp">
+<code class="descname">streamConsumerConsumerCreationTimestamp</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.streamConsumerConsumerCreationTimestamp" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.streamConsumerConsumerName">
+<code class="descname">streamConsumerConsumerName</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.streamConsumerConsumerName" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.streamConsumerConsumerStatus">
+<code class="descname">streamConsumerConsumerStatus</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.streamConsumerConsumerStatus" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.streamConsumerStreamArn">
+<code class="descname">streamConsumerStreamArn</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.streamConsumerStreamArn" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.toString">
+<code class="descname">toString</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; string<a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.toString" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.toString" title="&#64;aws-cdk/cdk.Construct.toString"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Returns a string representation of this construct.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; string[]<a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.validate" title="&#64;aws-cdk/cdk.Construct.validate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Validate the current construct.</p>
+<p>This method can be implemented by derived constructs in order to perform</p>
+<p>validation logic. It is called on all constructs before synthesis.</p>
+<p><em>Protected method</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">An array of validation error messages, or an empty array if there the construct is valid.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">string[]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.dependencyRoots">
+<code class="descname">dependencyRoots</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.dependencyRoots" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.dependencyRoots" title="&#64;aws-cdk/cdk.Construct.dependencyRoots"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>The set of constructs that form the root of this dependable</p>
+<p>All resources under all returned constructs are included in the ordering</p>
+<p>dependency.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.IConstruct" title="&#64;aws-cdk/cdk.IConstruct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.IConstruct</span></code></a>[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.node">
+<code class="descname">node</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.node" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.node" title="&#64;aws-cdk/cdk.Construct.node"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Construct node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.ConstructNode" title="&#64;aws-cdk/cdk.ConstructNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.ConstructNode</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.ref">
+<code class="descname">ref</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.ref" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Referenceable.ref" title="&#64;aws-cdk/cdk.Referenceable.ref"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Referenceable</span></code></a></p>
+<p>Returns a token to a CloudFormation { Ref } that references this entity based on it’s logical ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.addDeletionOverride">
+<code class="descname">addDeletionOverride</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.addDeletionOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addDeletionOverride" title="&#64;aws-cdk/cdk.Resource.addDeletionOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Syntactic sugar for <cite>addOverride(path, undefined)</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> (<em>string</em>) – The path of the value to delete</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.addDependsOn">
+<code class="descname">addDependsOn</code><span class="sig-paren">(</span><em>resource</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.addDependsOn" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addDependsOn" title="&#64;aws-cdk/cdk.Resource.addDependsOn"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Indicates that this resource depends on another resource and cannot be provisioned</p>
+<p>unless the other resource has been successfully provisioned.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>resource</strong> (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource" title="&#64;aws-cdk/cdk.Resource"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.addOverride">
+<code class="descname">addOverride</code><span class="sig-paren">(</span><em>path</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.addOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addOverride" title="&#64;aws-cdk/cdk.Resource.addOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Adds an override to the synthesized CloudFormation resource. To add a</p>
+<p>property override, either use <cite>addPropertyOverride</cite> or prefix <cite>path</cite> with</p>
+<p>“Properties.” (i.e. <cite>Properties.TopicName</cite>).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>path</strong> (<em>string</em>) – The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.</li>
+<li><strong>value</strong> (<em>any</em>) – The value. Could be primitive or complex.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.addPropertyDeletionOverride">
+<code class="descname">addPropertyDeletionOverride</code><span class="sig-paren">(</span><em>propertyPath</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.addPropertyDeletionOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addPropertyDeletionOverride" title="&#64;aws-cdk/cdk.Resource.addPropertyDeletionOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Adds an override that deletes the value of a property from the resource definition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>propertyPath</strong> (<em>string</em>) – The path to the property.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.addPropertyOverride">
+<code class="descname">addPropertyOverride</code><span class="sig-paren">(</span><em>propertyPath</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.addPropertyOverride" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.addPropertyOverride" title="&#64;aws-cdk/cdk.Resource.addPropertyOverride"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Adds an override to a resource property.</p>
+<p>Syntactic sugar for <cite>addOverride(“Properties.&lt;…&gt;”, value)</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>propertyPath</strong> (<em>string</em>) – The path of the property</li>
+<li><strong>value</strong> (<em>any</em>) – The value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.getAtt">
+<code class="descname">getAtt</code><span class="sig-paren">(</span><em>attributeName</em><span class="sig-paren">)</span> &#x2192; &#64;aws-cdk/cdk.CfnReference<a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.getAtt" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.getAtt" title="&#64;aws-cdk/cdk.Resource.getAtt"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Returns a token for an runtime attribute of this resource.</p>
+<p>Ideally, use generated attribute accessors (e.g. <cite>resource.arn</cite>), but this can be used for future compatibility</p>
+<p>in case there is no generated attribute.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>attributeName</strong> (<em>string</em>) – The name of the attribute.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.CfnReference" title="&#64;aws-cdk/cdk.CfnReference"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.CfnReference</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.toCloudFormation">
+<code class="descname">toCloudFormation</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; json<a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.toCloudFormation" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.toCloudFormation" title="&#64;aws-cdk/cdk.Resource.toCloudFormation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Emits CloudFormation for this resource.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">json</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.options">
+<code class="descname">options</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.options" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.options" title="&#64;aws-cdk/cdk.Resource.options"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>Options for this resource, such as condition, update policy etc.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.ResourceOptions" title="&#64;aws-cdk/cdk.ResourceOptions"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.ResourceOptions</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.properties">
+<code class="descname">properties</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.properties" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.properties" title="&#64;aws-cdk/cdk.Resource.properties"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>AWS resource properties.</p>
+<p>This object is rendered via a call to “renderProperties(this.properties)”.</p>
+<p><em>Protected property</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">any <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.resourceType">
+<code class="descname">resourceType</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.resourceType" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.resourceType" title="&#64;aws-cdk/cdk.Resource.resourceType"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>AWS resource type.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.untypedPropertyOverrides">
+<code class="descname">untypedPropertyOverrides</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.untypedPropertyOverrides" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Resource.untypedPropertyOverrides" title="&#64;aws-cdk/cdk.Resource.untypedPropertyOverrides"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Resource</span></code></a></p>
+<p>AWS resource property overrides.</p>
+<p>During synthesis, the method “renderProperties(this.overrides)” is called</p>
+<p>with this object, and merged on top of the output of</p>
+<p>“renderProperties(this.properties)”.</p>
+<p>Derived classes should expose a strongly-typed version of this object as</p>
+<p>a public property called <cite>propertyOverrides</cite>.</p>
+<p><em>Protected property</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">any <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.overrideLogicalId">
+<code class="descname">overrideLogicalId</code><span class="sig-paren">(</span><em>newLogicalId</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.overrideLogicalId" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.overrideLogicalId" title="&#64;aws-cdk/cdk.StackElement.overrideLogicalId"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>Overrides the auto-generated logical ID with a specific ID.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>newLogicalId</strong> (<em>string</em>) – The new logical ID to use for this stack element.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.prepare">
+<code class="descname">prepare</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.prepare" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.prepare" title="&#64;aws-cdk/cdk.StackElement.prepare"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>Automatically detect references in this StackElement</p>
+<p><em>Protected method</em></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.creationStackTrace">
+<code class="descname">creationStackTrace</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.creationStackTrace" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.creationStackTrace" title="&#64;aws-cdk/cdk.StackElement.creationStackTrace"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.logicalId">
+<code class="descname">logicalId</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.logicalId" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.logicalId" title="&#64;aws-cdk/cdk.StackElement.logicalId"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>The logical ID for this CloudFormation stack element. The logical ID of the element</p>
+<p>is calculated from the path of the resource node in the construct tree.</p>
+<p>To override this value, use <cite>overrideLogicalId(newLogicalId)</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumer.stackPath">
+<code class="descname">stackPath</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumer.stackPath" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.StackElement.stackPath" title="&#64;aws-cdk/cdk.StackElement.stackPath"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.StackElement</span></code></a></p>
+<p>Return the path with respect to the stack</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="cfnstreamconsumerprops-interface">
+<h3>CfnStreamConsumerProps (interface)<a class="headerlink" href="#cfnstreamconsumerprops-interface" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumerProps">
+<em class="property">class </em><code class="descclassname">&#64;aws-cdk/aws-kinesis.</code><code class="descname">CfnStreamConsumerProps</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumerProps" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.Kinesis</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.kinesis.CfnStreamConsumerProps</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// CfnStreamConsumerProps is an interface</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnStreamConsumerProps</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-kinesis&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumerProps.consumerName">
+<code class="descname">consumerName</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumerProps.consumerName" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::Kinesis::StreamConsumer.ConsumerName</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html#cfn-kinesis-streamconsumer-consumername">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html#cfn-kinesis-streamconsumer-consumername</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamConsumerProps.streamArn">
+<code class="descname">streamArn</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamConsumerProps.streamArn" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::Kinesis::StreamConsumer.StreamARN</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html#cfn-kinesis-streamconsumer-streamarn">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-streamconsumer.html#cfn-kinesis-streamconsumer-streamarn</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="cfnstreamprops-interface">
+<h3>CfnStreamProps (interface)<a class="headerlink" href="#cfnstreamprops-interface" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamProps">
+<em class="property">class </em><code class="descclassname">&#64;aws-cdk/aws-kinesis.</code><code class="descname">CfnStreamProps</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamProps" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.Kinesis</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.kinesis.CfnStreamProps</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// CfnStreamProps is an interface</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">CfnStreamProps</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-kinesis&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamProps.shardCount">
+<code class="descname">shardCount</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamProps.shardCount" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::Kinesis::Stream.ShardCount</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-shardcount">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-shardcount</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">number or <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamProps.name">
+<code class="descname">name</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamProps.name" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::Kinesis::Stream.Name</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-name">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-name</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamProps.retentionPeriodHours">
+<code class="descname">retentionPeriodHours</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamProps.retentionPeriodHours" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::Kinesis::Stream.RetentionPeriodHours</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-retentionperiodhours">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-retentionperiodhours</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">number or <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamProps.streamEncryption">
+<code class="descname">streamEncryption</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamProps.streamEncryption" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::Kinesis::Stream.StreamEncryption</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-streamencryption">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-streamencryption</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> or <a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.CfnStream.StreamEncryptionProperty" title="&#64;aws-cdk/aws-kinesis.CfnStream.StreamEncryptionProperty"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamEncryptionProperty</span></code></a> <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.CfnStreamProps.tags">
+<code class="descname">tags</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.CfnStreamProps.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">AWS::Kinesis::Stream.Tags</span></code></p>
+<p><a class="reference external" href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-tags">http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesis-stream.html#cfn-kinesis-stream-tags</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> or (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Token" title="&#64;aws-cdk/cdk.Token"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Token</span></code></a> or <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.CfnTag" title="&#64;aws-cdk/cdk.CfnTag"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.CfnTag</span></code></a>)[] <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="istream-interface">
+<h3>IStream (interface)<a class="headerlink" href="#istream-interface" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-kinesis.IStream">
+<em class="property">class </em><code class="descclassname">&#64;aws-cdk/aws-kinesis.</code><code class="descname">IStream</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.IStream" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.Kinesis</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.kinesis.IStream</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// IStream is an interface</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">IStream</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-kinesis&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Extends:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.IConstruct" title="&#64;aws-cdk/cdk.IConstruct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.IConstruct</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Extends:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_aws-logs.html#&#64;aws-cdk/aws-logs.ILogSubscriptionDestination" title="&#64;aws-cdk/aws-logs.ILogSubscriptionDestination"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-logs.ILogSubscriptionDestination</span></code></a></td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.IStream.streamArn">
+<code class="descname">streamArn</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.IStream.streamArn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the stream.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.IStream.streamName">
+<code class="descname">streamName</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.IStream.streamName" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the stream</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.IStream.encryptionKey">
+<code class="descname">encryptionKey</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.IStream.encryptionKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional KMS encryption key associated with this stream.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_aws-kms.html#&#64;aws-cdk/aws-kms.IEncryptionKey" title="&#64;aws-cdk/aws-kms.IEncryptionKey"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kms.IEncryptionKey</span></code></a> <em>(optional)</em> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.IStream.export">
+<code class="descname">export</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; &#64;aws-cdk/aws-kinesis.StreamImportProps<a class="headerlink" href="#@aws-cdk/aws-kinesis.IStream.export" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exports this stream from the stack.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.StreamImportProps" title="&#64;aws-cdk/aws-kinesis.StreamImportProps"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamImportProps</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Abstract:</th><td class="field-body">Yes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.IStream.grantRead">
+<code class="descname">grantRead</code><span class="sig-paren">(</span><span class="optional">[</span><em>identity</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.IStream.grantRead" title="Permalink to this definition">¶</a></dt>
+<dd><p>Grant read permissions for this stream and its contents to an IAM</p>
+<p>principal (Role/Group/User).</p>
+<p>If an encryption key is used, permission to ues the key to decrypt the</p>
+<p>contents of the stream will also be granted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>identity</strong> (<a class="reference internal" href="_aws-cdk_aws-iam.html#&#64;aws-cdk/aws-iam.IPrincipal" title="&#64;aws-cdk/aws-iam.IPrincipal"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-iam.IPrincipal</span></code></a> <em>(optional)</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Abstract:</th><td class="field-body">Yes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.IStream.grantReadWrite">
+<code class="descname">grantReadWrite</code><span class="sig-paren">(</span><span class="optional">[</span><em>identity</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.IStream.grantReadWrite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Grants read/write permissions for this stream and its contents to an IAM</p>
+<p>principal (Role/Group/User).</p>
+<p>If an encryption key is used, permission to use the key for</p>
+<p>encrypt/decrypt will also be granted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>identity</strong> (<a class="reference internal" href="_aws-cdk_aws-iam.html#&#64;aws-cdk/aws-iam.IPrincipal" title="&#64;aws-cdk/aws-iam.IPrincipal"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-iam.IPrincipal</span></code></a> <em>(optional)</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Abstract:</th><td class="field-body">Yes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.IStream.grantWrite">
+<code class="descname">grantWrite</code><span class="sig-paren">(</span><span class="optional">[</span><em>identity</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.IStream.grantWrite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Grant write permissions for this stream and its contents to an IAM</p>
+<p>principal (Role/Group/User).</p>
+<p>If an encryption key is used, permission to ues the key to encrypt the</p>
+<p>contents of the stream will also be granted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>identity</strong> (<a class="reference internal" href="_aws-cdk_aws-iam.html#&#64;aws-cdk/aws-iam.IPrincipal" title="&#64;aws-cdk/aws-iam.IPrincipal"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-iam.IPrincipal</span></code></a> <em>(optional)</em>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Abstract:</th><td class="field-body">Yes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.IStream.logSubscriptionDestination">
+<code class="descname">logSubscriptionDestination</code><span class="sig-paren">(</span><em>sourceLogGroup</em><span class="sig-paren">)</span> &#x2192; &#64;aws-cdk/aws-logs.LogSubscriptionDestination<a class="headerlink" href="#@aws-cdk/aws-kinesis.IStream.logSubscriptionDestination" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_aws-logs.html#&#64;aws-cdk/aws-logs.ILogSubscriptionDestination.logSubscriptionDestination" title="&#64;aws-cdk/aws-logs.ILogSubscriptionDestination.logSubscriptionDestination"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-logs.ILogSubscriptionDestination</span></code></a></p>
+<p>Return the properties required to send subscription events to this destination.</p>
+<p>If necessary, the destination can use the properties of the SubscriptionFilter</p>
+<p>object itself to configure its permissions to allow the subscription to write</p>
+<p>to it.</p>
+<p>The destination may reconfigure its own permissions in response to this</p>
+<p>function call.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sourceLogGroup</strong> (<a class="reference internal" href="_aws-cdk_aws-logs.html#&#64;aws-cdk/aws-logs.ILogGroup" title="&#64;aws-cdk/aws-logs.ILogGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-logs.ILogGroup</span></code></a>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_aws-logs.html#&#64;aws-cdk/aws-logs.LogSubscriptionDestination" title="&#64;aws-cdk/aws-logs.LogSubscriptionDestination"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-logs.LogSubscriptionDestination</span></code></a></td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Abstract:</th><td class="field-body">Yes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.IStream.node">
+<code class="descname">node</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.IStream.node" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.IConstruct.node" title="&#64;aws-cdk/cdk.IConstruct.node"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.IConstruct</span></code></a></p>
+<p>The construct node in the scope tree.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.ConstructNode" title="&#64;aws-cdk/cdk.ConstructNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.ConstructNode</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.IStream.dependencyRoots">
+<code class="descname">dependencyRoots</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.IStream.dependencyRoots" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.IDependable.dependencyRoots" title="&#64;aws-cdk/cdk.IDependable.dependencyRoots"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.IDependable</span></code></a></p>
+<p>The set of constructs that form the root of this dependable</p>
+<p>All resources under all returned constructs are included in the ordering</p>
+<p>dependency.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.IConstruct" title="&#64;aws-cdk/cdk.IConstruct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.IConstruct</span></code></a>[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="stream">
+<h3>Stream<a class="headerlink" href="#stream" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-kinesis.Stream">
+<em class="property">class </em><code class="descclassname">&#64;aws-cdk/aws-kinesis.</code><code class="descname">Stream</code><span class="sig-paren">(</span><em>scope</em>, <em>id</em><span class="optional">[</span>, <em>props</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.Stream" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.Kinesis</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.kinesis.Stream</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">Stream</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@aws-cdk/aws-kinesis&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">Stream</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-kinesis&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A Kinesis stream. Can be encrypted with a KMS key.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Extends:</th><td class="field-body"><p class="first"><a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.StreamBase" title="&#64;aws-cdk/aws-kinesis.StreamBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamBase</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>scope</strong> (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct" title="&#64;aws-cdk/cdk.Construct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a>) – </li>
+<li><strong>id</strong> (<em>string</em>) – </li>
+<li><strong>props</strong> (<a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.StreamProps" title="&#64;aws-cdk/aws-kinesis.StreamProps"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamProps</span></code></a> <em>(optional)</em>) – </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="staticmethod">
+<dt id="&#64;aws-cdk/aws-kinesis.Stream.import">
+<em class="property">static </em><code class="descname">import</code><span class="sig-paren">(</span><em>scope</em>, <em>id</em>, <em>props</em><span class="sig-paren">)</span> &#x2192; &#64;aws-cdk/aws-kinesis.IStream<a class="headerlink" href="#@aws-cdk/aws-kinesis.Stream.import" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a Stream construct that represents an external stream.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>scope</strong> (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct" title="&#64;aws-cdk/cdk.Construct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a>) – The parent creating construct (usually <cite>this</cite>).</li>
+<li><strong>id</strong> (<em>string</em>) – The construct’s name.</li>
+<li><strong>props</strong> (<a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.StreamImportProps" title="&#64;aws-cdk/aws-kinesis.StreamImportProps"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamImportProps</span></code></a>) – </li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last"><a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.IStream" title="&#64;aws-cdk/aws-kinesis.IStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">IStream</span></code></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.Stream.export">
+<code class="descname">export</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; &#64;aws-cdk/aws-kinesis.StreamImportProps<a class="headerlink" href="#@aws-cdk/aws-kinesis.Stream.export" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Implements</em> <a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.StreamBase.export" title="&#64;aws-cdk/aws-kinesis.StreamBase.export"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kinesis.StreamBase.export()</span></code></a></p>
+<p>Exports this stream from the stack.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.StreamImportProps" title="&#64;aws-cdk/aws-kinesis.StreamImportProps"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamImportProps</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.Stream.streamArn">
+<code class="descname">streamArn</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.Stream.streamArn" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Implements</em> <a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.StreamBase.streamArn" title="&#64;aws-cdk/aws-kinesis.StreamBase.streamArn"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kinesis.StreamBase.streamArn()</span></code></a></p>
+<p>The ARN of the stream.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.Stream.streamName">
+<code class="descname">streamName</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.Stream.streamName" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Implements</em> <a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.StreamBase.streamName" title="&#64;aws-cdk/aws-kinesis.StreamBase.streamName"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kinesis.StreamBase.streamName()</span></code></a></p>
+<p>The name of the stream</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.Stream.encryptionKey">
+<code class="descname">encryptionKey</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.Stream.encryptionKey" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Implements</em> <a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.StreamBase.encryptionKey" title="&#64;aws-cdk/aws-kinesis.StreamBase.encryptionKey"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kinesis.StreamBase.encryptionKey()</span></code></a></p>
+<p>Optional KMS encryption key associated with this stream.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_aws-kms.html#&#64;aws-cdk/aws-kms.IEncryptionKey" title="&#64;aws-cdk/aws-kms.IEncryptionKey"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kms.IEncryptionKey</span></code></a> <em>(optional)</em> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.Stream.grantRead">
+<code class="descname">grantRead</code><span class="sig-paren">(</span><span class="optional">[</span><em>identity</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.Stream.grantRead" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.StreamBase.grantRead" title="&#64;aws-cdk/aws-kinesis.StreamBase.grantRead"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kinesis.StreamBase</span></code></a></p>
+<p>Grant write permissions for this stream and its contents to an IAM</p>
+<p>principal (Role/Group/User).</p>
+<p>If an encryption key is used, permission to ues the key to decrypt the</p>
+<p>contents of the stream will also be granted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>identity</strong> (<a class="reference internal" href="_aws-cdk_aws-iam.html#&#64;aws-cdk/aws-iam.IPrincipal" title="&#64;aws-cdk/aws-iam.IPrincipal"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-iam.IPrincipal</span></code></a> <em>(optional)</em>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.Stream.grantReadWrite">
+<code class="descname">grantReadWrite</code><span class="sig-paren">(</span><span class="optional">[</span><em>identity</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.Stream.grantReadWrite" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.StreamBase.grantReadWrite" title="&#64;aws-cdk/aws-kinesis.StreamBase.grantReadWrite"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kinesis.StreamBase</span></code></a></p>
+<p>Grants read/write permissions for this stream and its contents to an IAM</p>
+<p>principal (Role/Group/User).</p>
+<p>If an encryption key is used, permission to use the key for</p>
+<p>encrypt/decrypt will also be granted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>identity</strong> (<a class="reference internal" href="_aws-cdk_aws-iam.html#&#64;aws-cdk/aws-iam.IPrincipal" title="&#64;aws-cdk/aws-iam.IPrincipal"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-iam.IPrincipal</span></code></a> <em>(optional)</em>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.Stream.grantWrite">
+<code class="descname">grantWrite</code><span class="sig-paren">(</span><span class="optional">[</span><em>identity</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.Stream.grantWrite" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.StreamBase.grantWrite" title="&#64;aws-cdk/aws-kinesis.StreamBase.grantWrite"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kinesis.StreamBase</span></code></a></p>
+<p>Grant read permissions for this stream and its contents to an IAM</p>
+<p>principal (Role/Group/User).</p>
+<p>If an encryption key is used, permission to ues the key to decrypt the</p>
+<p>contents of the stream will also be granted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>identity</strong> (<a class="reference internal" href="_aws-cdk_aws-iam.html#&#64;aws-cdk/aws-iam.IPrincipal" title="&#64;aws-cdk/aws-iam.IPrincipal"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-iam.IPrincipal</span></code></a> <em>(optional)</em>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.Stream.logSubscriptionDestination">
+<code class="descname">logSubscriptionDestination</code><span class="sig-paren">(</span><em>sourceLogGroup</em><span class="sig-paren">)</span> &#x2192; &#64;aws-cdk/aws-logs.LogSubscriptionDestination<a class="headerlink" href="#@aws-cdk/aws-kinesis.Stream.logSubscriptionDestination" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.StreamBase.logSubscriptionDestination" title="&#64;aws-cdk/aws-kinesis.StreamBase.logSubscriptionDestination"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kinesis.StreamBase</span></code></a></p>
+<p>Return the properties required to send subscription events to this destination.</p>
+<p>If necessary, the destination can use the properties of the SubscriptionFilter</p>
+<p>object itself to configure its permissions to allow the subscription to write</p>
+<p>to it.</p>
+<p>The destination may reconfigure its own permissions in response to this</p>
+<p>function call.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sourceLogGroup</strong> (<a class="reference internal" href="_aws-cdk_aws-logs.html#&#64;aws-cdk/aws-logs.ILogGroup" title="&#64;aws-cdk/aws-logs.ILogGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-logs.ILogGroup</span></code></a>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_aws-logs.html#&#64;aws-cdk/aws-logs.LogSubscriptionDestination" title="&#64;aws-cdk/aws-logs.LogSubscriptionDestination"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-logs.LogSubscriptionDestination</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.Stream.prepare">
+<code class="descname">prepare</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.Stream.prepare" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.prepare" title="&#64;aws-cdk/cdk.Construct.prepare"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Perform final modifications before synthesis</p>
+<p>This method can be implemented by derived constructs in order to perform</p>
+<p>final changes before synthesis. prepare() will be called after child</p>
+<p>constructs have been prepared.</p>
+<p>This is an advanced framework feature. Only use this if you</p>
+<p>understand the implications.</p>
+<p><em>Protected method</em></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.Stream.toString">
+<code class="descname">toString</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; string<a class="headerlink" href="#@aws-cdk/aws-kinesis.Stream.toString" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.toString" title="&#64;aws-cdk/cdk.Construct.toString"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Returns a string representation of this construct.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.Stream.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; string[]<a class="headerlink" href="#@aws-cdk/aws-kinesis.Stream.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.validate" title="&#64;aws-cdk/cdk.Construct.validate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Validate the current construct.</p>
+<p>This method can be implemented by derived constructs in order to perform</p>
+<p>validation logic. It is called on all constructs before synthesis.</p>
+<p><em>Protected method</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">An array of validation error messages, or an empty array if there the construct is valid.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">string[]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.Stream.dependencyRoots">
+<code class="descname">dependencyRoots</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.Stream.dependencyRoots" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.dependencyRoots" title="&#64;aws-cdk/cdk.Construct.dependencyRoots"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>The set of constructs that form the root of this dependable</p>
+<p>All resources under all returned constructs are included in the ordering</p>
+<p>dependency.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.IConstruct" title="&#64;aws-cdk/cdk.IConstruct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.IConstruct</span></code></a>[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.Stream.node">
+<code class="descname">node</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.Stream.node" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.node" title="&#64;aws-cdk/cdk.Construct.node"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Construct node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.ConstructNode" title="&#64;aws-cdk/cdk.ConstructNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.ConstructNode</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="streambase">
+<h3>StreamBase<a class="headerlink" href="#streambase" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamBase">
+<em class="property">class </em><code class="descclassname">&#64;aws-cdk/aws-kinesis.</code><code class="descname">StreamBase</code><span class="sig-paren">(</span><em>scope</em>, <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamBase" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.Kinesis</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.kinesis.StreamBase</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">StreamBase</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@aws-cdk/aws-kinesis&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">StreamBase</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-kinesis&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Represents a Kinesis Stream.</p>
+<p>Streams can be either defined within this stack:</p>
+<blockquote>
+<div>new Stream(this, ‘MyStream’, { props });</div></blockquote>
+<p>Or imported from an existing stream:</p>
+<blockquote>
+<div>Stream.import(this, ‘MyImportedStream’, { streamArn: … });</div></blockquote>
+<p>You can also export a stream and import it into another stack:</p>
+<blockquote>
+<div><p>const ref = myStream.export();</p>
+<p>Stream.import(this, ‘MyImportedStream’, ref);</p>
+</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Extends:</th><td class="field-body"><p class="first"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct" title="&#64;aws-cdk/cdk.Construct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Implements:</th><td class="field-body"><p class="first"><a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.IStream" title="&#64;aws-cdk/aws-kinesis.IStream"><code class="xref py py-class docutils literal notranslate"><span class="pre">IStream</span></code></a></p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Abstract:</th><td class="field-body"><p class="first">Yes</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>scope</strong> (<a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct" title="&#64;aws-cdk/cdk.Construct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a>) – The scope in which to define this construct</li>
+<li><strong>id</strong> (<em>string</em>) – The scoped construct ID. Must be unique amongst siblings. If the ID includes a path separator (<cite>/</cite>), then it will be replaced by double dash <cite>–</cite>.</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamBase.export">
+<code class="descname">export</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; &#64;aws-cdk/aws-kinesis.StreamImportProps<a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamBase.export" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Implements</em> <a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.IStream.export" title="&#64;aws-cdk/aws-kinesis.IStream.export"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kinesis.IStream.export()</span></code></a></p>
+<p>Exports this stream from the stack.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.StreamImportProps" title="&#64;aws-cdk/aws-kinesis.StreamImportProps"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamImportProps</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Abstract:</th><td class="field-body">Yes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamBase.grantRead">
+<code class="descname">grantRead</code><span class="sig-paren">(</span><span class="optional">[</span><em>identity</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamBase.grantRead" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Implements</em> <a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.IStream.grantRead" title="&#64;aws-cdk/aws-kinesis.IStream.grantRead"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kinesis.IStream.grantRead()</span></code></a></p>
+<p>Grant write permissions for this stream and its contents to an IAM</p>
+<p>principal (Role/Group/User).</p>
+<p>If an encryption key is used, permission to ues the key to decrypt the</p>
+<p>contents of the stream will also be granted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>identity</strong> (<a class="reference internal" href="_aws-cdk_aws-iam.html#&#64;aws-cdk/aws-iam.IPrincipal" title="&#64;aws-cdk/aws-iam.IPrincipal"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-iam.IPrincipal</span></code></a> <em>(optional)</em>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamBase.grantReadWrite">
+<code class="descname">grantReadWrite</code><span class="sig-paren">(</span><span class="optional">[</span><em>identity</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamBase.grantReadWrite" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Implements</em> <a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.IStream.grantReadWrite" title="&#64;aws-cdk/aws-kinesis.IStream.grantReadWrite"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kinesis.IStream.grantReadWrite()</span></code></a></p>
+<p>Grants read/write permissions for this stream and its contents to an IAM</p>
+<p>principal (Role/Group/User).</p>
+<p>If an encryption key is used, permission to use the key for</p>
+<p>encrypt/decrypt will also be granted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>identity</strong> (<a class="reference internal" href="_aws-cdk_aws-iam.html#&#64;aws-cdk/aws-iam.IPrincipal" title="&#64;aws-cdk/aws-iam.IPrincipal"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-iam.IPrincipal</span></code></a> <em>(optional)</em>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamBase.grantWrite">
+<code class="descname">grantWrite</code><span class="sig-paren">(</span><span class="optional">[</span><em>identity</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamBase.grantWrite" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Implements</em> <a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.IStream.grantWrite" title="&#64;aws-cdk/aws-kinesis.IStream.grantWrite"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kinesis.IStream.grantWrite()</span></code></a></p>
+<p>Grant read permissions for this stream and its contents to an IAM</p>
+<p>principal (Role/Group/User).</p>
+<p>If an encryption key is used, permission to ues the key to decrypt the</p>
+<p>contents of the stream will also be granted.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>identity</strong> (<a class="reference internal" href="_aws-cdk_aws-iam.html#&#64;aws-cdk/aws-iam.IPrincipal" title="&#64;aws-cdk/aws-iam.IPrincipal"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-iam.IPrincipal</span></code></a> <em>(optional)</em>) – </td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamBase.logSubscriptionDestination">
+<code class="descname">logSubscriptionDestination</code><span class="sig-paren">(</span><em>sourceLogGroup</em><span class="sig-paren">)</span> &#x2192; &#64;aws-cdk/aws-logs.LogSubscriptionDestination<a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamBase.logSubscriptionDestination" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Implements</em> <a class="reference internal" href="_aws-cdk_aws-logs.html#&#64;aws-cdk/aws-logs.ILogSubscriptionDestination.logSubscriptionDestination" title="&#64;aws-cdk/aws-logs.ILogSubscriptionDestination.logSubscriptionDestination"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-logs.ILogSubscriptionDestination.logSubscriptionDestination()</span></code></a></p>
+<p>Return the properties required to send subscription events to this destination.</p>
+<p>If necessary, the destination can use the properties of the SubscriptionFilter</p>
+<p>object itself to configure its permissions to allow the subscription to write</p>
+<p>to it.</p>
+<p>The destination may reconfigure its own permissions in response to this</p>
+<p>function call.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>sourceLogGroup</strong> (<a class="reference internal" href="_aws-cdk_aws-logs.html#&#64;aws-cdk/aws-logs.ILogGroup" title="&#64;aws-cdk/aws-logs.ILogGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-logs.ILogGroup</span></code></a>) – </td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_aws-logs.html#&#64;aws-cdk/aws-logs.LogSubscriptionDestination" title="&#64;aws-cdk/aws-logs.LogSubscriptionDestination"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-logs.LogSubscriptionDestination</span></code></a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamBase.streamArn">
+<code class="descname">streamArn</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamBase.streamArn" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Implements</em> <a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.IStream.streamArn" title="&#64;aws-cdk/aws-kinesis.IStream.streamArn"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kinesis.IStream.streamArn()</span></code></a></p>
+<p>The ARN of the stream.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em> <em>(abstract)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamBase.streamName">
+<code class="descname">streamName</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamBase.streamName" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Implements</em> <a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.IStream.streamName" title="&#64;aws-cdk/aws-kinesis.IStream.streamName"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kinesis.IStream.streamName()</span></code></a></p>
+<p>The name of the stream</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(readonly)</em> <em>(abstract)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamBase.encryptionKey">
+<code class="descname">encryptionKey</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamBase.encryptionKey" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Implements</em> <a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.IStream.encryptionKey" title="&#64;aws-cdk/aws-kinesis.IStream.encryptionKey"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kinesis.IStream.encryptionKey()</span></code></a></p>
+<p>Optional KMS encryption key associated with this stream.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_aws-kms.html#&#64;aws-cdk/aws-kms.IEncryptionKey" title="&#64;aws-cdk/aws-kms.IEncryptionKey"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kms.IEncryptionKey</span></code></a> <em>(optional)</em> <em>(readonly)</em> <em>(abstract)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamBase.prepare">
+<code class="descname">prepare</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamBase.prepare" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.prepare" title="&#64;aws-cdk/cdk.Construct.prepare"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Perform final modifications before synthesis</p>
+<p>This method can be implemented by derived constructs in order to perform</p>
+<p>final changes before synthesis. prepare() will be called after child</p>
+<p>constructs have been prepared.</p>
+<p>This is an advanced framework feature. Only use this if you</p>
+<p>understand the implications.</p>
+<p><em>Protected method</em></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamBase.toString">
+<code class="descname">toString</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; string<a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamBase.toString" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.toString" title="&#64;aws-cdk/cdk.Construct.toString"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Returns a string representation of this construct.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamBase.validate">
+<code class="descname">validate</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; string[]<a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamBase.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.validate" title="&#64;aws-cdk/cdk.Construct.validate"><code class="xref py py-meth docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Validate the current construct.</p>
+<p>This method can be implemented by derived constructs in order to perform</p>
+<p>validation logic. It is called on all constructs before synthesis.</p>
+<p><em>Protected method</em></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">An array of validation error messages, or an empty array if there the construct is valid.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">string[]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamBase.dependencyRoots">
+<code class="descname">dependencyRoots</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamBase.dependencyRoots" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.dependencyRoots" title="&#64;aws-cdk/cdk.Construct.dependencyRoots"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>The set of constructs that form the root of this dependable</p>
+<p>All resources under all returned constructs are included in the ordering</p>
+<p>dependency.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.IConstruct" title="&#64;aws-cdk/cdk.IConstruct"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.IConstruct</span></code></a>[] <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamBase.node">
+<code class="descname">node</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamBase.node" title="Permalink to this definition">¶</a></dt>
+<dd><p><em>Inherited from</em> <a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.Construct.node" title="&#64;aws-cdk/cdk.Construct.node"><code class="xref py py-attr docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.Construct</span></code></a></p>
+<p>Construct node.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_cdk.html#&#64;aws-cdk/cdk.ConstructNode" title="&#64;aws-cdk/cdk.ConstructNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/cdk.ConstructNode</span></code></a> <em>(readonly)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="streamencryption-enum">
+<h3>StreamEncryption (enum)<a class="headerlink" href="#streamencryption-enum" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamEncryption">
+<em class="property">class </em><code class="descclassname">&#64;aws-cdk/aws-kinesis.</code><code class="descname">StreamEncryption</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamEncryption" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.Kinesis</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.kinesis.StreamEncryption</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">StreamEncryption</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;@aws-cdk/aws-kinesis&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">StreamEncryption</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-kinesis&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>What kind of server-side encryption to apply to this stream</p>
+<dl class="data">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamEncryption.Unencrypted">
+<code class="descname">Unencrypted</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamEncryption.Unencrypted" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Records in the stream are not encrypted.</p>
+<dl class="data">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamEncryption.Kms">
+<code class="descname">Kms</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamEncryption.Kms" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<p>Server-side encryption with a KMS key managed by the user.</p>
+<p>If <cite>encryptionKey</cite> is specified, this key will be used, otherwise, one will be defined.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="streamimportprops-interface">
+<h3>StreamImportProps (interface)<a class="headerlink" href="#streamimportprops-interface" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamImportProps">
+<em class="property">class </em><code class="descclassname">&#64;aws-cdk/aws-kinesis.</code><code class="descname">StreamImportProps</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamImportProps" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.Kinesis</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.kinesis.StreamImportProps</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// StreamImportProps is an interface</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">StreamImportProps</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-kinesis&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A reference to a stream. The easiest way to instantiate is to call</p>
+<p><cite>stream.export()</cite>. Then, the consumer can use <cite>Stream.import(this, ref)</cite> and</p>
+<p>get a <cite>Stream</cite>.</p>
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamImportProps.streamArn">
+<code class="descname">streamArn</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamImportProps.streamArn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the stream.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamImportProps.encryptionKey">
+<code class="descname">encryptionKey</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamImportProps.encryptionKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>The KMS key securing the contents of the stream if encryption is enabled.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_aws-kms.html#&#64;aws-cdk/aws-kms.EncryptionKeyImportProps" title="&#64;aws-cdk/aws-kms.EncryptionKeyImportProps"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kms.EncryptionKeyImportProps</span></code></a> <em>(optional)</em></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="streamprops-interface">
+<h3>StreamProps (interface)<a class="headerlink" href="#streamprops-interface" title="Permalink to this headline">¶</a></h3>
+<dl class="class">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamProps">
+<em class="property">class </em><code class="descclassname">&#64;aws-cdk/aws-kinesis.</code><code class="descname">StreamProps</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamProps" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Language-specific names:</strong></p>
+<div class="sphinx-tabs docutils container">
+<div class="ui top attached tabular menu sphinx-menu docutils container">
+<div class="active item sphinx-data-tab-QyM= docutils container">
+<div class="docutils container">
+C#</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YQ== docutils container">
+<div class="docutils container">
+Java</div>
+</div>
+<div class="item sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="docutils container">
+JavaScript</div>
+</div>
+<div class="item sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="docutils container">
+TypeScript</div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-QyM= active docutils container">
+<div class="highlight-c# notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="nn">Amazon.CDK.AWS.Kinesis</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YQ== docutils container">
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">software.amazon.awscdk.services.kinesis.StreamProps</span><span class="o">;</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-SmF2YVNjcmlwdA== docutils container">
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// StreamProps is an interface</span>
+</pre></div>
+</div>
+</div>
+<div class="ui bottom attached sphinx-tab tab segment code-tab sphinx-data-tab-VHlwZVNjcmlwdA== docutils container">
+<div class="highlight-typescript notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">StreamProps</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;@aws-cdk/aws-kinesis&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamProps.encryption">
+<code class="descname">encryption</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamProps.encryption" title="Permalink to this definition">¶</a></dt>
+<dd><p>The kind of server-side encryption to apply to this stream.</p>
+<p>If you choose KMS, you can specify a KMS key via <cite>encryptionKey</cite>. If</p>
+<p>encryption key is not specified, a key will automatically be created.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="#&#64;aws-cdk/aws-kinesis.StreamEncryption" title="&#64;aws-cdk/aws-kinesis.StreamEncryption"><code class="xref py py-class docutils literal notranslate"><span class="pre">StreamEncryption</span></code></a> <em>(optional)</em></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Default:</th><td class="field-body">Unencrypted</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.StreamProps.encryptionKey">
+<code class="descname">encryptionKey</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.StreamProps.encryptionKey" title="Permalink to this definition">¶</a></dt>
+<dd><p>External KMS key to use for stream encryption.</p>
+<p>The ‘encryption’ property must be set to “Kms”.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body"><a class="reference internal" href="_aws-cdk_aws-kms.html#&#64;aws-cdk/aws-kms.IEncryptionKey" title="&#64;aws-cdk/aws-kms.IEncryptionKey"><code class="xref py py-class docutils literal notranslate"><span class="pre">&#64;aws-cdk/aws-kms.IEncryptionKey</span></code></a> <em>(optional)</em></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Default:</th><td class="field-body">If encryption is set to “Kms” and this property is undefined, a</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<p>new KMS key will be created and associated with this stream.</p>
+<blockquote>
+<div><dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.retentionPeriodHours">
+<code class="descclassname">&#64;aws-cdk/aws-kinesis.</code><code class="descname">retentionPeriodHours</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.retentionPeriodHours" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of hours for the data records that are stored in shards to remain accessible.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">number <em>(optional)</em></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Default:</th><td class="field-body">24</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.shardCount">
+<code class="descclassname">&#64;aws-cdk/aws-kinesis.</code><code class="descname">shardCount</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.shardCount" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of shards for the stream.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">number <em>(optional)</em></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Default:</th><td class="field-body">1</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="&#64;aws-cdk/aws-kinesis.streamName">
+<code class="descclassname">&#64;aws-cdk/aws-kinesis.</code><code class="descname">streamName</code><a class="headerlink" href="#@aws-cdk/aws-kinesis.streamName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enforces a particular physical stream name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Type:</th><td class="field-body">string <em>(optional)</em></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Default:</th><td class="field-body">&lt;generated&gt;</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="_aws-cdk_aws-kinesisanalytics.html" class="btn btn-neutral float-right" title="@aws-cdk/aws-kinesisanalytics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="_aws-cdk_aws-iotanalytics.html" class="btn btn-neutral" title="@aws-cdk/aws-iotanalytics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Amazon Web Services.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.25.1',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/sphinx_tabs/tabs.js"></script>
+      <script type="text/javascript" src="../_static/sphinx_tabs/semantic-ui-2.2.10/tab.min.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

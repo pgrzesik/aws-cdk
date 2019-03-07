@@ -1,0 +1,5909 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"Y9YxHkdy9+mV1knXy4B68PGnFwpZpZUpiA5Nxmji/ZU="}
+
+@aws-cdk/aws-ssm
+================
+
+.. mdinclude:: ./__aws-cdk_aws-ssm.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.SSM/0.25.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.SSM" Version="0.25.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.SSM --version 0.25.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.SSM" version="0.25.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/ssm/0.25.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:ssm:jar:0.25.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="ssm" rev="0.25.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>ssm</artifactId>
+           <version>0.25.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:ssm:0.25.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='ssm', version='0.25.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-ssm/v/0.25.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-ssm@0.25.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-ssm": "^0.25.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-ssm@0.25.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-ssm/v/0.25.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-ssm@0.25.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-ssm": "^0.25.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-ssm@0.25.0
+
+
+
+.. py:module:: @aws-cdk/aws-ssm
+
+CfnAssociation
+^^^^^^^^^^^^^^
+
+.. py:class:: CfnAssociation(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.CfnAssociation;
+
+      .. code-tab:: javascript
+
+         const { CfnAssociation } = require('@aws-cdk/aws-ssm');
+
+      .. code-tab:: typescript
+
+         import { CfnAssociation } from '@aws-cdk/aws-ssm';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-ssm.CfnAssociationProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-ssm.CfnAssociationProps`\  *(readonly)*
+
+   .. py:class:: InstanceAssociationOutputLocationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnAssociation.InstanceAssociationOutputLocationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnAssociation.InstanceAssociationOutputLocationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnAssociation.InstanceAssociationOutputLocationProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: s3Location
+
+         ``CfnAssociation.InstanceAssociationOutputLocationProperty.S3Location``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-instanceassociationoutputlocation.html#cfn-ssm-association-instanceassociationoutputlocation-s3location
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnAssociation.S3OutputLocationProperty`\  *(optional)*
+
+
+   .. py:class:: ParameterValuesProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnAssociation.ParameterValuesProperty;
+
+         .. code-tab:: javascript
+
+            // CfnAssociation.ParameterValuesProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnAssociation.ParameterValuesProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: parameterValues
+
+         ``CfnAssociation.ParameterValuesProperty.ParameterValues``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-parametervalues.html#cfn-ssm-association-parametervalues-parametervalues
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[]
+
+
+   .. py:class:: S3OutputLocationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnAssociation.S3OutputLocationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnAssociation.S3OutputLocationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnAssociation.S3OutputLocationProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: outputS3BucketName
+
+         ``CfnAssociation.S3OutputLocationProperty.OutputS3BucketName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3bucketname
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: outputS3KeyPrefix
+
+         ``CfnAssociation.S3OutputLocationProperty.OutputS3KeyPrefix``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-s3outputlocation.html#cfn-ssm-association-s3outputlocation-outputs3keyprefix
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: TargetProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnAssociation.TargetProperty;
+
+         .. code-tab:: javascript
+
+            // CfnAssociation.TargetProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnAssociation.TargetProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: key
+
+         ``CfnAssociation.TargetProperty.Key``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-target.html#cfn-ssm-association-target-key
+
+
+         :type: string
+
+
+      .. py:attribute:: values
+
+         ``CfnAssociation.TargetProperty.Values``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-association-target.html#cfn-ssm-association-target-values
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[]
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+CfnAssociationProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnAssociationProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.CfnAssociationProps;
+
+      .. code-tab:: javascript
+
+         // CfnAssociationProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnAssociationProps } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+   .. py:attribute:: name
+
+      ``AWS::SSM::Association.Name``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-name
+
+
+      :type: string
+
+
+   .. py:attribute:: associationName
+
+      ``AWS::SSM::Association.AssociationName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-associationname
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: documentVersion
+
+      ``AWS::SSM::Association.DocumentVersion``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-documentversion
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: instanceId
+
+      ``AWS::SSM::Association.InstanceId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-instanceid
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: outputLocation
+
+      ``AWS::SSM::Association.OutputLocation``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-outputlocation
+
+
+      :type: :py:class:`~@aws-cdk/aws-ssm.CfnAssociation.InstanceAssociationOutputLocationProperty`\  or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: parameters
+
+      ``AWS::SSM::Association.Parameters``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-parameters
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or string => (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnAssociation.ParameterValuesProperty`\ ) *(optional)*
+
+
+   .. py:attribute:: scheduleExpression
+
+      ``AWS::SSM::Association.ScheduleExpression``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-scheduleexpression
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: targets
+
+      ``AWS::SSM::Association.Targets``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnAssociation.TargetProperty`\ )[] *(optional)*
+
+
+CfnDocument
+^^^^^^^^^^^
+
+.. py:class:: CfnDocument(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.CfnDocument;
+
+      .. code-tab:: javascript
+
+         const { CfnDocument } = require('@aws-cdk/aws-ssm');
+
+      .. code-tab:: typescript
+
+         import { CfnDocument } from '@aws-cdk/aws-ssm';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-ssm.CfnDocumentProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: documentName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-ssm.CfnDocumentProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The ``TagManager`` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. ``Tag`` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+CfnDocumentProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDocumentProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.CfnDocumentProps;
+
+      .. code-tab:: javascript
+
+         // CfnDocumentProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnDocumentProps } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+   .. py:attribute:: content
+
+      ``AWS::SSM::Document.Content``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-content
+
+
+      :type: json or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:attribute:: documentType
+
+      ``AWS::SSM::Document.DocumentType``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-documenttype
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: tags
+
+      ``AWS::SSM::Document.Tags``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-document.html#cfn-ssm-document-tags
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`@aws-cdk/cdk.CfnTag`\ )[] *(optional)*
+
+
+CfnMaintenanceWindow
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnMaintenanceWindow(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.CfnMaintenanceWindow;
+
+      .. code-tab:: javascript
+
+         const { CfnMaintenanceWindow } = require('@aws-cdk/aws-ssm');
+
+      .. code-tab:: typescript
+
+         import { CfnMaintenanceWindow } from '@aws-cdk/aws-ssm';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-ssm.CfnMaintenanceWindowProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: maintenanceWindowId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-ssm.CfnMaintenanceWindowProps`\  *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+CfnMaintenanceWindowProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnMaintenanceWindowProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowProps;
+
+      .. code-tab:: javascript
+
+         // CfnMaintenanceWindowProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnMaintenanceWindowProps } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+   .. py:attribute:: allowUnassociatedTargets
+
+      ``AWS::SSM::MaintenanceWindow.AllowUnassociatedTargets``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html#cfn-ssm-maintenancewindow-allowunassociatedtargets
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:attribute:: cutoff
+
+      ``AWS::SSM::MaintenanceWindow.Cutoff``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html#cfn-ssm-maintenancewindow-cutoff
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:attribute:: duration
+
+      ``AWS::SSM::MaintenanceWindow.Duration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html#cfn-ssm-maintenancewindow-duration
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:attribute:: name
+
+      ``AWS::SSM::MaintenanceWindow.Name``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html#cfn-ssm-maintenancewindow-name
+
+
+      :type: string
+
+
+   .. py:attribute:: schedule
+
+      ``AWS::SSM::MaintenanceWindow.Schedule``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html#cfn-ssm-maintenancewindow-schedule
+
+
+      :type: string
+
+
+   .. py:attribute:: description
+
+      ``AWS::SSM::MaintenanceWindow.Description``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html#cfn-ssm-maintenancewindow-description
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: endDate
+
+      ``AWS::SSM::MaintenanceWindow.EndDate``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html#cfn-ssm-maintenancewindow-enddate
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: scheduleTimezone
+
+      ``AWS::SSM::MaintenanceWindow.ScheduleTimezone``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html#cfn-ssm-maintenancewindow-scheduletimezone
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: startDate
+
+      ``AWS::SSM::MaintenanceWindow.StartDate``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindow.html#cfn-ssm-maintenancewindow-startdate
+
+
+      :type: string *(optional)*
+
+
+CfnMaintenanceWindowTask
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnMaintenanceWindowTask(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask;
+
+      .. code-tab:: javascript
+
+         const { CfnMaintenanceWindowTask } = require('@aws-cdk/aws-ssm');
+
+      .. code-tab:: typescript
+
+         import { CfnMaintenanceWindowTask } from '@aws-cdk/aws-ssm';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-ssm.CfnMaintenanceWindowTaskProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: maintenanceWindowTaskId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-ssm.CfnMaintenanceWindowTaskProps`\  *(readonly)*
+
+   .. py:class:: LoggingInfoProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.LoggingInfoProperty;
+
+         .. code-tab:: javascript
+
+            // CfnMaintenanceWindowTask.LoggingInfoProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnMaintenanceWindowTask.LoggingInfoProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: region
+
+         ``CfnMaintenanceWindowTask.LoggingInfoProperty.Region``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-region
+
+
+         :type: string
+
+
+      .. py:attribute:: s3Bucket
+
+         ``CfnMaintenanceWindowTask.LoggingInfoProperty.S3Bucket``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket
+
+
+         :type: string
+
+
+      .. py:attribute:: s3Prefix
+
+         ``CfnMaintenanceWindowTask.LoggingInfoProperty.S3Prefix``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: MaintenanceWindowAutomationParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: documentVersion
+
+         ``CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty.DocumentVersion``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-documentversion
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: parameters
+
+         ``CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty.Parameters``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowautomationparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowautomationparameters-parameters
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: MaintenanceWindowLambdaParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: clientContext
+
+         ``CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty.ClientContext``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-clientcontext
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: payload
+
+         ``CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty.Payload``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-payload
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: qualifier
+
+         ``CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty.Qualifier``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-qualifier
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: MaintenanceWindowRunCommandParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: comment
+
+         ``CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty.Comment``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-comment
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: documentHash
+
+         ``CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty.DocumentHash``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthash
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: documentHashType
+
+         ``CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty.DocumentHashType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-documenthashtype
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: notificationConfig
+
+         ``CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty.NotificationConfig``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-notificationconfig
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnMaintenanceWindowTask.NotificationConfigProperty`\  *(optional)*
+
+
+      .. py:attribute:: outputS3BucketName
+
+         ``CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty.OutputS3BucketName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3bucketname
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: outputS3KeyPrefix
+
+         ``CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty.OutputS3KeyPrefix``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-outputs3keyprefix
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: parameters
+
+         ``CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty.Parameters``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-parameters
+
+
+         :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: serviceRoleArn
+
+         ``CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty.ServiceRoleArn``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-servicerolearn
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: timeoutSeconds
+
+         ``CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty.TimeoutSeconds``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowruncommandparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowruncommandparameters-timeoutseconds
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: MaintenanceWindowStepFunctionsParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: input
+
+         ``CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty.Input``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-input
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: name
+
+         ``CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowstepfunctionsparameters-name
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: NotificationConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.NotificationConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnMaintenanceWindowTask.NotificationConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnMaintenanceWindowTask.NotificationConfigProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: notificationArn
+
+         ``CfnMaintenanceWindowTask.NotificationConfigProperty.NotificationArn``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html#cfn-ssm-maintenancewindowtask-notificationconfig-notificationarn
+
+
+         :type: string
+
+
+      .. py:attribute:: notificationEvents
+
+         ``CfnMaintenanceWindowTask.NotificationConfigProperty.NotificationEvents``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html#cfn-ssm-maintenancewindowtask-notificationconfig-notificationevents
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+      .. py:attribute:: notificationType
+
+         ``CfnMaintenanceWindowTask.NotificationConfigProperty.NotificationType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-notificationconfig.html#cfn-ssm-maintenancewindowtask-notificationconfig-notificationtype
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: TargetProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TargetProperty;
+
+         .. code-tab:: javascript
+
+            // CfnMaintenanceWindowTask.TargetProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnMaintenanceWindowTask.TargetProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: key
+
+         ``CfnMaintenanceWindowTask.TargetProperty.Key``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html#cfn-ssm-maintenancewindowtask-target-key
+
+
+         :type: string
+
+
+      .. py:attribute:: values
+
+         ``CfnMaintenanceWindowTask.TargetProperty.Values``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-target.html#cfn-ssm-maintenancewindowtask-target-values
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:class:: TaskInvocationParametersProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTask.TaskInvocationParametersProperty;
+
+         .. code-tab:: javascript
+
+            // CfnMaintenanceWindowTask.TaskInvocationParametersProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnMaintenanceWindowTask.TaskInvocationParametersProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: maintenanceWindowAutomationParameters
+
+         ``CfnMaintenanceWindowTask.TaskInvocationParametersProperty.MaintenanceWindowAutomationParameters``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowautomationparameters
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnMaintenanceWindowTask.MaintenanceWindowAutomationParametersProperty`\  *(optional)*
+
+
+      .. py:attribute:: maintenanceWindowLambdaParameters
+
+         ``CfnMaintenanceWindowTask.TaskInvocationParametersProperty.MaintenanceWindowLambdaParameters``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowlambdaparameters
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnMaintenanceWindowTask.MaintenanceWindowLambdaParametersProperty`\  *(optional)*
+
+
+      .. py:attribute:: maintenanceWindowRunCommandParameters
+
+         ``CfnMaintenanceWindowTask.TaskInvocationParametersProperty.MaintenanceWindowRunCommandParameters``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowruncommandparameters
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnMaintenanceWindowTask.MaintenanceWindowRunCommandParametersProperty`\  *(optional)*
+
+
+      .. py:attribute:: maintenanceWindowStepFunctionsParameters
+
+         ``CfnMaintenanceWindowTask.TaskInvocationParametersProperty.MaintenanceWindowStepFunctionsParameters``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowstepfunctionsparameters
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnMaintenanceWindowTask.MaintenanceWindowStepFunctionsParametersProperty`\  *(optional)*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+CfnMaintenanceWindowTaskProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnMaintenanceWindowTaskProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.CfnMaintenanceWindowTaskProps;
+
+      .. code-tab:: javascript
+
+         // CfnMaintenanceWindowTaskProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnMaintenanceWindowTaskProps } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+   .. py:attribute:: maxConcurrency
+
+      ``AWS::SSM::MaintenanceWindowTask.MaxConcurrency``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-maxconcurrency
+
+
+      :type: string
+
+
+   .. py:attribute:: maxErrors
+
+      ``AWS::SSM::MaintenanceWindowTask.MaxErrors``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-maxerrors
+
+
+      :type: string
+
+
+   .. py:attribute:: priority
+
+      ``AWS::SSM::MaintenanceWindowTask.Priority``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-priority
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:attribute:: serviceRoleArn
+
+      ``AWS::SSM::MaintenanceWindowTask.ServiceRoleArn``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-servicerolearn
+
+
+      :type: string
+
+
+   .. py:attribute:: targets
+
+      ``AWS::SSM::MaintenanceWindowTask.Targets``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-targets
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnMaintenanceWindowTask.TargetProperty`\ )[]
+
+
+   .. py:attribute:: taskArn
+
+      ``AWS::SSM::MaintenanceWindowTask.TaskArn``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-taskarn
+
+
+      :type: string
+
+
+   .. py:attribute:: taskType
+
+      ``AWS::SSM::MaintenanceWindowTask.TaskType``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-tasktype
+
+
+      :type: string
+
+
+   .. py:attribute:: description
+
+      ``AWS::SSM::MaintenanceWindowTask.Description``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-description
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: loggingInfo
+
+      ``AWS::SSM::MaintenanceWindowTask.LoggingInfo``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-logginginfo
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnMaintenanceWindowTask.LoggingInfoProperty`\  *(optional)*
+
+
+   .. py:attribute:: name
+
+      ``AWS::SSM::MaintenanceWindowTask.Name``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-name
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: taskInvocationParameters
+
+      ``AWS::SSM::MaintenanceWindowTask.TaskInvocationParameters``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnMaintenanceWindowTask.TaskInvocationParametersProperty`\  *(optional)*
+
+
+   .. py:attribute:: taskParameters
+
+      ``AWS::SSM::MaintenanceWindowTask.TaskParameters``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-taskparameters
+
+
+      :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: windowId
+
+      ``AWS::SSM::MaintenanceWindowTask.WindowId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-maintenancewindowtask.html#cfn-ssm-maintenancewindowtask-windowid
+
+
+      :type: string *(optional)*
+
+
+CfnParameter
+^^^^^^^^^^^^
+
+.. py:class:: CfnParameter(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.CfnParameter;
+
+      .. code-tab:: javascript
+
+         const { CfnParameter } = require('@aws-cdk/aws-ssm');
+
+      .. code-tab:: typescript
+
+         import { CfnParameter } from '@aws-cdk/aws-ssm';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-ssm.CfnParameterProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: parameterName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: parameterType
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: parameterValue
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-ssm.CfnParameterProps`\  *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+CfnParameterProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnParameterProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.CfnParameterProps;
+
+      .. code-tab:: javascript
+
+         // CfnParameterProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnParameterProps } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+   .. py:attribute:: type
+
+      ``AWS::SSM::Parameter.Type``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-type
+
+
+      :type: string
+
+
+   .. py:attribute:: value
+
+      ``AWS::SSM::Parameter.Value``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-value
+
+
+      :type: string
+
+
+   .. py:attribute:: allowedPattern
+
+      ``AWS::SSM::Parameter.AllowedPattern``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-allowedpattern
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: description
+
+      ``AWS::SSM::Parameter.Description``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-description
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: name
+
+      ``AWS::SSM::Parameter.Name``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-parameter.html#cfn-ssm-parameter-name
+
+
+      :type: string *(optional)*
+
+
+CfnPatchBaseline
+^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnPatchBaseline(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.CfnPatchBaseline;
+
+      .. code-tab:: javascript
+
+         const { CfnPatchBaseline } = require('@aws-cdk/aws-ssm');
+
+      .. code-tab:: typescript
+
+         import { CfnPatchBaseline } from '@aws-cdk/aws-ssm';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-ssm.CfnPatchBaselineProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: patchBaselineId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-ssm.CfnPatchBaselineProps`\  *(readonly)*
+
+   .. py:class:: PatchFilterGroupProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterGroupProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPatchBaseline.PatchFilterGroupProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPatchBaseline.PatchFilterGroupProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: patchFilters
+
+         ``CfnPatchBaseline.PatchFilterGroupProperty.PatchFilters``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchfiltergroup.html#cfn-ssm-patchbaseline-patchfiltergroup-patchfilters
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnPatchBaseline.PatchFilterProperty`\ )[] *(optional)*
+
+
+   .. py:class:: PatchFilterProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchFilterProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPatchBaseline.PatchFilterProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPatchBaseline.PatchFilterProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: key
+
+         ``CfnPatchBaseline.PatchFilterProperty.Key``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchfilter.html#cfn-ssm-patchbaseline-patchfilter-key
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: values
+
+         ``CfnPatchBaseline.PatchFilterProperty.Values``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchfilter.html#cfn-ssm-patchbaseline-patchfilter-values
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:class:: PatchSourceProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnPatchBaseline.PatchSourceProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPatchBaseline.PatchSourceProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPatchBaseline.PatchSourceProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: configuration
+
+         ``CfnPatchBaseline.PatchSourceProperty.Configuration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchsource.html#cfn-ssm-patchbaseline-patchsource-configuration
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: name
+
+         ``CfnPatchBaseline.PatchSourceProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchsource.html#cfn-ssm-patchbaseline-patchsource-name
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: products
+
+         ``CfnPatchBaseline.PatchSourceProperty.Products``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchsource.html#cfn-ssm-patchbaseline-patchsource-products
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:class:: RuleGroupProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleGroupProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPatchBaseline.RuleGroupProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPatchBaseline.RuleGroupProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: patchRules
+
+         ``CfnPatchBaseline.RuleGroupProperty.PatchRules``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rulegroup.html#cfn-ssm-patchbaseline-rulegroup-patchrules
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnPatchBaseline.RuleProperty`\ )[] *(optional)*
+
+
+   .. py:class:: RuleProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.SSM;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.ssm.CfnPatchBaseline.RuleProperty;
+
+         .. code-tab:: javascript
+
+            // CfnPatchBaseline.RuleProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnPatchBaseline.RuleProperty } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+      .. py:attribute:: approveAfterDays
+
+         ``CfnPatchBaseline.RuleProperty.ApproveAfterDays``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-approveafterdays
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: complianceLevel
+
+         ``CfnPatchBaseline.RuleProperty.ComplianceLevel``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-compliancelevel
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: enableNonSecurity
+
+         ``CfnPatchBaseline.RuleProperty.EnableNonSecurity``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-enablenonsecurity
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: patchFilterGroup
+
+         ``CfnPatchBaseline.RuleProperty.PatchFilterGroup``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-patchfiltergroup
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnPatchBaseline.PatchFilterGroupProperty`\  *(optional)*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+CfnPatchBaselineProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnPatchBaselineProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.CfnPatchBaselineProps;
+
+      .. code-tab:: javascript
+
+         // CfnPatchBaselineProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnPatchBaselineProps } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+   .. py:attribute:: name
+
+      ``AWS::SSM::PatchBaseline.Name``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-name
+
+
+      :type: string
+
+
+   .. py:attribute:: approvalRules
+
+      ``AWS::SSM::PatchBaseline.ApprovalRules``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-approvalrules
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnPatchBaseline.RuleGroupProperty`\  *(optional)*
+
+
+   .. py:attribute:: approvedPatches
+
+      ``AWS::SSM::PatchBaseline.ApprovedPatches``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-approvedpatches
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: approvedPatchesComplianceLevel
+
+      ``AWS::SSM::PatchBaseline.ApprovedPatchesComplianceLevel``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-approvedpatchescompliancelevel
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: approvedPatchesEnableNonSecurity
+
+      ``AWS::SSM::PatchBaseline.ApprovedPatchesEnableNonSecurity``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-approvedpatchesenablenonsecurity
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: description
+
+      ``AWS::SSM::PatchBaseline.Description``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-description
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: globalFilters
+
+      ``AWS::SSM::PatchBaseline.GlobalFilters``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-globalfilters
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnPatchBaseline.PatchFilterGroupProperty`\  *(optional)*
+
+
+   .. py:attribute:: operatingSystem
+
+      ``AWS::SSM::PatchBaseline.OperatingSystem``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-operatingsystem
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: patchGroups
+
+      ``AWS::SSM::PatchBaseline.PatchGroups``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-patchgroups
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: rejectedPatches
+
+      ``AWS::SSM::PatchBaseline.RejectedPatches``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-rejectedpatches
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: rejectedPatchesAction
+
+      ``AWS::SSM::PatchBaseline.RejectedPatchesAction``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-rejectedpatchesaction
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: sources
+
+      ``AWS::SSM::PatchBaseline.Sources``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-sources
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-ssm.CfnPatchBaseline.PatchSourceProperty`\ )[] *(optional)*
+
+
+CfnResourceDataSync
+^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnResourceDataSync(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.CfnResourceDataSync;
+
+      .. code-tab:: javascript
+
+         const { CfnResourceDataSync } = require('@aws-cdk/aws-ssm');
+
+      .. code-tab:: typescript
+
+         import { CfnResourceDataSync } from '@aws-cdk/aws-ssm';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-ssm.CfnResourceDataSyncProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-ssm.CfnResourceDataSyncProps`\  *(readonly)*
+
+
+   .. py:attribute:: resourceDataSyncName
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+CfnResourceDataSyncProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnResourceDataSyncProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.CfnResourceDataSyncProps;
+
+      .. code-tab:: javascript
+
+         // CfnResourceDataSyncProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnResourceDataSyncProps } from '@aws-cdk/aws-ssm';
+
+
+
+
+
+   .. py:attribute:: bucketName
+
+      ``AWS::SSM::ResourceDataSync.BucketName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-bucketname
+
+
+      :type: string
+
+
+   .. py:attribute:: bucketRegion
+
+      ``AWS::SSM::ResourceDataSync.BucketRegion``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-bucketregion
+
+
+      :type: string
+
+
+   .. py:attribute:: syncFormat
+
+      ``AWS::SSM::ResourceDataSync.SyncFormat``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-syncformat
+
+
+      :type: string
+
+
+   .. py:attribute:: syncName
+
+      ``AWS::SSM::ResourceDataSync.SyncName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-syncname
+
+
+      :type: string
+
+
+   .. py:attribute:: bucketPrefix
+
+      ``AWS::SSM::ResourceDataSync.BucketPrefix``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-bucketprefix
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: kmsKeyArn
+
+      ``AWS::SSM::ResourceDataSync.KMSKeyArn``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-resourcedatasync.html#cfn-ssm-resourcedatasync-kmskeyarn
+
+
+      :type: string *(optional)*
+
+
+IParameter (interface)
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IParameter
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.IParameter;
+
+      .. code-tab:: javascript
+
+         // IParameter is an interface
+
+      .. code-tab:: typescript
+
+         import { IParameter } from '@aws-cdk/aws-ssm';
+
+
+
+   An SSM Parameter reference.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: parameterArn
+
+      The ARN of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: parameterName
+
+      The name of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: parameterType
+
+      The type of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: grantRead(grantee)
+
+      Grants read (DescribeParameter, GetParameter, GetParameterHistory) permissions on the SSM Parameter.
+
+
+
+      :param grantee: the role to be granted read-only access to the parameter.
+      :type grantee: :py:class:`@aws-cdk/aws-iam.IPrincipal`\ 
+      :abstract: Yes
+
+
+   .. py:method:: grantWrite(grantee)
+
+      Grants write (PutParameter) permissions on the SSM Parameter.
+
+
+
+      :param grantee: the role to be granted write access to the parameter.
+      :type grantee: :py:class:`@aws-cdk/aws-iam.IPrincipal`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+IStringListParameter (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IStringListParameter
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.IStringListParameter;
+
+      .. code-tab:: javascript
+
+         // IStringListParameter is an interface
+
+      .. code-tab:: typescript
+
+         import { IStringListParameter } from '@aws-cdk/aws-ssm';
+
+
+
+   A StringList SSM Parameter.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-ssm.IParameter`\ 
+
+
+   .. py:attribute:: stringListValue
+
+      The parameter value. Value must not nest another parameter. Do not use {{}} in the value. Values in the array
+
+      cannot contain commas (``,``).
+
+
+
+      :type: string[] *(readonly)*
+
+
+   .. py:method:: grantRead(grantee)
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-ssm.IParameter <@aws-cdk/aws-ssm.IParameter.grantRead>`
+
+      Grants read (DescribeParameter, GetParameter, GetParameterHistory) permissions on the SSM Parameter.
+
+
+
+      :param grantee: the role to be granted read-only access to the parameter.
+      :type grantee: :py:class:`@aws-cdk/aws-iam.IPrincipal`\ 
+      :abstract: Yes
+
+
+   .. py:method:: grantWrite(grantee)
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-ssm.IParameter <@aws-cdk/aws-ssm.IParameter.grantWrite>`
+
+      Grants write (PutParameter) permissions on the SSM Parameter.
+
+
+
+      :param grantee: the role to be granted write access to the parameter.
+      :type grantee: :py:class:`@aws-cdk/aws-iam.IPrincipal`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: parameterArn
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ssm.IParameter <@aws-cdk/aws-ssm.IParameter.parameterArn>`
+
+      The ARN of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: parameterName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ssm.IParameter <@aws-cdk/aws-ssm.IParameter.parameterName>`
+
+      The name of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: parameterType
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ssm.IParameter <@aws-cdk/aws-ssm.IParameter.parameterType>`
+
+      The type of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+IStringParameter (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IStringParameter
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.IStringParameter;
+
+      .. code-tab:: javascript
+
+         // IStringParameter is an interface
+
+      .. code-tab:: typescript
+
+         import { IStringParameter } from '@aws-cdk/aws-ssm';
+
+
+
+   A String SSM Parameter.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-ssm.IParameter`\ 
+
+
+   .. py:attribute:: stringValue
+
+      The parameter value. Value must not nest another parameter. Do not use {{}} in the value.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: grantRead(grantee)
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-ssm.IParameter <@aws-cdk/aws-ssm.IParameter.grantRead>`
+
+      Grants read (DescribeParameter, GetParameter, GetParameterHistory) permissions on the SSM Parameter.
+
+
+
+      :param grantee: the role to be granted read-only access to the parameter.
+      :type grantee: :py:class:`@aws-cdk/aws-iam.IPrincipal`\ 
+      :abstract: Yes
+
+
+   .. py:method:: grantWrite(grantee)
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-ssm.IParameter <@aws-cdk/aws-ssm.IParameter.grantWrite>`
+
+      Grants write (PutParameter) permissions on the SSM Parameter.
+
+
+
+      :param grantee: the role to be granted write access to the parameter.
+      :type grantee: :py:class:`@aws-cdk/aws-iam.IPrincipal`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: parameterArn
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ssm.IParameter <@aws-cdk/aws-ssm.IParameter.parameterArn>`
+
+      The ARN of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: parameterName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ssm.IParameter <@aws-cdk/aws-ssm.IParameter.parameterName>`
+
+      The name of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: parameterType
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ssm.IParameter <@aws-cdk/aws-ssm.IParameter.parameterType>`
+
+      The type of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+ParameterBase
+^^^^^^^^^^^^^
+
+.. py:class:: ParameterBase(scope, id, _props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.ParameterBase;
+
+      .. code-tab:: javascript
+
+         const { ParameterBase } = require('@aws-cdk/aws-ssm');
+
+      .. code-tab:: typescript
+
+         import { ParameterBase } from '@aws-cdk/aws-ssm';
+
+
+
+   Basic features shared across all types of SSM Parameters.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-ssm.IParameter`\ 
+   :abstract: Yes
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param _props: 
+   :type _props: :py:class:`~@aws-cdk/aws-ssm.ParameterProps`\ 
+
+   .. py:method:: grantRead(grantee)
+
+      *Implements* :py:meth:`@aws-cdk/aws-ssm.IParameter.grantRead`
+
+      Grants read (DescribeParameter, GetParameter, GetParameterHistory) permissions on the SSM Parameter.
+
+
+
+      :param grantee: 
+      :type grantee: :py:class:`@aws-cdk/aws-iam.IPrincipal`\ 
+
+
+   .. py:method:: grantWrite(grantee)
+
+      *Implements* :py:meth:`@aws-cdk/aws-ssm.IParameter.grantWrite`
+
+      Grants write (PutParameter) permissions on the SSM Parameter.
+
+
+
+      :param grantee: 
+      :type grantee: :py:class:`@aws-cdk/aws-iam.IPrincipal`\ 
+
+
+   .. py:attribute:: parameterArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-ssm.IParameter.parameterArn`
+
+      The ARN of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: parameterName
+
+      *Implements* :py:meth:`@aws-cdk/aws-ssm.IParameter.parameterName`
+
+      The name of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: parameterType
+
+      *Implements* :py:meth:`@aws-cdk/aws-ssm.IParameter.parameterType`
+
+      The type of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ParameterProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ParameterProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.ParameterProps;
+
+      .. code-tab:: javascript
+
+         // ParameterProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ParameterProps } from '@aws-cdk/aws-ssm';
+
+
+
+   Properties needed to create a new SSM Parameter.
+
+
+
+
+
+   .. py:attribute:: allowedPattern
+
+      A regular expression used to validate the parameter value. For example, for String types with values restricted to
+
+      numbers, you can specify the following: ``^\d+$``
+
+
+
+      :type: string *(optional)*
+      :default: no validation is performed
+
+
+   .. py:attribute:: description
+
+      Information about the parameter that you want to add to the system.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: name
+
+      The name of the parameter.
+
+
+
+      :type: string *(optional)*
+      :default: a name will be generated by CloudFormation
+
+
+ParameterStoreSecureString
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ParameterStoreSecureString(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.ParameterStoreSecureString;
+
+      .. code-tab:: javascript
+
+         const { ParameterStoreSecureString } = require('@aws-cdk/aws-ssm');
+
+      .. code-tab:: typescript
+
+         import { ParameterStoreSecureString } from '@aws-cdk/aws-ssm';
+
+
+
+   References a secret value in AWS Systems Manager Parameter Store
+
+   
+
+   It is not possible to retrieve the "latest" value of a secret.
+
+   Use Secrets Manager if you need that ability.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.DynamicReference`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-ssm.ParameterStoreSecureStringProps`\ 
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:method:: makeResolveValue(service, referenceKey) -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.DynamicReference <@aws-cdk/cdk.DynamicReference.makeResolveValue>`
+
+      Make a dynamic reference Token value
+
+      
+
+      This is a value (similar to CDK Tokens) that will be substituted by
+
+      CloudFormation before executing the changeset.
+
+
+
+      *Protected method*
+
+      :param service: 
+      :type service: :py:class:`@aws-cdk/cdk.DynamicReferenceService`\ 
+      :param referenceKey: 
+      :type referenceKey: string
+      :rtype: string
+
+
+   .. py:attribute:: stringValue
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.DynamicReference <@aws-cdk/cdk.DynamicReference.stringValue>`
+
+      The value of this dynamic reference
+
+
+
+      :type: string *(readonly)*
+
+
+ParameterStoreSecureStringProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ParameterStoreSecureStringProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.ParameterStoreSecureStringProps;
+
+      .. code-tab:: javascript
+
+         // ParameterStoreSecureStringProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ParameterStoreSecureStringProps } from '@aws-cdk/aws-ssm';
+
+
+
+   Properties for a ParameterStoreValue
+
+
+
+
+
+   .. py:attribute:: parameterName
+
+      The name of the parameter store secure string value
+
+
+
+      :type: string
+
+
+   .. py:attribute:: version
+
+      The version number of the value you wish to retrieve.
+
+
+
+      :type: number
+
+
+ParameterStoreString
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ParameterStoreString(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.ParameterStoreString;
+
+      .. code-tab:: javascript
+
+         const { ParameterStoreString } = require('@aws-cdk/aws-ssm');
+
+      .. code-tab:: typescript
+
+         import { ParameterStoreString } from '@aws-cdk/aws-ssm';
+
+
+
+   References a public value in AWS Systems Manager Parameter Store
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-ssm.ParameterStoreStringProps`\ 
+
+   .. py:attribute:: stringValue
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ParameterStoreStringProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ParameterStoreStringProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.ParameterStoreStringProps;
+
+      .. code-tab:: javascript
+
+         // ParameterStoreStringProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ParameterStoreStringProps } from '@aws-cdk/aws-ssm';
+
+
+
+   Properties for a ParameterStoreValue
+
+
+
+
+
+   .. py:attribute:: parameterName
+
+      The name of the parameter store value
+
+
+
+      :type: string
+
+
+   .. py:attribute:: version
+
+      The version number of the value you wish to retrieve.
+
+
+
+      :type: number *(optional)*
+      :default: The latest version will be retrieved.
+
+
+StringListParameter
+^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: StringListParameter(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.StringListParameter;
+
+      .. code-tab:: javascript
+
+         const { StringListParameter } = require('@aws-cdk/aws-ssm');
+
+      .. code-tab:: typescript
+
+         import { StringListParameter } from '@aws-cdk/aws-ssm';
+
+
+
+   Creates a new StringList SSM Parameter.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-ssm.ParameterBase`\ 
+   :implements: :py:class:`~@aws-cdk/aws-ssm.IStringListParameter`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-ssm.StringListParameterProps`\ 
+
+   .. py:attribute:: parameterName
+
+      *Implements* :py:meth:`@aws-cdk/aws-ssm.IParameter.parameterName`
+
+      The name of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: parameterType
+
+      *Implements* :py:meth:`@aws-cdk/aws-ssm.IParameter.parameterType`
+
+      The type of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stringListValue
+
+      *Implements* :py:meth:`@aws-cdk/aws-ssm.IStringListParameter.stringListValue`
+
+      The parameter value. Value must not nest another parameter. Do not use {{}} in the value. Values in the array
+
+      cannot contain commas (``,``).
+
+
+
+      :type: string[] *(readonly)*
+
+
+   .. py:method:: grantRead(grantee)
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-ssm.ParameterBase <@aws-cdk/aws-ssm.ParameterBase.grantRead>`
+
+      Grants read (DescribeParameter, GetParameter, GetParameterHistory) permissions on the SSM Parameter.
+
+
+
+      :param grantee: 
+      :type grantee: :py:class:`@aws-cdk/aws-iam.IPrincipal`\ 
+
+
+   .. py:method:: grantWrite(grantee)
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-ssm.ParameterBase <@aws-cdk/aws-ssm.ParameterBase.grantWrite>`
+
+      Grants write (PutParameter) permissions on the SSM Parameter.
+
+
+
+      :param grantee: 
+      :type grantee: :py:class:`@aws-cdk/aws-iam.IPrincipal`\ 
+
+
+   .. py:attribute:: parameterArn
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ssm.ParameterBase <@aws-cdk/aws-ssm.ParameterBase.parameterArn>`
+
+      The ARN of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+StringListParameterProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: StringListParameterProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.StringListParameterProps;
+
+      .. code-tab:: javascript
+
+         // StringListParameterProps is an interface
+
+      .. code-tab:: typescript
+
+         import { StringListParameterProps } from '@aws-cdk/aws-ssm';
+
+
+
+   Properties needed to create a StringList SSM Parameter
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-ssm.ParameterProps`\ 
+
+
+   .. py:attribute:: stringListValue
+
+      The values of the parameter. It may not reference another parameter and ``{{}}`` cannot be used in the value.
+
+
+
+      :type: string[]
+
+
+   .. py:attribute:: allowedPattern
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ssm.ParameterProps <@aws-cdk/aws-ssm.ParameterProps.allowedPattern>`
+
+      A regular expression used to validate the parameter value. For example, for String types with values restricted to
+
+      numbers, you can specify the following: ``^\d+$``
+
+
+
+      :type: string *(optional)*
+      :default: no validation is performed
+
+
+   .. py:attribute:: description
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ssm.ParameterProps <@aws-cdk/aws-ssm.ParameterProps.description>`
+
+      Information about the parameter that you want to add to the system.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: name
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ssm.ParameterProps <@aws-cdk/aws-ssm.ParameterProps.name>`
+
+      The name of the parameter.
+
+
+
+      :type: string *(optional)*
+      :default: a name will be generated by CloudFormation
+
+
+StringParameter
+^^^^^^^^^^^^^^^
+
+.. py:class:: StringParameter(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.StringParameter;
+
+      .. code-tab:: javascript
+
+         const { StringParameter } = require('@aws-cdk/aws-ssm');
+
+      .. code-tab:: typescript
+
+         import { StringParameter } from '@aws-cdk/aws-ssm';
+
+
+
+   Creates a new String SSM Parameter.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-ssm.ParameterBase`\ 
+   :implements: :py:class:`~@aws-cdk/aws-ssm.IStringParameter`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-ssm.StringParameterProps`\ 
+
+   .. py:attribute:: parameterName
+
+      *Implements* :py:meth:`@aws-cdk/aws-ssm.IParameter.parameterName`
+
+      The name of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: parameterType
+
+      *Implements* :py:meth:`@aws-cdk/aws-ssm.IParameter.parameterType`
+
+      The type of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stringValue
+
+      *Implements* :py:meth:`@aws-cdk/aws-ssm.IStringParameter.stringValue`
+
+      The parameter value. Value must not nest another parameter. Do not use {{}} in the value.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: grantRead(grantee)
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-ssm.ParameterBase <@aws-cdk/aws-ssm.ParameterBase.grantRead>`
+
+      Grants read (DescribeParameter, GetParameter, GetParameterHistory) permissions on the SSM Parameter.
+
+
+
+      :param grantee: 
+      :type grantee: :py:class:`@aws-cdk/aws-iam.IPrincipal`\ 
+
+
+   .. py:method:: grantWrite(grantee)
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-ssm.ParameterBase <@aws-cdk/aws-ssm.ParameterBase.grantWrite>`
+
+      Grants write (PutParameter) permissions on the SSM Parameter.
+
+
+
+      :param grantee: 
+      :type grantee: :py:class:`@aws-cdk/aws-iam.IPrincipal`\ 
+
+
+   .. py:attribute:: parameterArn
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ssm.ParameterBase <@aws-cdk/aws-ssm.ParameterBase.parameterArn>`
+
+      The ARN of the SSM Parameter resource.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+StringParameterProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: StringParameterProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.SSM;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.ssm.StringParameterProps;
+
+      .. code-tab:: javascript
+
+         // StringParameterProps is an interface
+
+      .. code-tab:: typescript
+
+         import { StringParameterProps } from '@aws-cdk/aws-ssm';
+
+
+
+   Properties needed to create a String SSM parameter.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-ssm.ParameterProps`\ 
+
+
+   .. py:attribute:: stringValue
+
+      The value of the parameter. It may not reference another parameter and ``{{}}`` cannot be used in the value.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: allowedPattern
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ssm.ParameterProps <@aws-cdk/aws-ssm.ParameterProps.allowedPattern>`
+
+      A regular expression used to validate the parameter value. For example, for String types with values restricted to
+
+      numbers, you can specify the following: ``^\d+$``
+
+
+
+      :type: string *(optional)*
+      :default: no validation is performed
+
+
+   .. py:attribute:: description
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ssm.ParameterProps <@aws-cdk/aws-ssm.ParameterProps.description>`
+
+      Information about the parameter that you want to add to the system.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: name
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ssm.ParameterProps <@aws-cdk/aws-ssm.ParameterProps.name>`
+
+      The name of the parameter.
+
+
+
+      :type: string *(optional)*
+      :default: a name will be generated by CloudFormation
+
+

@@ -1,0 +1,500 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"vd2jL2/DeOXIagwZkHSCgLVHg6l1Q5xnrOMPR/AJpqw="}
+
+@aws-cdk/aws-s3-deployment
+==========================
+
+.. mdinclude:: ./__aws-cdk_aws-s3-deployment.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.S3.Deployment/0.24.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.S3.Deployment" Version="0.24.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.S3.Deployment --version 0.24.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.S3.Deployment" version="0.24.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/s3-deployment/0.24.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:s3-deployment:jar:0.24.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="s3-deployment" rev="0.24.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>s3-deployment</artifactId>
+           <version>0.24.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:s3-deployment:0.24.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='s3-deployment', version='0.24.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-s3-deployment/v/0.24.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-s3-deployment@0.24.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-s3-deployment": "^0.24.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-s3-deployment@0.24.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-s3-deployment/v/0.24.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-s3-deployment@0.24.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-s3-deployment": "^0.24.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-s3-deployment@0.24.0
+
+
+
+.. py:module:: @aws-cdk/aws-s3-deployment
+
+BucketDeployment
+^^^^^^^^^^^^^^^^
+
+.. py:class:: BucketDeployment(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.S3.Deployment;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.s3.deployment.BucketDeployment;
+
+      .. code-tab:: javascript
+
+         const { BucketDeployment } = require('@aws-cdk/aws-s3-deployment');
+
+      .. code-tab:: typescript
+
+         import { BucketDeployment } from '@aws-cdk/aws-s3-deployment';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-s3-deployment.BucketDeploymentProps`\ 
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+BucketDeploymentProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: BucketDeploymentProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.S3.Deployment;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.s3.deployment.BucketDeploymentProps;
+
+      .. code-tab:: javascript
+
+         // BucketDeploymentProps is an interface
+
+      .. code-tab:: typescript
+
+         import { BucketDeploymentProps } from '@aws-cdk/aws-s3-deployment';
+
+
+
+
+
+   .. py:attribute:: destinationBucket
+
+      The S3 bucket to sync the contents of the zip file to.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-s3.IBucket`\ 
+
+
+   .. py:attribute:: source
+
+      The source from which to deploy the contents of this bucket.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-s3-deployment.ISource`\ 
+
+
+   .. py:attribute:: destinationKeyPrefix
+
+      Key prefix in the destination bucket.
+
+
+
+      :type: string *(optional)*
+      :default: "/" (unzip to root of the destination bucket)
+
+
+   .. py:attribute:: retainOnDelete
+
+      If this is set to "false", the destination files will be deleted when the
+
+      resource is deleted or the destination is updated.
+
+      
+
+      NOTICE: if this is set to "false" and destination bucket/prefix is updated,
+
+      all files in the previous destination will first be deleted and then
+
+      uploaded to the new destination location. This could have availablity
+
+      implications on your users.
+
+
+
+      :type: boolean *(optional)*
+      :default: true - when resource is deleted/updated, files are retained
+
+
+ISource (interface)
+^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ISource
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.S3.Deployment;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.s3.deployment.ISource;
+
+      .. code-tab:: javascript
+
+         // ISource is an interface
+
+      .. code-tab:: typescript
+
+         import { ISource } from '@aws-cdk/aws-s3-deployment';
+
+
+
+   Represents a source for bucket deployments.
+
+
+
+
+
+   .. py:method:: bind(context) -> @aws-cdk/aws-s3-deployment.SourceProps
+
+      Binds the source to a bucket deployment.
+
+
+
+      :param context: The construct tree context.
+      :type context: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-s3-deployment.SourceProps`\ 
+      :abstract: Yes
+
+
+Source
+^^^^^^
+
+.. py:class:: Source
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.S3.Deployment;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.s3.deployment.Source;
+
+      .. code-tab:: javascript
+
+         const { Source } = require('@aws-cdk/aws-s3-deployment');
+
+      .. code-tab:: typescript
+
+         import { Source } from '@aws-cdk/aws-s3-deployment';
+
+
+
+   Specifies bucket deployment source.
+
+   
+
+   Usage:
+
+   
+
+        Source.bucket(bucket, key)
+
+        Source.asset('/local/path/to/directory')
+
+        Source.asset('/local/path/to/a/file.zip')
+
+
+
+
+   .. py:staticmethod:: asset(path) -> @aws-cdk/aws-s3-deployment.ISource
+
+      Uses a local asset as the deployment source.
+
+
+
+      :param path: The path to a local .zip file or a directory
+      :type path: string
+      :rtype: :py:class:`~@aws-cdk/aws-s3-deployment.ISource`\ 
+
+
+   .. py:staticmethod:: bucket(bucket, zipObjectKey) -> @aws-cdk/aws-s3-deployment.ISource
+
+      Uses a .zip file stored in an S3 bucket as the source for the destination bucket contents.
+
+
+
+      :param bucket: The S3 Bucket
+      :type bucket: :py:class:`@aws-cdk/aws-s3.IBucket`\ 
+      :param zipObjectKey: The S3 object key of the zip file with contents
+      :type zipObjectKey: string
+      :rtype: :py:class:`~@aws-cdk/aws-s3-deployment.ISource`\ 
+
+
+SourceProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: SourceProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.S3.Deployment;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.s3.deployment.SourceProps;
+
+      .. code-tab:: javascript
+
+         // SourceProps is an interface
+
+      .. code-tab:: typescript
+
+         import { SourceProps } from '@aws-cdk/aws-s3-deployment';
+
+
+
+
+
+   .. py:attribute:: bucket
+
+      The source bucket to deploy from.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-s3.IBucket`\ 
+
+
+   .. py:attribute:: zipObjectKey
+
+      An S3 object key in the source bucket that points to a zip file.
+
+
+
+      :type: string
+
+

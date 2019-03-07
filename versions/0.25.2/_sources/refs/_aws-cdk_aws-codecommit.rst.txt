@@ -1,0 +1,2321 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"af4YPWQcBA8EcKTkGvK72I+uBJzj/VY7Fq9fzBr1bfE="}
+
+AWS CodeCommit
+==============
+
+.. mdinclude:: ./__aws-cdk_aws-codecommit.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.CodeCommit/0.25.2>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.CodeCommit" Version="0.25.2" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.CodeCommit --version 0.25.2
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.CodeCommit" version="0.25.2" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/codecommit/0.25.2/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:codecommit:jar:0.25.2'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="codecommit" rev="0.25.2"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>codecommit</artifactId>
+           <version>0.25.2</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:codecommit:0.25.2'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='codecommit', version='0.25.2')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-codecommit/v/0.25.2>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-codecommit@0.25.2
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-codecommit": "^0.25.2"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-codecommit@0.25.2
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-codecommit/v/0.25.2>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-codecommit@0.25.2
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-codecommit": "^0.25.2"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-codecommit@0.25.2
+
+
+
+.. py:module:: @aws-cdk/aws-codecommit
+
+CfnRepository
+^^^^^^^^^^^^^
+
+.. py:class:: CfnRepository(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeCommit;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codecommit.CfnRepository;
+
+      .. code-tab:: javascript
+
+         const { CfnRepository } = require('@aws-cdk/aws-codecommit');
+
+      .. code-tab:: typescript
+
+         import { CfnRepository } from '@aws-cdk/aws-codecommit';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-codecommit.CfnRepositoryProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-codecommit.CfnRepositoryProps`\  *(readonly)*
+
+
+   .. py:attribute:: repositoryArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: repositoryCloneUrlHttp
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: repositoryCloneUrlSsh
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: repositoryId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: repositoryName
+
+      :type: string *(readonly)*
+
+   .. py:class:: RepositoryTriggerProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeCommit;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codecommit.CfnRepository.RepositoryTriggerProperty;
+
+         .. code-tab:: javascript
+
+            // CfnRepository.RepositoryTriggerProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnRepository.RepositoryTriggerProperty } from '@aws-cdk/aws-codecommit';
+
+
+
+
+
+      .. py:attribute:: branches
+
+         ``CfnRepository.RepositoryTriggerProperty.Branches``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-branches
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+      .. py:attribute:: customData
+
+         ``CfnRepository.RepositoryTriggerProperty.CustomData``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-customdata
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: destinationArn
+
+         ``CfnRepository.RepositoryTriggerProperty.DestinationArn``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-destinationarn
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: events
+
+         ``CfnRepository.RepositoryTriggerProperty.Events``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-events
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+      .. py:attribute:: name
+
+         ``CfnRepository.RepositoryTriggerProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codecommit-repository-repositorytrigger.html#cfn-codecommit-repository-repositorytrigger-name
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+CfnRepositoryProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnRepositoryProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeCommit;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codecommit.CfnRepositoryProps;
+
+      .. code-tab:: javascript
+
+         // CfnRepositoryProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnRepositoryProps } from '@aws-cdk/aws-codecommit';
+
+
+
+
+
+   .. py:attribute:: repositoryName
+
+      ``AWS::CodeCommit::Repository.RepositoryName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html#cfn-codecommit-repository-repositoryname
+
+
+      :type: string
+
+
+   .. py:attribute:: repositoryDescription
+
+      ``AWS::CodeCommit::Repository.RepositoryDescription``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html#cfn-codecommit-repository-repositorydescription
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: triggers
+
+      ``AWS::CodeCommit::Repository.Triggers``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codecommit-repository.html#cfn-codecommit-repository-triggers
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`~@aws-cdk/aws-codecommit.CfnRepository.RepositoryTriggerProperty`\  or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+CommonPipelineSourceActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CommonPipelineSourceActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeCommit;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codecommit.CommonPipelineSourceActionProps;
+
+      .. code-tab:: javascript
+
+         // CommonPipelineSourceActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CommonPipelineSourceActionProps } from '@aws-cdk/aws-codecommit';
+
+
+
+   Common properties for creating {@link PipelineSourceAction} -
+
+   either directly, through its constructor,
+
+   or through {@link IRepository#toCodePipelineSourceAction}.
+
+
+
+   :extends: :py:class:`@aws-cdk/aws-codepipeline-api.CommonActionProps`\ 
+
+
+   .. py:attribute:: branch
+
+      :type: string *(optional)*
+      :default: 'master'
+
+
+   .. py:attribute:: outputArtifactName
+
+      The name of the source's output artifact.
+
+      Output artifacts are used by CodePipeline as inputs into other actions.
+
+
+
+      :type: string *(optional)*
+      :default: a name will be auto-generated
+
+
+   .. py:attribute:: pollForSourceChanges
+
+      Whether AWS CodePipeline should poll for source changes.
+
+      If this is `false`, the Pipeline will use CloudWatch Events to detect source changes instead.
+
+
+
+      :type: boolean *(optional)*
+      :default: false
+
+
+   .. py:attribute:: actionName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionProps <@aws-cdk/aws-codepipeline-api.CommonActionProps.actionName>`
+
+      The physical, human-readable name of the Action.
+
+      Not that Action names must be unique within a single Stage.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionProps <@aws-cdk/aws-codepipeline-api.CommonActionProps.runOrder>`
+
+      The runOrder property for this Action.
+
+      RunOrder determines the relative order in which multiple Actions in the same Stage execute.
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+
+IRepository (interface)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IRepository
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeCommit;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codecommit.IRepository;
+
+      .. code-tab:: javascript
+
+         // IRepository is an interface
+
+      .. code-tab:: typescript
+
+         import { IRepository } from '@aws-cdk/aws-codecommit';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: repositoryArn
+
+      The ARN of this Repository.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: repositoryCloneUrlHttp
+
+      The HTTP clone URL
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: repositoryCloneUrlSsh
+
+      The SSH clone URL
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: repositoryName
+
+      The human-visible name of this Repository.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: export() -> @aws-cdk/aws-codecommit.RepositoryImportProps
+
+      Exports this Repository. Allows the same Repository to be used in 2 different Stacks.
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-codecommit.RepositoryImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:method:: onCommentOnCommit(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      Defines a CloudWatch event rule which triggers when a comment is made on a commit.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+      :abstract: Yes
+
+
+   .. py:method:: onCommentOnPullRequest(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      Defines a CloudWatch event rule which triggers when a comment is made on a pull request.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+      :abstract: Yes
+
+
+   .. py:method:: onCommit(name, [target, [branch]]) -> @aws-cdk/aws-events.EventRule
+
+      Defines a CloudWatch event rule which triggers when a commit is pushed to a branch.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: The target of the event
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param branch: The branch to monitor. Defaults to all branches.
+      :type branch: string *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+      :abstract: Yes
+
+
+   .. py:method:: onEvent(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      Defines a CloudWatch event rule which triggers for repository events. Use
+
+      `rule.addEventPattern(pattern)` to specify a filter.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+      :abstract: Yes
+
+
+   .. py:method:: onPullRequestStateChange(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      Defines a CloudWatch event rule which triggers when a pull request state is changed.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+      :abstract: Yes
+
+
+   .. py:method:: onReferenceCreated(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      Defines a CloudWatch event rule which triggers when a reference is
+
+      created (i.e. a new branch/tag is created) to the repository.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+      :abstract: Yes
+
+
+   .. py:method:: onReferenceDeleted(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      Defines a CloudWatch event rule which triggers when a reference is
+
+      delete (i.e. a branch/tag is deleted) from the repository.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+      :abstract: Yes
+
+
+   .. py:method:: onReferenceUpdated(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      Defines a CloudWatch event rule which triggers when a reference is
+
+      updated (i.e. a commit is pushed to an existing or new branch) from the repository.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+      :abstract: Yes
+
+
+   .. py:method:: onStateChange(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      Defines a CloudWatch event rule which triggers when a "CodeCommit
+
+      Repository State Change" event occurs.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+      :abstract: Yes
+
+
+   .. py:method:: toCodePipelineSourceAction(props) -> @aws-cdk/aws-codecommit.PipelineSourceAction
+
+      Convenience method for creating a new {@link PipelineSourceAction}.
+
+
+
+      :param props: the construction properties of the new Action
+      :type props: :py:class:`~@aws-cdk/aws-codecommit.CommonPipelineSourceActionProps`\ 
+      :return: the newly created {@link PipelineSourceAction}
+      :rtype: :py:class:`~@aws-cdk/aws-codecommit.PipelineSourceAction`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+PipelineSourceAction
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: PipelineSourceAction(props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeCommit;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codecommit.PipelineSourceAction;
+
+      .. code-tab:: javascript
+
+         const { PipelineSourceAction } = require('@aws-cdk/aws-codecommit');
+
+      .. code-tab:: typescript
+
+         import { PipelineSourceAction } from '@aws-cdk/aws-codecommit';
+
+
+
+   CodePipeline Source that is provided by an AWS CodeCommit repository.
+
+
+
+   :extends: :py:class:`@aws-cdk/aws-codepipeline-api.SourceAction`\ 
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-codecommit.PipelineSourceActionProps`\ 
+
+   .. py:method:: bind(stage, _scope)
+
+      *Implements* :py:meth:`@aws-cdk/aws-codepipeline-api.Action.bind`
+
+      The method called when an Action is attached to a Pipeline.
+
+      This method is guaranteed to be called only once for each Action instance.
+
+
+
+      *Protected method*
+
+      :param stage: 
+      :type stage: :py:class:`@aws-cdk/aws-codepipeline-api.IStage`\ 
+      :param _scope: 
+      :type _scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+
+
+   .. py:method:: addInputArtifact(artifact) -> @aws-cdk/aws-codepipeline-api.Action
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.addInputArtifact>`
+
+      *Protected method*
+
+      :param artifact: 
+      :type artifact: :py:class:`@aws-cdk/aws-codepipeline-api.Artifact`\ 
+      :rtype: :py:class:`@aws-cdk/aws-codepipeline-api.Action`\ 
+
+
+   .. py:method:: addOutputArtifact(name) -> @aws-cdk/aws-codepipeline-api.Artifact
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.addOutputArtifact>`
+
+      *Protected method*
+
+      :param name: 
+      :type name: string
+      :rtype: :py:class:`@aws-cdk/aws-codepipeline-api.Artifact`\ 
+
+
+   .. py:method:: onStateChange(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.onStateChange>`
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.validate>`
+
+      *Protected method*
+
+      :rtype: string[]
+
+
+   .. py:attribute:: actionName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.actionName>`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: category
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.category>`
+
+      The category of the action.
+
+      The category defines which action type the owner
+
+      (the entity that performs the action) performs.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-codepipeline-api.ActionCategory`\  *(readonly)*
+
+
+   .. py:attribute:: owner
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.owner>`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: provider
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.provider>`
+
+      The service provider that the action calls.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.runOrder>`
+
+      The order in which AWS CodePipeline runs this action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: scope
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.scope>`
+
+      Retrieves the Construct scope of this Action.
+
+      Only available after the Action has been added to a Stage,
+
+      and that Stage to a Pipeline.
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Construct`\  *(readonly)*
+
+
+   .. py:attribute:: version
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.version>`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: configuration
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.configuration>`
+
+      The action's configuration. These are key-value pairs that specify input values for an action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: any *(optional)* *(readonly)*
+
+
+   .. py:attribute:: region
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.region>`
+
+      The AWS region the given Action resides in.
+
+      Note that a cross-region Pipeline requires replication buckets to function correctly.
+
+      You can provide their names with the {@link PipelineProps#crossRegionReplicationBuckets} property.
+
+      If you don't, the CodePipeline Construct will create new Stacks in your CDK app containing those buckets,
+
+      that you will need to `cdk deploy` before deploying the main, Pipeline-containing Stack.
+
+
+
+      :type: string *(optional)* *(readonly)*
+      :default: the Action resides in the same region as the Pipeline
+
+
+   .. py:attribute:: role
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.role>`
+
+      The service role that is assumed during execution of action.
+
+      This role is not mandatory, however more advanced configuration
+
+      may require specifying it.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-iam.IRole`\  *(optional)* *(readonly)*
+
+
+   .. py:attribute:: outputArtifact
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.SourceAction <@aws-cdk/aws-codepipeline-api.SourceAction.outputArtifact>`
+
+      :type: :py:class:`@aws-cdk/aws-codepipeline-api.Artifact`\  *(readonly)*
+
+
+PipelineSourceActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: PipelineSourceActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeCommit;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codecommit.PipelineSourceActionProps;
+
+      .. code-tab:: javascript
+
+         // PipelineSourceActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { PipelineSourceActionProps } from '@aws-cdk/aws-codecommit';
+
+
+
+   Construction properties of the {@link PipelineSourceAction CodeCommit source CodePipeline Action}.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-codecommit.CommonPipelineSourceActionProps`\ 
+
+
+   .. py:attribute:: repository
+
+      The CodeCommit repository.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codecommit.IRepository`\ 
+
+
+   .. py:attribute:: branch
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codecommit.CommonPipelineSourceActionProps <@aws-cdk/aws-codecommit.CommonPipelineSourceActionProps.branch>`
+
+      :type: string *(optional)*
+      :default: 'master'
+
+
+   .. py:attribute:: outputArtifactName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codecommit.CommonPipelineSourceActionProps <@aws-cdk/aws-codecommit.CommonPipelineSourceActionProps.outputArtifactName>`
+
+      The name of the source's output artifact.
+
+      Output artifacts are used by CodePipeline as inputs into other actions.
+
+
+
+      :type: string *(optional)*
+      :default: a name will be auto-generated
+
+
+   .. py:attribute:: pollForSourceChanges
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codecommit.CommonPipelineSourceActionProps <@aws-cdk/aws-codecommit.CommonPipelineSourceActionProps.pollForSourceChanges>`
+
+      Whether AWS CodePipeline should poll for source changes.
+
+      If this is `false`, the Pipeline will use CloudWatch Events to detect source changes instead.
+
+
+
+      :type: boolean *(optional)*
+      :default: false
+
+
+   .. py:attribute:: actionName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionProps <@aws-cdk/aws-codepipeline-api.CommonActionProps.actionName>`
+
+      The physical, human-readable name of the Action.
+
+      Not that Action names must be unique within a single Stage.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionProps <@aws-cdk/aws-codepipeline-api.CommonActionProps.runOrder>`
+
+      The runOrder property for this Action.
+
+      RunOrder determines the relative order in which multiple Actions in the same Stage execute.
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+
+Repository
+^^^^^^^^^^
+
+.. py:class:: Repository(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeCommit;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codecommit.Repository;
+
+      .. code-tab:: javascript
+
+         const { Repository } = require('@aws-cdk/aws-codecommit');
+
+      .. code-tab:: typescript
+
+         import { Repository } from '@aws-cdk/aws-codecommit';
+
+
+
+   Provides a CodeCommit Repository
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-codecommit.RepositoryBase`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-codecommit.RepositoryProps`\ 
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-codecommit.IRepository
+
+      Import a Repository defined either outside the CDK, or in a different Stack
+
+      (exported with the {@link export} method).
+
+
+
+      :param scope: the parent Construct for the Repository
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: the name of the Repository Construct
+      :type id: string
+      :param props: the properties used to identify the existing Repository
+      :type props: :py:class:`~@aws-cdk/aws-codecommit.RepositoryImportProps`\ 
+      :return: a reference to the existing Repository
+      :rtype: :py:class:`~@aws-cdk/aws-codecommit.IRepository`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-codecommit.RepositoryImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.RepositoryBase.export`
+
+      Exports this Repository. Allows the same Repository to be used in 2 different Stacks.
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-codecommit.RepositoryImportProps`\ 
+
+
+   .. py:method:: notify(arn, [options]) -> @aws-cdk/aws-codecommit.Repository
+
+      Create a trigger to notify another service to run actions on repository events.
+
+
+
+      :param arn: Arn of the resource that repository events will notify
+      :type arn: string
+      :param options: Trigger options to run actions
+      :type options: :py:class:`~@aws-cdk/aws-codecommit.RepositoryTriggerOptions`\  *(optional)*
+      :rtype: :py:class:`~@aws-cdk/aws-codecommit.Repository`\ 
+
+
+   .. py:attribute:: repositoryArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.RepositoryBase.repositoryArn`
+
+      The ARN of this Repository.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: repositoryCloneUrlHttp
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.RepositoryBase.repositoryCloneUrlHttp`
+
+      The HTTP clone URL
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: repositoryCloneUrlSsh
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.RepositoryBase.repositoryCloneUrlSsh`
+
+      The SSH clone URL
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: repositoryName
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.RepositoryBase.repositoryName`
+
+      The human-visible name of this Repository.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: onCommentOnCommit(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codecommit.RepositoryBase <@aws-cdk/aws-codecommit.RepositoryBase.onCommentOnCommit>`
+
+      Defines a CloudWatch event rule which triggers when a comment is made on a commit.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: onCommentOnPullRequest(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codecommit.RepositoryBase <@aws-cdk/aws-codecommit.RepositoryBase.onCommentOnPullRequest>`
+
+      Defines a CloudWatch event rule which triggers when a comment is made on a pull request.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: onCommit(name, [target, [branch]]) -> @aws-cdk/aws-events.EventRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codecommit.RepositoryBase <@aws-cdk/aws-codecommit.RepositoryBase.onCommit>`
+
+      Defines a CloudWatch event rule which triggers when a commit is pushed to a branch.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: The target of the event
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param branch: The branch to monitor. Defaults to all branches.
+      :type branch: string *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: onEvent(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codecommit.RepositoryBase <@aws-cdk/aws-codecommit.RepositoryBase.onEvent>`
+
+      Defines a CloudWatch event rule which triggers for repository events. Use
+
+      `rule.addEventPattern(pattern)` to specify a filter.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: onPullRequestStateChange(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codecommit.RepositoryBase <@aws-cdk/aws-codecommit.RepositoryBase.onPullRequestStateChange>`
+
+      Defines a CloudWatch event rule which triggers when a pull request state is changed.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: onReferenceCreated(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codecommit.RepositoryBase <@aws-cdk/aws-codecommit.RepositoryBase.onReferenceCreated>`
+
+      Defines a CloudWatch event rule which triggers when a reference is
+
+      created (i.e. a new branch/tag is created) to the repository.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: onReferenceDeleted(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codecommit.RepositoryBase <@aws-cdk/aws-codecommit.RepositoryBase.onReferenceDeleted>`
+
+      Defines a CloudWatch event rule which triggers when a reference is
+
+      delete (i.e. a branch/tag is deleted) from the repository.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: onReferenceUpdated(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codecommit.RepositoryBase <@aws-cdk/aws-codecommit.RepositoryBase.onReferenceUpdated>`
+
+      Defines a CloudWatch event rule which triggers when a reference is
+
+      updated (i.e. a commit is pushed to an existing or new branch) from the repository.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: onStateChange(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codecommit.RepositoryBase <@aws-cdk/aws-codecommit.RepositoryBase.onStateChange>`
+
+      Defines a CloudWatch event rule which triggers when a "CodeCommit
+
+      Repository State Change" event occurs.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: toCodePipelineSourceAction(props) -> @aws-cdk/aws-codecommit.PipelineSourceAction
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codecommit.RepositoryBase <@aws-cdk/aws-codecommit.RepositoryBase.toCodePipelineSourceAction>`
+
+      Convenience method for creating a new {@link PipelineSourceAction}.
+
+
+
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-codecommit.CommonPipelineSourceActionProps`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-codecommit.PipelineSourceAction`\ 
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+RepositoryBase
+^^^^^^^^^^^^^^
+
+.. py:class:: RepositoryBase(scope, id)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeCommit;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codecommit.RepositoryBase;
+
+      .. code-tab:: javascript
+
+         const { RepositoryBase } = require('@aws-cdk/aws-codecommit');
+
+      .. code-tab:: typescript
+
+         import { RepositoryBase } from '@aws-cdk/aws-codecommit';
+
+
+
+   Represents a reference to a CodeCommit Repository.
+
+   
+
+   If you want to create a new Repository managed alongside your CDK code,
+
+   use the {@link Repository} class.
+
+   
+
+   If you want to reference an already existing Repository,
+
+   use the {@link Repository.import} method.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-codecommit.IRepository`\ 
+   :abstract: Yes
+   :param scope: The scope in which to define this construct
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: The scoped construct ID. Must be unique amongst siblings. If the ID includes a path separator (`/`), then it will be replaced by double dash `--`.
+   :type id: string
+
+   .. py:method:: export() -> @aws-cdk/aws-codecommit.RepositoryImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.IRepository.export`
+
+      Exports this Repository. Allows the same Repository to be used in 2 different Stacks.
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-codecommit.RepositoryImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:method:: onCommentOnCommit(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.IRepository.onCommentOnCommit`
+
+      Defines a CloudWatch event rule which triggers when a comment is made on a commit.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: onCommentOnPullRequest(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.IRepository.onCommentOnPullRequest`
+
+      Defines a CloudWatch event rule which triggers when a comment is made on a pull request.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: onCommit(name, [target, [branch]]) -> @aws-cdk/aws-events.EventRule
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.IRepository.onCommit`
+
+      Defines a CloudWatch event rule which triggers when a commit is pushed to a branch.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: The target of the event
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param branch: The branch to monitor. Defaults to all branches.
+      :type branch: string *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: onEvent(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.IRepository.onEvent`
+
+      Defines a CloudWatch event rule which triggers for repository events. Use
+
+      `rule.addEventPattern(pattern)` to specify a filter.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: onPullRequestStateChange(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.IRepository.onPullRequestStateChange`
+
+      Defines a CloudWatch event rule which triggers when a pull request state is changed.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: onReferenceCreated(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.IRepository.onReferenceCreated`
+
+      Defines a CloudWatch event rule which triggers when a reference is
+
+      created (i.e. a new branch/tag is created) to the repository.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: onReferenceDeleted(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.IRepository.onReferenceDeleted`
+
+      Defines a CloudWatch event rule which triggers when a reference is
+
+      delete (i.e. a branch/tag is deleted) from the repository.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: onReferenceUpdated(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.IRepository.onReferenceUpdated`
+
+      Defines a CloudWatch event rule which triggers when a reference is
+
+      updated (i.e. a commit is pushed to an existing or new branch) from the repository.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: onStateChange(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.IRepository.onStateChange`
+
+      Defines a CloudWatch event rule which triggers when a "CodeCommit
+
+      Repository State Change" event occurs.
+
+
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: toCodePipelineSourceAction(props) -> @aws-cdk/aws-codecommit.PipelineSourceAction
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.IRepository.toCodePipelineSourceAction`
+
+      Convenience method for creating a new {@link PipelineSourceAction}.
+
+
+
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-codecommit.CommonPipelineSourceActionProps`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-codecommit.PipelineSourceAction`\ 
+
+
+   .. py:attribute:: repositoryArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.IRepository.repositoryArn`
+
+      The ARN of this Repository.
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: repositoryCloneUrlHttp
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.IRepository.repositoryCloneUrlHttp`
+
+      The HTTP clone URL
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: repositoryCloneUrlSsh
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.IRepository.repositoryCloneUrlSsh`
+
+      The SSH clone URL
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: repositoryName
+
+      *Implements* :py:meth:`@aws-cdk/aws-codecommit.IRepository.repositoryName`
+
+      The human-visible name of this Repository.
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+RepositoryEventTrigger (enum)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: RepositoryEventTrigger
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeCommit;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codecommit.RepositoryEventTrigger;
+
+      .. code-tab:: javascript
+
+         const { RepositoryEventTrigger } = require('@aws-cdk/aws-codecommit');
+
+      .. code-tab:: typescript
+
+         import { RepositoryEventTrigger } from '@aws-cdk/aws-codecommit';
+
+
+
+   Repository events that will cause the trigger to run actions in another service.
+
+
+
+   .. py:data:: All
+
+   .. py:data:: UpdateRef
+
+   .. py:data:: CreateRef
+
+   .. py:data:: DeleteRef
+
+
+RepositoryImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: RepositoryImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeCommit;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codecommit.RepositoryImportProps;
+
+      .. code-tab:: javascript
+
+         // RepositoryImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { RepositoryImportProps } from '@aws-cdk/aws-codecommit';
+
+
+
+   Properties for the {@link Repository.import} method.
+
+
+
+
+
+   .. py:attribute:: repositoryName
+
+      The name of an existing CodeCommit Repository that we are referencing.
+
+      Must be in the same account and region as the root Stack.
+
+
+
+      :type: string
+
+
+RepositoryProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: RepositoryProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeCommit;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codecommit.RepositoryProps;
+
+      .. code-tab:: javascript
+
+         // RepositoryProps is an interface
+
+      .. code-tab:: typescript
+
+         import { RepositoryProps } from '@aws-cdk/aws-codecommit';
+
+
+
+
+
+   .. py:attribute:: repositoryName
+
+      Name of the repository. This property is required for all repositories.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: description
+
+      A description of the repository. Use the description to identify the
+
+      purpose of the repository.
+
+
+
+      :type: string *(optional)*
+
+
+RepositoryTriggerOptions (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: RepositoryTriggerOptions
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeCommit;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codecommit.RepositoryTriggerOptions;
+
+      .. code-tab:: javascript
+
+         // RepositoryTriggerOptions is an interface
+
+      .. code-tab:: typescript
+
+         import { RepositoryTriggerOptions } from '@aws-cdk/aws-codecommit';
+
+
+
+   Creates for a repository trigger to an SNS topic or Lambda function.
+
+
+
+
+
+   .. py:attribute:: branches
+
+      The names of the branches in the AWS CodeCommit repository that contain
+
+      events that you want to include in the trigger. If you don't specify at
+
+      least one branch, the trigger applies to all branches.
+
+
+
+      :type: string[] *(optional)*
+
+
+   .. py:attribute:: customData
+
+      When an event is triggered, additional information that AWS CodeCommit
+
+      includes when it sends information to the target.
+
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: events
+
+      The repository events for which AWS CodeCommit sends information to the
+
+      target, which you specified in the DestinationArn property.If you don't
+
+      specify events, the trigger runs for all repository events.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codecommit.RepositoryEventTrigger`\ [] *(optional)*
+
+
+   .. py:attribute:: name
+
+      A name for the trigger.Triggers on a repository must have unique names
+
+
+
+      :type: string *(optional)*
+
+

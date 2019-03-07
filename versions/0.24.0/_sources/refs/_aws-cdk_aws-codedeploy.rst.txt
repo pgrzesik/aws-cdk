@@ -1,0 +1,5601 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"E81/CyiIqbfza7EgaMb0EpI/zoxidIeDQOZp3ZW9yqI="}
+
+@aws-cdk/aws-codedeploy
+=======================
+
+.. mdinclude:: ./__aws-cdk_aws-codedeploy.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.CodeDeploy/0.24.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.CodeDeploy" Version="0.24.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.CodeDeploy --version 0.24.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.CodeDeploy" version="0.24.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/codedeploy/0.24.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:codedeploy:jar:0.24.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="codedeploy" rev="0.24.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>codedeploy</artifactId>
+           <version>0.24.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:codedeploy:0.24.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='codedeploy', version='0.24.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-codedeploy/v/0.24.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-codedeploy@0.24.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-codedeploy": "^0.24.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-codedeploy@0.24.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-codedeploy/v/0.24.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-codedeploy@0.24.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-codedeploy": "^0.24.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-codedeploy@0.24.0
+
+
+
+.. py:module:: @aws-cdk/aws-codedeploy
+
+AutoRollbackConfig (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: AutoRollbackConfig
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.AutoRollbackConfig;
+
+      .. code-tab:: javascript
+
+         // AutoRollbackConfig is an interface
+
+      .. code-tab:: typescript
+
+         import { AutoRollbackConfig } from '@aws-cdk/aws-codedeploy';
+
+
+
+   The configuration for automatically rolling back deployments in a given Deployment Group.
+
+
+
+
+
+   .. py:attribute:: deploymentInAlarm
+
+      Whether to automatically roll back a deployment during which one of the configured
+
+      CloudWatch alarms for this Deployment Group went off.
+
+
+
+      :type: boolean *(optional)*
+      :default: true if you've provided any Alarms with the `alarms` property, false otherwise
+
+
+   .. py:attribute:: failedDeployment
+
+      Whether to automatically roll back a deployment that fails.
+
+
+
+      :type: boolean *(optional)*
+      :default: true
+
+
+   .. py:attribute:: stoppedDeployment
+
+      Whether to automatically roll back a deployment that was manually stopped.
+
+
+
+      :type: boolean *(optional)*
+      :default: false
+
+
+CfnApplication
+^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplication(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.CfnApplication;
+
+      .. code-tab:: javascript
+
+         const { CfnApplication } = require('@aws-cdk/aws-codedeploy');
+
+      .. code-tab:: typescript
+
+         import { CfnApplication } from '@aws-cdk/aws-codedeploy';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-codedeploy.CfnApplicationProps`\  *(optional)*
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: applicationName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.CfnApplicationProps`\  *(readonly)*
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnApplicationProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnApplicationProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.CfnApplicationProps;
+
+      .. code-tab:: javascript
+
+         // CfnApplicationProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnApplicationProps } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+   .. py:attribute:: applicationName
+
+      ``AWS::CodeDeploy::Application.ApplicationName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html#cfn-codedeploy-application-applicationname
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: computePlatform
+
+      ``AWS::CodeDeploy::Application.ComputePlatform``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-application.html#cfn-codedeploy-application-computeplatform
+
+
+      :type: string *(optional)*
+
+
+CfnDeploymentConfig
+^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDeploymentConfig(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig;
+
+      .. code-tab:: javascript
+
+         const { CfnDeploymentConfig } = require('@aws-cdk/aws-codedeploy');
+
+      .. code-tab:: typescript
+
+         import { CfnDeploymentConfig } from '@aws-cdk/aws-codedeploy';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentConfigProps`\  *(optional)*
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: deploymentConfigId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentConfigProps`\  *(readonly)*
+
+   .. py:class:: MinimumHealthyHostsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentConfig.MinimumHealthyHostsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentConfig.MinimumHealthyHostsProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: type
+
+         ``CfnDeploymentConfig.MinimumHealthyHostsProperty.Type``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-type
+
+
+         :type: string
+
+
+      .. py:attribute:: value
+
+         ``CfnDeploymentConfig.MinimumHealthyHostsProperty.Value``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentconfig-minimumhealthyhosts.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts-value
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnDeploymentConfigProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDeploymentConfigProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.CfnDeploymentConfigProps;
+
+      .. code-tab:: javascript
+
+         // CfnDeploymentConfigProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnDeploymentConfigProps } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+   .. py:attribute:: deploymentConfigName
+
+      ``AWS::CodeDeploy::DeploymentConfig.DeploymentConfigName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html#cfn-codedeploy-deploymentconfig-deploymentconfigname
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: minimumHealthyHosts
+
+      ``AWS::CodeDeploy::DeploymentConfig.MinimumHealthyHosts``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentconfig.html#cfn-codedeploy-deploymentconfig-minimumhealthyhosts
+
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentConfig.MinimumHealthyHostsProperty`\  or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+CfnDeploymentGroup
+^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDeploymentGroup(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup;
+
+      .. code-tab:: javascript
+
+         const { CfnDeploymentGroup } = require('@aws-cdk/aws-codedeploy');
+
+      .. code-tab:: typescript
+
+         import { CfnDeploymentGroup } from '@aws-cdk/aws-codedeploy';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroupProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: deploymentGroupName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroupProps`\  *(readonly)*
+
+   .. py:class:: AlarmConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.AlarmConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.AlarmConfigurationProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: alarms
+
+         ``CfnDeploymentGroup.AlarmConfigurationProperty.Alarms``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-alarms
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.AlarmProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: enabled
+
+         ``CfnDeploymentGroup.AlarmConfigurationProperty.Enabled``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-enabled
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: ignorePollAlarmFailure
+
+         ``CfnDeploymentGroup.AlarmConfigurationProperty.IgnorePollAlarmFailure``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarmconfiguration.html#cfn-codedeploy-deploymentgroup-alarmconfiguration-ignorepollalarmfailure
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: AlarmProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AlarmProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.AlarmProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.AlarmProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: name
+
+         ``CfnDeploymentGroup.AlarmProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-alarm.html#cfn-codedeploy-deploymentgroup-alarm-name
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: AutoRollbackConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.AutoRollbackConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.AutoRollbackConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.AutoRollbackConfigurationProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: enabled
+
+         ``CfnDeploymentGroup.AutoRollbackConfigurationProperty.Enabled``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-autorollbackconfiguration.html#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-enabled
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: events
+
+         ``CfnDeploymentGroup.AutoRollbackConfigurationProperty.Events``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-autorollbackconfiguration.html#cfn-codedeploy-deploymentgroup-autorollbackconfiguration-events
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:class:: DeploymentProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.DeploymentProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.DeploymentProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: revision
+
+         ``CfnDeploymentGroup.DeploymentProperty.Revision``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.RevisionLocationProperty`\ 
+
+
+      .. py:attribute:: description
+
+         ``CfnDeploymentGroup.DeploymentProperty.Description``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-properties-codedeploy-deploymentgroup-deployment-description
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: ignoreApplicationStopFailures
+
+         ``CfnDeploymentGroup.DeploymentProperty.IgnoreApplicationStopFailures``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-properties-codedeploy-deploymentgroup-deployment-ignoreapplicationstopfailures
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: DeploymentStyleProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.DeploymentStyleProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.DeploymentStyleProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.DeploymentStyleProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: deploymentOption
+
+         ``CfnDeploymentGroup.DeploymentStyleProperty.DeploymentOption``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deploymentstyle.html#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymentoption
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: deploymentType
+
+         ``CfnDeploymentGroup.DeploymentStyleProperty.DeploymentType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deploymentstyle.html#cfn-codedeploy-deploymentgroup-deploymentstyle-deploymenttype
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: EC2TagFilterProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagFilterProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.EC2TagFilterProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.EC2TagFilterProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: key
+
+         ``CfnDeploymentGroup.EC2TagFilterProperty.Key``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-key
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: type
+
+         ``CfnDeploymentGroup.EC2TagFilterProperty.Type``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-type
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: value
+
+         ``CfnDeploymentGroup.EC2TagFilterProperty.Value``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagfilter.html#cfn-codedeploy-deploymentgroup-ec2tagfilter-value
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: EC2TagSetListObjectProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.EC2TagSetListObjectProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.EC2TagSetListObjectProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: ec2TagGroup
+
+         ``CfnDeploymentGroup.EC2TagSetListObjectProperty.Ec2TagGroup``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagsetlistobject.html#cfn-codedeploy-deploymentgroup-ec2tagsetlistobject-ec2taggroup
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.EC2TagFilterProperty`\ )[] *(optional)*
+
+
+   .. py:class:: EC2TagSetProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.EC2TagSetProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.EC2TagSetProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.EC2TagSetProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: ec2TagSetList
+
+         ``CfnDeploymentGroup.EC2TagSetProperty.Ec2TagSetList``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-ec2tagset.html#cfn-codedeploy-deploymentgroup-ec2tagset-ec2tagsetlist
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.EC2TagSetListObjectProperty`\ )[] *(optional)*
+
+
+   .. py:class:: ELBInfoProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.ELBInfoProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.ELBInfoProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.ELBInfoProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: name
+
+         ``CfnDeploymentGroup.ELBInfoProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-elbinfo.html#cfn-codedeploy-deploymentgroup-elbinfo-name
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: GitHubLocationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.GitHubLocationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.GitHubLocationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.GitHubLocationProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: commitId
+
+         ``CfnDeploymentGroup.GitHubLocationProperty.CommitId``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation-commitid
+
+
+         :type: string
+
+
+      .. py:attribute:: repository
+
+         ``CfnDeploymentGroup.GitHubLocationProperty.Repository``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision-githublocation.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation-repository
+
+
+         :type: string
+
+
+   .. py:class:: LoadBalancerInfoProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.LoadBalancerInfoProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.LoadBalancerInfoProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.LoadBalancerInfoProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: elbInfoList
+
+         ``CfnDeploymentGroup.LoadBalancerInfoProperty.ElbInfoList``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.html#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.ELBInfoProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: targetGroupInfoList
+
+         ``CfnDeploymentGroup.LoadBalancerInfoProperty.TargetGroupInfoList``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.html#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty`\ )[] *(optional)*
+
+
+   .. py:class:: OnPremisesTagSetListObjectProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.OnPremisesTagSetListObjectProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.OnPremisesTagSetListObjectProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: onPremisesTagGroup
+
+         ``CfnDeploymentGroup.OnPremisesTagSetListObjectProperty.OnPremisesTagGroup``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisestagsetlistobject.html#cfn-codedeploy-deploymentgroup-onpremisestagsetlistobject-onpremisestaggroup
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.TagFilterProperty`\ )[] *(optional)*
+
+
+   .. py:class:: OnPremisesTagSetProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.OnPremisesTagSetProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.OnPremisesTagSetProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.OnPremisesTagSetProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: onPremisesTagSetList
+
+         ``CfnDeploymentGroup.OnPremisesTagSetProperty.OnPremisesTagSetList``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-onpremisestagset.html#cfn-codedeploy-deploymentgroup-onpremisestagset-onpremisestagsetlist
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.OnPremisesTagSetListObjectProperty`\ )[] *(optional)*
+
+
+   .. py:class:: RevisionLocationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.RevisionLocationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.RevisionLocationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.RevisionLocationProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: gitHubLocation
+
+         ``CfnDeploymentGroup.RevisionLocationProperty.GitHubLocation``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.GitHubLocationProperty`\  *(optional)*
+
+
+      .. py:attribute:: revisionType
+
+         ``CfnDeploymentGroup.RevisionLocationProperty.RevisionType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-revisiontype
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: s3Location
+
+         ``CfnDeploymentGroup.RevisionLocationProperty.S3Location``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.S3LocationProperty`\  *(optional)*
+
+
+   .. py:class:: S3LocationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.S3LocationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.S3LocationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.S3LocationProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: bucket
+
+         ``CfnDeploymentGroup.S3LocationProperty.Bucket``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-bucket
+
+
+         :type: string
+
+
+      .. py:attribute:: key
+
+         ``CfnDeploymentGroup.S3LocationProperty.Key``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-key
+
+
+         :type: string
+
+
+      .. py:attribute:: bundleType
+
+         ``CfnDeploymentGroup.S3LocationProperty.BundleType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-bundletype
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: eTag
+
+         ``CfnDeploymentGroup.S3LocationProperty.ETag``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-etag
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: version
+
+         ``CfnDeploymentGroup.S3LocationProperty.Version``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision-s3location.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location-value
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: TagFilterProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TagFilterProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.TagFilterProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.TagFilterProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: key
+
+         ``CfnDeploymentGroup.TagFilterProperty.Key``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-key
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: type
+
+         ``CfnDeploymentGroup.TagFilterProperty.Type``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-type
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: value
+
+         ``CfnDeploymentGroup.TagFilterProperty.Value``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-tagfilter.html#cfn-codedeploy-deploymentgroup-tagfilter-value
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: TargetGroupInfoProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TargetGroupInfoProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.TargetGroupInfoProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.TargetGroupInfoProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: name
+
+         ``CfnDeploymentGroup.TargetGroupInfoProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-targetgroupinfo.html#cfn-codedeploy-deploymentgroup-targetgroupinfo-name
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: TriggerConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CodeDeploy;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroup.TriggerConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnDeploymentGroup.TriggerConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnDeploymentGroup.TriggerConfigProperty } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+      .. py:attribute:: triggerEvents
+
+         ``CfnDeploymentGroup.TriggerConfigProperty.TriggerEvents``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggerevents
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+      .. py:attribute:: triggerName
+
+         ``CfnDeploymentGroup.TriggerConfigProperty.TriggerName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggername
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: triggerTargetArn
+
+         ``CfnDeploymentGroup.TriggerConfigProperty.TriggerTargetArn``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-triggerconfig.html#cfn-codedeploy-deploymentgroup-triggerconfig-triggertargetarn
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnDeploymentGroupProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnDeploymentGroupProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.CfnDeploymentGroupProps;
+
+      .. code-tab:: javascript
+
+         // CfnDeploymentGroupProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnDeploymentGroupProps } from '@aws-cdk/aws-codedeploy';
+
+
+
+
+
+   .. py:attribute:: applicationName
+
+      ``AWS::CodeDeploy::DeploymentGroup.ApplicationName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-applicationname
+
+
+      :type: string
+
+
+   .. py:attribute:: serviceRoleArn
+
+      ``AWS::CodeDeploy::DeploymentGroup.ServiceRoleArn``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-servicerolearn
+
+
+      :type: string
+
+
+   .. py:attribute:: alarmConfiguration
+
+      ``AWS::CodeDeploy::DeploymentGroup.AlarmConfiguration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-alarmconfiguration
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.AlarmConfigurationProperty`\  *(optional)*
+
+
+   .. py:attribute:: autoRollbackConfiguration
+
+      ``AWS::CodeDeploy::DeploymentGroup.AutoRollbackConfiguration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-autorollbackconfiguration
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.AutoRollbackConfigurationProperty`\  *(optional)*
+
+
+   .. py:attribute:: autoScalingGroups
+
+      ``AWS::CodeDeploy::DeploymentGroup.AutoScalingGroups``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-autoscalinggroups
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: deployment
+
+      ``AWS::CodeDeploy::DeploymentGroup.Deployment``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-deployment
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.DeploymentProperty`\  *(optional)*
+
+
+   .. py:attribute:: deploymentConfigName
+
+      ``AWS::CodeDeploy::DeploymentGroup.DeploymentConfigName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-deploymentconfigname
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: deploymentGroupName
+
+      ``AWS::CodeDeploy::DeploymentGroup.DeploymentGroupName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-deploymentgroupname
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: deploymentStyle
+
+      ``AWS::CodeDeploy::DeploymentGroup.DeploymentStyle``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-deploymentstyle
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.DeploymentStyleProperty`\  *(optional)*
+
+
+   .. py:attribute:: ec2TagFilters
+
+      ``AWS::CodeDeploy::DeploymentGroup.Ec2TagFilters``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-ec2tagfilters
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.EC2TagFilterProperty`\ )[] *(optional)*
+
+
+   .. py:attribute:: ec2TagSet
+
+      ``AWS::CodeDeploy::DeploymentGroup.Ec2TagSet``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-ec2tagset
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.EC2TagSetProperty`\  *(optional)*
+
+
+   .. py:attribute:: loadBalancerInfo
+
+      ``AWS::CodeDeploy::DeploymentGroup.LoadBalancerInfo``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-loadbalancerinfo
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.LoadBalancerInfoProperty`\  *(optional)*
+
+
+   .. py:attribute:: onPremisesInstanceTagFilters
+
+      ``AWS::CodeDeploy::DeploymentGroup.OnPremisesInstanceTagFilters``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.TagFilterProperty`\ )[] *(optional)*
+
+
+   .. py:attribute:: onPremisesTagSet
+
+      ``AWS::CodeDeploy::DeploymentGroup.OnPremisesTagSet``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-onpremisestagset
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.OnPremisesTagSetProperty`\  *(optional)*
+
+
+   .. py:attribute:: triggerConfigurations
+
+      ``AWS::CodeDeploy::DeploymentGroup.TriggerConfigurations``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-triggerconfigurations
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-codedeploy.CfnDeploymentGroup.TriggerConfigProperty`\ )[] *(optional)*
+
+
+CommonPipelineDeployActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CommonPipelineDeployActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.CommonPipelineDeployActionProps;
+
+      .. code-tab:: javascript
+
+         // CommonPipelineDeployActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CommonPipelineDeployActionProps } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Common properties for creating a {@link PipelineDeployAction},
+
+   either directly, through its constructor,
+
+   or through {@link IServerDeploymentGroup#addToPipeline}.
+
+
+
+   :extends: :py:class:`@aws-cdk/aws-codepipeline-api.CommonActionProps`\ 
+
+
+   .. py:attribute:: inputArtifact
+
+      The source to use as input for deployment.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-codepipeline-api.Artifact`\  *(optional)*
+      :default: CodePipeline will use the output of the last Action from a previous Stage as input
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionProps <@aws-cdk/aws-codepipeline-api.CommonActionProps.runOrder>`
+
+      The runOrder property for this Action.
+
+      RunOrder determines the relative order in which multiple Actions in the same Stage execute.
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+
+ILambdaApplication (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ILambdaApplication
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.ILambdaApplication;
+
+      .. code-tab:: javascript
+
+         // ILambdaApplication is an interface
+
+      .. code-tab:: typescript
+
+         import { ILambdaApplication } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Represents a reference to a CodeDeploy Application deploying to AWS Lambda.
+
+   
+
+   If you're managing the Application alongside the rest of your CDK resources,
+
+   use the {@link LambdaApplication} class.
+
+   
+
+   If you want to reference an already existing Application,
+
+   or one defined in a different CDK Stack,
+
+   use the {@link LambdaApplication#import} method.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: applicationArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: applicationName
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: export() -> @aws-cdk/aws-codedeploy.LambdaApplicationImportProps
+
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.LambdaApplicationImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+ILambdaDeploymentConfig (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ILambdaDeploymentConfig
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.ILambdaDeploymentConfig;
+
+      .. code-tab:: javascript
+
+         // ILambdaDeploymentConfig is an interface
+
+      .. code-tab:: typescript
+
+         import { ILambdaDeploymentConfig } from '@aws-cdk/aws-codedeploy';
+
+
+
+   The Deployment Configuration of a Lambda Deployment Group.
+
+   The default, pre-defined Configurations are available as constants on the {@link LambdaDeploymentConfig} class
+
+   (`LambdaDeploymentConfig.AllAtOnce`, `LambdaDeploymentConfig.Canary10Percent30Minutes`, etc.).
+
+   
+
+   Note: CloudFormation does not currently support creating custom lambda configs outside
+
+   of using a custom resource. You can import custom deployment config created outside the
+
+   CDK or via a custom resource with {@link LambdaDeploymentConfig#import}.
+
+
+
+
+
+   .. py:attribute:: deploymentConfigName
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: deploymentConfigArn(scope) -> string
+
+      :param scope: 
+      :type scope: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+      :rtype: string
+      :abstract: Yes
+
+
+ILambdaDeploymentGroup (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ILambdaDeploymentGroup
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.ILambdaDeploymentGroup;
+
+      .. code-tab:: javascript
+
+         // ILambdaDeploymentGroup is an interface
+
+      .. code-tab:: typescript
+
+         import { ILambdaDeploymentGroup } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Interface for a Lambda deployment groups.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: application
+
+      The reference to the CodeDeploy Lambda Application that this Deployment Group belongs to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaApplication`\  *(readonly)*
+
+
+   .. py:attribute:: deploymentGroupArn
+
+      The ARN of this Deployment Group.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: deploymentGroupName
+
+      The physical name of the CodeDeploy Deployment Group.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: export() -> @aws-cdk/aws-codedeploy.LambdaDeploymentGroupImportProps
+
+      Export this Deployment Group for use in another stack or application.
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.LambdaDeploymentGroupImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+IServerApplication (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IServerApplication
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.IServerApplication;
+
+      .. code-tab:: javascript
+
+         // IServerApplication is an interface
+
+      .. code-tab:: typescript
+
+         import { IServerApplication } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Represents a reference to a CodeDeploy Application deploying to EC2/on-premise instances.
+
+   
+
+   If you're managing the Application alongside the rest of your CDK resources,
+
+   use the {@link ServerApplication} class.
+
+   
+
+   If you want to reference an already existing Application,
+
+   or one defined in a different CDK Stack,
+
+   use the {@link #import} method.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: applicationArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: applicationName
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: export() -> @aws-cdk/aws-codedeploy.ServerApplicationImportProps
+
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.ServerApplicationImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+IServerDeploymentConfig (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IServerDeploymentConfig
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.IServerDeploymentConfig;
+
+      .. code-tab:: javascript
+
+         // IServerDeploymentConfig is an interface
+
+      .. code-tab:: typescript
+
+         import { IServerDeploymentConfig } from '@aws-cdk/aws-codedeploy';
+
+
+
+   The Deployment Configuration of an EC2/on-premise Deployment Group.
+
+   The default, pre-defined Configurations are available as constants on the {@link ServerDeploymentConfig} class
+
+   (`ServerDeploymentConfig.HalfAtATime`, `ServerDeploymentConfig.AllAtOnce`, etc.).
+
+   To create a custom Deployment Configuration,
+
+   instantiate the {@link ServerDeploymentConfig} Construct.
+
+
+
+
+
+   .. py:attribute:: deploymentConfigName
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: deploymentConfigArn(scope) -> string
+
+      :param scope: 
+      :type scope: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+      :rtype: string
+      :abstract: Yes
+
+
+   .. py:method:: export() -> @aws-cdk/aws-codedeploy.ServerDeploymentConfigImportProps
+
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.ServerDeploymentConfigImportProps`\ 
+      :abstract: Yes
+
+
+IServerDeploymentGroup (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IServerDeploymentGroup
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.IServerDeploymentGroup;
+
+      .. code-tab:: javascript
+
+         // IServerDeploymentGroup is an interface
+
+      .. code-tab:: typescript
+
+         import { IServerDeploymentGroup } from '@aws-cdk/aws-codedeploy';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: application
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.IServerApplication`\  *(readonly)*
+
+
+   .. py:attribute:: deploymentConfig
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.IServerDeploymentConfig`\  *(readonly)*
+
+
+   .. py:attribute:: deploymentGroupArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: deploymentGroupName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: autoScalingGroups
+
+      :type: :py:class:`@aws-cdk/aws-autoscaling.AutoScalingGroup`\ [] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: role
+
+      :type: :py:class:`@aws-cdk/aws-iam.Role`\  *(optional)* *(readonly)*
+
+
+   .. py:method:: export() -> @aws-cdk/aws-codedeploy.ServerDeploymentGroupImportProps
+
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.ServerDeploymentGroupImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+InstanceTagSet
+^^^^^^^^^^^^^^
+
+.. py:class:: InstanceTagSet(*instanceTagGroups)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.InstanceTagSet;
+
+      .. code-tab:: javascript
+
+         const { InstanceTagSet } = require('@aws-cdk/aws-codedeploy');
+
+      .. code-tab:: typescript
+
+         import { InstanceTagSet } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Represents a set of instance tag groups.
+
+   An instance will match a set if it matches all of the groups in the set -
+
+   in other words, sets follow 'and' semantics.
+
+   You can have a maximum of 3 tag groups inside a set.
+
+
+
+   :param \*instanceTagGroups: 
+   :type \*instanceTagGroups: string => string[]
+
+   .. py:attribute:: instanceTagGroups
+
+      :type: string => string[][] *(readonly)*
+
+
+LambdaApplication
+^^^^^^^^^^^^^^^^^
+
+.. py:class:: LambdaApplication(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.LambdaApplication;
+
+      .. code-tab:: javascript
+
+         const { LambdaApplication } = require('@aws-cdk/aws-codedeploy');
+
+      .. code-tab:: typescript
+
+         import { LambdaApplication } from '@aws-cdk/aws-codedeploy';
+
+
+
+   A CodeDeploy Application that deploys to an AWS Lambda function.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaApplication`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-codedeploy.LambdaApplicationProps`\  *(optional)*
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-codedeploy.ILambdaApplication
+
+      Import an Application defined either outside the CDK,
+
+      or in a different CDK Stack and exported using the {@link ILambdaApplication#export} method.
+
+
+
+      :param scope: the parent Construct for this new Construct
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: the logical ID of this new Construct
+      :type id: string
+      :param props: the properties of the referenced Application
+      :type props: :py:class:`~@aws-cdk/aws-codedeploy.LambdaApplicationImportProps`\ 
+      :return: a Construct representing a reference to an existing Application
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaApplication`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-codedeploy.LambdaApplicationImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.ILambdaApplication.export`
+
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.LambdaApplicationImportProps`\ 
+
+
+   .. py:attribute:: applicationArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.ILambdaApplication.applicationArn`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: applicationName
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.ILambdaApplication.applicationName`
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+LambdaApplicationImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: LambdaApplicationImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.LambdaApplicationImportProps;
+
+      .. code-tab:: javascript
+
+         // LambdaApplicationImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { LambdaApplicationImportProps } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Properties of a reference to a CodeDeploy Application.
+
+
+
+
+
+   .. py:attribute:: applicationName
+
+      The physical, human-readable name of the Lambda Application we're referencing.
+
+      The Application must be in the same account and region as the root Stack.
+
+
+
+      :type: string
+
+
+LambdaApplicationProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: LambdaApplicationProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.LambdaApplicationProps;
+
+      .. code-tab:: javascript
+
+         // LambdaApplicationProps is an interface
+
+      .. code-tab:: typescript
+
+         import { LambdaApplicationProps } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Construction properties for {@link LambdaApplication}.
+
+
+
+
+
+   .. py:attribute:: applicationName
+
+      The physical, human-readable name of the CodeDeploy Application.
+
+
+
+      :type: string *(optional)*
+      :default: an auto-generated name will be used
+
+
+LambdaDeploymentConfig
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: LambdaDeploymentConfig
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfig;
+
+      .. code-tab:: javascript
+
+         const { LambdaDeploymentConfig } = require('@aws-cdk/aws-codedeploy');
+
+      .. code-tab:: typescript
+
+         import { LambdaDeploymentConfig } from '@aws-cdk/aws-codedeploy';
+
+
+
+   A custom Deployment Configuration for a Lambda Deployment Group.
+
+   
+
+   Note: This class currently stands as namespaced container of the default configurations
+
+   until CloudFormation supports custom Lambda Deployment Configs. Until then it is closed
+
+   (private constructor) and does not extend {@link cdk.Construct}
+
+
+
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-codedeploy.ILambdaDeploymentConfig
+
+      Import a custom Deployment Configuration for a Lambda Deployment Group defined outside the CDK.
+
+
+
+      :param scope: the parent Construct for this new Construct
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: the logical ID of this new Construct
+      :type id: string
+      :param props: the properties of the referenced custom Deployment Configuration
+      :type props: :py:class:`~@aws-cdk/aws-codedeploy.LambdaDeploymentConfigImportProps`\ 
+      :return: a Construct representing a reference to an existing custom Deployment Configuration
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaDeploymentConfig`\ 
+
+
+   .. py:attribute:: AllAtOnce
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaDeploymentConfig`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: Canary10Percent10Minutes
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaDeploymentConfig`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: Canary10Percent15Minutes
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaDeploymentConfig`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: Canary10Percent30Minutes
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaDeploymentConfig`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: Canary10Percent5Minutes
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaDeploymentConfig`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: Linear10PercentEvery10Minutes
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaDeploymentConfig`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: Linear10PercentEvery1Minute
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaDeploymentConfig`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: Linear10PercentEvery2Minutes
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaDeploymentConfig`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: Linear10PercentEvery3Minutes
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaDeploymentConfig`\  *(readonly)* *(static)*
+
+
+LambdaDeploymentConfigImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: LambdaDeploymentConfigImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.LambdaDeploymentConfigImportProps;
+
+      .. code-tab:: javascript
+
+         // LambdaDeploymentConfigImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { LambdaDeploymentConfigImportProps } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Properties of a reference to a CodeDeploy Lambda Deployment Configuration.
+
+
+
+
+
+   .. py:attribute:: deploymentConfigName
+
+      The physical, human-readable name of the custom CodeDeploy Lambda Deployment Configuration
+
+      that we are referencing.
+
+
+
+      :type: string
+
+
+LambdaDeploymentGroup
+^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: LambdaDeploymentGroup(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroup;
+
+      .. code-tab:: javascript
+
+         const { LambdaDeploymentGroup } = require('@aws-cdk/aws-codedeploy');
+
+      .. code-tab:: typescript
+
+         import { LambdaDeploymentGroup } from '@aws-cdk/aws-codedeploy';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaDeploymentGroup`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-codedeploy.LambdaDeploymentGroupProps`\ 
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-codedeploy.ILambdaDeploymentGroup
+
+      Import an Lambda Deployment Group defined either outside the CDK,
+
+      or in a different CDK Stack and exported using the {@link #export} method.
+
+
+
+      :param scope: the parent Construct for this new Construct
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: the logical ID of this new Construct
+      :type id: string
+      :param props: the properties of the referenced Deployment Group
+      :type props: :py:class:`~@aws-cdk/aws-codedeploy.LambdaDeploymentGroupImportProps`\ 
+      :return: a Construct representing a reference to an existing Deployment Group
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaDeploymentGroup`\ 
+
+
+   .. py:method:: addAlarm(alarm)
+
+      Associates an additional alarm with this Deployment Group.
+
+
+
+      :param alarm: the alarm to associate with this Deployment Group
+      :type alarm: :py:class:`@aws-cdk/aws-cloudwatch.Alarm`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-codedeploy.LambdaDeploymentGroupImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.ILambdaDeploymentGroup.export`
+
+      Export this Deployment Group for use in another stack or application.
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.LambdaDeploymentGroupImportProps`\ 
+
+
+   .. py:method:: grantPutLifecycleEventHookExecutionStatus([principal])
+
+      Grant a principal permission to codedeploy:PutLifecycleEventHookExecutionStatus
+
+      on this deployment group resource.
+
+
+
+      :param principal: to grant permission to
+      :type principal: :py:class:`@aws-cdk/aws-iam.IPrincipal`\  *(optional)*
+
+
+   .. py:method:: onPostHook(postHook)
+
+      Associate a function to run after deployment completes.
+
+
+
+      :param postHook: 
+      :type postHook: :py:class:`@aws-cdk/aws-lambda.IFunction`\ 
+
+
+   .. py:method:: onPreHook(preHook)
+
+      Associate a function to run before deployment begins.
+
+
+
+      :param preHook: function to run before deployment beings
+      :type preHook: :py:class:`@aws-cdk/aws-lambda.IFunction`\ 
+
+
+   .. py:attribute:: application
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.ILambdaDeploymentGroup.application`
+
+      The reference to the CodeDeploy Lambda Application that this Deployment Group belongs to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaApplication`\  *(readonly)*
+
+
+   .. py:attribute:: deploymentGroupArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.ILambdaDeploymentGroup.deploymentGroupArn`
+
+      The ARN of this Deployment Group.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: deploymentGroupName
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.ILambdaDeploymentGroup.deploymentGroupName`
+
+      The physical name of the CodeDeploy Deployment Group.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: role
+
+      :type: :py:class:`@aws-cdk/aws-iam.Role`\  *(readonly)*
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+LambdaDeploymentGroupImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: LambdaDeploymentGroupImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupImportProps;
+
+      .. code-tab:: javascript
+
+         // LambdaDeploymentGroupImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { LambdaDeploymentGroupImportProps } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Properties of a reference to a CodeDeploy Lambda Deployment Group.
+
+
+
+
+
+   .. py:attribute:: application
+
+      The reference to the CodeDeploy Lambda Application
+
+      that this Deployment Group belongs to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaApplication`\ 
+
+
+   .. py:attribute:: deploymentGroupName
+
+      The physical, human-readable name of the CodeDeploy Lambda Deployment Group
+
+      that we are referencing.
+
+
+
+      :type: string
+
+
+LambdaDeploymentGroupProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: LambdaDeploymentGroupProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.LambdaDeploymentGroupProps;
+
+      .. code-tab:: javascript
+
+         // LambdaDeploymentGroupProps is an interface
+
+      .. code-tab:: typescript
+
+         import { LambdaDeploymentGroupProps } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Construction properties for {@link LambdaDeploymentGroup}.
+
+
+
+
+
+   .. py:attribute:: alias
+
+      Lambda Alias to shift traffic. Updating the version
+
+      of the alias will trigger a CodeDeploy deployment.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-lambda.Alias`\ 
+
+
+   .. py:attribute:: alarms
+
+      The CloudWatch alarms associated with this Deployment Group.
+
+      CodeDeploy will stop (and optionally roll back)
+
+      a deployment if during it any of the alarms trigger.
+
+      
+
+      Alarms can also be added after the Deployment Group is created using the {@link #addAlarm} method.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-cloudwatch.Alarm`\ [] *(optional)*
+      :default: []
+
+
+   .. py:attribute:: application
+
+      The reference to the CodeDeploy Lambda Application that this Deployment Group belongs to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.LambdaApplication`\  *(optional)*
+      :default: one will be created for you
+
+
+   .. py:attribute:: autoRollback
+
+      The auto-rollback configuration for this Deployment Group.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.AutoRollbackConfig`\  *(optional)*
+
+
+   .. py:attribute:: deploymentConfig
+
+      The Deployment Configuration this Deployment Group uses.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.ILambdaDeploymentConfig`\  *(optional)*
+      :default: LambdaDeploymentConfig#AllAtOnce
+
+
+   .. py:attribute:: deploymentGroupName
+
+      The physical, human-readable name of the CodeDeploy Deployment Group.
+
+
+
+      :type: string *(optional)*
+      :default: an auto-generated name will be used
+
+
+   .. py:attribute:: ignorePollAlarmsFailure
+
+      Whether to continue a deployment even if fetching the alarm status from CloudWatch failed.
+
+
+
+      :type: boolean *(optional)*
+      :default: false
+
+
+   .. py:attribute:: postHook
+
+      The Lambda function to run after traffic routing starts.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-lambda.IFunction`\  *(optional)*
+
+
+   .. py:attribute:: preHook
+
+      The Lambda function to run before traffic routing starts.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-lambda.IFunction`\  *(optional)*
+
+
+   .. py:attribute:: role
+
+      The service Role of this Deployment Group.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-iam.Role`\  *(optional)*
+      :default: a new Role will be created.
+
+
+PipelineDeployAction
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: PipelineDeployAction(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.PipelineDeployAction;
+
+      .. code-tab:: javascript
+
+         const { PipelineDeployAction } = require('@aws-cdk/aws-codedeploy');
+
+      .. code-tab:: typescript
+
+         import { PipelineDeployAction } from '@aws-cdk/aws-codedeploy';
+
+
+
+   :extends: :py:class:`@aws-cdk/aws-codepipeline-api.DeployAction`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-codedeploy.PipelineDeployActionProps`\ 
+
+   .. py:method:: addInputArtifact([artifact]) -> @aws-cdk/aws-codepipeline-api.Action
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.addInputArtifact>`
+
+      *Protected method*
+
+      :param artifact: 
+      :type artifact: :py:class:`@aws-cdk/aws-codepipeline-api.Artifact`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-codepipeline-api.Action`\ 
+
+
+   .. py:method:: addOutputArtifact([name]) -> @aws-cdk/aws-codepipeline-api.Artifact
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.addOutputArtifact>`
+
+      *Protected method*
+
+      :param name: 
+      :type name: string *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-codepipeline-api.Artifact`\ 
+
+
+   .. py:method:: onStateChange(name, [target, [options]]) -> @aws-cdk/aws-events.EventRule
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.onStateChange>`
+
+      :param name: 
+      :type name: string
+      :param target: 
+      :type target: :py:class:`@aws-cdk/aws-events.IEventRuleTarget`\  *(optional)*
+      :param options: 
+      :type options: :py:class:`@aws-cdk/aws-events.EventRuleProps`\  *(optional)*
+      :rtype: :py:class:`@aws-cdk/aws-events.EventRule`\ 
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :rtype: string[]
+
+
+   .. py:attribute:: category
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.category>`
+
+      The category of the action.
+
+      The category defines which action type the owner
+
+      (the entity that performs the action) performs.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-codepipeline-api.ActionCategory`\  *(readonly)*
+
+
+   .. py:attribute:: owner
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.owner>`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: provider
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.provider>`
+
+      The service provider that the action calls.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.runOrder>`
+
+      The order in which AWS CodePipeline runs this action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      https://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: number *(readonly)*
+
+
+   .. py:attribute:: version
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.version>`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: configuration
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.configuration>`
+
+      The action's configuration. These are key-value pairs that specify input values for an action.
+
+      For more information, see the AWS CodePipeline User Guide.
+
+      
+
+      http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements
+
+
+
+      :type: any *(optional)* *(readonly)*
+
+
+   .. py:attribute:: region
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.region>`
+
+      The AWS region the given Action resides in.
+
+      Note that a cross-region Pipeline requires replication buckets to function correctly.
+
+      You can provide their names with the {@link PipelineProps#crossRegionReplicationBuckets} property.
+
+      If you don't, the CodePipeline Construct will create new Stacks in your CDK app containing those buckets,
+
+      that you will need to `cdk deploy` before deploying the main, Pipeline-containing Stack.
+
+
+
+      :type: string *(optional)* *(readonly)*
+      :default: the Action resides in the same region as the Pipeline
+
+
+   .. py:attribute:: role
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.Action <@aws-cdk/aws-codepipeline-api.Action.role>`
+
+      The service role that is assumed during execution of action.
+
+      This role is not mandatory, however more advanced configuration
+
+      may require specifying it.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-iam.IRole`\  *(optional)* *(readonly)*
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+PipelineDeployActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: PipelineDeployActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.PipelineDeployActionProps;
+
+      .. code-tab:: javascript
+
+         // PipelineDeployActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { PipelineDeployActionProps } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Construction properties of the {@link PipelineDeployAction CodeDeploy deploy CodePipeline Action}.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-codedeploy.CommonPipelineDeployActionProps`\ 
+   :extends: :py:class:`@aws-cdk/aws-codepipeline-api.CommonActionConstructProps`\ 
+
+
+   .. py:attribute:: deploymentGroup
+
+      The CodeDeploy Deployment Group to deploy to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.IServerDeploymentGroup`\ 
+
+
+   .. py:attribute:: inputArtifact
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codedeploy.CommonPipelineDeployActionProps <@aws-cdk/aws-codedeploy.CommonPipelineDeployActionProps.inputArtifact>`
+
+      The source to use as input for deployment.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-codepipeline-api.Artifact`\  *(optional)*
+      :default: CodePipeline will use the output of the last Action from a previous Stage as input
+
+
+   .. py:attribute:: stage
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionConstructProps <@aws-cdk/aws-codepipeline-api.CommonActionConstructProps.stage>`
+
+      The Pipeline Stage to add this Action to.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-codepipeline-api.IStage`\ 
+
+
+   .. py:attribute:: runOrder
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codepipeline-api.CommonActionProps <@aws-cdk/aws-codepipeline-api.CommonActionProps.runOrder>`
+
+      The runOrder property for this Action.
+
+      RunOrder determines the relative order in which multiple Actions in the same Stage execute.
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+
+ServerApplication
+^^^^^^^^^^^^^^^^^
+
+.. py:class:: ServerApplication(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.ServerApplication;
+
+      .. code-tab:: javascript
+
+         const { ServerApplication } = require('@aws-cdk/aws-codedeploy');
+
+      .. code-tab:: typescript
+
+         import { ServerApplication } from '@aws-cdk/aws-codedeploy';
+
+
+
+   A CodeDeploy Application that deploys to EC2/on-premise instances.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-codedeploy.IServerApplication`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-codedeploy.ServerApplicationProps`\  *(optional)*
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-codedeploy.IServerApplication
+
+      Import an Application defined either outside the CDK,
+
+      or in a different CDK Stack and exported using the {@link #export} method.
+
+
+
+      :param scope: the parent Construct for this new Construct
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: the logical ID of this new Construct
+      :type id: string
+      :param props: the properties of the referenced Application
+      :type props: :py:class:`~@aws-cdk/aws-codedeploy.ServerApplicationImportProps`\ 
+      :return: a Construct representing a reference to an existing Application
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.IServerApplication`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-codedeploy.ServerApplicationImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.IServerApplication.export`
+
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.ServerApplicationImportProps`\ 
+
+
+   .. py:attribute:: applicationArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.IServerApplication.applicationArn`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: applicationName
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.IServerApplication.applicationName`
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ServerApplicationImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ServerApplicationImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.ServerApplicationImportProps;
+
+      .. code-tab:: javascript
+
+         // ServerApplicationImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ServerApplicationImportProps } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Properties of a reference to a CodeDeploy EC2/on-premise Application.
+
+
+
+
+
+   .. py:attribute:: applicationName
+
+      The physical, human-readable name of the CodeDeploy EC2/on-premise Application we're referencing.
+
+      The Application must be in the same account and region as the root Stack.
+
+
+
+      :type: string
+
+
+ServerApplicationProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ServerApplicationProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.ServerApplicationProps;
+
+      .. code-tab:: javascript
+
+         // ServerApplicationProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ServerApplicationProps } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Construction properties for {@link ServerApplication}.
+
+
+
+
+
+   .. py:attribute:: applicationName
+
+      The physical, human-readable name of the CodeDeploy Application.
+
+
+
+      :type: string *(optional)*
+      :default: an auto-generated name will be used
+
+
+ServerDeploymentConfig
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ServerDeploymentConfig(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.ServerDeploymentConfig;
+
+      .. code-tab:: javascript
+
+         const { ServerDeploymentConfig } = require('@aws-cdk/aws-codedeploy');
+
+      .. code-tab:: typescript
+
+         import { ServerDeploymentConfig } from '@aws-cdk/aws-codedeploy';
+
+
+
+   A custom Deployment Configuration for an EC2/on-premise Deployment Group.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-codedeploy.IServerDeploymentConfig`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-codedeploy.ServerDeploymentConfigProps`\ 
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-codedeploy.IServerDeploymentConfig
+
+      Import a custom Deployment Configuration for an EC2/on-premise Deployment Group defined either outside the CDK,
+
+      or in a different CDK Stack and exported using the {@link #export} method.
+
+
+
+      :param scope: the parent Construct for this new Construct
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: the logical ID of this new Construct
+      :type id: string
+      :param props: the properties of the referenced custom Deployment Configuration
+      :type props: :py:class:`~@aws-cdk/aws-codedeploy.ServerDeploymentConfigImportProps`\ 
+      :return: a Construct representing a reference to an existing custom Deployment Configuration
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.IServerDeploymentConfig`\ 
+
+
+   .. py:method:: deploymentConfigArn(scope) -> string
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.IServerDeploymentConfig.deploymentConfigArn`
+
+      :param scope: 
+      :type scope: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+      :rtype: string
+
+
+   .. py:method:: export() -> @aws-cdk/aws-codedeploy.ServerDeploymentConfigImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.IServerDeploymentConfig.export`
+
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.ServerDeploymentConfigImportProps`\ 
+
+
+   .. py:attribute:: AllAtOnce
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.IServerDeploymentConfig`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: HalfAtATime
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.IServerDeploymentConfig`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: OneAtATime
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.IServerDeploymentConfig`\  *(readonly)* *(static)*
+
+
+   .. py:attribute:: deploymentConfigName
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.IServerDeploymentConfig.deploymentConfigName`
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ServerDeploymentConfigImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ServerDeploymentConfigImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.ServerDeploymentConfigImportProps;
+
+      .. code-tab:: javascript
+
+         // ServerDeploymentConfigImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ServerDeploymentConfigImportProps } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Properties of a reference to a CodeDeploy EC2/on-premise Deployment Configuration.
+
+
+
+
+
+   .. py:attribute:: deploymentConfigName
+
+      The physical, human-readable name of the custom CodeDeploy EC2/on-premise Deployment Configuration
+
+      that we are referencing.
+
+
+
+      :type: string
+
+
+ServerDeploymentConfigProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ServerDeploymentConfigProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.ServerDeploymentConfigProps;
+
+      .. code-tab:: javascript
+
+         // ServerDeploymentConfigProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ServerDeploymentConfigProps } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Construction properties of {@link ServerDeploymentConfig}.
+
+
+
+
+
+   .. py:attribute:: deploymentConfigName
+
+      The physical, human-readable name of the Deployment Configuration.
+
+
+
+      :type: string *(optional)*
+      :default: a name will be auto-generated
+
+
+   .. py:attribute:: minHealthyHostCount
+
+      The minimum healhty hosts threshold expressed as an absolute number.
+
+      If you've specified this value,
+
+      you can't specify {@link #minHealthyHostPercentage},
+
+      however one of this or {@link #minHealthyHostPercentage} is required.
+
+
+
+      :type: number *(optional)*
+
+
+   .. py:attribute:: minHealthyHostPercentage
+
+      The minmum healhty hosts threshold expressed as a percentage of the fleet.
+
+      If you've specified this value,
+
+      you can't specify {@link #minHealthyHostCount},
+
+      however one of this or {@link #minHealthyHostCount} is required.
+
+
+
+      :type: number *(optional)*
+
+
+ServerDeploymentGroup
+^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ServerDeploymentGroup(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.ServerDeploymentGroup;
+
+      .. code-tab:: javascript
+
+         const { ServerDeploymentGroup } = require('@aws-cdk/aws-codedeploy');
+
+      .. code-tab:: typescript
+
+         import { ServerDeploymentGroup } from '@aws-cdk/aws-codedeploy';
+
+
+
+   A CodeDeploy Deployment Group that deploys to EC2/on-premise instances.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-codedeploy.ServerDeploymentGroupBase`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-codedeploy.ServerDeploymentGroupProps`\  *(optional)*
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-codedeploy.IServerDeploymentGroup
+
+      Import an EC2/on-premise Deployment Group defined either outside the CDK,
+
+      or in a different CDK Stack and exported using the {@link #export} method.
+
+
+
+      :param scope: the parent Construct for this new Construct
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: the logical ID of this new Construct
+      :type id: string
+      :param props: the properties of the referenced Deployment Group
+      :type props: :py:class:`~@aws-cdk/aws-codedeploy.ServerDeploymentGroupImportProps`\ 
+      :return: a Construct representing a reference to an existing Deployment Group
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.IServerDeploymentGroup`\ 
+
+
+   .. py:method:: addAlarm(alarm)
+
+      Associates an additional alarm with this Deployment Group.
+
+
+
+      :param alarm: the alarm to associate with this Deployment Group
+      :type alarm: :py:class:`@aws-cdk/aws-cloudwatch.Alarm`\ 
+
+
+   .. py:method:: addAutoScalingGroup(asg)
+
+      Adds an additional auto-scaling group to this Deployment Group.
+
+
+
+      :param asg: the auto-scaling group to add to this Deployment Group
+      :type asg: :py:class:`@aws-cdk/aws-autoscaling.AutoScalingGroup`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-codedeploy.ServerDeploymentGroupImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.ServerDeploymentGroupBase.export`
+
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.ServerDeploymentGroupImportProps`\ 
+
+
+   .. py:attribute:: application
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.ServerDeploymentGroupBase.application`
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.IServerApplication`\  *(readonly)*
+
+
+   .. py:attribute:: deploymentGroupArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.ServerDeploymentGroupBase.deploymentGroupArn`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: deploymentGroupName
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.ServerDeploymentGroupBase.deploymentGroupName`
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: autoScalingGroups
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.ServerDeploymentGroupBase.autoScalingGroups`
+
+      :type: :py:class:`@aws-cdk/aws-autoscaling.AutoScalingGroup`\ [] *(optional)* *(readonly)*
+
+
+   .. py:attribute:: role
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.ServerDeploymentGroupBase.role`
+
+      :type: :py:class:`@aws-cdk/aws-iam.Role`\  *(optional)* *(readonly)*
+
+
+   .. py:method:: addToPipeline(stage, name, [props]) -> @aws-cdk/aws-codedeploy.PipelineDeployAction
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-codedeploy.ServerDeploymentGroupBase <@aws-cdk/aws-codedeploy.ServerDeploymentGroupBase.addToPipeline>`
+
+      Convenience method for creating a new {@link PipelineDeployAction}
+
+      and adding it to the given Stage.
+
+
+
+      :param stage: the Pipeline Stage to add the new Action to
+      :type stage: :py:class:`@aws-cdk/aws-codepipeline-api.IStage`\ 
+      :param name: the name of the newly created Action
+      :type name: string
+      :param props: the properties of the new Action
+      :type props: :py:class:`~@aws-cdk/aws-codedeploy.CommonPipelineDeployActionProps`\  *(optional)*
+      :return: the newly created {@link PipelineDeployAction} deploy Action
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.PipelineDeployAction`\ 
+
+
+   .. py:attribute:: deploymentConfig
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-codedeploy.ServerDeploymentGroupBase <@aws-cdk/aws-codedeploy.ServerDeploymentGroupBase.deploymentConfig>`
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.IServerDeploymentConfig`\  *(readonly)*
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ServerDeploymentGroupBase
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ServerDeploymentGroupBase(scope, id, [deploymentConfig])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupBase;
+
+      .. code-tab:: javascript
+
+         const { ServerDeploymentGroupBase } = require('@aws-cdk/aws-codedeploy');
+
+      .. code-tab:: typescript
+
+         import { ServerDeploymentGroupBase } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Represents a reference to a CodeDeploy EC2/on-premise Deployment Group.
+
+   
+
+   If you're managing the Deployment Group alongside the rest of your CDK resources,
+
+   use the {@link ServerDeploymentGroup} class.
+
+   
+
+   If you want to reference an already existing Deployment Group,
+
+   or one defined in a different CDK Stack,
+
+   use the {@link #import} method.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-codedeploy.IServerDeploymentGroup`\ 
+   :abstract: Yes
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param deploymentConfig: 
+   :type deploymentConfig: :py:class:`~@aws-cdk/aws-codedeploy.IServerDeploymentConfig`\  *(optional)*
+
+   .. py:method:: addToPipeline(stage, name, [props]) -> @aws-cdk/aws-codedeploy.PipelineDeployAction
+
+      Convenience method for creating a new {@link PipelineDeployAction}
+
+      and adding it to the given Stage.
+
+
+
+      :param stage: the Pipeline Stage to add the new Action to
+      :type stage: :py:class:`@aws-cdk/aws-codepipeline-api.IStage`\ 
+      :param name: the name of the newly created Action
+      :type name: string
+      :param props: the properties of the new Action
+      :type props: :py:class:`~@aws-cdk/aws-codedeploy.CommonPipelineDeployActionProps`\  *(optional)*
+      :return: the newly created {@link PipelineDeployAction} deploy Action
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.PipelineDeployAction`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-codedeploy.ServerDeploymentGroupImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.IServerDeploymentGroup.export`
+
+      :rtype: :py:class:`~@aws-cdk/aws-codedeploy.ServerDeploymentGroupImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: application
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.IServerDeploymentGroup.application`
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.IServerApplication`\  *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: deploymentConfig
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.IServerDeploymentGroup.deploymentConfig`
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.IServerDeploymentConfig`\  *(readonly)*
+
+
+   .. py:attribute:: deploymentGroupArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.IServerDeploymentGroup.deploymentGroupArn`
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: deploymentGroupName
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.IServerDeploymentGroup.deploymentGroupName`
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: autoScalingGroups
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.IServerDeploymentGroup.autoScalingGroups`
+
+      :type: :py:class:`@aws-cdk/aws-autoscaling.AutoScalingGroup`\ [] *(optional)* *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: role
+
+      *Implements* :py:meth:`@aws-cdk/aws-codedeploy.IServerDeploymentGroup.role`
+
+      :type: :py:class:`@aws-cdk/aws-iam.Role`\  *(optional)* *(readonly)* *(abstract)*
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ServerDeploymentGroupImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ServerDeploymentGroupImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupImportProps;
+
+      .. code-tab:: javascript
+
+         // ServerDeploymentGroupImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ServerDeploymentGroupImportProps } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Properties of a reference to a CodeDeploy EC2/on-premise Deployment Group.
+
+
+
+
+
+   .. py:attribute:: application
+
+      The reference to the CodeDeploy EC2/on-premise Application
+
+      that this Deployment Group belongs to.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.IServerApplication`\ 
+
+
+   .. py:attribute:: deploymentGroupName
+
+      The physical, human-readable name of the CodeDeploy EC2/on-premise Deployment Group
+
+      that we are referencing.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: deploymentConfig
+
+      The Deployment Configuration this Deployment Group uses.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.IServerDeploymentConfig`\  *(optional)*
+      :default: ServerDeploymentConfig#OneAtATime
+
+
+ServerDeploymentGroupProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ServerDeploymentGroupProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CodeDeploy;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.codedeploy.ServerDeploymentGroupProps;
+
+      .. code-tab:: javascript
+
+         // ServerDeploymentGroupProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ServerDeploymentGroupProps } from '@aws-cdk/aws-codedeploy';
+
+
+
+   Construction properties for {@link ServerDeploymentGroup}.
+
+
+
+
+
+   .. py:attribute:: alarms
+
+      The CloudWatch alarms associated with this Deployment Group.
+
+      CodeDeploy will stop (and optionally roll back)
+
+      a deployment if during it any of the alarms trigger.
+
+      
+
+      Alarms can also be added after the Deployment Group is created using the {@link #addAlarm} method.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-cloudwatch.Alarm`\ [] *(optional)*
+      :default: []
+
+
+   .. py:attribute:: application
+
+      The CodeDeploy EC2/on-premise Application this Deployment Group belongs to.
+
+      If you don't provide one, a new Application will be created.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.IServerApplication`\  *(optional)*
+
+
+   .. py:attribute:: autoRollback
+
+      The auto-rollback configuration for this Deployment Group.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.AutoRollbackConfig`\  *(optional)*
+
+
+   .. py:attribute:: autoScalingGroups
+
+      The auto-scaling groups belonging to this Deployment Group.
+
+      
+
+      Auto-scaling groups can also be added after the Deployment Group is created using the {@link #addAutoScalingGroup} method.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-autoscaling.AutoScalingGroup`\ [] *(optional)*
+      :default: []
+
+
+   .. py:attribute:: deploymentConfig
+
+      The EC2/on-premise Deployment Configuration to use for this Deployment Group.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.IServerDeploymentConfig`\  *(optional)*
+      :default: ServerDeploymentConfig#OneAtATime
+
+
+   .. py:attribute:: deploymentGroupName
+
+      The physical, human-readable name of the CodeDeploy Deployment Group.
+
+
+
+      :type: string *(optional)*
+      :default: an auto-generated name will be used
+
+
+   .. py:attribute:: ec2InstanceTags
+
+      All EC2 instances matching the given set of tags when a deployment occurs will be added to this Deployment Group.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.InstanceTagSet`\  *(optional)*
+      :default: no additional EC2 instances will be added to the Deployment Group
+
+
+   .. py:attribute:: ignorePollAlarmsFailure
+
+      Whether to continue a deployment even if fetching the alarm status from CloudWatch failed.
+
+
+
+      :type: boolean *(optional)*
+      :default: false
+
+
+   .. py:attribute:: installAgent
+
+      If you've provided any auto-scaling groups with the {@link #autoScalingGroups} property,
+
+      you can set this property to add User Data that installs the CodeDeploy agent on the instances.
+
+
+
+      :type: boolean *(optional)*
+      :default: true
+
+
+   .. py:attribute:: loadBalancer
+
+      The load balancer to place in front of this Deployment Group.
+
+      Can be either a classic Elastic Load Balancer,
+
+      or an Application Load Balancer / Network Load Balancer Target Group.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-codedeploy-api.ILoadBalancer`\  *(optional)*
+      :default: the Deployment Group will not have a load balancer defined
+
+
+   .. py:attribute:: onPremiseInstanceTags
+
+      All on-premise instances matching the given set of tags when a deployment occurs will be added to this Deployment Group.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-codedeploy.InstanceTagSet`\  *(optional)*
+      :default: no additional on-premise instances will be added to the Deployment Group
+
+
+   .. py:attribute:: role
+
+      The service Role of this Deployment Group.
+
+      If you don't provide one, a new Role will be created.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-iam.Role`\  *(optional)*
+
+

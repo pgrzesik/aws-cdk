@@ -1,0 +1,4795 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"Sbh89lePp06Gx0f+TxwWlmWzr1ShzYyqLqWO4m/G6FY="}
+
+@aws-cdk/aws-route53
+====================
+
+.. mdinclude:: ./__aws-cdk_aws-route53.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.Route53/0.23.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.Route53" Version="0.23.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.Route53 --version 0.23.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.Route53" version="0.23.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/route53/0.23.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:route53:jar:0.23.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="route53" rev="0.23.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>route53</artifactId>
+           <version>0.23.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:route53:0.23.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='route53', version='0.23.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-route53/v/0.23.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-route53@0.23.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-route53": "^0.23.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-route53@0.23.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-route53/v/0.23.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-route53@0.23.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-route53": "^0.23.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-route53@0.23.0
+
+
+
+.. py:module:: @aws-cdk/aws-route53
+
+AliasRecord
+^^^^^^^^^^^
+
+.. py:class:: AliasRecord(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.AliasRecord;
+
+      .. code-tab:: javascript
+
+         const { AliasRecord } = require('@aws-cdk/aws-route53');
+
+      .. code-tab:: typescript
+
+         import { AliasRecord } from '@aws-cdk/aws-route53';
+
+
+
+   A Route53 alias record
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-route53.AliasRecordProps`\ 
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+AliasRecordProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: AliasRecordProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.AliasRecordProps;
+
+      .. code-tab:: javascript
+
+         // AliasRecordProps is an interface
+
+      .. code-tab:: typescript
+
+         import { AliasRecordProps } from '@aws-cdk/aws-route53';
+
+
+
+
+
+   .. py:attribute:: recordName
+
+      Name for the record. This can be the FQDN for the record (foo.example.com) or
+
+      a subdomain of the parent hosted zone (foo, with example.com as the hosted zone).
+
+
+
+      :type: string
+
+
+   .. py:attribute:: target
+
+      Target for the alias record
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-route53.IAliasRecordTarget`\ 
+
+
+   .. py:attribute:: zone
+
+      The zone in which this alias should be defined.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-route53.IHostedZone`\ 
+
+
+AliasRecordTargetProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: AliasRecordTargetProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.AliasRecordTargetProps;
+
+      .. code-tab:: javascript
+
+         // AliasRecordTargetProps is an interface
+
+      .. code-tab:: typescript
+
+         import { AliasRecordTargetProps } from '@aws-cdk/aws-route53';
+
+
+
+   Represents the properties of an alias target destination.
+
+
+
+
+
+   .. py:attribute:: dnsName
+
+      DNS name of the target
+
+
+
+      :type: string
+
+
+   .. py:attribute:: hostedZoneId
+
+      Hosted zone ID of the target
+
+
+
+      :type: string
+
+
+CfnHealthCheck
+^^^^^^^^^^^^^^
+
+.. py:class:: CfnHealthCheck(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.CfnHealthCheck;
+
+      .. code-tab:: javascript
+
+         const { CfnHealthCheck } = require('@aws-cdk/aws-route53');
+
+      .. code-tab:: typescript
+
+         import { CfnHealthCheck } from '@aws-cdk/aws-route53';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-route53.CfnHealthCheckProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: healthCheckId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-route53.CfnHealthCheckProps`\  *(readonly)*
+
+   .. py:class:: AlarmIdentifierProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Route53;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.route53.CfnHealthCheck.AlarmIdentifierProperty;
+
+         .. code-tab:: javascript
+
+            // CfnHealthCheck.AlarmIdentifierProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnHealthCheck.AlarmIdentifierProperty } from '@aws-cdk/aws-route53';
+
+
+
+
+
+      .. py:attribute:: name
+
+         ``CfnHealthCheck.AlarmIdentifierProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-alarmidentifier.html#cfn-route53-healthcheck-alarmidentifier-name
+
+
+         :type: string
+
+
+      .. py:attribute:: region
+
+         ``CfnHealthCheck.AlarmIdentifierProperty.Region``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-alarmidentifier.html#cfn-route53-healthcheck-alarmidentifier-region
+
+
+         :type: string
+
+
+   .. py:class:: HealthCheckConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Route53;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnHealthCheck.HealthCheckConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnHealthCheck.HealthCheckConfigProperty } from '@aws-cdk/aws-route53';
+
+
+
+
+
+      .. py:attribute:: type
+
+         ``CfnHealthCheck.HealthCheckConfigProperty.Type``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-type
+
+
+         :type: string
+
+
+      .. py:attribute:: alarmIdentifier
+
+         ``CfnHealthCheck.HealthCheckConfigProperty.AlarmIdentifier``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-alarmidentifier
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-route53.CfnHealthCheck.AlarmIdentifierProperty`\  *(optional)*
+
+
+      .. py:attribute:: childHealthChecks
+
+         ``CfnHealthCheck.HealthCheckConfigProperty.ChildHealthChecks``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-childhealthchecks
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+      .. py:attribute:: enableSni
+
+         ``CfnHealthCheck.HealthCheckConfigProperty.EnableSNI``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-enablesni
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: failureThreshold
+
+         ``CfnHealthCheck.HealthCheckConfigProperty.FailureThreshold``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-failurethreshold
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: fullyQualifiedDomainName
+
+         ``CfnHealthCheck.HealthCheckConfigProperty.FullyQualifiedDomainName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-fullyqualifieddomainname
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: healthThreshold
+
+         ``CfnHealthCheck.HealthCheckConfigProperty.HealthThreshold``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-healththreshold
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: insufficientDataHealthStatus
+
+         ``CfnHealthCheck.HealthCheckConfigProperty.InsufficientDataHealthStatus``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-insufficientdatahealthstatus
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: inverted
+
+         ``CfnHealthCheck.HealthCheckConfigProperty.Inverted``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-inverted
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: ipAddress
+
+         ``CfnHealthCheck.HealthCheckConfigProperty.IPAddress``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-ipaddress
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: measureLatency
+
+         ``CfnHealthCheck.HealthCheckConfigProperty.MeasureLatency``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-measurelatency
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: port
+
+         ``CfnHealthCheck.HealthCheckConfigProperty.Port``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-port
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: regions
+
+         ``CfnHealthCheck.HealthCheckConfigProperty.Regions``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-regions
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+      .. py:attribute:: requestInterval
+
+         ``CfnHealthCheck.HealthCheckConfigProperty.RequestInterval``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-requestinterval
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: resourcePath
+
+         ``CfnHealthCheck.HealthCheckConfigProperty.ResourcePath``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-resourcepath
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: searchString
+
+         ``CfnHealthCheck.HealthCheckConfigProperty.SearchString``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthcheckconfig.html#cfn-route53-healthcheck-healthcheckconfig-searchstring
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: HealthCheckTagProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Route53;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.route53.CfnHealthCheck.HealthCheckTagProperty;
+
+         .. code-tab:: javascript
+
+            // CfnHealthCheck.HealthCheckTagProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnHealthCheck.HealthCheckTagProperty } from '@aws-cdk/aws-route53';
+
+
+
+
+
+      .. py:attribute:: key
+
+         ``CfnHealthCheck.HealthCheckTagProperty.Key``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html#cfn-route53-healthchecktags-key
+
+
+         :type: string
+
+
+      .. py:attribute:: value
+
+         ``CfnHealthCheck.HealthCheckTagProperty.Value``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-healthcheck-healthchecktag.html#cfn-route53-healthchecktags-value
+
+
+         :type: string
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnHealthCheckProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnHealthCheckProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.CfnHealthCheckProps;
+
+      .. code-tab:: javascript
+
+         // CfnHealthCheckProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnHealthCheckProps } from '@aws-cdk/aws-route53';
+
+
+
+
+
+   .. py:attribute:: healthCheckConfig
+
+      ``AWS::Route53::HealthCheck.HealthCheckConfig``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html#cfn-route53-healthcheck-healthcheckconfig
+
+
+      :type: :py:class:`~@aws-cdk/aws-route53.CfnHealthCheck.HealthCheckConfigProperty`\  or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:attribute:: healthCheckTags
+
+      ``AWS::Route53::HealthCheck.HealthCheckTags``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html#cfn-route53-healthcheck-healthchecktags
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-route53.CfnHealthCheck.HealthCheckTagProperty`\ )[] *(optional)*
+
+
+CfnHostedZone
+^^^^^^^^^^^^^
+
+.. py:class:: CfnHostedZone(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.CfnHostedZone;
+
+      .. code-tab:: javascript
+
+         const { CfnHostedZone } = require('@aws-cdk/aws-route53');
+
+      .. code-tab:: typescript
+
+         import { CfnHostedZone } from '@aws-cdk/aws-route53';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-route53.CfnHostedZoneProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: hostedZoneId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: hostedZoneNameServers
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-route53.CfnHostedZoneProps`\  *(readonly)*
+
+   .. py:class:: HostedZoneConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Route53;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnHostedZone.HostedZoneConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnHostedZone.HostedZoneConfigProperty } from '@aws-cdk/aws-route53';
+
+
+
+
+
+      .. py:attribute:: comment
+
+         ``CfnHostedZone.HostedZoneConfigProperty.Comment``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzoneconfig.html#cfn-route53-hostedzone-hostedzoneconfig-comment
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: HostedZoneTagProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Route53;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.route53.CfnHostedZone.HostedZoneTagProperty;
+
+         .. code-tab:: javascript
+
+            // CfnHostedZone.HostedZoneTagProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnHostedZone.HostedZoneTagProperty } from '@aws-cdk/aws-route53';
+
+
+
+
+
+      .. py:attribute:: key
+
+         ``CfnHostedZone.HostedZoneTagProperty.Key``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetags.html#cfn-route53-hostedzonetags-key
+
+
+         :type: string
+
+
+      .. py:attribute:: value
+
+         ``CfnHostedZone.HostedZoneTagProperty.Value``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-hostedzonetags.html#cfn-route53-hostedzonetags-value
+
+
+         :type: string
+
+
+   .. py:class:: QueryLoggingConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Route53;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.route53.CfnHostedZone.QueryLoggingConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnHostedZone.QueryLoggingConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnHostedZone.QueryLoggingConfigProperty } from '@aws-cdk/aws-route53';
+
+
+
+
+
+      .. py:attribute:: cloudWatchLogsLogGroupArn
+
+         ``CfnHostedZone.QueryLoggingConfigProperty.CloudWatchLogsLogGroupArn``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-queryloggingconfig.html#cfn-route53-hostedzone-queryloggingconfig-cloudwatchlogsloggrouparn
+
+
+         :type: string
+
+
+   .. py:class:: VPCProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Route53;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.route53.CfnHostedZone.VPCProperty;
+
+         .. code-tab:: javascript
+
+            // CfnHostedZone.VPCProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnHostedZone.VPCProperty } from '@aws-cdk/aws-route53';
+
+
+
+
+
+      .. py:attribute:: vpcId
+
+         ``CfnHostedZone.VPCProperty.VPCId``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html#cfn-route53-hostedzone-hostedzonevpcs-vpcid
+
+
+         :type: string
+
+
+      .. py:attribute:: vpcRegion
+
+         ``CfnHostedZone.VPCProperty.VPCRegion``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone-hostedzonevpcs.html#cfn-route53-hostedzone-hostedzonevpcs-vpcregion
+
+
+         :type: string
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnHostedZoneProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnHostedZoneProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.CfnHostedZoneProps;
+
+      .. code-tab:: javascript
+
+         // CfnHostedZoneProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnHostedZoneProps } from '@aws-cdk/aws-route53';
+
+
+
+
+
+   .. py:attribute:: name
+
+      ``AWS::Route53::HostedZone.Name``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-name
+
+
+      :type: string
+
+
+   .. py:attribute:: hostedZoneConfig
+
+      ``AWS::Route53::HostedZone.HostedZoneConfig``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzoneconfig
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-route53.CfnHostedZone.HostedZoneConfigProperty`\  *(optional)*
+
+
+   .. py:attribute:: hostedZoneTags
+
+      ``AWS::Route53::HostedZone.HostedZoneTags``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzonetags
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-route53.CfnHostedZone.HostedZoneTagProperty`\ )[] *(optional)*
+
+
+   .. py:attribute:: queryLoggingConfig
+
+      ``AWS::Route53::HostedZone.QueryLoggingConfig``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-queryloggingconfig
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-route53.CfnHostedZone.QueryLoggingConfigProperty`\  *(optional)*
+
+
+   .. py:attribute:: vpcs
+
+      ``AWS::Route53::HostedZone.VPCs``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-vpcs
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`~@aws-cdk/aws-route53.CfnHostedZone.VPCProperty`\  or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+CfnRecordSet
+^^^^^^^^^^^^
+
+.. py:class:: CfnRecordSet(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.CfnRecordSet;
+
+      .. code-tab:: javascript
+
+         const { CfnRecordSet } = require('@aws-cdk/aws-route53');
+
+      .. code-tab:: typescript
+
+         import { CfnRecordSet } from '@aws-cdk/aws-route53';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-route53.CfnRecordSetProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-route53.CfnRecordSetProps`\  *(readonly)*
+
+
+   .. py:attribute:: recordSetDomainName
+
+      :type: string *(readonly)*
+
+   .. py:class:: AliasTargetProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Route53;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.route53.CfnRecordSet.AliasTargetProperty;
+
+         .. code-tab:: javascript
+
+            // CfnRecordSet.AliasTargetProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnRecordSet.AliasTargetProperty } from '@aws-cdk/aws-route53';
+
+
+
+
+
+      .. py:attribute:: dnsName
+
+         ``CfnRecordSet.AliasTargetProperty.DNSName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-dnshostname
+
+
+         :type: string
+
+
+      .. py:attribute:: hostedZoneId
+
+         ``CfnRecordSet.AliasTargetProperty.HostedZoneId``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-hostedzoneid
+
+
+         :type: string
+
+
+      .. py:attribute:: evaluateTargetHealth
+
+         ``CfnRecordSet.AliasTargetProperty.EvaluateTargetHealth``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-evaluatetargethealth
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: GeoLocationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Route53;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.route53.CfnRecordSet.GeoLocationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnRecordSet.GeoLocationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnRecordSet.GeoLocationProperty } from '@aws-cdk/aws-route53';
+
+
+
+
+
+      .. py:attribute:: continentCode
+
+         ``CfnRecordSet.GeoLocationProperty.ContinentCode``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-continentcode
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: countryCode
+
+         ``CfnRecordSet.GeoLocationProperty.CountryCode``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-countrycode
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: subdivisionCode
+
+         ``CfnRecordSet.GeoLocationProperty.SubdivisionCode``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-subdivisioncode
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnRecordSetGroup
+^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnRecordSetGroup(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.CfnRecordSetGroup;
+
+      .. code-tab:: javascript
+
+         const { CfnRecordSetGroup } = require('@aws-cdk/aws-route53');
+
+      .. code-tab:: typescript
+
+         import { CfnRecordSetGroup } from '@aws-cdk/aws-route53';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-route53.CfnRecordSetGroupProps`\  *(optional)*
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-route53.CfnRecordSetGroupProps`\  *(readonly)*
+
+
+   .. py:attribute:: recordSetGroupName
+
+      :type: string *(readonly)*
+
+   .. py:class:: AliasTargetProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Route53;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.route53.CfnRecordSetGroup.AliasTargetProperty;
+
+         .. code-tab:: javascript
+
+            // CfnRecordSetGroup.AliasTargetProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnRecordSetGroup.AliasTargetProperty } from '@aws-cdk/aws-route53';
+
+
+
+
+
+      .. py:attribute:: dnsName
+
+         ``CfnRecordSetGroup.AliasTargetProperty.DNSName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-dnshostname
+
+
+         :type: string
+
+
+      .. py:attribute:: hostedZoneId
+
+         ``CfnRecordSetGroup.AliasTargetProperty.HostedZoneId``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-hostedzoneid
+
+
+         :type: string
+
+
+      .. py:attribute:: evaluateTargetHealth
+
+         ``CfnRecordSetGroup.AliasTargetProperty.EvaluateTargetHealth``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-aliastarget.html#cfn-route53-aliastarget-evaluatetargethealth
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: GeoLocationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Route53;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.route53.CfnRecordSetGroup.GeoLocationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnRecordSetGroup.GeoLocationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnRecordSetGroup.GeoLocationProperty } from '@aws-cdk/aws-route53';
+
+
+
+
+
+      .. py:attribute:: continentCode
+
+         ``CfnRecordSetGroup.GeoLocationProperty.ContinentCode``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordsetgroup-geolocation-continentcode
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: countryCode
+
+         ``CfnRecordSetGroup.GeoLocationProperty.CountryCode``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-countrycode
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: subdivisionCode
+
+         ``CfnRecordSetGroup.GeoLocationProperty.SubdivisionCode``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-subdivisioncode
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: RecordSetProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Route53;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.route53.CfnRecordSetGroup.RecordSetProperty;
+
+         .. code-tab:: javascript
+
+            // CfnRecordSetGroup.RecordSetProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnRecordSetGroup.RecordSetProperty } from '@aws-cdk/aws-route53';
+
+
+
+
+
+      .. py:attribute:: name
+
+         ``CfnRecordSetGroup.RecordSetProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-name
+
+
+         :type: string
+
+
+      .. py:attribute:: type
+
+         ``CfnRecordSetGroup.RecordSetProperty.Type``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-type
+
+
+         :type: string
+
+
+      .. py:attribute:: aliasTarget
+
+         ``CfnRecordSetGroup.RecordSetProperty.AliasTarget``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-aliastarget
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-route53.CfnRecordSetGroup.AliasTargetProperty`\  *(optional)*
+
+
+      .. py:attribute:: comment
+
+         ``CfnRecordSetGroup.RecordSetProperty.Comment``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-comment
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: failover
+
+         ``CfnRecordSetGroup.RecordSetProperty.Failover``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-failover
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: geoLocation
+
+         ``CfnRecordSetGroup.RecordSetProperty.GeoLocation``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-geolocation
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-route53.CfnRecordSetGroup.GeoLocationProperty`\  *(optional)*
+
+
+      .. py:attribute:: healthCheckId
+
+         ``CfnRecordSetGroup.RecordSetProperty.HealthCheckId``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-healthcheckid
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: hostedZoneId
+
+         ``CfnRecordSetGroup.RecordSetProperty.HostedZoneId``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-hostedzoneid
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: hostedZoneName
+
+         ``CfnRecordSetGroup.RecordSetProperty.HostedZoneName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-hostedzonename
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: multiValueAnswer
+
+         ``CfnRecordSetGroup.RecordSetProperty.MultiValueAnswer``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-multivalueanswer
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: region
+
+         ``CfnRecordSetGroup.RecordSetProperty.Region``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-region
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: resourceRecords
+
+         ``CfnRecordSetGroup.RecordSetProperty.ResourceRecords``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-resourcerecords
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+      .. py:attribute:: setIdentifier
+
+         ``CfnRecordSetGroup.RecordSetProperty.SetIdentifier``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-setidentifier
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: ttl
+
+         ``CfnRecordSetGroup.RecordSetProperty.TTL``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-ttl
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: weight
+
+         ``CfnRecordSetGroup.RecordSetProperty.Weight``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-weight
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnRecordSetGroupProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnRecordSetGroupProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.CfnRecordSetGroupProps;
+
+      .. code-tab:: javascript
+
+         // CfnRecordSetGroupProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnRecordSetGroupProps } from '@aws-cdk/aws-route53';
+
+
+
+
+
+   .. py:attribute:: comment
+
+      ``AWS::Route53::RecordSetGroup.Comment``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html#cfn-route53-recordsetgroup-comment
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: hostedZoneId
+
+      ``AWS::Route53::RecordSetGroup.HostedZoneId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html#cfn-route53-recordsetgroup-hostedzoneid
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: hostedZoneName
+
+      ``AWS::Route53::RecordSetGroup.HostedZoneName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html#cfn-route53-recordsetgroup-hostedzonename
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: recordSets
+
+      ``AWS::Route53::RecordSetGroup.RecordSets``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-recordsetgroup.html#cfn-route53-recordsetgroup-recordsets
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-route53.CfnRecordSetGroup.RecordSetProperty`\ )[] *(optional)*
+
+
+CfnRecordSetProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnRecordSetProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.CfnRecordSetProps;
+
+      .. code-tab:: javascript
+
+         // CfnRecordSetProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnRecordSetProps } from '@aws-cdk/aws-route53';
+
+
+
+
+
+   .. py:attribute:: name
+
+      ``AWS::Route53::RecordSet.Name``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-name
+
+
+      :type: string
+
+
+   .. py:attribute:: type
+
+      ``AWS::Route53::RecordSet.Type``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-type
+
+
+      :type: string
+
+
+   .. py:attribute:: aliasTarget
+
+      ``AWS::Route53::RecordSet.AliasTarget``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-aliastarget
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-route53.CfnRecordSet.AliasTargetProperty`\  *(optional)*
+
+
+   .. py:attribute:: comment
+
+      ``AWS::Route53::RecordSet.Comment``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-comment
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: failover
+
+      ``AWS::Route53::RecordSet.Failover``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-failover
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: geoLocation
+
+      ``AWS::Route53::RecordSet.GeoLocation``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-geolocation
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-route53.CfnRecordSet.GeoLocationProperty`\  *(optional)*
+
+
+   .. py:attribute:: healthCheckId
+
+      ``AWS::Route53::RecordSet.HealthCheckId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-healthcheckid
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: hostedZoneId
+
+      ``AWS::Route53::RecordSet.HostedZoneId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-hostedzoneid
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: hostedZoneName
+
+      ``AWS::Route53::RecordSet.HostedZoneName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-hostedzonename
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: multiValueAnswer
+
+      ``AWS::Route53::RecordSet.MultiValueAnswer``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-multivalueanswer
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: region
+
+      ``AWS::Route53::RecordSet.Region``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-region
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: resourceRecords
+
+      ``AWS::Route53::RecordSet.ResourceRecords``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-resourcerecords
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: setIdentifier
+
+      ``AWS::Route53::RecordSet.SetIdentifier``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-setidentifier
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: ttl
+
+      ``AWS::Route53::RecordSet.TTL``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-ttl
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: weight
+
+      ``AWS::Route53::RecordSet.Weight``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset.html#cfn-route53-recordset-weight
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+CnameRecord
+^^^^^^^^^^^
+
+.. py:class:: CnameRecord(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.CnameRecord;
+
+      .. code-tab:: javascript
+
+         const { CnameRecord } = require('@aws-cdk/aws-route53');
+
+      .. code-tab:: typescript
+
+         import { CnameRecord } from '@aws-cdk/aws-route53';
+
+
+
+   A DNS CNAME record
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-route53.CnameRecordProps`\ 
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CnameRecordProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CnameRecordProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.CnameRecordProps;
+
+      .. code-tab:: javascript
+
+         // CnameRecordProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CnameRecordProps } from '@aws-cdk/aws-route53';
+
+
+
+
+
+   .. py:attribute:: recordName
+
+      The domain name for this record set.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: recordValue
+
+      The value for this record set.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: zone
+
+      The hosted zone in which to define the new TXT record.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-route53.IHostedZone`\ 
+
+
+   .. py:attribute:: ttl
+
+      The resource record cache time to live (TTL) in seconds.
+
+
+
+      :type: number *(optional)*
+      :default: 1800 seconds
+
+
+CommonHostedZoneProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CommonHostedZoneProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.CommonHostedZoneProps;
+
+      .. code-tab:: javascript
+
+         // CommonHostedZoneProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CommonHostedZoneProps } from '@aws-cdk/aws-route53';
+
+
+
+
+
+   .. py:attribute:: zoneName
+
+      The name of the domain. For resource record types that include a domain
+
+      name, specify a fully qualified domain name.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: comment
+
+      Any comments that you want to include about the hosted zone.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: queryLogsLogGroupArn
+
+      The Amazon Resource Name (ARN) for the log group that you want Amazon Route 53 to send query logs to.
+
+
+
+      :type: string *(optional)*
+      :default: disabled
+
+
+HostedZone
+^^^^^^^^^^
+
+.. py:class:: HostedZone(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.HostedZone;
+
+      .. code-tab:: javascript
+
+         const { HostedZone } = require('@aws-cdk/aws-route53');
+
+      .. code-tab:: typescript
+
+         import { HostedZone } from '@aws-cdk/aws-route53';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-route53.IHostedZone`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-route53.HostedZoneProps`\ 
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-route53.IHostedZone
+
+      Imports a hosted zone from another stack.
+
+
+
+      :param scope: 
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: 
+      :type id: string
+      :param props: 
+      :type props: :py:class:`~@aws-cdk/aws-route53.HostedZoneImportProps`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-route53.IHostedZone`\ 
+
+
+   .. py:method:: addVpc(vpc)
+
+      Add another VPC to this private hosted zone.
+
+
+
+      :param vpc: the other VPC to add.
+      :type vpc: :py:class:`@aws-cdk/aws-ec2.IVpcNetwork`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-route53.HostedZoneImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-route53.IHostedZone.export`
+
+      Export the hosted zone
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-route53.HostedZoneImportProps`\ 
+
+
+   .. py:attribute:: hostedZoneId
+
+      *Implements* :py:meth:`@aws-cdk/aws-route53.IHostedZone.hostedZoneId`
+
+      ID of this hosted zone, such as "Z23ABC4XYZL05B"
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: vpcs
+
+      VPCs to which this hosted zone will be added
+
+
+
+      *Protected property*
+
+      :type: :py:class:`~@aws-cdk/aws-route53.CfnHostedZone.VPCProperty`\ [] *(readonly)*
+
+
+   .. py:attribute:: zoneName
+
+      *Implements* :py:meth:`@aws-cdk/aws-route53.IHostedZone.zoneName`
+
+      FQDN of this hosted zone
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: hostedZoneNameServers
+
+      *Implements* :py:meth:`@aws-cdk/aws-route53.IHostedZone.hostedZoneNameServers`
+
+      Returns the set of name servers for the specific hosted zone. For example:
+
+      ns1.example.com.
+
+      
+
+      This attribute will be undefined for private hosted zones or hosted zones imported from another stack.
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+HostedZoneImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: HostedZoneImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.HostedZoneImportProps;
+
+      .. code-tab:: javascript
+
+         // HostedZoneImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { HostedZoneImportProps } from '@aws-cdk/aws-route53';
+
+
+
+   Reference to a hosted zone
+
+
+
+
+
+   .. py:attribute:: hostedZoneId
+
+      Identifier of the hosted zone
+
+
+
+      :type: string
+
+
+   .. py:attribute:: zoneName
+
+      Name of the hosted zone
+
+
+
+      :type: string
+
+
+HostedZoneProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: HostedZoneProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.HostedZoneProps;
+
+      .. code-tab:: javascript
+
+         // HostedZoneProps is an interface
+
+      .. code-tab:: typescript
+
+         import { HostedZoneProps } from '@aws-cdk/aws-route53';
+
+
+
+   Properties of a new hosted zone
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-route53.CommonHostedZoneProps`\ 
+
+
+   .. py:attribute:: vpcs
+
+      A VPC that you want to associate with this hosted zone. When you specify
+
+      this property, a private hosted zone will be created.
+
+      
+
+      You can associate additional VPCs to this private zone using `addVpc(vpc)`.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.IVpcNetwork`\ [] *(optional)*
+      :default: public (no VPCs associated)
+
+
+   .. py:attribute:: zoneName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.CommonHostedZoneProps <@aws-cdk/aws-route53.CommonHostedZoneProps.zoneName>`
+
+      The name of the domain. For resource record types that include a domain
+
+      name, specify a fully qualified domain name.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: comment
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.CommonHostedZoneProps <@aws-cdk/aws-route53.CommonHostedZoneProps.comment>`
+
+      Any comments that you want to include about the hosted zone.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: queryLogsLogGroupArn
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.CommonHostedZoneProps <@aws-cdk/aws-route53.CommonHostedZoneProps.queryLogsLogGroupArn>`
+
+      The Amazon Resource Name (ARN) for the log group that you want Amazon Route 53 to send query logs to.
+
+
+
+      :type: string *(optional)*
+      :default: disabled
+
+
+HostedZoneProvider
+^^^^^^^^^^^^^^^^^^
+
+.. py:class:: HostedZoneProvider(context, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.HostedZoneProvider;
+
+      .. code-tab:: javascript
+
+         const { HostedZoneProvider } = require('@aws-cdk/aws-route53');
+
+      .. code-tab:: typescript
+
+         import { HostedZoneProvider } from '@aws-cdk/aws-route53';
+
+
+
+   Context provider that will lookup the Hosted Zone ID for the given arguments
+
+
+
+   :param context: 
+   :type context: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-route53.HostedZoneProviderProps`\ 
+
+   .. py:method:: findAndImport(scope, id) -> @aws-cdk/aws-route53.IHostedZone
+
+      This method calls `findHostedZone` and returns the imported hosted zone
+
+
+
+      :param scope: 
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: 
+      :type id: string
+      :rtype: :py:class:`~@aws-cdk/aws-route53.IHostedZone`\ 
+
+
+   .. py:method:: findHostedZone() -> @aws-cdk/aws-route53.HostedZoneImportProps
+
+      Return the hosted zone meeting the filter
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-route53.HostedZoneImportProps`\ 
+
+
+HostedZoneProviderProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: HostedZoneProviderProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.HostedZoneProviderProps;
+
+      .. code-tab:: javascript
+
+         // HostedZoneProviderProps is an interface
+
+      .. code-tab:: typescript
+
+         import { HostedZoneProviderProps } from '@aws-cdk/aws-route53';
+
+
+
+   Zone properties for looking up the Hosted Zone
+
+
+
+
+
+   .. py:attribute:: domainName
+
+      The zone domain e.g. example.com
+
+
+
+      :type: string
+
+
+   .. py:attribute:: privateZone
+
+      Is this a private zone
+
+
+
+      :type: boolean *(optional)*
+
+
+   .. py:attribute:: vpcId
+
+      If this is a private zone which VPC is assocaitated
+
+
+
+      :type: string *(optional)*
+
+
+IAliasRecordTarget (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IAliasRecordTarget
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.IAliasRecordTarget;
+
+      .. code-tab:: javascript
+
+         // IAliasRecordTarget is an interface
+
+      .. code-tab:: typescript
+
+         import { IAliasRecordTarget } from '@aws-cdk/aws-route53';
+
+
+
+   Classes that are valid alias record targets, like CloudFront distributions and load
+
+   balancers, should implement this interface.
+
+
+
+
+
+   .. py:method:: asAliasRecordTarget() -> @aws-cdk/aws-route53.AliasRecordTargetProps
+
+      Return hosted zone ID and DNS name, usable for Route53 alias targets
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-route53.AliasRecordTargetProps`\ 
+      :abstract: Yes
+
+
+IHostedZone (interface)
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IHostedZone
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.IHostedZone;
+
+      .. code-tab:: javascript
+
+         // IHostedZone is an interface
+
+      .. code-tab:: typescript
+
+         import { IHostedZone } from '@aws-cdk/aws-route53';
+
+
+
+   Imported or created hosted zone
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: hostedZoneId
+
+      ID of this hosted zone, such as "Z23ABC4XYZL05B"
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: zoneName
+
+      FQDN of this hosted zone
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: hostedZoneNameServers
+
+      Returns the set of name servers for the specific hosted zone. For example:
+
+      ns1.example.com.
+
+      
+
+      This attribute will be undefined for private hosted zones or hosted zones imported from another stack.
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:method:: export() -> @aws-cdk/aws-route53.HostedZoneImportProps
+
+      Export the hosted zone
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-route53.HostedZoneImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+PrivateHostedZone
+^^^^^^^^^^^^^^^^^
+
+.. py:class:: PrivateHostedZone(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.PrivateHostedZone;
+
+      .. code-tab:: javascript
+
+         const { PrivateHostedZone } = require('@aws-cdk/aws-route53');
+
+      .. code-tab:: typescript
+
+         import { PrivateHostedZone } from '@aws-cdk/aws-route53';
+
+
+
+   Create a Route53 private hosted zone for use in one or more VPCs.
+
+   
+
+   Note that `enableDnsHostnames` and `enableDnsSupport` must have been enabled
+
+   for the VPC you're configuring for private hosted zones.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-route53.HostedZone`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-route53.PrivateHostedZoneProps`\ 
+
+   .. py:method:: addVpc(vpc)
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-route53.HostedZone <@aws-cdk/aws-route53.HostedZone.addVpc>`
+
+      Add another VPC to this private hosted zone.
+
+
+
+      :param vpc: the other VPC to add.
+      :type vpc: :py:class:`@aws-cdk/aws-ec2.IVpcNetwork`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-route53.HostedZoneImportProps
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-route53.HostedZone <@aws-cdk/aws-route53.HostedZone.export>`
+
+      Export the hosted zone
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-route53.HostedZoneImportProps`\ 
+
+
+   .. py:attribute:: hostedZoneId
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.HostedZone <@aws-cdk/aws-route53.HostedZone.hostedZoneId>`
+
+      ID of this hosted zone, such as "Z23ABC4XYZL05B"
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: vpcs
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.HostedZone <@aws-cdk/aws-route53.HostedZone.vpcs>`
+
+      VPCs to which this hosted zone will be added
+
+
+
+      *Protected property*
+
+      :type: :py:class:`~@aws-cdk/aws-route53.CfnHostedZone.VPCProperty`\ [] *(readonly)*
+
+
+   .. py:attribute:: zoneName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.HostedZone <@aws-cdk/aws-route53.HostedZone.zoneName>`
+
+      FQDN of this hosted zone
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: hostedZoneNameServers
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.HostedZone <@aws-cdk/aws-route53.HostedZone.hostedZoneNameServers>`
+
+      Returns the set of name servers for the specific hosted zone. For example:
+
+      ns1.example.com.
+
+      
+
+      This attribute will be undefined for private hosted zones or hosted zones imported from another stack.
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+PrivateHostedZoneProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: PrivateHostedZoneProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.PrivateHostedZoneProps;
+
+      .. code-tab:: javascript
+
+         // PrivateHostedZoneProps is an interface
+
+      .. code-tab:: typescript
+
+         import { PrivateHostedZoneProps } from '@aws-cdk/aws-route53';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-route53.CommonHostedZoneProps`\ 
+
+
+   .. py:attribute:: vpc
+
+      A VPC that you want to associate with this hosted zone.
+
+      
+
+      Private hosted zones must be associated with at least one VPC. You can
+
+      associated additional VPCs using `addVpc(vpc)`.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.IVpcNetwork`\ 
+
+
+   .. py:attribute:: zoneName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.CommonHostedZoneProps <@aws-cdk/aws-route53.CommonHostedZoneProps.zoneName>`
+
+      The name of the domain. For resource record types that include a domain
+
+      name, specify a fully qualified domain name.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: comment
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.CommonHostedZoneProps <@aws-cdk/aws-route53.CommonHostedZoneProps.comment>`
+
+      Any comments that you want to include about the hosted zone.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: queryLogsLogGroupArn
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.CommonHostedZoneProps <@aws-cdk/aws-route53.CommonHostedZoneProps.queryLogsLogGroupArn>`
+
+      The Amazon Resource Name (ARN) for the log group that you want Amazon Route 53 to send query logs to.
+
+
+
+      :type: string *(optional)*
+      :default: disabled
+
+
+PublicHostedZone
+^^^^^^^^^^^^^^^^
+
+.. py:class:: PublicHostedZone(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.PublicHostedZone;
+
+      .. code-tab:: javascript
+
+         const { PublicHostedZone } = require('@aws-cdk/aws-route53');
+
+      .. code-tab:: typescript
+
+         import { PublicHostedZone } from '@aws-cdk/aws-route53';
+
+
+
+   Create a Route53 public hosted zone.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-route53.HostedZone`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-route53.PublicHostedZoneProps`\ 
+
+   .. py:method:: addVpc(_vpc)
+
+      *Overrides* :py:meth:`@aws-cdk/aws-route53.HostedZone.addVpc`
+
+      Add another VPC to this private hosted zone.
+
+
+
+      :param _vpc: 
+      :type _vpc: :py:class:`@aws-cdk/aws-ec2.IVpcNetwork`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-route53.HostedZoneImportProps
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-route53.HostedZone <@aws-cdk/aws-route53.HostedZone.export>`
+
+      Export the hosted zone
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-route53.HostedZoneImportProps`\ 
+
+
+   .. py:attribute:: hostedZoneId
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.HostedZone <@aws-cdk/aws-route53.HostedZone.hostedZoneId>`
+
+      ID of this hosted zone, such as "Z23ABC4XYZL05B"
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: vpcs
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.HostedZone <@aws-cdk/aws-route53.HostedZone.vpcs>`
+
+      VPCs to which this hosted zone will be added
+
+
+
+      *Protected property*
+
+      :type: :py:class:`~@aws-cdk/aws-route53.CfnHostedZone.VPCProperty`\ [] *(readonly)*
+
+
+   .. py:attribute:: zoneName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.HostedZone <@aws-cdk/aws-route53.HostedZone.zoneName>`
+
+      FQDN of this hosted zone
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: hostedZoneNameServers
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.HostedZone <@aws-cdk/aws-route53.HostedZone.hostedZoneNameServers>`
+
+      Returns the set of name servers for the specific hosted zone. For example:
+
+      ns1.example.com.
+
+      
+
+      This attribute will be undefined for private hosted zones or hosted zones imported from another stack.
+
+
+
+      :type: string[] *(optional)* *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+PublicHostedZoneProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: PublicHostedZoneProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.PublicHostedZoneProps;
+
+      .. code-tab:: javascript
+
+         // PublicHostedZoneProps is an interface
+
+      .. code-tab:: typescript
+
+         import { PublicHostedZoneProps } from '@aws-cdk/aws-route53';
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-route53.CommonHostedZoneProps`\ 
+
+
+   .. py:attribute:: zoneName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.CommonHostedZoneProps <@aws-cdk/aws-route53.CommonHostedZoneProps.zoneName>`
+
+      The name of the domain. For resource record types that include a domain
+
+      name, specify a fully qualified domain name.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: comment
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.CommonHostedZoneProps <@aws-cdk/aws-route53.CommonHostedZoneProps.comment>`
+
+      Any comments that you want to include about the hosted zone.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: queryLogsLogGroupArn
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-route53.CommonHostedZoneProps <@aws-cdk/aws-route53.CommonHostedZoneProps.queryLogsLogGroupArn>`
+
+      The Amazon Resource Name (ARN) for the log group that you want Amazon Route 53 to send query logs to.
+
+
+
+      :type: string *(optional)*
+      :default: disabled
+
+
+TxtRecord
+^^^^^^^^^
+
+.. py:class:: TxtRecord(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.TxtRecord;
+
+      .. code-tab:: javascript
+
+         const { TxtRecord } = require('@aws-cdk/aws-route53');
+
+      .. code-tab:: typescript
+
+         import { TxtRecord } from '@aws-cdk/aws-route53';
+
+
+
+   A DNS TXT record
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-route53.TxtRecordProps`\ 
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+TxtRecordProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: TxtRecordProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.TxtRecordProps;
+
+      .. code-tab:: javascript
+
+         // TxtRecordProps is an interface
+
+      .. code-tab:: typescript
+
+         import { TxtRecordProps } from '@aws-cdk/aws-route53';
+
+
+
+
+
+   .. py:attribute:: recordName
+
+      The domain name for this record set.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: recordValue
+
+      The value for this record set.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: zone
+
+      The hosted zone in which to define the new TXT record.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-route53.IHostedZone`\ 
+
+
+   .. py:attribute:: ttl
+
+      The resource record cache time to live (TTL) in seconds.
+
+
+
+      :type: number *(optional)*
+      :default: 1800 seconds
+
+
+ZoneDelegationRecord
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ZoneDelegationRecord(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.ZoneDelegationRecord;
+
+      .. code-tab:: javascript
+
+         const { ZoneDelegationRecord } = require('@aws-cdk/aws-route53');
+
+      .. code-tab:: typescript
+
+         import { ZoneDelegationRecord } from '@aws-cdk/aws-route53';
+
+
+
+   A record to delegate further lookups to a different set of name servers
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-route53.ZoneDelegationRecordProps`\ 
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ZoneDelegationRecordProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ZoneDelegationRecordProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Route53;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.route53.ZoneDelegationRecordProps;
+
+      .. code-tab:: javascript
+
+         // ZoneDelegationRecordProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ZoneDelegationRecordProps } from '@aws-cdk/aws-route53';
+
+
+
+
+
+   .. py:attribute:: delegatedZoneName
+
+      The name of the zone that delegation is made to.
+
+
+
+      :type: string
+
+
+   .. py:attribute:: nameServers
+
+      The name servers to report in the delegation records.
+
+
+
+      :type: string[]
+
+
+   .. py:attribute:: zone
+
+      The zone in which this delegate is defined.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-route53.IHostedZone`\ 
+
+
+   .. py:attribute:: comment
+
+      Any comments that you want to include about the zone delegation records.
+
+
+
+      :type: string *(optional)*
+      :default: no comment.
+
+
+   .. py:attribute:: ttl
+
+      The TTL of the zone delegation records.
+
+
+
+      :type: number *(optional)*
+      :default: 172800 seconds.
+
+

@@ -1,0 +1,452 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"sn1B8E9aFh1BU5b93Q8nLss/GToR5KF/NtL1w1VKjjk="}
+
+@aws-cdk/app-delivery
+=====================
+
+.. mdinclude:: ./__aws-cdk_app-delivery.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AppDelivery/0.23.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AppDelivery" Version="0.23.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AppDelivery --version 0.23.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AppDelivery" version="0.23.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/cdk-app-delivery/0.23.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:cdk-app-delivery:jar:0.23.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="cdk-app-delivery" rev="0.23.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>cdk-app-delivery</artifactId>
+           <version>0.23.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:cdk-app-delivery:0.23.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='cdk-app-delivery', version='0.23.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/app-delivery/v/0.23.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/app-delivery@0.23.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/app-delivery": "^0.23.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/app-delivery@0.23.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/app-delivery/v/0.23.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/app-delivery@0.23.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/app-delivery": "^0.23.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/app-delivery@0.23.0
+
+
+
+.. py:module:: @aws-cdk/app-delivery
+
+PipelineDeployStackAction
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: PipelineDeployStackAction(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AppDelivery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.appdelivery.PipelineDeployStackAction;
+
+      .. code-tab:: javascript
+
+         const { PipelineDeployStackAction } = require('@aws-cdk/app-delivery');
+
+      .. code-tab:: typescript
+
+         import { PipelineDeployStackAction } from '@aws-cdk/app-delivery';
+
+
+
+   A CodePipeline action to deploy a stack that is part of a CDK App. This
+
+   action takes care of preparing and executing a CloudFormation ChangeSet.
+
+   
+
+   It currently does *not* support stacks that make use of ``Asset``s, and
+
+   requires the deployed stack is in the same account and region where the
+
+   CodePipeline is hosted.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/app-delivery.PipelineDeployStackActionProps`\ 
+
+   .. py:method:: addToDeploymentRolePolicy(statement)
+
+      Add policy statements to the role deploying the stack.
+
+      
+
+      This role is passed to CloudFormation and must have the IAM permissions
+
+      necessary to deploy the stack or you can grant this role `adminPermissions`
+
+      by using that option during creation. If you do not grant
+
+      `adminPermissions` you need to identify the proper statements to add to
+
+      this role based on the CloudFormation Resources in your stack.
+
+
+
+      :param statement: 
+      :type statement: :py:class:`@aws-cdk/aws-iam.PolicyStatement`\ 
+
+
+   .. py:method:: validate() -> string[]
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Construct.validate`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :rtype: string[]
+
+
+   .. py:attribute:: deploymentRole
+
+      The role used by CloudFormation for the deploy action
+
+
+
+      :type: :py:class:`@aws-cdk/aws-iam.IRole`\  *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+PipelineDeployStackActionProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: PipelineDeployStackActionProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AppDelivery;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.appdelivery.PipelineDeployStackActionProps;
+
+      .. code-tab:: javascript
+
+         // PipelineDeployStackActionProps is an interface
+
+      .. code-tab:: typescript
+
+         import { PipelineDeployStackActionProps } from '@aws-cdk/app-delivery';
+
+
+
+
+
+   .. py:attribute:: adminPermissions
+
+      Whether to grant admin permissions to CloudFormation while deploying this template.
+
+      
+
+      Setting this to `true` affects the defaults for `role` and `capabilities`, if you
+
+      don't specify any alternatives.
+
+      
+
+      The default role that will be created for you will have admin (i.e., `*`)
+
+      permissions on all resources, and the deployment will have named IAM
+
+      capabilities (i.e., able to create all IAM resources).
+
+      
+
+      This is a shorthand that you can use if you fully trust the templates that
+
+      are deployed in this pipeline. If you want more fine-grained permissions,
+
+      use `addToRolePolicy` and `capabilities` to control what the CloudFormation
+
+      deployment is allowed to do.
+
+
+
+      :type: boolean
+
+
+   .. py:attribute:: inputArtifact
+
+      The CodePipeline artifact that holds the synthesized app, which is the
+
+      contents of the ``<directory>`` when running ``cdk synth -o <directory>``.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-codepipeline-api.Artifact`\ 
+
+
+   .. py:attribute:: stack
+
+      The CDK stack to be deployed.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+   .. py:attribute:: stage
+
+      The CodePipeline stage in which to perform the deployment.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-codepipeline-api.IStage`\ 
+
+
+   .. py:attribute:: capabilities
+
+      Acknowledge certain changes made as part of deployment
+
+      
+
+      For stacks that contain certain resources, explicit acknowledgement that AWS CloudFormation
+
+      might create or update those resources. For example, you must specify AnonymousIAM if your
+
+      stack template contains AWS Identity and Access Management (IAM) resources. For more
+
+      information
+
+
+
+      :type: :py:class:`@aws-cdk/aws-cloudformation.CloudFormationCapabilities`\  *(optional)*
+      :default: AnonymousIAM, unless `adminPermissions` is true
+
+
+   .. py:attribute:: changeSetName
+
+      The name to use when creating a ChangeSet for the stack.
+
+
+
+      :type: string *(optional)*
+      :default: CDK-CodePipeline-ChangeSet
+
+
+   .. py:attribute:: createChangeSetRunOrder
+
+      The runOrder for the CodePipeline action creating the ChangeSet.
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+
+   .. py:attribute:: executeChangeSetRunOrder
+
+      The runOrder for the CodePipeline action executing the ChangeSet.
+
+
+
+      :type: number *(optional)*
+      :default: ``createChangeSetRunOrder + 1``
+
+
+   .. py:attribute:: role
+
+      IAM role to assume when deploying changes.
+
+      
+
+      If not specified, a fresh role is created. The role is created with zero
+
+      permissions unless `adminPermissions` is true, in which case the role will have
+
+      admin permissions.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-iam.IRole`\  *(optional)*
+      :default: A fresh role with admin or no permissions (depending on the value of `adminPermissions`).
+
+

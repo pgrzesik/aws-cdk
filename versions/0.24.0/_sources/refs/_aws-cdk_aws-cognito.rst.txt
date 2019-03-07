@@ -1,0 +1,5768 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"TgvXcGWKgtFhQ1rY8NC3LGpzjwLnSqHCttq1Tp1uPx8="}
+
+@aws-cdk/aws-cognito
+====================
+
+.. mdinclude:: ./__aws-cdk_aws-cognito.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.Cognito/0.24.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.Cognito" Version="0.24.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.Cognito --version 0.24.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.Cognito" version="0.24.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/cognito/0.24.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:cognito:jar:0.24.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="cognito" rev="0.24.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>cognito</artifactId>
+           <version>0.24.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:cognito:0.24.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='cognito', version='0.24.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-cognito/v/0.24.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-cognito@0.24.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-cognito": "^0.24.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-cognito@0.24.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-cognito/v/0.24.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-cognito@0.24.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-cognito": "^0.24.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-cognito@0.24.0
+
+
+
+.. py:module:: @aws-cdk/aws-cognito
+
+AuthFlow (enum)
+^^^^^^^^^^^^^^^
+
+.. py:class:: AuthFlow
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.AuthFlow;
+
+      .. code-tab:: javascript
+
+         const { AuthFlow } = require('@aws-cdk/aws-cognito');
+
+      .. code-tab:: typescript
+
+         import { AuthFlow } from '@aws-cdk/aws-cognito';
+
+
+
+   Types of authentication flow
+
+
+
+   .. py:data:: AdminNoSrp
+
+   Enable flow for server-side or admin authentication (no client app)
+
+
+
+   .. py:data:: CustomFlowOnly
+
+   Enable custom authentication flow
+
+
+
+   .. py:data:: UserPassword
+
+   Enable auth using username & password
+
+
+
+
+CfnIdentityPool
+^^^^^^^^^^^^^^^
+
+.. py:class:: CfnIdentityPool(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.CfnIdentityPool;
+
+      .. code-tab:: javascript
+
+         const { CfnIdentityPool } = require('@aws-cdk/aws-cognito');
+
+      .. code-tab:: typescript
+
+         import { CfnIdentityPool } from '@aws-cdk/aws-cognito';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-cognito.CfnIdentityPoolProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: identityPoolId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: identityPoolName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-cognito.CfnIdentityPoolProps`\  *(readonly)*
+
+   .. py:class:: CognitoIdentityProviderProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoIdentityProviderProperty;
+
+         .. code-tab:: javascript
+
+            // CfnIdentityPool.CognitoIdentityProviderProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnIdentityPool.CognitoIdentityProviderProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: clientId
+
+         ``CfnIdentityPool.CognitoIdentityProviderProperty.ClientId``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-clientid
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: providerName
+
+         ``CfnIdentityPool.CognitoIdentityProviderProperty.ProviderName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-providername
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: serverSideTokenCheck
+
+         ``CfnIdentityPool.CognitoIdentityProviderProperty.ServerSideTokenCheck``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitoidentityprovider.html#cfn-cognito-identitypool-cognitoidentityprovider-serversidetokencheck
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: CognitoStreamsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnIdentityPool.CognitoStreamsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnIdentityPool.CognitoStreamsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnIdentityPool.CognitoStreamsProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: roleArn
+
+         ``CfnIdentityPool.CognitoStreamsProperty.RoleArn``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-rolearn
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: streamingStatus
+
+         ``CfnIdentityPool.CognitoStreamsProperty.StreamingStatus``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamingstatus
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: streamName
+
+         ``CfnIdentityPool.CognitoStreamsProperty.StreamName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamname
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: PushSyncProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnIdentityPool.PushSyncProperty;
+
+         .. code-tab:: javascript
+
+            // CfnIdentityPool.PushSyncProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnIdentityPool.PushSyncProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: applicationArns
+
+         ``CfnIdentityPool.PushSyncProperty.ApplicationArns``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-pushsync.html#cfn-cognito-identitypool-pushsync-applicationarns
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+      .. py:attribute:: roleArn
+
+         ``CfnIdentityPool.PushSyncProperty.RoleArn``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-pushsync.html#cfn-cognito-identitypool-pushsync-rolearn
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnIdentityPoolProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnIdentityPoolProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.CfnIdentityPoolProps;
+
+      .. code-tab:: javascript
+
+         // CfnIdentityPoolProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnIdentityPoolProps } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+   .. py:attribute:: allowUnauthenticatedIdentities
+
+      ``AWS::Cognito::IdentityPool.AllowUnauthenticatedIdentities``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-allowunauthenticatedidentities
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:attribute:: cognitoEvents
+
+      ``AWS::Cognito::IdentityPool.CognitoEvents``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-cognitoevents
+
+
+      :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: cognitoIdentityProviders
+
+      ``AWS::Cognito::IdentityPool.CognitoIdentityProviders``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-cognitoidentityproviders
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnIdentityPool.CognitoIdentityProviderProperty`\ )[] *(optional)*
+
+
+   .. py:attribute:: cognitoStreams
+
+      ``AWS::Cognito::IdentityPool.CognitoStreams``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-cognitostreams
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnIdentityPool.CognitoStreamsProperty`\  *(optional)*
+
+
+   .. py:attribute:: developerProviderName
+
+      ``AWS::Cognito::IdentityPool.DeveloperProviderName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-developerprovidername
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: identityPoolName
+
+      ``AWS::Cognito::IdentityPool.IdentityPoolName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-identitypoolname
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: openIdConnectProviderArns
+
+      ``AWS::Cognito::IdentityPool.OpenIdConnectProviderARNs``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-openidconnectproviderarns
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: pushSync
+
+      ``AWS::Cognito::IdentityPool.PushSync``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-pushsync
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnIdentityPool.PushSyncProperty`\  *(optional)*
+
+
+   .. py:attribute:: samlProviderArns
+
+      ``AWS::Cognito::IdentityPool.SamlProviderARNs``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-samlproviderarns
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: supportedLoginProviders
+
+      ``AWS::Cognito::IdentityPool.SupportedLoginProviders``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypool.html#cfn-cognito-identitypool-supportedloginproviders
+
+
+      :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+CfnIdentityPoolRoleAttachment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnIdentityPoolRoleAttachment(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment;
+
+      .. code-tab:: javascript
+
+         const { CfnIdentityPoolRoleAttachment } = require('@aws-cdk/aws-cognito');
+
+      .. code-tab:: typescript
+
+         import { CfnIdentityPoolRoleAttachment } from '@aws-cdk/aws-cognito';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-cognito.CfnIdentityPoolRoleAttachmentProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: identityPoolRoleAttachmentId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-cognito.CfnIdentityPoolRoleAttachmentProps`\  *(readonly)*
+
+   .. py:class:: MappingRuleProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.MappingRuleProperty;
+
+         .. code-tab:: javascript
+
+            // CfnIdentityPoolRoleAttachment.MappingRuleProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnIdentityPoolRoleAttachment.MappingRuleProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: claim
+
+         ``CfnIdentityPoolRoleAttachment.MappingRuleProperty.Claim``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-claim
+
+
+         :type: string
+
+
+      .. py:attribute:: matchType
+
+         ``CfnIdentityPoolRoleAttachment.MappingRuleProperty.MatchType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-matchtype
+
+
+         :type: string
+
+
+      .. py:attribute:: roleArn
+
+         ``CfnIdentityPoolRoleAttachment.MappingRuleProperty.RoleARN``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-rolearn
+
+
+         :type: string
+
+
+      .. py:attribute:: value
+
+         ``CfnIdentityPoolRoleAttachment.MappingRuleProperty.Value``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-value
+
+
+         :type: string
+
+
+   .. py:class:: RoleMappingProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RoleMappingProperty;
+
+         .. code-tab:: javascript
+
+            // CfnIdentityPoolRoleAttachment.RoleMappingProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnIdentityPoolRoleAttachment.RoleMappingProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: type
+
+         ``CfnIdentityPoolRoleAttachment.RoleMappingProperty.Type``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-type
+
+
+         :type: string
+
+
+      .. py:attribute:: ambiguousRoleResolution
+
+         ``CfnIdentityPoolRoleAttachment.RoleMappingProperty.AmbiguousRoleResolution``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-ambiguousroleresolution
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: rulesConfiguration
+
+         ``CfnIdentityPoolRoleAttachment.RoleMappingProperty.RulesConfiguration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty`\  *(optional)*
+
+
+   .. py:class:: RulesConfigurationTypeProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty;
+
+         .. code-tab:: javascript
+
+            // CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: rules
+
+         ``CfnIdentityPoolRoleAttachment.RulesConfigurationTypeProperty.Rules``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnIdentityPoolRoleAttachment.MappingRuleProperty`\ )[]
+
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnIdentityPoolRoleAttachmentProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnIdentityPoolRoleAttachmentProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.CfnIdentityPoolRoleAttachmentProps;
+
+      .. code-tab:: javascript
+
+         // CfnIdentityPoolRoleAttachmentProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnIdentityPoolRoleAttachmentProps } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+   .. py:attribute:: identityPoolId
+
+      ``AWS::Cognito::IdentityPoolRoleAttachment.IdentityPoolId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html#cfn-cognito-identitypoolroleattachment-identitypoolid
+
+
+      :type: string
+
+
+   .. py:attribute:: roleMappings
+
+      ``AWS::Cognito::IdentityPoolRoleAttachment.RoleMappings``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html#cfn-cognito-identitypoolroleattachment-rolemappings
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or string => (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnIdentityPoolRoleAttachment.RoleMappingProperty`\ ) *(optional)*
+
+
+   .. py:attribute:: roles
+
+      ``AWS::Cognito::IdentityPoolRoleAttachment.Roles``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html#cfn-cognito-identitypoolroleattachment-roles
+
+
+      :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+CfnUserPool
+^^^^^^^^^^^
+
+.. py:class:: CfnUserPool(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.CfnUserPool;
+
+      .. code-tab:: javascript
+
+         const { CfnUserPool } = require('@aws-cdk/aws-cognito');
+
+      .. code-tab:: typescript
+
+         import { CfnUserPool } from '@aws-cdk/aws-cognito';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-cognito.CfnUserPoolProps`\  *(optional)*
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-cognito.CfnUserPoolProps`\  *(readonly)*
+
+
+   .. py:attribute:: userPoolArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: userPoolId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: userPoolProviderName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: userPoolProviderUrl
+
+      :type: string *(readonly)*
+
+   .. py:class:: AdminCreateUserConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnUserPool.AdminCreateUserConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnUserPool.AdminCreateUserConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnUserPool.AdminCreateUserConfigProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: allowAdminCreateUserOnly
+
+         ``CfnUserPool.AdminCreateUserConfigProperty.AllowAdminCreateUserOnly``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-admincreateuserconfig.html#cfn-cognito-userpool-admincreateuserconfig-allowadmincreateuseronly
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: inviteMessageTemplate
+
+         ``CfnUserPool.AdminCreateUserConfigProperty.InviteMessageTemplate``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-admincreateuserconfig.html#cfn-cognito-userpool-admincreateuserconfig-invitemessagetemplate
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnUserPool.InviteMessageTemplateProperty`\  *(optional)*
+
+
+      .. py:attribute:: unusedAccountValidityDays
+
+         ``CfnUserPool.AdminCreateUserConfigProperty.UnusedAccountValidityDays``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-admincreateuserconfig.html#cfn-cognito-userpool-admincreateuserconfig-unusedaccountvaliditydays
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: DeviceConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnUserPool.DeviceConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnUserPool.DeviceConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnUserPool.DeviceConfigurationProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: challengeRequiredOnNewDevice
+
+         ``CfnUserPool.DeviceConfigurationProperty.ChallengeRequiredOnNewDevice``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-deviceconfiguration.html#cfn-cognito-userpool-deviceconfiguration-challengerequiredonnewdevice
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: deviceOnlyRememberedOnUserPrompt
+
+         ``CfnUserPool.DeviceConfigurationProperty.DeviceOnlyRememberedOnUserPrompt``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-deviceconfiguration.html#cfn-cognito-userpool-deviceconfiguration-deviceonlyrememberedonuserprompt
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: EmailConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnUserPool.EmailConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnUserPool.EmailConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnUserPool.EmailConfigurationProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: replyToEmailAddress
+
+         ``CfnUserPool.EmailConfigurationProperty.ReplyToEmailAddress``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-emailconfiguration.html#cfn-cognito-userpool-emailconfiguration-replytoemailaddress
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: sourceArn
+
+         ``CfnUserPool.EmailConfigurationProperty.SourceArn``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-emailconfiguration.html#cfn-cognito-userpool-emailconfiguration-sourcearn
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: InviteMessageTemplateProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnUserPool.InviteMessageTemplateProperty;
+
+         .. code-tab:: javascript
+
+            // CfnUserPool.InviteMessageTemplateProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnUserPool.InviteMessageTemplateProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: emailMessage
+
+         ``CfnUserPool.InviteMessageTemplateProperty.EmailMessage``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-emailmessage
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: emailSubject
+
+         ``CfnUserPool.InviteMessageTemplateProperty.EmailSubject``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-emailsubject
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: smsMessage
+
+         ``CfnUserPool.InviteMessageTemplateProperty.SMSMessage``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-smsmessage
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: LambdaConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnUserPool.LambdaConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnUserPool.LambdaConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnUserPool.LambdaConfigProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: createAuthChallenge
+
+         ``CfnUserPool.LambdaConfigProperty.CreateAuthChallenge``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-createauthchallenge
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: customMessage
+
+         ``CfnUserPool.LambdaConfigProperty.CustomMessage``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-custommessage
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: defineAuthChallenge
+
+         ``CfnUserPool.LambdaConfigProperty.DefineAuthChallenge``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-defineauthchallenge
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: postAuthentication
+
+         ``CfnUserPool.LambdaConfigProperty.PostAuthentication``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-postauthentication
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: postConfirmation
+
+         ``CfnUserPool.LambdaConfigProperty.PostConfirmation``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-postconfirmation
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: preAuthentication
+
+         ``CfnUserPool.LambdaConfigProperty.PreAuthentication``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-preauthentication
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: preSignUp
+
+         ``CfnUserPool.LambdaConfigProperty.PreSignUp``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-presignup
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: verifyAuthChallengeResponse
+
+         ``CfnUserPool.LambdaConfigProperty.VerifyAuthChallengeResponse``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-lambdaconfig.html#cfn-cognito-userpool-lambdaconfig-verifyauthchallengeresponse
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: NumberAttributeConstraintsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnUserPool.NumberAttributeConstraintsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnUserPool.NumberAttributeConstraintsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnUserPool.NumberAttributeConstraintsProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: maxValue
+
+         ``CfnUserPool.NumberAttributeConstraintsProperty.MaxValue``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-numberattributeconstraints.html#cfn-cognito-userpool-numberattributeconstraints-maxvalue
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: minValue
+
+         ``CfnUserPool.NumberAttributeConstraintsProperty.MinValue``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-numberattributeconstraints.html#cfn-cognito-userpool-numberattributeconstraints-minvalue
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: PasswordPolicyProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnUserPool.PasswordPolicyProperty;
+
+         .. code-tab:: javascript
+
+            // CfnUserPool.PasswordPolicyProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnUserPool.PasswordPolicyProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: minimumLength
+
+         ``CfnUserPool.PasswordPolicyProperty.MinimumLength``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-minimumlength
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: requireLowercase
+
+         ``CfnUserPool.PasswordPolicyProperty.RequireLowercase``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requirelowercase
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: requireNumbers
+
+         ``CfnUserPool.PasswordPolicyProperty.RequireNumbers``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requirenumbers
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: requireSymbols
+
+         ``CfnUserPool.PasswordPolicyProperty.RequireSymbols``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requiresymbols
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: requireUppercase
+
+         ``CfnUserPool.PasswordPolicyProperty.RequireUppercase``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-passwordpolicy.html#cfn-cognito-userpool-passwordpolicy-requireuppercase
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: PoliciesProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnUserPool.PoliciesProperty;
+
+         .. code-tab:: javascript
+
+            // CfnUserPool.PoliciesProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnUserPool.PoliciesProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: passwordPolicy
+
+         ``CfnUserPool.PoliciesProperty.PasswordPolicy``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-policies.html#cfn-cognito-userpool-policies-passwordpolicy
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnUserPool.PasswordPolicyProperty`\  *(optional)*
+
+
+   .. py:class:: SchemaAttributeProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnUserPool.SchemaAttributeProperty;
+
+         .. code-tab:: javascript
+
+            // CfnUserPool.SchemaAttributeProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnUserPool.SchemaAttributeProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: attributeDataType
+
+         ``CfnUserPool.SchemaAttributeProperty.AttributeDataType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-attributedatatype
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: developerOnlyAttribute
+
+         ``CfnUserPool.SchemaAttributeProperty.DeveloperOnlyAttribute``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-developeronlyattribute
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: mutable
+
+         ``CfnUserPool.SchemaAttributeProperty.Mutable``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-mutable
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: name
+
+         ``CfnUserPool.SchemaAttributeProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-name
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: numberAttributeConstraints
+
+         ``CfnUserPool.SchemaAttributeProperty.NumberAttributeConstraints``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-numberattributeconstraints
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnUserPool.NumberAttributeConstraintsProperty`\  *(optional)*
+
+
+      .. py:attribute:: required
+
+         ``CfnUserPool.SchemaAttributeProperty.Required``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-required
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: stringAttributeConstraints
+
+         ``CfnUserPool.SchemaAttributeProperty.StringAttributeConstraints``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-stringattributeconstraints
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnUserPool.StringAttributeConstraintsProperty`\  *(optional)*
+
+
+   .. py:class:: SmsConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnUserPool.SmsConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnUserPool.SmsConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnUserPool.SmsConfigurationProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: externalId
+
+         ``CfnUserPool.SmsConfigurationProperty.ExternalId``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html#cfn-cognito-userpool-smsconfiguration-externalid
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: snsCallerArn
+
+         ``CfnUserPool.SmsConfigurationProperty.SnsCallerArn``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-smsconfiguration.html#cfn-cognito-userpool-smsconfiguration-snscallerarn
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: StringAttributeConstraintsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnUserPool.StringAttributeConstraintsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnUserPool.StringAttributeConstraintsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnUserPool.StringAttributeConstraintsProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: maxLength
+
+         ``CfnUserPool.StringAttributeConstraintsProperty.MaxLength``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-maxlength
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: minLength
+
+         ``CfnUserPool.StringAttributeConstraintsProperty.MinLength``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-stringattributeconstraints.html#cfn-cognito-userpool-stringattributeconstraints-minlength
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnUserPoolClient
+^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnUserPoolClient(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.CfnUserPoolClient;
+
+      .. code-tab:: javascript
+
+         const { CfnUserPoolClient } = require('@aws-cdk/aws-cognito');
+
+      .. code-tab:: typescript
+
+         import { CfnUserPoolClient } from '@aws-cdk/aws-cognito';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-cognito.CfnUserPoolClientProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-cognito.CfnUserPoolClientProps`\  *(readonly)*
+
+
+   .. py:attribute:: userPoolClientClientSecret
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: userPoolClientId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: userPoolClientName
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnUserPoolClientProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnUserPoolClientProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.CfnUserPoolClientProps;
+
+      .. code-tab:: javascript
+
+         // CfnUserPoolClientProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnUserPoolClientProps } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+   .. py:attribute:: userPoolId
+
+      ``AWS::Cognito::UserPoolClient.UserPoolId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-userpoolid
+
+
+      :type: string
+
+
+   .. py:attribute:: clientName
+
+      ``AWS::Cognito::UserPoolClient.ClientName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-clientname
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: explicitAuthFlows
+
+      ``AWS::Cognito::UserPoolClient.ExplicitAuthFlows``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-explicitauthflows
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: generateSecret
+
+      ``AWS::Cognito::UserPoolClient.GenerateSecret``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-generatesecret
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: readAttributes
+
+      ``AWS::Cognito::UserPoolClient.ReadAttributes``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-readattributes
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: refreshTokenValidity
+
+      ``AWS::Cognito::UserPoolClient.RefreshTokenValidity``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-refreshtokenvalidity
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: writeAttributes
+
+      ``AWS::Cognito::UserPoolClient.WriteAttributes``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-writeattributes
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+CfnUserPoolGroup
+^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnUserPoolGroup(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.CfnUserPoolGroup;
+
+      .. code-tab:: javascript
+
+         const { CfnUserPoolGroup } = require('@aws-cdk/aws-cognito');
+
+      .. code-tab:: typescript
+
+         import { CfnUserPoolGroup } from '@aws-cdk/aws-cognito';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-cognito.CfnUserPoolGroupProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-cognito.CfnUserPoolGroupProps`\  *(readonly)*
+
+
+   .. py:attribute:: userPoolGroupName
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnUserPoolGroupProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnUserPoolGroupProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.CfnUserPoolGroupProps;
+
+      .. code-tab:: javascript
+
+         // CfnUserPoolGroupProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnUserPoolGroupProps } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+   .. py:attribute:: userPoolId
+
+      ``AWS::Cognito::UserPoolGroup.UserPoolId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-userpoolid
+
+
+      :type: string
+
+
+   .. py:attribute:: description
+
+      ``AWS::Cognito::UserPoolGroup.Description``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-description
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: groupName
+
+      ``AWS::Cognito::UserPoolGroup.GroupName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-groupname
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: precedence
+
+      ``AWS::Cognito::UserPoolGroup.Precedence``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-precedence
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: roleArn
+
+      ``AWS::Cognito::UserPoolGroup.RoleArn``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolgroup.html#cfn-cognito-userpoolgroup-rolearn
+
+
+      :type: string *(optional)*
+
+
+CfnUserPoolProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnUserPoolProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.CfnUserPoolProps;
+
+      .. code-tab:: javascript
+
+         // CfnUserPoolProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnUserPoolProps } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+   .. py:attribute:: adminCreateUserConfig
+
+      ``AWS::Cognito::UserPool.AdminCreateUserConfig``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-admincreateuserconfig
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnUserPool.AdminCreateUserConfigProperty`\  *(optional)*
+
+
+   .. py:attribute:: aliasAttributes
+
+      ``AWS::Cognito::UserPool.AliasAttributes``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-aliasattributes
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: autoVerifiedAttributes
+
+      ``AWS::Cognito::UserPool.AutoVerifiedAttributes``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-autoverifiedattributes
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: deviceConfiguration
+
+      ``AWS::Cognito::UserPool.DeviceConfiguration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-deviceconfiguration
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnUserPool.DeviceConfigurationProperty`\  *(optional)*
+
+
+   .. py:attribute:: emailConfiguration
+
+      ``AWS::Cognito::UserPool.EmailConfiguration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-emailconfiguration
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnUserPool.EmailConfigurationProperty`\  *(optional)*
+
+
+   .. py:attribute:: emailVerificationMessage
+
+      ``AWS::Cognito::UserPool.EmailVerificationMessage``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-emailverificationmessage
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: emailVerificationSubject
+
+      ``AWS::Cognito::UserPool.EmailVerificationSubject``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-emailverificationsubject
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: lambdaConfig
+
+      ``AWS::Cognito::UserPool.LambdaConfig``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-lambdaconfig
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnUserPool.LambdaConfigProperty`\  *(optional)*
+
+
+   .. py:attribute:: mfaConfiguration
+
+      ``AWS::Cognito::UserPool.MfaConfiguration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-mfaconfiguration
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: policies
+
+      ``AWS::Cognito::UserPool.Policies``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-policies
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnUserPool.PoliciesProperty`\  *(optional)*
+
+
+   .. py:attribute:: schema
+
+      ``AWS::Cognito::UserPool.Schema``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-schema
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnUserPool.SchemaAttributeProperty`\ )[] *(optional)*
+
+
+   .. py:attribute:: smsAuthenticationMessage
+
+      ``AWS::Cognito::UserPool.SmsAuthenticationMessage``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-smsauthenticationmessage
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: smsConfiguration
+
+      ``AWS::Cognito::UserPool.SmsConfiguration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-smsconfiguration
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnUserPool.SmsConfigurationProperty`\  *(optional)*
+
+
+   .. py:attribute:: smsVerificationMessage
+
+      ``AWS::Cognito::UserPool.SmsVerificationMessage``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-smsverificationmessage
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: usernameAttributes
+
+      ``AWS::Cognito::UserPool.UsernameAttributes``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-usernameattributes
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: userPoolName
+
+      ``AWS::Cognito::UserPool.UserPoolName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpoolname
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: userPoolTags
+
+      ``AWS::Cognito::UserPool.UserPoolTags``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpool.html#cfn-cognito-userpool-userpooltags
+
+
+      :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+CfnUserPoolUser
+^^^^^^^^^^^^^^^
+
+.. py:class:: CfnUserPoolUser(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.CfnUserPoolUser;
+
+      .. code-tab:: javascript
+
+         const { CfnUserPoolUser } = require('@aws-cdk/aws-cognito');
+
+      .. code-tab:: typescript
+
+         import { CfnUserPoolUser } from '@aws-cdk/aws-cognito';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-cognito.CfnUserPoolUserProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-cognito.CfnUserPoolUserProps`\  *(readonly)*
+
+
+   .. py:attribute:: userPoolUserName
+
+      :type: string *(readonly)*
+
+   .. py:class:: AttributeTypeProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.Cognito;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cognito.CfnUserPoolUser.AttributeTypeProperty;
+
+         .. code-tab:: javascript
+
+            // CfnUserPoolUser.AttributeTypeProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnUserPoolUser.AttributeTypeProperty } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+      .. py:attribute:: name
+
+         ``CfnUserPoolUser.AttributeTypeProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpooluser-attributetype.html#cfn-cognito-userpooluser-attributetype-name
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: value
+
+         ``CfnUserPoolUser.AttributeTypeProperty.Value``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpooluser-attributetype.html#cfn-cognito-userpooluser-attributetype-value
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnUserPoolUserProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnUserPoolUserProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.CfnUserPoolUserProps;
+
+      .. code-tab:: javascript
+
+         // CfnUserPoolUserProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnUserPoolUserProps } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+   .. py:attribute:: userPoolId
+
+      ``AWS::Cognito::UserPoolUser.UserPoolId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-userpoolid
+
+
+      :type: string
+
+
+   .. py:attribute:: desiredDeliveryMediums
+
+      ``AWS::Cognito::UserPoolUser.DesiredDeliveryMediums``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-desireddeliverymediums
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:attribute:: forceAliasCreation
+
+      ``AWS::Cognito::UserPoolUser.ForceAliasCreation``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-forcealiascreation
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: messageAction
+
+      ``AWS::Cognito::UserPoolUser.MessageAction``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-messageaction
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: userAttributes
+
+      ``AWS::Cognito::UserPoolUser.UserAttributes``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-userattributes
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnUserPoolUser.AttributeTypeProperty`\ )[] *(optional)*
+
+
+   .. py:attribute:: username
+
+      ``AWS::Cognito::UserPoolUser.Username``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-username
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: validationData
+
+      ``AWS::Cognito::UserPoolUser.ValidationData``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-validationdata
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cognito.CfnUserPoolUser.AttributeTypeProperty`\ )[] *(optional)*
+
+
+CfnUserPoolUserToGroupAttachment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnUserPoolUserToGroupAttachment(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.CfnUserPoolUserToGroupAttachment;
+
+      .. code-tab:: javascript
+
+         const { CfnUserPoolUserToGroupAttachment } = require('@aws-cdk/aws-cognito');
+
+      .. code-tab:: typescript
+
+         import { CfnUserPoolUserToGroupAttachment } from '@aws-cdk/aws-cognito';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-cognito.CfnUserPoolUserToGroupAttachmentProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-cognito.CfnUserPoolUserToGroupAttachmentProps`\  *(readonly)*
+
+
+   .. py:attribute:: userPoolUserToGroupAttachmentId
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnUserPoolUserToGroupAttachmentProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnUserPoolUserToGroupAttachmentProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.CfnUserPoolUserToGroupAttachmentProps;
+
+      .. code-tab:: javascript
+
+         // CfnUserPoolUserToGroupAttachmentProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnUserPoolUserToGroupAttachmentProps } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+   .. py:attribute:: groupName
+
+      ``AWS::Cognito::UserPoolUserToGroupAttachment.GroupName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-groupname
+
+
+      :type: string
+
+
+   .. py:attribute:: username
+
+      ``AWS::Cognito::UserPoolUserToGroupAttachment.Username``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-username
+
+
+      :type: string
+
+
+   .. py:attribute:: userPoolId
+
+      ``AWS::Cognito::UserPoolUserToGroupAttachment.UserPoolId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-userpoolid
+
+
+      :type: string
+
+
+IUserPool (interface)
+^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: IUserPool
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.IUserPool;
+
+      .. code-tab:: javascript
+
+         // IUserPool is an interface
+
+      .. code-tab:: typescript
+
+         import { IUserPool } from '@aws-cdk/aws-cognito';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+
+
+   .. py:attribute:: userPoolArn
+
+      The ARN of this user pool resource
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: userPoolId
+
+      The physical ID of this user pool resource
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: userPoolProviderName
+
+      The provider name of this user pool resource
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: userPoolProviderUrl
+
+      The provider URL of this user pool resource
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: export() -> @aws-cdk/aws-cognito.UserPoolImportProps
+
+      Exports a User Pool from this stack
+
+
+
+      :return: user pool props that can be imported into another stack
+      :rtype: :py:class:`~@aws-cdk/aws-cognito.UserPoolImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+SignInType (enum)
+^^^^^^^^^^^^^^^^^
+
+.. py:class:: SignInType
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.SignInType;
+
+      .. code-tab:: javascript
+
+         const { SignInType } = require('@aws-cdk/aws-cognito');
+
+      .. code-tab:: typescript
+
+         import { SignInType } from '@aws-cdk/aws-cognito';
+
+
+
+   Methods of user sign-in
+
+
+
+   .. py:data:: Username
+
+   End-user will sign in with a username, with optional aliases
+
+
+
+   .. py:data:: Email
+
+   End-user will sign in using an email address
+
+
+
+   .. py:data:: Phone
+
+   End-user will sign in using a phone number
+
+
+
+   .. py:data:: EmailOrPhone
+
+   End-user will sign in using either an email address or phone number
+
+
+
+
+UserPool
+^^^^^^^^
+
+.. py:class:: UserPool(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.UserPool;
+
+      .. code-tab:: javascript
+
+         const { UserPool } = require('@aws-cdk/aws-cognito');
+
+      .. code-tab:: typescript
+
+         import { UserPool } from '@aws-cdk/aws-cognito';
+
+
+
+   Define a Cognito User Pool
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-cognito.IUserPool`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-cognito.UserPoolProps`\ 
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-cognito.IUserPool
+
+      Import an existing user pool resource
+
+
+
+      :param scope: Parent construct
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: Construct ID
+      :type id: string
+      :param props: Imported user pool properties
+      :type props: :py:class:`~@aws-cdk/aws-cognito.UserPoolImportProps`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-cognito.IUserPool`\ 
+
+
+   .. py:method:: export() -> @aws-cdk/aws-cognito.UserPoolImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-cognito.IUserPool.export`
+
+      Exports a User Pool from this stack
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-cognito.UserPoolImportProps`\ 
+
+
+   .. py:method:: onCreateAuthChallenge(fn)
+
+      Attach 'Create Auth Challenge' trigger
+
+      Grants access from cognito-idp.amazonaws.com to the lambda
+
+
+
+      :param fn: the lambda function to attach
+      :type fn: :py:class:`@aws-cdk/aws-lambda.IFunction`\ 
+
+
+   .. py:method:: onCustomMessage(fn)
+
+      Attach 'Custom Message' trigger
+
+      Grants access from cognito-idp.amazonaws.com to the lambda
+
+
+
+      :param fn: the lambda function to attach
+      :type fn: :py:class:`@aws-cdk/aws-lambda.IFunction`\ 
+
+
+   .. py:method:: onDefineAuthChallenge(fn)
+
+      Attach 'Define Auth Challenge' trigger
+
+      Grants access from cognito-idp.amazonaws.com to the lambda
+
+
+
+      :param fn: the lambda function to attach
+      :type fn: :py:class:`@aws-cdk/aws-lambda.IFunction`\ 
+
+
+   .. py:method:: onPostAuthentication(fn)
+
+      Attach 'Post Authentication' trigger
+
+      Grants access from cognito-idp.amazonaws.com to the lambda
+
+
+
+      :param fn: the lambda function to attach
+      :type fn: :py:class:`@aws-cdk/aws-lambda.IFunction`\ 
+
+
+   .. py:method:: onPostConfirmation(fn)
+
+      Attach 'Post Confirmation' trigger
+
+      Grants access from cognito-idp.amazonaws.com to the lambda
+
+
+
+      :param fn: the lambda function to attach
+      :type fn: :py:class:`@aws-cdk/aws-lambda.IFunction`\ 
+
+
+   .. py:method:: onPreAuthentication(fn)
+
+      Attach 'Pre Authentication' trigger
+
+      Grants access from cognito-idp.amazonaws.com to the lambda
+
+
+
+      :param fn: the lambda function to attach
+      :type fn: :py:class:`@aws-cdk/aws-lambda.IFunction`\ 
+
+
+   .. py:method:: onPreSignUp(fn)
+
+      Attach 'Pre Sign Up' trigger
+
+      Grants access from cognito-idp.amazonaws.com to the lambda
+
+
+
+      :param fn: the lambda function to attach
+      :type fn: :py:class:`@aws-cdk/aws-lambda.IFunction`\ 
+
+
+   .. py:method:: onVerifyAuthChallengeResponse(fn)
+
+      Attach 'Verify Auth Challenge Response' trigger
+
+      Grants access from cognito-idp.amazonaws.com to the lambda
+
+
+
+      :param fn: the lambda function to attach
+      :type fn: :py:class:`@aws-cdk/aws-lambda.IFunction`\ 
+
+
+   .. py:attribute:: userPoolArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-cognito.IUserPool.userPoolArn`
+
+      The ARN of the user pool
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: userPoolId
+
+      *Implements* :py:meth:`@aws-cdk/aws-cognito.IUserPool.userPoolId`
+
+      The physical ID of this user pool resource
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: userPoolProviderName
+
+      *Implements* :py:meth:`@aws-cdk/aws-cognito.IUserPool.userPoolProviderName`
+
+      User pool provider name
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: userPoolProviderUrl
+
+      *Implements* :py:meth:`@aws-cdk/aws-cognito.IUserPool.userPoolProviderUrl`
+
+      User pool provider URL
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+UserPoolAttribute (enum)
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: UserPoolAttribute
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.UserPoolAttribute;
+
+      .. code-tab:: javascript
+
+         const { UserPoolAttribute } = require('@aws-cdk/aws-cognito');
+
+      .. code-tab:: typescript
+
+         import { UserPoolAttribute } from '@aws-cdk/aws-cognito';
+
+
+
+   Standard attributes
+
+   Specified following the OpenID Connect spec
+
+
+
+   .. py:data:: Address
+
+   End-User's preferred postal address.
+
+
+
+   .. py:data:: Birthdate
+
+   End-User's birthday, represented as an ISO 8601:2004 [ISO8601‑2004] YYYY-MM-DD format.
+
+   The year MAY be 0000, indicating that it is omitted.
+
+   To represent only the year, YYYY format is allowed.
+
+
+
+   .. py:data:: Email
+
+   End-User's preferred e-mail address.
+
+   Its value MUST conform to the RFC 5322 [RFC5322] addr-spec syntax.
+
+
+
+   .. py:data:: FamilyName
+
+   Surname(s) or last name(s) of the End-User.
+
+   Note that in some cultures, people can have multiple family names or no family name;
+
+   all can be present, with the names being separated by space characters.
+
+
+
+   .. py:data:: Gender
+
+   End-User's gender.
+
+
+
+   .. py:data:: GivenName
+
+   Given name(s) or first name(s) of the End-User.
+
+   Note that in some cultures, people can have multiple given names;
+
+   all can be present, with the names being separated by space characters.
+
+
+
+   .. py:data:: Locale
+
+   End-User's locale, represented as a BCP47 [RFC5646] language tag.
+
+   This is typically an ISO 639-1 Alpha-2 [ISO639‑1] language code in lowercase
+
+   and an ISO 3166-1 Alpha-2 [ISO3166‑1] country code in uppercase, separated by a dash.
+
+   For example, en-US or fr-CA.
+
+
+
+   .. py:data:: MiddleName
+
+   Middle name(s) of the End-User.
+
+   Note that in some cultures, people can have multiple middle names;
+
+   all can be present, with the names being separated by space characters.
+
+   Also note that in some cultures, middle names are not used.
+
+
+
+   .. py:data:: Name
+
+   End-User's full name in displayable form including all name parts,
+
+   possibly including titles and suffixes, ordered according to the End-User's locale and preferences.
+
+
+
+   .. py:data:: Nickname
+
+   Casual name of the End-User that may or may not be the same as the given_name.
+
+   For instance, a nickname value of Mike might be returned alongside a given_name value of Michael.
+
+
+
+   .. py:data:: PhoneNumber
+
+   End-User's preferred telephone number.
+
+   E.164 [E.164] is RECOMMENDED as the format of this Claim, for example, +1 (425) 555-1212 or +56 (2) 687 2400.
+
+   If the phone number contains an extension, it is RECOMMENDED that the extension be represented using the
+
+   RFC 3966 [RFC3966] extension syntax, for example, +1 (604) 555-1234;ext=5678.
+
+
+
+   .. py:data:: Picture
+
+   URL of the End-User's profile picture.
+
+   This URL MUST refer to an image file (for example, a PNG, JPEG, or GIF image file),
+
+   rather than to a Web page containing an image.
+
+   Note that this URL SHOULD specifically reference a profile photo of the End-User
+
+   suitable for displaying when describing the End-User, rather than an arbitrary photo taken by the End-User
+
+
+
+   .. py:data:: PreferredUsername
+
+   Shorthand name by which the End-User wishes to be referred to.
+
+
+
+   .. py:data:: Profile
+
+   URL of the End-User's profile page. The contents of this Web page SHOULD be about the End-User.
+
+
+
+   .. py:data:: Timezone
+
+   The End-User's time zone
+
+
+
+   .. py:data:: UpdatedAt
+
+   Time the End-User's information was last updated.
+
+   Its value is a JSON number representing the number of seconds from 1970-01-01T0:0:0Z
+
+   as measured in UTC until the date/time.
+
+
+
+   .. py:data:: Website
+
+   URL of the End-User's Web page or blog.
+
+   This Web page SHOULD contain information published by the End-User or an organization that the End-User is affiliated with.
+
+
+
+
+UserPoolClient
+^^^^^^^^^^^^^^
+
+.. py:class:: UserPoolClient(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.UserPoolClient;
+
+      .. code-tab:: javascript
+
+         const { UserPoolClient } = require('@aws-cdk/aws-cognito');
+
+      .. code-tab:: typescript
+
+         import { UserPoolClient } from '@aws-cdk/aws-cognito';
+
+
+
+   Define a UserPool App Client
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-cognito.UserPoolClientProps`\ 
+
+   .. py:attribute:: clientId
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: apply(aspect)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.apply>`
+
+      Applies the aspect to this Constructs node
+
+
+
+      :param aspect: 
+      :type aspect: :py:class:`@aws-cdk/cdk.IAspect`\ 
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+UserPoolClientProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: UserPoolClientProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.UserPoolClientProps;
+
+      .. code-tab:: javascript
+
+         // UserPoolClientProps is an interface
+
+      .. code-tab:: typescript
+
+         import { UserPoolClientProps } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+   .. py:attribute:: userPool
+
+      The UserPool resource this client will have access to
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-cognito.IUserPool`\ 
+
+
+   .. py:attribute:: clientName
+
+      Name of the application client
+
+
+
+      :type: string *(optional)*
+      :default: cloudformation generated name
+
+
+   .. py:attribute:: enabledAuthFlows
+
+      List of enabled authentication flows
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-cognito.AuthFlow`\ [] *(optional)*
+      :default: no enabled flows
+
+
+   .. py:attribute:: generateSecret
+
+      Whether to generate a client secret
+
+
+
+      :type: boolean *(optional)*
+      :default: false
+
+
+UserPoolImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: UserPoolImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.UserPoolImportProps;
+
+      .. code-tab:: javascript
+
+         // UserPoolImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { UserPoolImportProps } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+   .. py:attribute:: userPoolArn
+
+      The ARN of the imported user pool
+
+
+
+      :type: string
+
+
+   .. py:attribute:: userPoolId
+
+      The ID of an existing user pool
+
+
+
+      :type: string
+
+
+   .. py:attribute:: userPoolProviderName
+
+      The provider name of the imported user pool
+
+
+
+      :type: string
+
+
+   .. py:attribute:: userPoolProviderUrl
+
+      The URL of the imported user pool
+
+
+
+      :type: string
+
+
+UserPoolProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: UserPoolProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.UserPoolProps;
+
+      .. code-tab:: javascript
+
+         // UserPoolProps is an interface
+
+      .. code-tab:: typescript
+
+         import { UserPoolProps } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+   .. py:attribute:: autoVerifiedAttributes
+
+      Attributes which Cognito will automatically send a verification message to.
+
+      Must be either EMAIL, PHONE, or both.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-cognito.UserPoolAttribute`\ [] *(optional)*
+      :default: no auto verification
+
+
+   .. py:attribute:: lambdaTriggers
+
+      Lambda functions to use for supported Cognito triggers.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-cognito.UserPoolTriggers`\  *(optional)*
+
+
+   .. py:attribute:: poolName
+
+      Name of the user pool
+
+
+
+      :type: string *(optional)*
+      :default: unique ID
+
+
+   .. py:attribute:: signInType
+
+      Method used for user registration & sign in.
+
+      Allows either username with aliases OR sign in with email, phone, or both.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-cognito.SignInType`\  *(optional)*
+      :default: SignInType.USERNAME
+
+
+   .. py:attribute:: usernameAliasAttributes
+
+      Attributes to allow as username alias.
+
+      Only valid if signInType is USERNAME
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-cognito.UserPoolAttribute`\ [] *(optional)*
+      :default: no alias
+
+
+UserPoolTriggers (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: UserPoolTriggers
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.Cognito;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cognito.UserPoolTriggers;
+
+      .. code-tab:: javascript
+
+         // UserPoolTriggers is an interface
+
+      .. code-tab:: typescript
+
+         import { UserPoolTriggers } from '@aws-cdk/aws-cognito';
+
+
+
+
+
+   .. py:attribute:: createAuthChallenge
+
+      Creates an authentication challenge.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-lambda.IFunction`\  *(optional)*
+
+
+   .. py:attribute:: customMessage
+
+      A custom Message AWS Lambda trigger.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-lambda.IFunction`\  *(optional)*
+
+
+   .. py:attribute:: defineAuthChallenge
+
+      Defines the authentication challenge.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-lambda.IFunction`\  *(optional)*
+
+
+   .. py:attribute:: postAuthentication
+
+      A post-authentication AWS Lambda trigger.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-lambda.IFunction`\  *(optional)*
+
+
+   .. py:attribute:: postConfirmation
+
+      A post-confirmation AWS Lambda trigger.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-lambda.IFunction`\  *(optional)*
+
+
+   .. py:attribute:: preAuthentication
+
+      A pre-authentication AWS Lambda trigger.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-lambda.IFunction`\  *(optional)*
+
+
+   .. py:attribute:: preSignUp
+
+      A pre-registration AWS Lambda trigger.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-lambda.IFunction`\  *(optional)*
+
+
+   .. py:attribute:: verifyAuthChallengeResponse
+
+      Verifies the authentication challenge response.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-lambda.IFunction`\  *(optional)*
+
+

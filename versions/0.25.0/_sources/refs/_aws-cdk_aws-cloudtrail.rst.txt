@@ -1,0 +1,1255 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"wRAyA9CLGquNU74mRMxLjZTTHQlKe1XSyJiFojiZlDQ="}
+
+@aws-cdk/aws-cloudtrail
+=======================
+
+.. mdinclude:: ./__aws-cdk_aws-cloudtrail.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.CloudTrail/0.25.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.CloudTrail" Version="0.25.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.CloudTrail --version 0.25.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.CloudTrail" version="0.25.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/cloudtrail/0.25.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:cloudtrail:jar:0.25.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="cloudtrail" rev="0.25.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>cloudtrail</artifactId>
+           <version>0.25.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:cloudtrail:0.25.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='cloudtrail', version='0.25.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-cloudtrail/v/0.25.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-cloudtrail@0.25.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-cloudtrail": "^0.25.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-cloudtrail@0.25.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-cloudtrail/v/0.25.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-cloudtrail@0.25.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-cloudtrail": "^0.25.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-cloudtrail@0.25.0
+
+
+
+.. py:module:: @aws-cdk/aws-cloudtrail
+
+AddS3EventSelectorOptions (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: AddS3EventSelectorOptions
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CloudTrail;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cloudtrail.AddS3EventSelectorOptions;
+
+      .. code-tab:: javascript
+
+         // AddS3EventSelectorOptions is an interface
+
+      .. code-tab:: typescript
+
+         import { AddS3EventSelectorOptions } from '@aws-cdk/aws-cloudtrail';
+
+
+
+   Options for adding an S3 event selector.
+
+
+
+
+
+   .. py:attribute:: includeManagementEvents
+
+      Specifies whether the event selector includes management events for the trail.
+
+
+
+      :type: boolean *(optional)*
+      :default: true
+
+
+   .. py:attribute:: readWriteType
+
+      Specifies whether to log read-only events, write-only events, or all events.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-cloudtrail.ReadWriteType`\  *(optional)*
+      :default: ReadWriteType.All
+
+
+CfnTrail
+^^^^^^^^
+
+.. py:class:: CfnTrail(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CloudTrail;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cloudtrail.CfnTrail;
+
+      .. code-tab:: javascript
+
+         const { CfnTrail } = require('@aws-cdk/aws-cloudtrail');
+
+      .. code-tab:: typescript
+
+         import { CfnTrail } from '@aws-cdk/aws-cloudtrail';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-cloudtrail.CfnTrailProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-cloudtrail.CfnTrailProps`\  *(readonly)*
+
+
+   .. py:attribute:: tags
+
+      The ``TagManager`` handles setting, removing and formatting tags
+
+      
+
+      Tags should be managed either passing them as properties during
+
+      initiation or by calling methods on this object. If both techniques are
+
+      used only the tags from the TagManager will be used. ``Tag`` (aspect)
+
+      will use the manager.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.TagManager`\  *(readonly)*
+
+
+   .. py:attribute:: trailArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: trailName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: trailSnsTopicArn
+
+      :type: string *(readonly)*
+
+   .. py:class:: DataResourceProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CloudTrail;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cloudtrail.CfnTrail.DataResourceProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTrail.DataResourceProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTrail.DataResourceProperty } from '@aws-cdk/aws-cloudtrail';
+
+
+
+
+
+      .. py:attribute:: type
+
+         ``CfnTrail.DataResourceProperty.Type``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-dataresource.html#cfn-cloudtrail-trail-dataresource-type
+
+
+         :type: string
+
+
+      .. py:attribute:: values
+
+         ``CfnTrail.DataResourceProperty.Values``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-dataresource.html#cfn-cloudtrail-trail-dataresource-values
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:class:: EventSelectorProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.CloudTrail;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.cloudtrail.CfnTrail.EventSelectorProperty;
+
+         .. code-tab:: javascript
+
+            // CfnTrail.EventSelectorProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnTrail.EventSelectorProperty } from '@aws-cdk/aws-cloudtrail';
+
+
+
+
+
+      .. py:attribute:: dataResources
+
+         ``CfnTrail.EventSelectorProperty.DataResources``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-dataresources
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cloudtrail.CfnTrail.DataResourceProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: includeManagementEvents
+
+         ``CfnTrail.EventSelectorProperty.IncludeManagementEvents``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-includemanagementevents
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: readWriteType
+
+         ``CfnTrail.EventSelectorProperty.ReadWriteType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-readwritetype
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+CfnTrailProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnTrailProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CloudTrail;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cloudtrail.CfnTrailProps;
+
+      .. code-tab:: javascript
+
+         // CfnTrailProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnTrailProps } from '@aws-cdk/aws-cloudtrail';
+
+
+
+
+
+   .. py:attribute:: isLogging
+
+      ``AWS::CloudTrail::Trail.IsLogging``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-islogging
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:attribute:: s3BucketName
+
+      ``AWS::CloudTrail::Trail.S3BucketName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3bucketname
+
+
+      :type: string
+
+
+   .. py:attribute:: cloudWatchLogsLogGroupArn
+
+      ``AWS::CloudTrail::Trail.CloudWatchLogsLogGroupArn``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: cloudWatchLogsRoleArn
+
+      ``AWS::CloudTrail::Trail.CloudWatchLogsRoleArn``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-cloudwatchlogsrolearn
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: enableLogFileValidation
+
+      ``AWS::CloudTrail::Trail.EnableLogFileValidation``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-enablelogfilevalidation
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: eventSelectors
+
+      ``AWS::CloudTrail::Trail.EventSelectors``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-eventselectors
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-cloudtrail.CfnTrail.EventSelectorProperty`\ )[] *(optional)*
+
+
+   .. py:attribute:: includeGlobalServiceEvents
+
+      ``AWS::CloudTrail::Trail.IncludeGlobalServiceEvents``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-includeglobalserviceevents
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: isMultiRegionTrail
+
+      ``AWS::CloudTrail::Trail.IsMultiRegionTrail``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-ismultiregiontrail
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: kmsKeyId
+
+      ``AWS::CloudTrail::Trail.KMSKeyId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-kmskeyid
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: s3KeyPrefix
+
+      ``AWS::CloudTrail::Trail.S3KeyPrefix``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3keyprefix
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: snsTopicName
+
+      ``AWS::CloudTrail::Trail.SnsTopicName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-snstopicname
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: tags
+
+      ``AWS::CloudTrail::Trail.Tags``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-tags
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`@aws-cdk/cdk.CfnTag`\ )[] *(optional)*
+
+
+   .. py:attribute:: trailName
+
+      ``AWS::CloudTrail::Trail.TrailName``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-trailname
+
+
+      :type: string *(optional)*
+
+
+CloudTrail
+^^^^^^^^^^
+
+.. py:class:: CloudTrail(scope, id, [props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CloudTrail;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cloudtrail.CloudTrail;
+
+      .. code-tab:: javascript
+
+         const { CloudTrail } = require('@aws-cdk/aws-cloudtrail');
+
+      .. code-tab:: typescript
+
+         import { CloudTrail } from '@aws-cdk/aws-cloudtrail';
+
+
+
+   Cloud trail allows you to log events that happen in your AWS account
+
+   For example:
+
+   
+
+   import { CloudTrail } from '@aws-cdk/aws-cloudtrail'
+
+   
+
+   const cloudTrail = new CloudTrail(this, 'MyTrail');
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param scope: 
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-cloudtrail.CloudTrailProps`\  *(optional)*
+
+   .. py:method:: addS3EventSelector(prefixes, [options])
+
+      When an event occurs in your account, CloudTrail evaluates whether the event matches the settings for your trails.
+
+      Only events that match your trail settings are delivered to your Amazon S3 bucket and Amazon CloudWatch Logs log group.
+
+      
+
+      This method adds an S3 Data Event Selector for filtering events that match S3 operations.
+
+      
+
+      Data events: These events provide insight into the resource operations performed on or within a resource.
+
+      These are also known as data plane operations.
+
+
+
+      :param prefixes: the list of object ARN prefixes to include in logging (maximum 250 entries).
+      :type prefixes: string[]
+      :param options: the options to configure logging of management and data events.
+      :type options: :py:class:`~@aws-cdk/aws-cloudtrail.AddS3EventSelectorOptions`\  *(optional)*
+
+
+   .. py:attribute:: cloudTrailArn
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+CloudTrailProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CloudTrailProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CloudTrail;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cloudtrail.CloudTrailProps;
+
+      .. code-tab:: javascript
+
+         // CloudTrailProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CloudTrailProps } from '@aws-cdk/aws-cloudtrail';
+
+
+
+
+
+   .. py:attribute:: cloudWatchLogsRetentionTimeDays
+
+      How long to retain logs in CloudWatchLogs. Ignored if sendToCloudWatchLogs is false
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-cloudtrail.LogRetention`\  *(optional)*
+      :default: LogRetention.OneYear
+
+
+   .. py:attribute:: enableFileValidation
+
+      To determine whether a log file was modified, deleted, or unchanged after CloudTrail delivered it,
+
+      you can use CloudTrail log file integrity validation.
+
+      This feature is built using industry standard algorithms: SHA-256 for hashing and SHA-256 with RSA for digital signing.
+
+      This makes it computationally infeasible to modify, delete or forge CloudTrail log files without detection.
+
+      You can use the AWS CLI to validate the files in the location where CloudTrail delivered them.
+
+
+
+      :type: boolean *(optional)*
+      :default: true
+
+
+   .. py:attribute:: includeGlobalServiceEvents
+
+      For most services, events are recorded in the region where the action occurred.
+
+      For global services such as AWS Identity and Access Management (IAM), AWS STS, Amazon CloudFront, and Route 53,
+
+      events are delivered to any trail that includes global services, and are logged as occurring in US East (N. Virginia) Region.
+
+
+
+      :type: boolean *(optional)*
+      :default: true
+
+
+   .. py:attribute:: isMultiRegionTrail
+
+      Whether or not this trail delivers log files from multiple regions to a single S3 bucket for a single account.
+
+
+
+      :type: boolean *(optional)*
+      :default: true
+
+
+   .. py:attribute:: kmsKey
+
+      The AWS Key Management Service (AWS KMS) key ID that you want to use to encrypt CloudTrail logs.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-kms.IEncryptionKey`\  *(optional)*
+      :default: none
+
+
+   .. py:attribute:: managementEvents
+
+      When an event occurs in your account, CloudTrail evaluates whether the event matches the settings for your trails.
+
+      Only events that match your trail settings are delivered to your Amazon S3 bucket and Amazon CloudWatch Logs log group.
+
+      
+
+      This method sets the management configuration for this trail.
+
+      
+
+      Management events provide insight into management operations that are performed on resources in your AWS account.
+
+      These are also known as control plane operations.
+
+      Management events can also include non-API events that occur in your account.
+
+      For example, when a user logs in to your account, CloudTrail logs the ConsoleLogin event.
+
+      
+
+      If managementEvents is undefined, we'll not log management events by default.
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-cloudtrail.ReadWriteType`\  *(optional)*
+
+
+   .. py:attribute:: s3KeyPrefix
+
+      An Amazon S3 object key prefix that precedes the name of all log files.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: sendToCloudWatchLogs
+
+      If CloudTrail pushes logs to CloudWatch Logs in addition to S3.
+
+      Disabled for cost out of the box.
+
+
+
+      :type: boolean *(optional)*
+      :default: false
+
+
+   .. py:attribute:: snsTopic
+
+      The name of an Amazon SNS topic that is notified when new log files are published.
+
+
+
+      :type: string *(optional)*
+      :default: none
+
+
+   .. py:attribute:: trailName
+
+      The name of the trail. We recoomend customers do not set an explicit name.
+
+
+
+      :type: string *(optional)*
+      :default: the CloudFormation generated neme
+
+
+LogRetention (enum)
+^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: LogRetention
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CloudTrail;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cloudtrail.LogRetention;
+
+      .. code-tab:: javascript
+
+         const { LogRetention } = require('@aws-cdk/aws-cloudtrail');
+
+      .. code-tab:: typescript
+
+         import { LogRetention } from '@aws-cdk/aws-cloudtrail';
+
+
+
+   .. py:data:: OneDay
+
+   .. py:data:: ThreeDays
+
+   .. py:data:: FiveDays
+
+   .. py:data:: OneWeek
+
+   .. py:data:: TwoWeeks
+
+   .. py:data:: OneMonth
+
+   .. py:data:: TwoMonths
+
+   .. py:data:: ThreeMonths
+
+   .. py:data:: FourMonths
+
+   .. py:data:: FiveMonths
+
+   .. py:data:: HalfYear
+
+   .. py:data:: OneYear
+
+   .. py:data:: FourHundredDays
+
+   .. py:data:: EighteenMonths
+
+   .. py:data:: TwoYears
+
+   .. py:data:: FiveYears
+
+   .. py:data:: TenYears
+
+
+ReadWriteType (enum)
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ReadWriteType
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.CloudTrail;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.cloudtrail.ReadWriteType;
+
+      .. code-tab:: javascript
+
+         const { ReadWriteType } = require('@aws-cdk/aws-cloudtrail');
+
+      .. code-tab:: typescript
+
+         import { ReadWriteType } from '@aws-cdk/aws-cloudtrail';
+
+
+
+   .. py:data:: ReadOnly
+
+   .. py:data:: WriteOnly
+
+   .. py:data:: All
+
+

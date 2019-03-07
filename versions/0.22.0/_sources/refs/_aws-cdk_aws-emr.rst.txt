@@ -1,0 +1,5246 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"TDcb8Q42Q5/1Pg8IZtH8bYGQjelnNeOhyolColTbLgY="}
+
+@aws-cdk/aws-emr
+================
+
+.. mdinclude:: ./__aws-cdk_aws-emr.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.EMR/0.22.0>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.EMR" Version="0.22.0" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.EMR --version 0.22.0
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.EMR" version="0.22.0" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/emr/0.22.0/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:emr:jar:0.22.0'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="emr" rev="0.22.0"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>emr</artifactId>
+           <version>0.22.0</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:emr:0.22.0'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='emr', version='0.22.0')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-emr/v/0.22.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-emr@0.22.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-emr": "^0.22.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-emr@0.22.0
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-emr/v/0.22.0>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-emr@0.22.0
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-emr": "^0.22.0"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-emr@0.22.0
+
+
+
+.. py:module:: @aws-cdk/aws-emr
+
+CfnCluster
+^^^^^^^^^^
+
+.. py:class:: CfnCluster(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EMR;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.emr.CfnCluster;
+
+      .. code-tab:: javascript
+
+         const { CfnCluster } = require('@aws-cdk/aws-emr');
+
+      .. code-tab:: typescript
+
+         import { CfnCluster } from '@aws-cdk/aws-emr';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-emr.CfnClusterProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: clusterId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: clusterMasterPublicDns
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-emr.CfnClusterProps`\  *(readonly)*
+
+   .. py:class:: ApplicationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.ApplicationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.ApplicationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.ApplicationProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: additionalInfo
+
+         ``CfnCluster.ApplicationProperty.AdditionalInfo``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-application.html#cfn-elasticmapreduce-cluster-application-additionalinfo
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or string => (string or :py:class:`@aws-cdk/cdk.Token`\ ) *(optional)*
+
+
+      .. py:attribute:: args
+
+         ``CfnCluster.ApplicationProperty.Args``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-application.html#cfn-elasticmapreduce-cluster-application-args
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+      .. py:attribute:: name
+
+         ``CfnCluster.ApplicationProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-application.html#cfn-elasticmapreduce-cluster-application-name
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: version
+
+         ``CfnCluster.ApplicationProperty.Version``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-application.html#cfn-elasticmapreduce-cluster-application-version
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: AutoScalingPolicyProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.AutoScalingPolicyProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.AutoScalingPolicyProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.AutoScalingPolicyProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: constraints
+
+         ``CfnCluster.AutoScalingPolicyProperty.Constraints``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-autoscalingpolicy.html#cfn-elasticmapreduce-cluster-autoscalingpolicy-constraints
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.ScalingConstraintsProperty`\ 
+
+
+      .. py:attribute:: rules
+
+         ``CfnCluster.AutoScalingPolicyProperty.Rules``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-autoscalingpolicy.html#cfn-elasticmapreduce-cluster-autoscalingpolicy-rules
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.ScalingRuleProperty`\ )[]
+
+
+   .. py:class:: BootstrapActionConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.BootstrapActionConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.BootstrapActionConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.BootstrapActionConfigProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: name
+
+         ``CfnCluster.BootstrapActionConfigProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-bootstrapactionconfig.html#cfn-elasticmapreduce-cluster-bootstrapactionconfig-name
+
+
+         :type: string
+
+
+      .. py:attribute:: scriptBootstrapAction
+
+         ``CfnCluster.BootstrapActionConfigProperty.ScriptBootstrapAction``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-bootstrapactionconfig.html#cfn-elasticmapreduce-cluster-bootstrapactionconfig-scriptbootstrapaction
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.ScriptBootstrapActionConfigProperty`\ 
+
+
+   .. py:class:: CloudWatchAlarmDefinitionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.CloudWatchAlarmDefinitionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.CloudWatchAlarmDefinitionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.CloudWatchAlarmDefinitionProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: comparisonOperator
+
+         ``CfnCluster.CloudWatchAlarmDefinitionProperty.ComparisonOperator``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-comparisonoperator
+
+
+         :type: string
+
+
+      .. py:attribute:: metricName
+
+         ``CfnCluster.CloudWatchAlarmDefinitionProperty.MetricName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-metricname
+
+
+         :type: string
+
+
+      .. py:attribute:: period
+
+         ``CfnCluster.CloudWatchAlarmDefinitionProperty.Period``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-period
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: threshold
+
+         ``CfnCluster.CloudWatchAlarmDefinitionProperty.Threshold``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-threshold
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: dimensions
+
+         ``CfnCluster.CloudWatchAlarmDefinitionProperty.Dimensions``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-dimensions
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.MetricDimensionProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: evaluationPeriods
+
+         ``CfnCluster.CloudWatchAlarmDefinitionProperty.EvaluationPeriods``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-evaluationperiods
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: namespace
+
+         ``CfnCluster.CloudWatchAlarmDefinitionProperty.Namespace``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-namespace
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: statistic
+
+         ``CfnCluster.CloudWatchAlarmDefinitionProperty.Statistic``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-statistic
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: unit
+
+         ``CfnCluster.CloudWatchAlarmDefinitionProperty.Unit``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-cluster-cloudwatchalarmdefinition-unit
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: ConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.ConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.ConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.ConfigurationProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: classification
+
+         ``CfnCluster.ConfigurationProperty.Classification``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-configuration.html#cfn-elasticmapreduce-cluster-configuration-classification
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: configurationProperties
+
+         ``CfnCluster.ConfigurationProperty.ConfigurationProperties``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-configuration.html#cfn-elasticmapreduce-cluster-configuration-configurationproperties
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or string => (string or :py:class:`@aws-cdk/cdk.Token`\ ) *(optional)*
+
+
+      .. py:attribute:: configurations
+
+         ``CfnCluster.ConfigurationProperty.Configurations``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-configuration.html#cfn-elasticmapreduce-cluster-configuration-configurations
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.ConfigurationProperty`\ )[] *(optional)*
+
+
+   .. py:class:: EbsBlockDeviceConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.EbsBlockDeviceConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.EbsBlockDeviceConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.EbsBlockDeviceConfigProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: volumeSpecification
+
+         ``CfnCluster.EbsBlockDeviceConfigProperty.VolumeSpecification``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-ebsblockdeviceconfig.html#cfn-elasticmapreduce-cluster-ebsblockdeviceconfig-volumespecification
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.VolumeSpecificationProperty`\ 
+
+
+      .. py:attribute:: volumesPerInstance
+
+         ``CfnCluster.EbsBlockDeviceConfigProperty.VolumesPerInstance``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-ebsblockdeviceconfig.html#cfn-elasticmapreduce-cluster-ebsblockdeviceconfig-volumesperinstance
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: EbsConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.EbsConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.EbsConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.EbsConfigurationProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: ebsBlockDeviceConfigs
+
+         ``CfnCluster.EbsConfigurationProperty.EbsBlockDeviceConfigs``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-ebsconfiguration.html#cfn-elasticmapreduce-cluster-ebsconfiguration-ebsblockdeviceconfigs
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.EbsBlockDeviceConfigProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: ebsOptimized
+
+         ``CfnCluster.EbsConfigurationProperty.EbsOptimized``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-ebsconfiguration.html#cfn-elasticmapreduce-cluster-ebsconfiguration-ebsoptimized
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: HadoopJarStepConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.HadoopJarStepConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.HadoopJarStepConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.HadoopJarStepConfigProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: jar
+
+         ``CfnCluster.HadoopJarStepConfigProperty.Jar``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.html#cfn-elasticmapreduce-cluster-hadoopjarstepconfig-jar
+
+
+         :type: string
+
+
+      .. py:attribute:: args
+
+         ``CfnCluster.HadoopJarStepConfigProperty.Args``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.html#cfn-elasticmapreduce-cluster-hadoopjarstepconfig-args
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+      .. py:attribute:: mainClass
+
+         ``CfnCluster.HadoopJarStepConfigProperty.MainClass``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.html#cfn-elasticmapreduce-cluster-hadoopjarstepconfig-mainclass
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: stepProperties
+
+         ``CfnCluster.HadoopJarStepConfigProperty.StepProperties``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-hadoopjarstepconfig.html#cfn-elasticmapreduce-cluster-hadoopjarstepconfig-stepproperties
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.KeyValueProperty`\ )[] *(optional)*
+
+
+   .. py:class:: InstanceFleetConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.InstanceFleetConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.InstanceFleetConfigProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: instanceTypeConfigs
+
+         ``CfnCluster.InstanceFleetConfigProperty.InstanceTypeConfigs``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancefleetconfig.html#cfn-elasticmapreduce-cluster-instancefleetconfig-instancetypeconfigs
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.InstanceTypeConfigProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: launchSpecifications
+
+         ``CfnCluster.InstanceFleetConfigProperty.LaunchSpecifications``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancefleetconfig.html#cfn-elasticmapreduce-cluster-instancefleetconfig-launchspecifications
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty`\  *(optional)*
+
+
+      .. py:attribute:: name
+
+         ``CfnCluster.InstanceFleetConfigProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancefleetconfig.html#cfn-elasticmapreduce-cluster-instancefleetconfig-name
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: targetOnDemandCapacity
+
+         ``CfnCluster.InstanceFleetConfigProperty.TargetOnDemandCapacity``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancefleetconfig.html#cfn-elasticmapreduce-cluster-instancefleetconfig-targetondemandcapacity
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: targetSpotCapacity
+
+         ``CfnCluster.InstanceFleetConfigProperty.TargetSpotCapacity``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancefleetconfig.html#cfn-elasticmapreduce-cluster-instancefleetconfig-targetspotcapacity
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: InstanceFleetProvisioningSpecificationsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.InstanceFleetProvisioningSpecificationsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.InstanceFleetProvisioningSpecificationsProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: spotSpecification
+
+         ``CfnCluster.InstanceFleetProvisioningSpecificationsProperty.SpotSpecification``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancefleetprovisioningspecifications.html#cfn-elasticmapreduce-cluster-instancefleetprovisioningspecifications-spotspecification
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.SpotProvisioningSpecificationProperty`\ 
+
+
+   .. py:class:: InstanceGroupConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.InstanceGroupConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.InstanceGroupConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.InstanceGroupConfigProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: instanceCount
+
+         ``CfnCluster.InstanceGroupConfigProperty.InstanceCount``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-instancecount
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: instanceType
+
+         ``CfnCluster.InstanceGroupConfigProperty.InstanceType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-instancetype
+
+
+         :type: string
+
+
+      .. py:attribute:: autoScalingPolicy
+
+         ``CfnCluster.InstanceGroupConfigProperty.AutoScalingPolicy``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-autoscalingpolicy
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.AutoScalingPolicyProperty`\  *(optional)*
+
+
+      .. py:attribute:: bidPrice
+
+         ``CfnCluster.InstanceGroupConfigProperty.BidPrice``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-bidprice
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: configurations
+
+         ``CfnCluster.InstanceGroupConfigProperty.Configurations``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-configurations
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.ConfigurationProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: ebsConfiguration
+
+         ``CfnCluster.InstanceGroupConfigProperty.EbsConfiguration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-ebsconfiguration
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.EbsConfigurationProperty`\  *(optional)*
+
+
+      .. py:attribute:: market
+
+         ``CfnCluster.InstanceGroupConfigProperty.Market``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-market
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: name
+
+         ``CfnCluster.InstanceGroupConfigProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancegroupconfig.html#cfn-elasticmapreduce-cluster-instancegroupconfig-name
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: InstanceTypeConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.InstanceTypeConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.InstanceTypeConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.InstanceTypeConfigProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: instanceType
+
+         ``CfnCluster.InstanceTypeConfigProperty.InstanceType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancetypeconfig.html#cfn-elasticmapreduce-cluster-instancetypeconfig-instancetype
+
+
+         :type: string
+
+
+      .. py:attribute:: bidPrice
+
+         ``CfnCluster.InstanceTypeConfigProperty.BidPrice``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancetypeconfig.html#cfn-elasticmapreduce-cluster-instancetypeconfig-bidprice
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: bidPriceAsPercentageOfOnDemandPrice
+
+         ``CfnCluster.InstanceTypeConfigProperty.BidPriceAsPercentageOfOnDemandPrice``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancetypeconfig.html#cfn-elasticmapreduce-cluster-instancetypeconfig-bidpriceaspercentageofondemandprice
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: configurations
+
+         ``CfnCluster.InstanceTypeConfigProperty.Configurations``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancetypeconfig.html#cfn-elasticmapreduce-cluster-instancetypeconfig-configurations
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.ConfigurationProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: ebsConfiguration
+
+         ``CfnCluster.InstanceTypeConfigProperty.EbsConfiguration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancetypeconfig.html#cfn-elasticmapreduce-cluster-instancetypeconfig-ebsconfiguration
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.EbsConfigurationProperty`\  *(optional)*
+
+
+      .. py:attribute:: weightedCapacity
+
+         ``CfnCluster.InstanceTypeConfigProperty.WeightedCapacity``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-instancetypeconfig.html#cfn-elasticmapreduce-cluster-instancetypeconfig-weightedcapacity
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: JobFlowInstancesConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.JobFlowInstancesConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.JobFlowInstancesConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.JobFlowInstancesConfigProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: additionalMasterSecurityGroups
+
+         ``CfnCluster.JobFlowInstancesConfigProperty.AdditionalMasterSecurityGroups``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-additionalmastersecuritygroups
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+      .. py:attribute:: additionalSlaveSecurityGroups
+
+         ``CfnCluster.JobFlowInstancesConfigProperty.AdditionalSlaveSecurityGroups``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-additionalslavesecuritygroups
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+      .. py:attribute:: coreInstanceFleet
+
+         ``CfnCluster.JobFlowInstancesConfigProperty.CoreInstanceFleet``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancefleet
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.InstanceFleetConfigProperty`\  *(optional)*
+
+
+      .. py:attribute:: coreInstanceGroup
+
+         ``CfnCluster.JobFlowInstancesConfigProperty.CoreInstanceGroup``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-coreinstancegroup
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.InstanceGroupConfigProperty`\  *(optional)*
+
+
+      .. py:attribute:: ec2KeyName
+
+         ``CfnCluster.JobFlowInstancesConfigProperty.Ec2KeyName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2keyname
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: ec2SubnetId
+
+         ``CfnCluster.JobFlowInstancesConfigProperty.Ec2SubnetId``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-ec2subnetid
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: emrManagedMasterSecurityGroup
+
+         ``CfnCluster.JobFlowInstancesConfigProperty.EmrManagedMasterSecurityGroup``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedmastersecuritygroup
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: emrManagedSlaveSecurityGroup
+
+         ``CfnCluster.JobFlowInstancesConfigProperty.EmrManagedSlaveSecurityGroup``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-emrmanagedslavesecuritygroup
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: hadoopVersion
+
+         ``CfnCluster.JobFlowInstancesConfigProperty.HadoopVersion``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-hadoopversion
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: keepJobFlowAliveWhenNoSteps
+
+         ``CfnCluster.JobFlowInstancesConfigProperty.KeepJobFlowAliveWhenNoSteps``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-keepjobflowalivewhennosteps
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: masterInstanceFleet
+
+         ``CfnCluster.JobFlowInstancesConfigProperty.MasterInstanceFleet``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancefleet
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.InstanceFleetConfigProperty`\  *(optional)*
+
+
+      .. py:attribute:: masterInstanceGroup
+
+         ``CfnCluster.JobFlowInstancesConfigProperty.MasterInstanceGroup``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-masterinstancegroup
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.InstanceGroupConfigProperty`\  *(optional)*
+
+
+      .. py:attribute:: placement
+
+         ``CfnCluster.JobFlowInstancesConfigProperty.Placement``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-placement
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.PlacementTypeProperty`\  *(optional)*
+
+
+      .. py:attribute:: serviceAccessSecurityGroup
+
+         ``CfnCluster.JobFlowInstancesConfigProperty.ServiceAccessSecurityGroup``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-serviceaccesssecuritygroup
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: terminationProtected
+
+         ``CfnCluster.JobFlowInstancesConfigProperty.TerminationProtected``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-jobflowinstancesconfig.html#cfn-elasticmapreduce-cluster-jobflowinstancesconfig-terminationprotected
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: KerberosAttributesProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.KerberosAttributesProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.KerberosAttributesProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.KerberosAttributesProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: kdcAdminPassword
+
+         ``CfnCluster.KerberosAttributesProperty.KdcAdminPassword``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-kdcadminpassword
+
+
+         :type: string
+
+
+      .. py:attribute:: realm
+
+         ``CfnCluster.KerberosAttributesProperty.Realm``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-realm
+
+
+         :type: string
+
+
+      .. py:attribute:: adDomainJoinPassword
+
+         ``CfnCluster.KerberosAttributesProperty.ADDomainJoinPassword``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-addomainjoinpassword
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: adDomainJoinUser
+
+         ``CfnCluster.KerberosAttributesProperty.ADDomainJoinUser``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-addomainjoinuser
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: crossRealmTrustPrincipalPassword
+
+         ``CfnCluster.KerberosAttributesProperty.CrossRealmTrustPrincipalPassword``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-kerberosattributes.html#cfn-elasticmapreduce-cluster-kerberosattributes-crossrealmtrustprincipalpassword
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: KeyValueProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.KeyValueProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.KeyValueProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.KeyValueProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: key
+
+         ``CfnCluster.KeyValueProperty.Key``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-keyvalue.html#cfn-elasticmapreduce-cluster-keyvalue-key
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: value
+
+         ``CfnCluster.KeyValueProperty.Value``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-keyvalue.html#cfn-elasticmapreduce-cluster-keyvalue-value
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: MetricDimensionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.MetricDimensionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.MetricDimensionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.MetricDimensionProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: key
+
+         ``CfnCluster.MetricDimensionProperty.Key``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-metricdimension.html#cfn-elasticmapreduce-cluster-metricdimension-key
+
+
+         :type: string
+
+
+      .. py:attribute:: value
+
+         ``CfnCluster.MetricDimensionProperty.Value``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-metricdimension.html#cfn-elasticmapreduce-cluster-metricdimension-value
+
+
+         :type: string
+
+
+   .. py:class:: PlacementTypeProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.PlacementTypeProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.PlacementTypeProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.PlacementTypeProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: availabilityZone
+
+         ``CfnCluster.PlacementTypeProperty.AvailabilityZone``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-placementtype.html#cfn-elasticmapreduce-cluster-placementtype-availabilityzone
+
+
+         :type: string
+
+
+   .. py:class:: ScalingActionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.ScalingActionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.ScalingActionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.ScalingActionProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: simpleScalingPolicyConfiguration
+
+         ``CfnCluster.ScalingActionProperty.SimpleScalingPolicyConfiguration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingaction.html#cfn-elasticmapreduce-cluster-scalingaction-simplescalingpolicyconfiguration
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.SimpleScalingPolicyConfigurationProperty`\ 
+
+
+      .. py:attribute:: market
+
+         ``CfnCluster.ScalingActionProperty.Market``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingaction.html#cfn-elasticmapreduce-cluster-scalingaction-market
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: ScalingConstraintsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.ScalingConstraintsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.ScalingConstraintsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.ScalingConstraintsProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: maxCapacity
+
+         ``CfnCluster.ScalingConstraintsProperty.MaxCapacity``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingconstraints.html#cfn-elasticmapreduce-cluster-scalingconstraints-maxcapacity
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: minCapacity
+
+         ``CfnCluster.ScalingConstraintsProperty.MinCapacity``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingconstraints.html#cfn-elasticmapreduce-cluster-scalingconstraints-mincapacity
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:class:: ScalingRuleProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.ScalingRuleProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.ScalingRuleProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.ScalingRuleProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: action
+
+         ``CfnCluster.ScalingRuleProperty.Action``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingrule.html#cfn-elasticmapreduce-cluster-scalingrule-action
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.ScalingActionProperty`\ 
+
+
+      .. py:attribute:: name
+
+         ``CfnCluster.ScalingRuleProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingrule.html#cfn-elasticmapreduce-cluster-scalingrule-name
+
+
+         :type: string
+
+
+      .. py:attribute:: trigger
+
+         ``CfnCluster.ScalingRuleProperty.Trigger``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingrule.html#cfn-elasticmapreduce-cluster-scalingrule-trigger
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.ScalingTriggerProperty`\ 
+
+
+      .. py:attribute:: description
+
+         ``CfnCluster.ScalingRuleProperty.Description``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingrule.html#cfn-elasticmapreduce-cluster-scalingrule-description
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: ScalingTriggerProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.ScalingTriggerProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.ScalingTriggerProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.ScalingTriggerProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: cloudWatchAlarmDefinition
+
+         ``CfnCluster.ScalingTriggerProperty.CloudWatchAlarmDefinition``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scalingtrigger.html#cfn-elasticmapreduce-cluster-scalingtrigger-cloudwatchalarmdefinition
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.CloudWatchAlarmDefinitionProperty`\ 
+
+
+   .. py:class:: ScriptBootstrapActionConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.ScriptBootstrapActionConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.ScriptBootstrapActionConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.ScriptBootstrapActionConfigProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: path
+
+         ``CfnCluster.ScriptBootstrapActionConfigProperty.Path``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scriptbootstrapactionconfig.html#cfn-elasticmapreduce-cluster-scriptbootstrapactionconfig-path
+
+
+         :type: string
+
+
+      .. py:attribute:: args
+
+         ``CfnCluster.ScriptBootstrapActionConfigProperty.Args``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scriptbootstrapactionconfig.html#cfn-elasticmapreduce-cluster-scriptbootstrapactionconfig-args
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+   .. py:class:: SimpleScalingPolicyConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.SimpleScalingPolicyConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.SimpleScalingPolicyConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.SimpleScalingPolicyConfigurationProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: scalingAdjustment
+
+         ``CfnCluster.SimpleScalingPolicyConfigurationProperty.ScalingAdjustment``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-scalingadjustment
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: adjustmentType
+
+         ``CfnCluster.SimpleScalingPolicyConfigurationProperty.AdjustmentType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-adjustmenttype
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: coolDown
+
+         ``CfnCluster.SimpleScalingPolicyConfigurationProperty.CoolDown``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-cooldown
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: SpotProvisioningSpecificationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.SpotProvisioningSpecificationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.SpotProvisioningSpecificationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.SpotProvisioningSpecificationProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: timeoutAction
+
+         ``CfnCluster.SpotProvisioningSpecificationProperty.TimeoutAction``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-spotprovisioningspecification.html#cfn-elasticmapreduce-cluster-spotprovisioningspecification-timeoutaction
+
+
+         :type: string
+
+
+      .. py:attribute:: timeoutDurationMinutes
+
+         ``CfnCluster.SpotProvisioningSpecificationProperty.TimeoutDurationMinutes``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-spotprovisioningspecification.html#cfn-elasticmapreduce-cluster-spotprovisioningspecification-timeoutdurationminutes
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: blockDurationMinutes
+
+         ``CfnCluster.SpotProvisioningSpecificationProperty.BlockDurationMinutes``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-spotprovisioningspecification.html#cfn-elasticmapreduce-cluster-spotprovisioningspecification-blockdurationminutes
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: StepConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.StepConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.StepConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.StepConfigProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: hadoopJarStep
+
+         ``CfnCluster.StepConfigProperty.HadoopJarStep``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-stepconfig.html#cfn-elasticmapreduce-cluster-stepconfig-hadoopjarstep
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.HadoopJarStepConfigProperty`\ 
+
+
+      .. py:attribute:: name
+
+         ``CfnCluster.StepConfigProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-stepconfig.html#cfn-elasticmapreduce-cluster-stepconfig-name
+
+
+         :type: string
+
+
+      .. py:attribute:: actionOnFailure
+
+         ``CfnCluster.StepConfigProperty.ActionOnFailure``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-stepconfig.html#cfn-elasticmapreduce-cluster-stepconfig-actiononfailure
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: VolumeSpecificationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnCluster.VolumeSpecificationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.VolumeSpecificationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.VolumeSpecificationProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: sizeInGb
+
+         ``CfnCluster.VolumeSpecificationProperty.SizeInGB``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-volumespecification.html#cfn-elasticmapreduce-cluster-volumespecification-sizeingb
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: volumeType
+
+         ``CfnCluster.VolumeSpecificationProperty.VolumeType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-volumespecification.html#cfn-elasticmapreduce-cluster-volumespecification-volumetype
+
+
+         :type: string
+
+
+      .. py:attribute:: iops
+
+         ``CfnCluster.VolumeSpecificationProperty.Iops``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-volumespecification.html#cfn-elasticmapreduce-cluster-volumespecification-iops
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependency(*other)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependency>`
+
+      Adds a dependency on another resource.
+
+
+
+      :param \*other: The other resource.
+      :type \*other: :py:class:`@aws-cdk/cdk.IDependable`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: dependencyElements
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.dependencyElements>`
+
+      Returns the set of all stack elements (resources, parameters, conditions)
+
+      that should be added when a resource "depends on" this construct.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IDependable`\ [] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnClusterProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnClusterProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EMR;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.emr.CfnClusterProps;
+
+      .. code-tab:: javascript
+
+         // CfnClusterProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnClusterProps } from '@aws-cdk/aws-emr';
+
+
+
+
+
+   .. py:attribute:: instances
+
+      ``AWS::EMR::Cluster.Instances``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-instances
+
+
+      :type: :py:class:`~@aws-cdk/aws-emr.CfnCluster.JobFlowInstancesConfigProperty`\  or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:attribute:: jobFlowRole
+
+      ``AWS::EMR::Cluster.JobFlowRole``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-jobflowrole
+
+
+      :type: string
+
+
+   .. py:attribute:: name
+
+      ``AWS::EMR::Cluster.Name``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-name
+
+
+      :type: string
+
+
+   .. py:attribute:: serviceRole
+
+      ``AWS::EMR::Cluster.ServiceRole``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-servicerole
+
+
+      :type: string
+
+
+   .. py:attribute:: additionalInfo
+
+      ``AWS::EMR::Cluster.AdditionalInfo``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-additionalinfo
+
+
+      :type: json or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: applications
+
+      ``AWS::EMR::Cluster.Applications``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-applications
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.ApplicationProperty`\ )[] *(optional)*
+
+
+   .. py:attribute:: autoScalingRole
+
+      ``AWS::EMR::Cluster.AutoScalingRole``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-autoscalingrole
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: bootstrapActions
+
+      ``AWS::EMR::Cluster.BootstrapActions``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-bootstrapactions
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.BootstrapActionConfigProperty`\ )[] *(optional)*
+
+
+   .. py:attribute:: configurations
+
+      ``AWS::EMR::Cluster.Configurations``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-configurations
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.ConfigurationProperty`\ )[] *(optional)*
+
+
+   .. py:attribute:: customAmiId
+
+      ``AWS::EMR::Cluster.CustomAmiId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-customamiid
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: ebsRootVolumeSize
+
+      ``AWS::EMR::Cluster.EbsRootVolumeSize``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-ebsrootvolumesize
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: kerberosAttributes
+
+      ``AWS::EMR::Cluster.KerberosAttributes``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-kerberosattributes
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.KerberosAttributesProperty`\  *(optional)*
+
+
+   .. py:attribute:: logUri
+
+      ``AWS::EMR::Cluster.LogUri``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-loguri
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: releaseLabel
+
+      ``AWS::EMR::Cluster.ReleaseLabel``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-releaselabel
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: scaleDownBehavior
+
+      ``AWS::EMR::Cluster.ScaleDownBehavior``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-scaledownbehavior
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: securityConfiguration
+
+      ``AWS::EMR::Cluster.SecurityConfiguration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-securityconfiguration
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: steps
+
+      ``AWS::EMR::Cluster.Steps``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-steps
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnCluster.StepConfigProperty`\ )[] *(optional)*
+
+
+   .. py:attribute:: tags
+
+      ``AWS::EMR::Cluster.Tags``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-tags
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`@aws-cdk/cdk.Tag`\ )[] *(optional)*
+
+
+   .. py:attribute:: visibleToAllUsers
+
+      ``AWS::EMR::Cluster.VisibleToAllUsers``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-visibletoallusers
+
+
+      :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+CfnInstanceFleetConfig
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnInstanceFleetConfig(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EMR;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.emr.CfnInstanceFleetConfig;
+
+      .. code-tab:: javascript
+
+         const { CfnInstanceFleetConfig } = require('@aws-cdk/aws-emr');
+
+      .. code-tab:: typescript
+
+         import { CfnInstanceFleetConfig } from '@aws-cdk/aws-emr';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-emr.CfnInstanceFleetConfigProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: instanceFleetConfigId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-emr.CfnInstanceFleetConfigProps`\  *(readonly)*
+
+   .. py:class:: ConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.ConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceFleetConfig.ConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceFleetConfig.ConfigurationProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: classification
+
+         ``CfnInstanceFleetConfig.ConfigurationProperty.Classification``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-configuration.html#cfn-elasticmapreduce-instancefleetconfig-configuration-classification
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: configurationProperties
+
+         ``CfnInstanceFleetConfig.ConfigurationProperty.ConfigurationProperties``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-configuration.html#cfn-elasticmapreduce-instancefleetconfig-configuration-configurationproperties
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or string => (string or :py:class:`@aws-cdk/cdk.Token`\ ) *(optional)*
+
+
+      .. py:attribute:: configurations
+
+         ``CfnInstanceFleetConfig.ConfigurationProperty.Configurations``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-configuration.html#cfn-elasticmapreduce-instancefleetconfig-configuration-configurations
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceFleetConfig.ConfigurationProperty`\ )[] *(optional)*
+
+
+   .. py:class:: EbsBlockDeviceConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsBlockDeviceConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceFleetConfig.EbsBlockDeviceConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceFleetConfig.EbsBlockDeviceConfigProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: volumeSpecification
+
+         ``CfnInstanceFleetConfig.EbsBlockDeviceConfigProperty.VolumeSpecification``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig.html#cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumespecification
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceFleetConfig.VolumeSpecificationProperty`\ 
+
+
+      .. py:attribute:: volumesPerInstance
+
+         ``CfnInstanceFleetConfig.EbsBlockDeviceConfigProperty.VolumesPerInstance``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig.html#cfn-elasticmapreduce-instancefleetconfig-ebsblockdeviceconfig-volumesperinstance
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: EbsConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.EbsConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceFleetConfig.EbsConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceFleetConfig.EbsConfigurationProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: ebsBlockDeviceConfigs
+
+         ``CfnInstanceFleetConfig.EbsConfigurationProperty.EbsBlockDeviceConfigs``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-ebsconfiguration.html#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsblockdeviceconfigs
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceFleetConfig.EbsBlockDeviceConfigProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: ebsOptimized
+
+         ``CfnInstanceFleetConfig.EbsConfigurationProperty.EbsOptimized``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-ebsconfiguration.html#cfn-elasticmapreduce-instancefleetconfig-ebsconfiguration-ebsoptimized
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: InstanceFleetProvisioningSpecificationsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: spotSpecification
+
+         ``CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty.SpotSpecification``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications.html#cfn-elasticmapreduce-instancefleetconfig-instancefleetprovisioningspecifications-spotspecification
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty`\ 
+
+
+   .. py:class:: InstanceTypeConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.InstanceTypeConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceFleetConfig.InstanceTypeConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceFleetConfig.InstanceTypeConfigProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: instanceType
+
+         ``CfnInstanceFleetConfig.InstanceTypeConfigProperty.InstanceType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-instancetype
+
+
+         :type: string
+
+
+      .. py:attribute:: bidPrice
+
+         ``CfnInstanceFleetConfig.InstanceTypeConfigProperty.BidPrice``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-bidprice
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: bidPriceAsPercentageOfOnDemandPrice
+
+         ``CfnInstanceFleetConfig.InstanceTypeConfigProperty.BidPriceAsPercentageOfOnDemandPrice``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-bidpriceaspercentageofondemandprice
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: configurations
+
+         ``CfnInstanceFleetConfig.InstanceTypeConfigProperty.Configurations``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-configurations
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceFleetConfig.ConfigurationProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: ebsConfiguration
+
+         ``CfnInstanceFleetConfig.InstanceTypeConfigProperty.EbsConfiguration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-ebsconfiguration
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceFleetConfig.EbsConfigurationProperty`\  *(optional)*
+
+
+      .. py:attribute:: weightedCapacity
+
+         ``CfnInstanceFleetConfig.InstanceTypeConfigProperty.WeightedCapacity``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-instancetypeconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfig-weightedcapacity
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: SpotProvisioningSpecificationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: timeoutAction
+
+         ``CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty.TimeoutAction``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-spotprovisioningspecification.html#cfn-elasticmapreduce-instancefleetconfig-spotprovisioningspecification-timeoutaction
+
+
+         :type: string
+
+
+      .. py:attribute:: timeoutDurationMinutes
+
+         ``CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty.TimeoutDurationMinutes``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-spotprovisioningspecification.html#cfn-elasticmapreduce-instancefleetconfig-spotprovisioningspecification-timeoutdurationminutes
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: blockDurationMinutes
+
+         ``CfnInstanceFleetConfig.SpotProvisioningSpecificationProperty.BlockDurationMinutes``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-spotprovisioningspecification.html#cfn-elasticmapreduce-instancefleetconfig-spotprovisioningspecification-blockdurationminutes
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: VolumeSpecificationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceFleetConfig.VolumeSpecificationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceFleetConfig.VolumeSpecificationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceFleetConfig.VolumeSpecificationProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: sizeInGb
+
+         ``CfnInstanceFleetConfig.VolumeSpecificationProperty.SizeInGB``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.html#cfn-elasticmapreduce-instancefleetconfig-volumespecification-sizeingb
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: volumeType
+
+         ``CfnInstanceFleetConfig.VolumeSpecificationProperty.VolumeType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.html#cfn-elasticmapreduce-instancefleetconfig-volumespecification-volumetype
+
+
+         :type: string
+
+
+      .. py:attribute:: iops
+
+         ``CfnInstanceFleetConfig.VolumeSpecificationProperty.Iops``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-volumespecification.html#cfn-elasticmapreduce-instancefleetconfig-volumespecification-iops
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependency(*other)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependency>`
+
+      Adds a dependency on another resource.
+
+
+
+      :param \*other: The other resource.
+      :type \*other: :py:class:`@aws-cdk/cdk.IDependable`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: dependencyElements
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.dependencyElements>`
+
+      Returns the set of all stack elements (resources, parameters, conditions)
+
+      that should be added when a resource "depends on" this construct.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IDependable`\ [] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnInstanceFleetConfigProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnInstanceFleetConfigProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EMR;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.emr.CfnInstanceFleetConfigProps;
+
+      .. code-tab:: javascript
+
+         // CfnInstanceFleetConfigProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnInstanceFleetConfigProps } from '@aws-cdk/aws-emr';
+
+
+
+
+
+   .. py:attribute:: clusterId
+
+      ``AWS::EMR::InstanceFleetConfig.ClusterId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-instancefleetconfig.html#cfn-elasticmapreduce-instancefleetconfig-clusterid
+
+
+      :type: string
+
+
+   .. py:attribute:: instanceFleetType
+
+      ``AWS::EMR::InstanceFleetConfig.InstanceFleetType``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-instancefleetconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancefleettype
+
+
+      :type: string
+
+
+   .. py:attribute:: instanceTypeConfigs
+
+      ``AWS::EMR::InstanceFleetConfig.InstanceTypeConfigs``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-instancefleetconfig.html#cfn-elasticmapreduce-instancefleetconfig-instancetypeconfigs
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceFleetConfig.InstanceTypeConfigProperty`\ )[] *(optional)*
+
+
+   .. py:attribute:: launchSpecifications
+
+      ``AWS::EMR::InstanceFleetConfig.LaunchSpecifications``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-instancefleetconfig.html#cfn-elasticmapreduce-instancefleetconfig-launchspecifications
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceFleetConfig.InstanceFleetProvisioningSpecificationsProperty`\  *(optional)*
+
+
+   .. py:attribute:: name
+
+      ``AWS::EMR::InstanceFleetConfig.Name``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-instancefleetconfig.html#cfn-elasticmapreduce-instancefleetconfig-name
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: targetOnDemandCapacity
+
+      ``AWS::EMR::InstanceFleetConfig.TargetOnDemandCapacity``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-instancefleetconfig.html#cfn-elasticmapreduce-instancefleetconfig-targetondemandcapacity
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:attribute:: targetSpotCapacity
+
+      ``AWS::EMR::InstanceFleetConfig.TargetSpotCapacity``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-instancefleetconfig.html#cfn-elasticmapreduce-instancefleetconfig-targetspotcapacity
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+CfnInstanceGroupConfig
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnInstanceGroupConfig(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EMR;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig;
+
+      .. code-tab:: javascript
+
+         const { CfnInstanceGroupConfig } = require('@aws-cdk/aws-emr');
+
+      .. code-tab:: typescript
+
+         import { CfnInstanceGroupConfig } from '@aws-cdk/aws-emr';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-emr.CfnInstanceGroupConfigProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: instanceGroupConfigId
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-emr.CfnInstanceGroupConfigProps`\  *(readonly)*
+
+   .. py:class:: AutoScalingPolicyProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.AutoScalingPolicyProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceGroupConfig.AutoScalingPolicyProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceGroupConfig.AutoScalingPolicyProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: constraints
+
+         ``CfnInstanceGroupConfig.AutoScalingPolicyProperty.Constraints``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.html#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-constraints
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceGroupConfig.ScalingConstraintsProperty`\ 
+
+
+      .. py:attribute:: rules
+
+         ``CfnInstanceGroupConfig.AutoScalingPolicyProperty.Rules``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-autoscalingpolicy.html#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy-rules
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceGroupConfig.ScalingRuleProperty`\ )[]
+
+
+   .. py:class:: CloudWatchAlarmDefinitionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: comparisonOperator
+
+         ``CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty.ComparisonOperator``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-comparisonoperator
+
+
+         :type: string
+
+
+      .. py:attribute:: metricName
+
+         ``CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty.MetricName``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-metricname
+
+
+         :type: string
+
+
+      .. py:attribute:: period
+
+         ``CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty.Period``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-period
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: threshold
+
+         ``CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty.Threshold``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-threshold
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: dimensions
+
+         ``CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty.Dimensions``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-dimensions
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceGroupConfig.MetricDimensionProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: evaluationPeriods
+
+         ``CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty.EvaluationPeriods``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-evaluationperiods
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+      .. py:attribute:: namespace
+
+         ``CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty.Namespace``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-namespace
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: statistic
+
+         ``CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty.Statistic``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-statistic
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: unit
+
+         ``CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty.Unit``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition.html#cfn-elasticmapreduce-instancegroupconfig-cloudwatchalarmdefinition-unit
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: ConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceGroupConfig.ConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceGroupConfig.ConfigurationProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: classification
+
+         ``CfnInstanceGroupConfig.ConfigurationProperty.Classification``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-classification
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: configurationProperties
+
+         ``CfnInstanceGroupConfig.ConfigurationProperty.ConfigurationProperties``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-configurationproperties
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or string => (string or :py:class:`@aws-cdk/cdk.Token`\ ) *(optional)*
+
+
+      .. py:attribute:: configurations
+
+         ``CfnInstanceGroupConfig.ConfigurationProperty.Configurations``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-configuration.html#cfn-emr-cluster-configuration-configurations
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceGroupConfig.ConfigurationProperty`\ )[] *(optional)*
+
+
+   .. py:class:: EbsBlockDeviceConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: volumeSpecification
+
+         ``CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty.VolumeSpecification``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceGroupConfig.VolumeSpecificationProperty`\ 
+
+
+      .. py:attribute:: volumesPerInstance
+
+         ``CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty.VolumesPerInstance``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumesperinstance
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: EbsConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.EbsConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceGroupConfig.EbsConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceGroupConfig.EbsConfigurationProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: ebsBlockDeviceConfigs
+
+         ``CfnInstanceGroupConfig.EbsConfigurationProperty.EbsBlockDeviceConfigs``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfigs
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceGroupConfig.EbsBlockDeviceConfigProperty`\ )[] *(optional)*
+
+
+      .. py:attribute:: ebsOptimized
+
+         ``CfnInstanceGroupConfig.EbsConfigurationProperty.EbsOptimized``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration.html#cfn-emr-ebsconfiguration-ebsoptimized
+
+
+         :type: boolean or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: MetricDimensionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.MetricDimensionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceGroupConfig.MetricDimensionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceGroupConfig.MetricDimensionProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: key
+
+         ``CfnInstanceGroupConfig.MetricDimensionProperty.Key``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-metricdimension.html#cfn-elasticmapreduce-instancegroupconfig-metricdimension-key
+
+
+         :type: string
+
+
+      .. py:attribute:: value
+
+         ``CfnInstanceGroupConfig.MetricDimensionProperty.Value``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-metricdimension.html#cfn-elasticmapreduce-instancegroupconfig-metricdimension-value
+
+
+         :type: string
+
+
+   .. py:class:: ScalingActionProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingActionProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceGroupConfig.ScalingActionProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceGroupConfig.ScalingActionProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: simpleScalingPolicyConfiguration
+
+         ``CfnInstanceGroupConfig.ScalingActionProperty.SimpleScalingPolicyConfiguration``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingaction.html#cfn-elasticmapreduce-instancegroupconfig-scalingaction-simplescalingpolicyconfiguration
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceGroupConfig.SimpleScalingPolicyConfigurationProperty`\ 
+
+
+      .. py:attribute:: market
+
+         ``CfnInstanceGroupConfig.ScalingActionProperty.Market``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingaction.html#cfn-elasticmapreduce-instancegroupconfig-scalingaction-market
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: ScalingConstraintsProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingConstraintsProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceGroupConfig.ScalingConstraintsProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceGroupConfig.ScalingConstraintsProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: maxCapacity
+
+         ``CfnInstanceGroupConfig.ScalingConstraintsProperty.MaxCapacity``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints.html#cfn-elasticmapreduce-instancegroupconfig-scalingconstraints-maxcapacity
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: minCapacity
+
+         ``CfnInstanceGroupConfig.ScalingConstraintsProperty.MinCapacity``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingconstraints.html#cfn-elasticmapreduce-instancegroupconfig-scalingconstraints-mincapacity
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:class:: ScalingRuleProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingRuleProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceGroupConfig.ScalingRuleProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceGroupConfig.ScalingRuleProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: action
+
+         ``CfnInstanceGroupConfig.ScalingRuleProperty.Action``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.html#cfn-elasticmapreduce-instancegroupconfig-scalingrule-action
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceGroupConfig.ScalingActionProperty`\ 
+
+
+      .. py:attribute:: name
+
+         ``CfnInstanceGroupConfig.ScalingRuleProperty.Name``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.html#cfn-elasticmapreduce-instancegroupconfig-scalingrule-name
+
+
+         :type: string
+
+
+      .. py:attribute:: trigger
+
+         ``CfnInstanceGroupConfig.ScalingRuleProperty.Trigger``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.html#cfn-elasticmapreduce-instancegroupconfig-scalingrule-trigger
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceGroupConfig.ScalingTriggerProperty`\ 
+
+
+      .. py:attribute:: description
+
+         ``CfnInstanceGroupConfig.ScalingRuleProperty.Description``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingrule.html#cfn-elasticmapreduce-instancegroupconfig-scalingrule-description
+
+
+         :type: string *(optional)*
+
+
+   .. py:class:: ScalingTriggerProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.ScalingTriggerProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceGroupConfig.ScalingTriggerProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceGroupConfig.ScalingTriggerProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: cloudWatchAlarmDefinition
+
+         ``CfnInstanceGroupConfig.ScalingTriggerProperty.CloudWatchAlarmDefinition``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-scalingtrigger.html#cfn-elasticmapreduce-instancegroupconfig-scalingtrigger-cloudwatchalarmdefinition
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceGroupConfig.CloudWatchAlarmDefinitionProperty`\ 
+
+
+   .. py:class:: SimpleScalingPolicyConfigurationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.SimpleScalingPolicyConfigurationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceGroupConfig.SimpleScalingPolicyConfigurationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceGroupConfig.SimpleScalingPolicyConfigurationProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: scalingAdjustment
+
+         ``CfnInstanceGroupConfig.SimpleScalingPolicyConfigurationProperty.ScalingAdjustment``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-scalingadjustment
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: adjustmentType
+
+         ``CfnInstanceGroupConfig.SimpleScalingPolicyConfigurationProperty.AdjustmentType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-adjustmenttype
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: coolDown
+
+         ``CfnInstanceGroupConfig.SimpleScalingPolicyConfigurationProperty.CoolDown``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-instancegroupconfig-simplescalingpolicyconfiguration-cooldown
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+   .. py:class:: VolumeSpecificationProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnInstanceGroupConfig.VolumeSpecificationProperty;
+
+         .. code-tab:: javascript
+
+            // CfnInstanceGroupConfig.VolumeSpecificationProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnInstanceGroupConfig.VolumeSpecificationProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: sizeInGb
+
+         ``CfnInstanceGroupConfig.VolumeSpecificationProperty.SizeInGB``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-sizeingb
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+      .. py:attribute:: volumeType
+
+         ``CfnInstanceGroupConfig.VolumeSpecificationProperty.VolumeType``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-volumetype
+
+
+         :type: string
+
+
+      .. py:attribute:: iops
+
+         ``CfnInstanceGroupConfig.VolumeSpecificationProperty.Iops``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification.html#cfn-emr-ebsconfiguration-ebsblockdeviceconfig-volumespecification-iops
+
+
+         :type: number or :py:class:`@aws-cdk/cdk.Token`\  *(optional)*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependency(*other)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependency>`
+
+      Adds a dependency on another resource.
+
+
+
+      :param \*other: The other resource.
+      :type \*other: :py:class:`@aws-cdk/cdk.IDependable`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: dependencyElements
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.dependencyElements>`
+
+      Returns the set of all stack elements (resources, parameters, conditions)
+
+      that should be added when a resource "depends on" this construct.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IDependable`\ [] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnInstanceGroupConfigProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnInstanceGroupConfigProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EMR;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.emr.CfnInstanceGroupConfigProps;
+
+      .. code-tab:: javascript
+
+         // CfnInstanceGroupConfigProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnInstanceGroupConfigProps } from '@aws-cdk/aws-emr';
+
+
+
+
+
+   .. py:attribute:: instanceCount
+
+      ``AWS::EMR::InstanceGroupConfig.InstanceCount``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html#cfn-emr-instancegroupconfiginstancecount-
+
+
+      :type: number or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:attribute:: instanceRole
+
+      ``AWS::EMR::InstanceGroupConfig.InstanceRole``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html#cfn-emr-instancegroupconfig-instancerole
+
+
+      :type: string
+
+
+   .. py:attribute:: instanceType
+
+      ``AWS::EMR::InstanceGroupConfig.InstanceType``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html#cfn-emr-instancegroupconfig-instancetype
+
+
+      :type: string
+
+
+   .. py:attribute:: jobFlowId
+
+      ``AWS::EMR::InstanceGroupConfig.JobFlowId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html#cfn-emr-instancegroupconfig-jobflowid
+
+
+      :type: string
+
+
+   .. py:attribute:: autoScalingPolicy
+
+      ``AWS::EMR::InstanceGroupConfig.AutoScalingPolicy``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html#cfn-elasticmapreduce-instancegroupconfig-autoscalingpolicy
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceGroupConfig.AutoScalingPolicyProperty`\  *(optional)*
+
+
+   .. py:attribute:: bidPrice
+
+      ``AWS::EMR::InstanceGroupConfig.BidPrice``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html#cfn-emr-instancegroupconfig-bidprice
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: configurations
+
+      ``AWS::EMR::InstanceGroupConfig.Configurations``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html#cfn-emr-instancegroupconfig-configurations
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceGroupConfig.ConfigurationProperty`\ )[] *(optional)*
+
+
+   .. py:attribute:: ebsConfiguration
+
+      ``AWS::EMR::InstanceGroupConfig.EbsConfiguration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html#cfn-emr-instancegroupconfig-ebsconfiguration
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnInstanceGroupConfig.EbsConfigurationProperty`\  *(optional)*
+
+
+   .. py:attribute:: market
+
+      ``AWS::EMR::InstanceGroupConfig.Market``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html#cfn-emr-instancegroupconfig-market
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: name
+
+      ``AWS::EMR::InstanceGroupConfig.Name``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancegroupconfig.html#cfn-emr-instancegroupconfig-name
+
+
+      :type: string *(optional)*
+
+
+CfnSecurityConfiguration
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnSecurityConfiguration(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EMR;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.emr.CfnSecurityConfiguration;
+
+      .. code-tab:: javascript
+
+         const { CfnSecurityConfiguration } = require('@aws-cdk/aws-emr');
+
+      .. code-tab:: typescript
+
+         import { CfnSecurityConfiguration } from '@aws-cdk/aws-emr';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-emr.CfnSecurityConfigurationProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-emr.CfnSecurityConfigurationProps`\  *(readonly)*
+
+
+   .. py:attribute:: securityConfigurationName
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependency(*other)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependency>`
+
+      Adds a dependency on another resource.
+
+
+
+      :param \*other: The other resource.
+      :type \*other: :py:class:`@aws-cdk/cdk.IDependable`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: dependencyElements
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.dependencyElements>`
+
+      Returns the set of all stack elements (resources, parameters, conditions)
+
+      that should be added when a resource "depends on" this construct.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IDependable`\ [] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnSecurityConfigurationProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnSecurityConfigurationProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EMR;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.emr.CfnSecurityConfigurationProps;
+
+      .. code-tab:: javascript
+
+         // CfnSecurityConfigurationProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnSecurityConfigurationProps } from '@aws-cdk/aws-emr';
+
+
+
+
+
+   .. py:attribute:: securityConfiguration
+
+      ``AWS::EMR::SecurityConfiguration.SecurityConfiguration``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html#cfn-emr-securityconfiguration-securityconfiguration
+
+
+      :type: json or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:attribute:: name
+
+      ``AWS::EMR::SecurityConfiguration.Name``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-securityconfiguration.html#cfn-emr-securityconfiguration-name
+
+
+      :type: string *(optional)*
+
+
+CfnStep
+^^^^^^^
+
+.. py:class:: CfnStep(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EMR;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.emr.CfnStep;
+
+      .. code-tab:: javascript
+
+         const { CfnStep } = require('@aws-cdk/aws-emr');
+
+      .. code-tab:: typescript
+
+         import { CfnStep } from '@aws-cdk/aws-emr';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-emr.CfnStepProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-emr.CfnStepProps`\  *(readonly)*
+
+
+   .. py:attribute:: stepId
+
+      :type: string *(readonly)*
+
+   .. py:class:: HadoopJarStepConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnStep.HadoopJarStepConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnStep.HadoopJarStepConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnStep.HadoopJarStepConfigProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: jar
+
+         ``CfnStep.HadoopJarStepConfigProperty.Jar``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-step-hadoopjarstepconfig.html#cfn-elasticmapreduce-step-hadoopjarstepconfig-jar
+
+
+         :type: string
+
+
+      .. py:attribute:: args
+
+         ``CfnStep.HadoopJarStepConfigProperty.Args``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-step-hadoopjarstepconfig.html#cfn-elasticmapreduce-step-hadoopjarstepconfig-args
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+      .. py:attribute:: mainClass
+
+         ``CfnStep.HadoopJarStepConfigProperty.MainClass``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-step-hadoopjarstepconfig.html#cfn-elasticmapreduce-step-hadoopjarstepconfig-mainclass
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: stepProperties
+
+         ``CfnStep.HadoopJarStepConfigProperty.StepProperties``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-step-hadoopjarstepconfig.html#cfn-elasticmapreduce-step-hadoopjarstepconfig-stepproperties
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (:py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnStep.KeyValueProperty`\ )[] *(optional)*
+
+
+   .. py:class:: KeyValueProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EMR;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.emr.CfnStep.KeyValueProperty;
+
+         .. code-tab:: javascript
+
+            // CfnStep.KeyValueProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnStep.KeyValueProperty } from '@aws-cdk/aws-emr';
+
+
+
+
+
+      .. py:attribute:: key
+
+         ``CfnStep.KeyValueProperty.Key``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-step-keyvalue.html#cfn-elasticmapreduce-step-keyvalue-key
+
+
+         :type: string *(optional)*
+
+
+      .. py:attribute:: value
+
+         ``CfnStep.KeyValueProperty.Value``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-step-keyvalue.html#cfn-elasticmapreduce-step-keyvalue-value
+
+
+         :type: string *(optional)*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependency(*other)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependency>`
+
+      Adds a dependency on another resource.
+
+
+
+      :param \*other: The other resource.
+      :type \*other: :py:class:`@aws-cdk/cdk.IDependable`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: dependencyElements
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.dependencyElements>`
+
+      Returns the set of all stack elements (resources, parameters, conditions)
+
+      that should be added when a resource "depends on" this construct.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IDependable`\ [] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stack
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stack>`
+
+      The stack this Construct has been made a part of
+
+
+
+      *Protected property*
+
+      :type: :py:class:`@aws-cdk/cdk.Stack`\ 
+
+
+CfnStepProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnStepProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EMR;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.emr.CfnStepProps;
+
+      .. code-tab:: javascript
+
+         // CfnStepProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnStepProps } from '@aws-cdk/aws-emr';
+
+
+
+
+
+   .. py:attribute:: actionOnFailure
+
+      ``AWS::EMR::Step.ActionOnFailure``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html#cfn-elasticmapreduce-step-actiononfailure
+
+
+      :type: string
+
+
+   .. py:attribute:: hadoopJarStep
+
+      ``AWS::EMR::Step.HadoopJarStep``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html#cfn-elasticmapreduce-step-hadoopjarstep
+
+
+      :type: :py:class:`@aws-cdk/cdk.Token`\  or :py:class:`~@aws-cdk/aws-emr.CfnStep.HadoopJarStepConfigProperty`\ 
+
+
+   .. py:attribute:: jobFlowId
+
+      ``AWS::EMR::Step.JobFlowId``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html#cfn-elasticmapreduce-step-jobflowid
+
+
+      :type: string
+
+
+   .. py:attribute:: name
+
+      ``AWS::EMR::Step.Name``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-step.html#cfn-elasticmapreduce-step-name
+
+
+      :type: string
+
+

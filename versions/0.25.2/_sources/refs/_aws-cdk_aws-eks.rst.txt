@@ -1,0 +1,1883 @@
+.. @jsii-pacmak:meta@ {"fingerprint":"+nipevKP7D3UsbRve6lHXthXtXJtezkfCyTgcn35sV8="}
+
+@aws-cdk/aws-eks
+================
+
+.. mdinclude:: ./__aws-cdk_aws-eks.README.md
+
+Reference
+---------
+
+.. tabs::
+
+   .. group-tab:: C#
+
+      View in `Nuget <https://www.nuget.org/packages/Amazon.CDK.AWS.EKS/0.25.2>`_
+
+      **csproj**:
+
+      .. code-block:: xml
+
+         <PackageReference Include="Amazon.CDK.AWS.EKS" Version="0.25.2" />
+
+      **dotnet**:
+
+      .. code-block:: console
+
+         dotnet add package Amazon.CDK.AWS.EKS --version 0.25.2
+
+      **packages.config**:
+
+      .. code-block:: xml
+
+         <package id="Amazon.CDK.AWS.EKS" version="0.25.2" />
+
+
+   .. group-tab:: Java
+
+      View in `Maven Central <https://repo1.maven.org/maven2/software/amazon/awscdk/eks/0.25.2/>`_
+
+      **Apache Buildr**:
+
+      .. code-block:: none
+
+         'software.amazon.awscdk:eks:jar:0.25.2'
+
+      **Apache Ivy**:
+
+      .. code-block:: xml
+
+         <dependency groupId="software.amazon.awscdk" name="eks" rev="0.25.2"/>
+
+      **Apache Maven**:
+
+      .. code-block:: xml
+
+         <dependency>
+           <groupId>software.amazon.awscdk</groupId>
+           <artifactId>eks</artifactId>
+           <version>0.25.2</version>
+         </dependency>
+
+      **Gradle / Grails**:
+
+      .. code-block:: none
+
+         compile 'software.amazon.awscdk:eks:0.25.2'
+
+      **Groovy Grape**:
+
+      .. code-block:: none
+
+         @Grapes(
+         @Grab(group='software.amazon.awscdk', module='eks', version='0.25.2')
+         )
+
+
+   .. group-tab:: JavaScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-eks/v/0.25.2>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-eks@0.25.2
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-eks": "^0.25.2"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-eks@0.25.2
+
+
+   .. group-tab:: TypeScript
+
+      View in `NPM <https://www.npmjs.com/package/@aws-cdk/aws-eks/v/0.25.2>`_
+
+      **npm**:
+
+      .. code-block:: console
+
+         $ npm i @aws-cdk/aws-eks@0.25.2
+
+      **package.json**:
+
+      .. code-block:: js
+
+         {
+           "@aws-cdk/aws-eks": "^0.25.2"
+         }
+
+      **yarn**:
+
+      .. code-block:: console
+
+         $ yarn add @aws-cdk/aws-eks@0.25.2
+
+
+
+.. py:module:: @aws-cdk/aws-eks
+
+AddAutoScalingGroupOptions (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: AddAutoScalingGroupOptions
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EKS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.eks.AddAutoScalingGroupOptions;
+
+      .. code-tab:: javascript
+
+         // AddAutoScalingGroupOptions is an interface
+
+      .. code-tab:: typescript
+
+         import { AddAutoScalingGroupOptions } from '@aws-cdk/aws-eks';
+
+
+
+   Options for adding an AutoScalingGroup as capacity
+
+
+
+
+
+   .. py:attribute:: maxPods
+
+      How many pods to allow on this instance.
+
+      
+
+      Should be at most equal to the maximum number of IP addresses available to
+
+      the instance type less one.
+
+
+
+      :type: number
+
+
+AddWorkerNodesOptions (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: AddWorkerNodesOptions
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EKS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.eks.AddWorkerNodesOptions;
+
+      .. code-tab:: javascript
+
+         // AddWorkerNodesOptions is an interface
+
+      .. code-tab:: typescript
+
+         import { AddWorkerNodesOptions } from '@aws-cdk/aws-eks';
+
+
+
+   Options for adding worker nodes
+
+
+
+   :extends: :py:class:`@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps`\ 
+
+
+   .. py:attribute:: instanceType
+
+      Instance type of the instances to start
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.InstanceType`\ 
+
+
+   .. py:attribute:: allowAllOutbound
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps <@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps.allowAllOutbound>`
+
+      Whether the instances can initiate connections to anywhere by default
+
+
+
+      :type: boolean *(optional)*
+      :default: true
+
+
+   .. py:attribute:: associatePublicIpAddress
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps <@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps.associatePublicIpAddress>`
+
+      Whether instances in the Auto Scaling Group should have public
+
+      IP addresses associated with them.
+
+
+
+      :type: boolean *(optional)*
+      :default: Use subnet setting
+
+
+   .. py:attribute:: cooldownSeconds
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps <@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps.cooldownSeconds>`
+
+      Default scaling cooldown for this AutoScalingGroup
+
+
+
+      :type: number *(optional)*
+      :default: 300 (5 minutes)
+
+
+   .. py:attribute:: desiredCapacity
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps <@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps.desiredCapacity>`
+
+      Initial amount of instances in the fleet
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+
+   .. py:attribute:: ignoreUnmodifiedSizeProperties
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps <@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps.ignoreUnmodifiedSizeProperties>`
+
+      If the ASG has scheduled actions, don't reset unchanged group sizes
+
+      
+
+      Only used if the ASG has scheduled actions (which may scale your ASG up
+
+      or down regardless of cdk deployments). If true, the size of the group
+
+      will only be reset if it has been changed in the CDK app. If false, the
+
+      sizes will always be changed back to what they were in the CDK app
+
+      on deployment.
+
+
+
+      :type: boolean *(optional)*
+      :default: true
+
+
+   .. py:attribute:: keyName
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps <@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps.keyName>`
+
+      Name of SSH keypair to grant access to instances
+
+
+
+      :type: string *(optional)*
+      :default: No SSH access will be possible
+
+
+   .. py:attribute:: maxCapacity
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps <@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps.maxCapacity>`
+
+      Maximum number of instances in the fleet
+
+
+
+      :type: number *(optional)*
+      :default: desiredCapacity
+
+
+   .. py:attribute:: minCapacity
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps <@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps.minCapacity>`
+
+      Minimum number of instances in the fleet
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+
+   .. py:attribute:: notificationsTopic
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps <@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps.notificationsTopic>`
+
+      SNS topic to send notifications about fleet changes
+
+
+
+      :type: :py:class:`@aws-cdk/aws-sns.ITopic`\  *(optional)*
+      :default: No fleet change notifications will be sent.
+
+
+   .. py:attribute:: replacingUpdateMinSuccessfulInstancesPercent
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps <@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps.replacingUpdateMinSuccessfulInstancesPercent>`
+
+      Configuration for replacing updates.
+
+      
+
+      Only used if updateType == UpdateType.ReplacingUpdate. Specifies how
+
+      many instances must signal success for the update to succeed.
+
+
+
+      :type: number *(optional)*
+
+
+   .. py:attribute:: resourceSignalCount
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps <@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps.resourceSignalCount>`
+
+      How many ResourceSignal calls CloudFormation expects before the resource is considered created
+
+
+
+      :type: number *(optional)*
+      :default: 1
+
+
+   .. py:attribute:: resourceSignalTimeoutSec
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps <@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps.resourceSignalTimeoutSec>`
+
+      The length of time to wait for the resourceSignalCount
+
+      
+
+      The maximum value is 43200 (12 hours).
+
+
+
+      :type: number *(optional)*
+      :default: 300 (5 minutes)
+
+
+   .. py:attribute:: rollingUpdateConfiguration
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps <@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps.rollingUpdateConfiguration>`
+
+      Configuration for rolling updates
+
+      
+
+      Only used if updateType == UpdateType.RollingUpdate.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-autoscaling.RollingUpdateConfiguration`\  *(optional)*
+
+
+   .. py:attribute:: updateType
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps <@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps.updateType>`
+
+      What to do when an AutoScalingGroup's instance configuration is changed
+
+      
+
+      This is applied when any of the settings on the ASG are changed that
+
+      affect how the instances should be created (VPC, instance type, startup
+
+      scripts, etc.). It indicates how the existing instances should be
+
+      replaced with new instances matching the new config. By default, nothing
+
+      is done and only new instances are launched with the new config.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-autoscaling.UpdateType`\  *(optional)*
+      :default: UpdateType.None
+
+
+   .. py:attribute:: vpcPlacement
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps <@aws-cdk/aws-autoscaling.CommonAutoScalingGroupProps.vpcPlacement>`
+
+      Where to place instances within the VPC
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.VpcPlacementStrategy`\  *(optional)*
+
+
+CfnCluster
+^^^^^^^^^^
+
+.. py:class:: CfnCluster(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EKS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.eks.CfnCluster;
+
+      .. code-tab:: javascript
+
+         const { CfnCluster } = require('@aws-cdk/aws-eks');
+
+      .. code-tab:: typescript
+
+         import { CfnCluster } from '@aws-cdk/aws-eks';
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Resource`\ 
+   :param scope: scope in which this resource is defined
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: scoped id of the resource
+   :type id: string
+   :param props: resource properties
+   :type props: :py:class:`~@aws-cdk/aws-eks.CfnClusterProps`\ 
+
+   .. py:method:: renderProperties(properties) -> string => any
+
+      *Overrides* :py:meth:`@aws-cdk/cdk.Resource.renderProperties`
+
+      *Protected method*
+
+      :param properties: 
+      :type properties: any
+      :rtype: string => any
+
+
+   .. py:attribute:: resourceTypeName
+
+      The CloudFormation resource type name for this resource class.
+
+
+
+      :type: string *(readonly)* *(static)*
+
+
+   .. py:attribute:: clusterArn
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: clusterCertificateAuthorityData
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: clusterEndpoint
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: clusterName
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: propertyOverrides
+
+      :type: :py:class:`~@aws-cdk/aws-eks.CfnClusterProps`\  *(readonly)*
+
+   .. py:class:: ResourcesVpcConfigProperty
+
+      **Language-specific names:**
+
+      .. tabs::
+
+         .. code-tab:: c#
+
+            using Amazon.CDK.AWS.EKS;
+
+         .. code-tab:: java
+
+            import software.amazon.awscdk.services.eks.CfnCluster.ResourcesVpcConfigProperty;
+
+         .. code-tab:: javascript
+
+            // CfnCluster.ResourcesVpcConfigProperty is an interface
+
+         .. code-tab:: typescript
+
+            import { CfnCluster.ResourcesVpcConfigProperty } from '@aws-cdk/aws-eks';
+
+
+
+
+
+      .. py:attribute:: subnetIds
+
+         ``CfnCluster.ResourcesVpcConfigProperty.SubnetIds``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-subnetids
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[]
+
+
+      .. py:attribute:: securityGroupIds
+
+         ``CfnCluster.ResourcesVpcConfigProperty.SecurityGroupIds``
+
+         http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-resourcesvpcconfig.html#cfn-eks-cluster-resourcesvpcconfig-securitygroupids
+
+
+         :type: :py:class:`@aws-cdk/cdk.Token`\  or (string or :py:class:`@aws-cdk/cdk.Token`\ )[] *(optional)*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: ref
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Referenceable <@aws-cdk/cdk.Referenceable.ref>`
+
+      Returns a token to a CloudFormation { Ref } that references this entity based on it's logical ID.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:method:: addDeletionOverride(path)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDeletionOverride>`
+
+      Syntactic sugar for `addOverride(path, undefined)`.
+
+
+
+      :param path: The path of the value to delete
+      :type path: string
+
+
+   .. py:method:: addDependsOn(resource)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addDependsOn>`
+
+      Indicates that this resource depends on another resource and cannot be provisioned
+
+      unless the other resource has been successfully provisioned.
+
+
+
+      :param resource: 
+      :type resource: :py:class:`@aws-cdk/cdk.Resource`\ 
+
+
+   .. py:method:: addOverride(path, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addOverride>`
+
+      Adds an override to the synthesized CloudFormation resource. To add a
+
+      property override, either use `addPropertyOverride` or prefix `path` with
+
+      "Properties." (i.e. `Properties.TopicName`).
+
+
+
+      :param path: The path of the property, you can use dot notation to override values in complex types. Any intermdediate keys will be created as needed.
+      :type path: string
+      :param value: The value. Could be primitive or complex.
+      :type value: any
+
+
+   .. py:method:: addPropertyDeletionOverride(propertyPath)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyDeletionOverride>`
+
+      Adds an override that deletes the value of a property from the resource definition.
+
+
+
+      :param propertyPath: The path to the property.
+      :type propertyPath: string
+
+
+   .. py:method:: addPropertyOverride(propertyPath, value)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.addPropertyOverride>`
+
+      Adds an override to a resource property.
+
+      
+
+      Syntactic sugar for `addOverride("Properties.<...>", value)`.
+
+
+
+      :param propertyPath: The path of the property
+      :type propertyPath: string
+      :param value: The value
+      :type value: any
+
+
+   .. py:method:: getAtt(attributeName) -> @aws-cdk/cdk.CfnReference
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.getAtt>`
+
+      Returns a token for an runtime attribute of this resource.
+
+      Ideally, use generated attribute accessors (e.g. `resource.arn`), but this can be used for future compatibility
+
+      in case there is no generated attribute.
+
+
+
+      :param attributeName: The name of the attribute.
+      :type attributeName: string
+      :rtype: :py:class:`@aws-cdk/cdk.CfnReference`\ 
+
+
+   .. py:method:: toCloudFormation() -> json
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.toCloudFormation>`
+
+      Emits CloudFormation for this resource.
+
+
+
+      :rtype: json
+
+
+   .. py:attribute:: options
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.options>`
+
+      Options for this resource, such as condition, update policy etc.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ResourceOptions`\  *(readonly)*
+
+
+   .. py:attribute:: properties
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.properties>`
+
+      AWS resource properties.
+
+      
+
+      This object is rendered via a call to "renderProperties(this.properties)".
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:attribute:: resourceType
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.resourceType>`
+
+      AWS resource type.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: untypedPropertyOverrides
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Resource <@aws-cdk/cdk.Resource.untypedPropertyOverrides>`
+
+      AWS resource property overrides.
+
+      
+
+      During synthesis, the method "renderProperties(this.overrides)" is called
+
+      with this object, and merged on top of the output of
+
+      "renderProperties(this.properties)".
+
+      
+
+      Derived classes should expose a strongly-typed version of this object as
+
+      a public property called `propertyOverrides`.
+
+
+
+      *Protected property*
+
+      :type: any *(readonly)*
+
+
+   .. py:method:: overrideLogicalId(newLogicalId)
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.overrideLogicalId>`
+
+      Overrides the auto-generated logical ID with a specific ID.
+
+
+
+      :param newLogicalId: The new logical ID to use for this stack element.
+      :type newLogicalId: string
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.prepare>`
+
+      Automatically detect references in this StackElement
+
+
+
+      *Protected method*
+
+
+
+   .. py:attribute:: creationStackTrace
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.creationStackTrace>`
+
+      :type: string[] *(readonly)*
+
+
+   .. py:attribute:: logicalId
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.logicalId>`
+
+      The logical ID for this CloudFormation stack element. The logical ID of the element
+
+      is calculated from the path of the resource node in the construct tree.
+
+      
+
+      To override this value, use `overrideLogicalId(newLogicalId)`.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: stackPath
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.StackElement <@aws-cdk/cdk.StackElement.stackPath>`
+
+      Return the path with respect to the stack
+
+
+
+      :type: string *(readonly)*
+
+
+CfnClusterProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: CfnClusterProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EKS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.eks.CfnClusterProps;
+
+      .. code-tab:: javascript
+
+         // CfnClusterProps is an interface
+
+      .. code-tab:: typescript
+
+         import { CfnClusterProps } from '@aws-cdk/aws-eks';
+
+
+
+
+
+   .. py:attribute:: resourcesVpcConfig
+
+      ``AWS::EKS::Cluster.ResourcesVpcConfig``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-resourcesvpcconfig
+
+
+      :type: :py:class:`~@aws-cdk/aws-eks.CfnCluster.ResourcesVpcConfigProperty`\  or :py:class:`@aws-cdk/cdk.Token`\ 
+
+
+   .. py:attribute:: roleArn
+
+      ``AWS::EKS::Cluster.RoleArn``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-rolearn
+
+
+      :type: string
+
+
+   .. py:attribute:: name
+
+      ``AWS::EKS::Cluster.Name``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-name
+
+
+      :type: string *(optional)*
+
+
+   .. py:attribute:: version
+
+      ``AWS::EKS::Cluster.Version``
+
+      http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-version
+
+
+      :type: string *(optional)*
+
+
+Cluster
+^^^^^^^
+
+.. py:class:: Cluster(scope, id, props)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EKS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.eks.Cluster;
+
+      .. code-tab:: javascript
+
+         const { Cluster } = require('@aws-cdk/aws-eks');
+
+      .. code-tab:: typescript
+
+         import { Cluster } from '@aws-cdk/aws-eks';
+
+
+
+   A Cluster represents a managed Kubernetes Service (EKS)
+
+   
+
+   This is a fully managed cluster of API Servers (control-plane)
+
+   The user is still required to create the worker nodes.
+
+
+
+   :extends: :py:class:`~@aws-cdk/aws-eks.ClusterBase`\ 
+   :param scope: a Construct, most likely a cdk.Stack created
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: 
+   :type id: string
+   :param props: properties in the IClusterProps interface
+   :type props: :py:class:`~@aws-cdk/aws-eks.ClusterProps`\ 
+
+   .. py:staticmethod:: import(scope, id, props) -> @aws-cdk/aws-eks.ICluster
+
+      Import an existing cluster
+
+
+
+      :param scope: the construct scope, in most cases 'this'
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :param id: the id or name to import as
+      :type id: string
+      :param props: the cluster properties to use for importing information
+      :type props: :py:class:`~@aws-cdk/aws-eks.ClusterImportProps`\ 
+      :rtype: :py:class:`~@aws-cdk/aws-eks.ICluster`\ 
+
+
+   .. py:method:: addAutoScalingGroup(autoScalingGroup, options)
+
+      Add compute capacity to this EKS cluster in the form of an AutoScalingGroup
+
+      
+
+      The AutoScalingGroup must be running an EKS-optimized AMI containing the
+
+      /etc/eks/bootstrap.sh script. This method will configure Security Groups,
+
+      add the right policies to the instance role, apply the right tags, and add
+
+      the required user data to the instance's launch configuration.
+
+      
+
+      Prefer to use `addCapacity` if possible, it will automatically configure
+
+      the right AMI and the `maxPods` number based on your instance type.
+
+
+
+      :param autoScalingGroup: 
+      :type autoScalingGroup: :py:class:`@aws-cdk/aws-autoscaling.AutoScalingGroup`\ 
+      :param options: 
+      :type options: :py:class:`~@aws-cdk/aws-eks.AddAutoScalingGroupOptions`\ 
+
+
+   .. py:method:: addCapacity(id, options) -> @aws-cdk/aws-autoscaling.AutoScalingGroup
+
+      Add nodes to this EKS cluster
+
+      
+
+      The nodes will automatically be configured with the right VPC and AMI
+
+      for the instance type and Kubernetes version.
+
+
+
+      :param id: 
+      :type id: string
+      :param options: 
+      :type options: :py:class:`~@aws-cdk/aws-eks.AddWorkerNodesOptions`\ 
+      :rtype: :py:class:`@aws-cdk/aws-autoscaling.AutoScalingGroup`\ 
+
+
+   .. py:attribute:: clusterArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-eks.ClusterBase.clusterArn`
+
+      The AWS generated ARN for the Cluster resource
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: clusterCertificateAuthorityData
+
+      *Implements* :py:meth:`@aws-cdk/aws-eks.ClusterBase.clusterCertificateAuthorityData`
+
+      The certificate-authority-data for your cluster.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: clusterEndpoint
+
+      *Implements* :py:meth:`@aws-cdk/aws-eks.ClusterBase.clusterEndpoint`
+
+      The endpoint URL for the Cluster
+
+      
+
+      This is the URL inside the kubeconfig file to use with kubectl
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: clusterName
+
+      *Implements* :py:meth:`@aws-cdk/aws-eks.ClusterBase.clusterName`
+
+      The Name of the created EKS Cluster
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: connections
+
+      *Implements* :py:meth:`@aws-cdk/aws-eks.ClusterBase.connections`
+
+      Manages connection rules (Security Group Rules) for the cluster
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.Connections`\  *(readonly)*
+
+
+   .. py:attribute:: role
+
+      IAM role assumed by the EKS Control Plane
+
+
+
+      :type: :py:class:`@aws-cdk/aws-iam.IRole`\  *(readonly)*
+
+
+   .. py:attribute:: vpc
+
+      *Implements* :py:meth:`@aws-cdk/aws-eks.ClusterBase.vpc`
+
+      The VPC in which this Cluster was created
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.IVpcNetwork`\  *(readonly)*
+
+
+   .. py:method:: export() -> @aws-cdk/aws-eks.ClusterImportProps
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-eks.ClusterBase <@aws-cdk/aws-eks.ClusterBase.export>`
+
+      Export cluster references to use in other stacks
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-eks.ClusterImportProps`\ 
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ClusterBase
+^^^^^^^^^^^
+
+.. py:class:: ClusterBase(scope, id)
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EKS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.eks.ClusterBase;
+
+      .. code-tab:: javascript
+
+         const { ClusterBase } = require('@aws-cdk/aws-eks');
+
+      .. code-tab:: typescript
+
+         import { ClusterBase } from '@aws-cdk/aws-eks';
+
+
+
+   A SecurityGroup Reference, object not created with this template.
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :implements: :py:class:`~@aws-cdk/aws-eks.ICluster`\ 
+   :abstract: Yes
+   :param scope: The scope in which to define this construct
+   :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+   :param id: The scoped construct ID. Must be unique amongst siblings. If the ID includes a path separator (`/`), then it will be replaced by double dash `--`.
+   :type id: string
+
+   .. py:method:: export() -> @aws-cdk/aws-eks.ClusterImportProps
+
+      *Implements* :py:meth:`@aws-cdk/aws-eks.ICluster.export`
+
+      Export cluster references to use in other stacks
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-eks.ClusterImportProps`\ 
+
+
+   .. py:attribute:: clusterArn
+
+      *Implements* :py:meth:`@aws-cdk/aws-eks.ICluster.clusterArn`
+
+      The unique ARN assigned to the service by AWS
+
+      in the form of arn:aws:eks:
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: clusterCertificateAuthorityData
+
+      *Implements* :py:meth:`@aws-cdk/aws-eks.ICluster.clusterCertificateAuthorityData`
+
+      The certificate-authority-data for your cluster.
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: clusterEndpoint
+
+      *Implements* :py:meth:`@aws-cdk/aws-eks.ICluster.clusterEndpoint`
+
+      The API Server endpoint URL
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: clusterName
+
+      *Implements* :py:meth:`@aws-cdk/aws-eks.ICluster.clusterName`
+
+      The physical name of the Cluster
+
+
+
+      :type: string *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: connections
+
+      *Implements* :py:meth:`@aws-cdk/aws-ec2.IConnectable.connections`
+
+      :type: :py:class:`@aws-cdk/aws-ec2.Connections`\  *(readonly)* *(abstract)*
+
+
+   .. py:attribute:: vpc
+
+      *Implements* :py:meth:`@aws-cdk/aws-eks.ICluster.vpc`
+
+      The VPC in which this Cluster was created
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.IVpcNetwork`\  *(readonly)* *(abstract)*
+
+
+   .. py:method:: prepare()
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.prepare>`
+
+      Perform final modifications before synthesis
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      final changes before synthesis. prepare() will be called after child
+
+      constructs have been prepared.
+
+      
+
+      This is an advanced framework feature. Only use this if you
+
+      understand the implications.
+
+
+
+      *Protected method*
+
+
+
+   .. py:method:: toString() -> string
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.toString>`
+
+      Returns a string representation of this construct.
+
+
+
+      :rtype: string
+
+
+   .. py:method:: validate() -> string[]
+
+      *Inherited from* :py:meth:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.validate>`
+
+      Validate the current construct.
+
+      
+
+      This method can be implemented by derived constructs in order to perform
+
+      validation logic. It is called on all constructs before synthesis.
+
+
+
+      *Protected method*
+
+      :return: An array of validation error messages, or an empty array if there the construct is valid.
+      :rtype: string[]
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.Construct <@aws-cdk/cdk.Construct.node>`
+
+      Construct node.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+ClusterImportProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ClusterImportProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EKS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.eks.ClusterImportProps;
+
+      .. code-tab:: javascript
+
+         // ClusterImportProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ClusterImportProps } from '@aws-cdk/aws-eks';
+
+
+
+
+
+   .. py:attribute:: clusterArn
+
+      The unique ARN assigned to the service by AWS
+
+      in the form of arn:aws:eks:
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: clusterCertificateAuthorityData
+
+      The certificate-authority-data for your cluster.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: clusterEndpoint
+
+      The API Server endpoint URL
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: clusterName
+
+      The physical name of the Cluster
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: securityGroups
+
+      :type: :py:class:`@aws-cdk/aws-ec2.SecurityGroupImportProps`\ [] *(readonly)*
+
+
+   .. py:attribute:: vpc
+
+      The VPC in which this Cluster was created
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.VpcNetworkImportProps`\  *(readonly)*
+
+
+ClusterProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ClusterProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EKS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.eks.ClusterProps;
+
+      .. code-tab:: javascript
+
+         // ClusterProps is an interface
+
+      .. code-tab:: typescript
+
+         import { ClusterProps } from '@aws-cdk/aws-eks';
+
+
+
+   Properties to instantiate the Cluster
+
+
+
+
+
+   .. py:attribute:: vpc
+
+      The VPC in which to create the Cluster
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.IVpcNetwork`\ 
+
+
+   .. py:attribute:: clusterName
+
+      Name for the cluster.
+
+
+
+      :type: string *(optional)*
+      :default: Automatically generated name
+
+
+   .. py:attribute:: role
+
+      Role that provides permissions for the Kubernetes control plane to make calls to AWS API operations on your behalf.
+
+
+
+      :type: :py:class:`@aws-cdk/aws-iam.IRole`\  *(optional)*
+      :default: A role is automatically created for you
+
+
+   .. py:attribute:: securityGroup
+
+      Security Group to use for Control Plane ENIs
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.ISecurityGroup`\  *(optional)*
+      :default: A security group is automatically created
+
+
+   .. py:attribute:: version
+
+      The Kubernetes version to run in the cluster
+
+
+
+      :type: string *(optional)*
+      :default: If not supplied, will use Amazon default version
+
+
+   .. py:attribute:: vpcPlacements
+
+      Where to place EKS Control Plane ENIs
+
+      
+
+      If you want to create public load balancers, this must include public subnets.
+
+      
+
+      For example, to only select private subnets, supply the following:
+
+      
+
+      ```
+
+         * vpcPlacements: [
+
+         *   { subnetsToUse: ec2.SubnetType.Private }
+
+         * ]
+
+         * ```
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.VpcPlacementStrategy`\ [] *(optional)*
+      :default: All public and private subnets
+
+
+EksOptimizedAmi
+^^^^^^^^^^^^^^^
+
+.. py:class:: EksOptimizedAmi([props])
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EKS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.eks.EksOptimizedAmi;
+
+      .. code-tab:: javascript
+
+         const { EksOptimizedAmi } = require('@aws-cdk/aws-eks');
+
+      .. code-tab:: typescript
+
+         import { EksOptimizedAmi } from '@aws-cdk/aws-eks';
+
+
+
+   Source for EKS optimized AMIs
+
+
+
+   :extends: :py:class:`@aws-cdk/aws-ec2.GenericLinuxImage`\ 
+   :implements: :py:class:`@aws-cdk/aws-ec2.IMachineImageSource`\ 
+   :param props: 
+   :type props: :py:class:`~@aws-cdk/aws-eks.EksOptimizedAmiProps`\  *(optional)*
+
+   .. py:method:: getImage(scope) -> @aws-cdk/aws-ec2.MachineImage
+
+      *Inherited from* :py:meth:`@aws-cdk/aws-ec2.GenericLinuxImage <@aws-cdk/aws-ec2.GenericLinuxImage.getImage>`
+
+      Return the image to use in the given context
+
+
+
+      :param scope: 
+      :type scope: :py:class:`@aws-cdk/cdk.Construct`\ 
+      :rtype: :py:class:`@aws-cdk/aws-ec2.MachineImage`\ 
+
+
+   .. py:attribute:: amiMap
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ec2.GenericLinuxImage <@aws-cdk/aws-ec2.GenericLinuxImage.amiMap>`
+
+      :type: string => string *(readonly)*
+
+
+EksOptimizedAmiProps (interface)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: EksOptimizedAmiProps
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EKS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.eks.EksOptimizedAmiProps;
+
+      .. code-tab:: javascript
+
+         // EksOptimizedAmiProps is an interface
+
+      .. code-tab:: typescript
+
+         import { EksOptimizedAmiProps } from '@aws-cdk/aws-eks';
+
+
+
+   Properties for EksOptimizedAmi
+
+
+
+
+
+   .. py:attribute:: kubernetesVersion
+
+      The Kubernetes version to use
+
+
+
+      :type: string *(optional)*
+      :default: The latest version
+
+
+   .. py:attribute:: nodeType
+
+      What instance type to retrieve the image for (normal or GPU-optimized)
+
+
+
+      :type: :py:class:`~@aws-cdk/aws-eks.NodeType`\  *(optional)*
+      :default: Normal
+
+
+ICluster (interface)
+^^^^^^^^^^^^^^^^^^^^
+
+.. py:class:: ICluster
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EKS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.eks.ICluster;
+
+      .. code-tab:: javascript
+
+         // ICluster is an interface
+
+      .. code-tab:: typescript
+
+         import { ICluster } from '@aws-cdk/aws-eks';
+
+
+
+   An EKS cluster
+
+
+
+   :extends: :py:class:`@aws-cdk/cdk.IConstruct`\ 
+   :extends: :py:class:`@aws-cdk/aws-ec2.IConnectable`\ 
+
+
+   .. py:attribute:: clusterArn
+
+      The unique ARN assigned to the service by AWS
+
+      in the form of arn:aws:eks:
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: clusterCertificateAuthorityData
+
+      The certificate-authority-data for your cluster.
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: clusterEndpoint
+
+      The API Server endpoint URL
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: clusterName
+
+      The physical name of the Cluster
+
+
+
+      :type: string *(readonly)*
+
+
+   .. py:attribute:: vpc
+
+      The VPC in which this Cluster was created
+
+
+
+      :type: :py:class:`@aws-cdk/aws-ec2.IVpcNetwork`\  *(readonly)*
+
+
+   .. py:method:: export() -> @aws-cdk/aws-eks.ClusterImportProps
+
+      Export cluster references to use in other stacks
+
+
+
+      :rtype: :py:class:`~@aws-cdk/aws-eks.ClusterImportProps`\ 
+      :abstract: Yes
+
+
+   .. py:attribute:: connections
+
+      *Inherited from* :py:attr:`@aws-cdk/aws-ec2.IConnectable <@aws-cdk/aws-ec2.IConnectable.connections>`
+
+      :type: :py:class:`@aws-cdk/aws-ec2.Connections`\  *(readonly)*
+
+
+   .. py:attribute:: node
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IConstruct <@aws-cdk/cdk.IConstruct.node>`
+
+      The construct node in the scope tree.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.ConstructNode`\  *(readonly)*
+
+
+   .. py:attribute:: dependencyRoots
+
+      *Inherited from* :py:attr:`@aws-cdk/cdk.IDependable <@aws-cdk/cdk.IDependable.dependencyRoots>`
+
+      The set of constructs that form the root of this dependable
+
+      
+
+      All resources under all returned constructs are included in the ordering
+
+      dependency.
+
+
+
+      :type: :py:class:`@aws-cdk/cdk.IConstruct`\ [] *(readonly)*
+
+
+NodeType (enum)
+^^^^^^^^^^^^^^^
+
+.. py:class:: NodeType
+
+   **Language-specific names:**
+
+   .. tabs::
+
+      .. code-tab:: c#
+
+         using Amazon.CDK.AWS.EKS;
+
+      .. code-tab:: java
+
+         import software.amazon.awscdk.services.eks.NodeType;
+
+      .. code-tab:: javascript
+
+         const { NodeType } = require('@aws-cdk/aws-eks');
+
+      .. code-tab:: typescript
+
+         import { NodeType } from '@aws-cdk/aws-eks';
+
+
+
+   Whether the worker nodes should support GPU or just normal instances
+
+
+
+   .. py:data:: Normal
+
+   Normal instances
+
+
+
+   .. py:data:: GPU
+
+   GPU instances
+
+
+
+
